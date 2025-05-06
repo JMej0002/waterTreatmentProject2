@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.6)  6 MAY 2025 19:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.6)  6 MAY 2025 23:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -253,37 +253,37 @@ Package caption Info: End \AtBeginDocument code.
 <../images/monash_logo.png, id=14, 903.375pt x 501.875pt>
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 119.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 122.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [1 <../images/monash_logo.png>]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 122.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 125.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [2]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 125.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 128.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [3]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 128.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 131.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [4]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 131.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 134.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [5]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 134.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 137.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [6] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -300,9 +300,9 @@ Here is how much of TeX's memory you used:
  31498 multiletter control sequences out of 15000+600000
  639944 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,15n,114p,273b,390s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 68i,15n,114p,273b,388s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on document.pdf (9 pages, 56810 bytes).
+Output written on document.pdf (9 pages, 56828 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  29 compressed objects within 1 object stream
