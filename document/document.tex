@@ -1,17 +1,137 @@
+%Project settings
 
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage{graphicx}
-\usepackage[margin=1in]{geometry}
+\usepackage[
+  top=2.5cm,
+  bottom=3cm,
+  left=2cm,
+  right=2cm,
+  footskip=1.2cm
+]{geometry}
+\setlength{\headheight}{2.0cm}
+\setlength{\headsep}{0.5cm}
+\usepackage{times}
+\usepackage{sectsty}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{caption}
+%\usepackage{showframe} %this line to show document frames
+
+
+\justifying
+
+% Section formatting: TNR, 16pt, all caps
+\titleformat{\section}
+  {\normalfont\fontsize{16}{18}\bfseries\MakeUppercase}
+  {\thesection}{1em}{}
+
+% Optional paragraph environment
+\newenvironment{normaltext}
+{\begin{flushleft}\justifying\normalsize\rmfamily}
+{\end{flushleft}}
+
+% Caption style
+\DeclareCaptionFont{customcaption}{\fontsize{9pt}{10pt}\itshape\rmfamily}
+\captionsetup{
+  font=customcaption,
+  justification=centering
+}
+
+% Header/footer layout
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.5cm]{../images/monash_logo.png}}
+\fancyhead[C]{\fontsize{14pt}{16pt}\selectfont\textbf{Wastewater Treatment Plant Design}}
+\fancyhead[R]{\small CIV5178\\Advanced Water Treatment}
+%\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{1pt}
+
 \begin{document}
 
-\section*{Box Plots}
+% Turn off page numbers & headers
+\pagenumbering{gobble}
+\pagestyle{empty}
 
-Here are the box plots Kevin has done:
+\begin{titlepage}
+  \thispagestyle{empty}  % Ensures no header/footer
+  
+  % Left-aligned institutional info
+  \begin{flushleft}
+  \textbf{Monash University}\\
+  Faculty of Engineering\\
+  Master of Professional Engineering\\
+  Civil Engineering Specialization\\
+  CIV5178 – Advanced Water Treatment
+  \end{flushleft}
+  
+  \vspace{2cm}
+  
+  % Centered main title
+  \begin{center}
+      {\Huge \bfseries Wastewater Treatment Plant Design \\[0.5cm]}
+  
+      \vspace{1.5cm}
+  
+      {\large \bfseries
+      Presented by:\\
+      Kevin González – 111\\
+      Jhon Solórzano – 222\\
+      Julian Mejia – 34774564
+      }
+  
+      \vspace{1cm}
+  
+      {\large \bfseries
+      Presented to:\\
+      Unit coordinator and chief examiner: Brandon Winfrey
+      }
+  \end{center}
+  
+  \vfill
+  
+  % Date (bottom center)
+  \begin{center}
+      {\normalsize \today}
+  \end{center}
+  \end{titlepage}
+  
 
-\includegraphics[width=\linewidth]{/content/waterTreatmentProject/images/boxPlot_Ammonia.png}
+\section*{Executive Summary}
+Executive summary to be added here afterwards
+\newpage
 
-\includegraphics[width=\linewidth]{/content/waterTreatmentProject/images/boxPlot_BOD.png}
 
-\includegraphics[width=\linewidth]{/content/waterTreatmentProject/images/boxPlot_Nitrogen.png}
+\tableofcontents
+\newpage
+
+% Start main document with headers and page numbers
+\pagestyle{fancy}
+\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Introduction and Conceptual Design Description}
+Introduction to be completed later
+\newpage
+
+\section{Preliminary treatment}
+\newpage
+
+\section{Primary treatment}
+\newpage
+
+\section{Secondary treatment}
+\newpage
+
+\section{Environmental impact assessment}
+\newpage
+
+\section{summary}
+\newpage
 
 \end{document}
+
