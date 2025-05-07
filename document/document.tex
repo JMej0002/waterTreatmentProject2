@@ -166,6 +166,7 @@ following calculation:
 % END py_Population
 
 \subsection{Current flowrates estimation}
+\label{sec:current_flowrates}
 
 According to the \textit{Water Service Association of Australia} the inflow rate percapita
 can be estimated as 
@@ -199,7 +200,7 @@ From it, the Population average per suburb ( \(P_{\text{average}}\) ) and the av
 were calculated. With the \(P_{\text{average}}\) / \(A_{average}\) ratio, multiplied by the \(PE_{\mathrm{domestic}}\)
 the estimated area of the understudy suburb (\(A_{estimated}\)) is obtained. The \(PE_{\mathrm{commercial}}\) is not included
 as it does not represents actual population. In the Table \ref{tab:und_study_area} the obtained results for the infiltration 
-rate estimation. In the Table \ref{tab:current_flows} the current flow rates obtained are summarized.\\
+rate estimation. In the Table \ref{tab:current_rates} the current flow rates obtained are summarized.\\
 
 \begin{table}[h]
   \centering
@@ -218,10 +219,11 @@ rate estimation. In the Table \ref{tab:current_flows} the current flow rates obt
 
 
 \subsection{Minimum current flow rates}
+\label{sec:minimum_current_flowrates}
 
 The minimum flow rates can be estimated using the minimum peaking factor
-which from the \ref{fig:peaking_factor} is equal to 0.3. The current flow rates shown in the Table \ref{tab:current_flows}
-are multiplied by this factor, see results in \textbf{INSERT RESULTS TABLE REF}
+which from the \ref{fig:peaking_factor} is equal to 0.3. The current flow rates shown in the Table \ref{tab:current_rates}
+are multiplied by this factor, and results are presented in Table \ref{tab:projected_rates}.
 
 \begin{figure}[h]
   \centering
@@ -231,10 +233,11 @@ are multiplied by this factor, see results in \textbf{INSERT RESULTS TABLE REF}
 \end{figure}
 
 \subsection{Maximum current flow rates}
+\label{sec:maximum_current_flowrates}
 
 The maximum flow rates can be estimated using the maximum peaking factor
-which from the \ref{fig:peaking_factor} is equal to 1.9. The current flow rates shown in the Table \ref{tab:current_flows}
-are multiplied by this factor, see results in \textbf{INSERT RESULTS TABLE REF} 
+which from the Figure \ref{fig:peaking_factor} is equal to 1.9. The current flow rates shown in the Table \ref{tab:current_rates}
+are multiplied by this factor, and results are presented in Table \ref{tab:projected_rates}.
 
 \subsection*{Population Growth and Future Design Considerations}
 
@@ -253,8 +256,18 @@ The projected population can be calculated based on \eqref{eq:population_project
   \tag{Eq.~\theequation} \label{eq:population_projection}
 \end{align}
 
+With the per capita flow rates mentioned in the Section \ref{sec:current_flowrates}, following the same procedure there mentioned
+the flow rates for the projected population can be calculated as well. Additionally, the minimum and maximum projected flowrates
+can be calculated following the peak minimum factor and peak maximum factor mentioned in Sections \ref{sec:minimum_current_flowrates}
+and \ref{sec:maximum_current_flowrates}, respectively. Results are shown in the Table \ref{tab:projected_rates}.\\
 
-\noindent Additionally, a **climate change factor** of 1.2 was adopted based on published long-term projections. This factor accounts for increased intensity and frequency of rainfall events and their impact on infiltration and inflow volumes.
+To project the infiltration, a different approach is used. This value is not controlled by
+the population as it depends more on the environmental phenomenon. Because of this, it is projected
+based on an environmental factor instead. The \textit{Environment, Land, Water and Planning} department
+of the \textit{Victoria State Goverment} in their \textit{Guidelines for the Adaptive Management of 
+Wastewater Systems Under Climate Change in Victoria}, especified that the climate change factor
+can be taken as 1.2. The infiltration flow rate presented in Table \ref{tab:current_rates} is therefore multiplied by this
+factor and presented in the Table \ref{tab:projected_rates}.
 
 \input{current_rates.tex}
 \input{projected_rates.tex}
