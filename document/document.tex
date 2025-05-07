@@ -133,6 +133,7 @@ Executive summary to be added here afterwards
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
+\sloppy
 
 \section{Introduction and Conceptual Design Description}
 Population and economical growth among other factors require the subsequently development of cities and the
@@ -229,6 +230,48 @@ rate estimation. In the Table \ref{tab:current_flows} the current flow rates obt
   \caption{Current flow rates}
   \label{tab:current_flows}
 \end{table}
+
+\subsection{Minimum current flow rates}
+
+The minimum flow rates can be estimated using the minimum peaking factor
+which from the \ref{fig:peaking_factor} is equal to 0.3. The current flow rates shown in the Table \ref{tab:current_flows}
+are multiplied by this factor, see results in \textbf{INSERT RESULTS TABLE REF}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../images/peaking_factor.png}
+  \caption{Daily fluctuation of peaking factors at each hour of the day for flow rates on an average day in a similar wastewater catchment.}
+  \label{fig:peaking_factor}
+\end{figure}
+
+\subsection{Maximum current flow rates}
+
+The maximum flow rates can be estimated using the maximum peaking factor
+which from the \ref{fig:peaking_factor} is equal to 1.9. The current flow rates shown in the Table \ref{tab:current_flows}
+are multiplied by this factor, see results in \textbf{INSERT RESULTS TABLE REF} 
+
+\subsection*{Population Growth and Future Design Considerations}
+
+To account for future demand on the wastewater treatment plant, the design incorporates a projected population 
+growth. Based on previous analysis, it was determined that 
+the annual growth reate can be estimated as: \(G_{rate} = 1 + 10^{0.015} =2.04\%\).
+The current population is therefore projected during the life span of the plant. The life span is 
+commonly adopted as 20 years as it balances the need to consider future growth and 
+technological advancements while ensuring economic feasibility \cite{wef_DesignWaterResource}.
+The projected population can be calculated based on \eqref{eq:population_projection}. 
+
+\begin{align}
+  \refstepcounter{equation}
+  PE_{\text{projected}} = \left\lceil PE \times \left(1 + \frac{\text{Growth Percentage}}{100} \right)^{20} \right\rceil 
+  \tag{Eq.~\theequation} \label{eq:population_projection}
+\end{align}
+
+
+  
+  
+
+\noindent Additionally, a **climate change factor** of 1.2 was adopted based on published long-term projections. This factor accounts for increased intensity and frequency of rainfall events and their impact on infiltration and inflow volumes.
+
 
 
 
