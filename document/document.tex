@@ -20,6 +20,19 @@
 \usepackage{lastpage}
 \usepackage{caption}
 \usepackage{amsmath}
+\usepackage{appendix}
+\usepackage{titlesec}
+
+% Redefine section command for appendices
+\newcommand{\appendixsection}[1]{%
+  \refstepcounter{section}%
+  \section*{Appendix \thesection\quad #1}%
+  \addcontentsline{toc}{section}{Appendix \thesection\quad #1}%
+}
+
+
+
+
 %\usepackage{showframe} %this line to show document frames
 
 
@@ -142,8 +155,37 @@ following calculation:
 % BEGIN py_Population
 \(PE_{\mathrm{commercial}}
 = \bigl\lceil \sqrt{\text{10}}\times 9000 \bigr\rceil
-=  \text{28461} \)
+=  \text{28461} \).
 % END py_Population
+
+\subsection{Current flowrates estimation}
+
+According to the \textit{Water Service Association of Australia} the inflow rate percapita
+can be estimated as 
+% BEGIN py_DomesticPerCapitaFlowrate
+180
+% END py_DomesticPerCapitaFlowrate
+L/PE/day \cite{yarravalleywater_2023_amf}. Therefore, the 
+\( Q_{\text{current avg, domestic}} \) can be calculated as\\
+% BEGIN py_DomesticCurrentFlow
+\(\frac{Q_{\text{domestic per capita}} \times PE_{\text{domestic}}}{1000}= 61200.0\)
+% END py_DomesticCurrentFlow
+\(\mathrm{m^3/day}\).
+Similarly, based on previous surveys it got determine that the commercial contribution for this area is
+280 L/PE/day. Therefore the 
+\( Q_{\text{current avg, commercial}} \) can be calculated as
+% BEGIN py_CommercialCurrentFlow
+\(\frac{Q_{\text{commercial per capita}} \times PE_{\text{commercial}}}{1000}= 7969.08\)
+% END py_CommercialCurrentFlow
+\(\mathrm{m^3/day}\).\\
+\\
+The infiltration/inflow flowrate, when no data is available, can be estimated based on either the
+total length of the sewer system, or based on the area to be covered. For the last one, the ratio can vary
+from 0.2 up to 28 \(\mathrm{m^3/ha/day}\) \cite{metcalf_2014_wastewater}. In this report, the authors
+has choosen the lower limit as the system will be new and therefore the damage on the pipelines will be
+minimum. 
+
+As no data of the covered area is available, the autors have
 
 
 \newpage
@@ -162,6 +204,17 @@ following calculation:
 
 \section{summary}
 \newpage
+
+\bibliographystyle{apalike}     % or plain, abbrv, unsrt, etc.
+\bibliography{references}      % <- filename of your .bib file, no extension
+\newpage
+
+\appendix
+
+\appendixsection{Area and Population per suburb}
+
+Table of Melbourne suburbs with their area and popluation \cite{australianbureauofstatistics_2021_suburbs}.\\
+\input{melbourne_density.tex}
 
 \end{document}
 
