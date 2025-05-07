@@ -203,6 +203,8 @@ rate estimation. In the Table \ref{tab:current_flows} the current flow rates obt
 
 \begin{table}[h]
   \centering
+  \caption{Understudy landscape area estimation}
+  \label{tab:und_study_area}
   \begin{tabular}{|p{2cm}|c|c|c|c|c|}
   \hline
   $P_{\text{average}}$ & $A_{\text{average}}$ (km$^2$) & $A_{\text{average}} / P_{\text{average}}$ & $A_{\text{estimated}}$ (km$^2$) & Ratio (m$^3$/ha/day) & $Q_{\text{infiltration}}$ (m$^3$/day) \\
@@ -212,24 +214,8 @@ rate estimation. In the Table \ref{tab:current_flows} the current flow rates obt
 % END py_areaContent
   \hline
   \end{tabular}
-  \caption{Understudy landscape area estimation}
-  \label{tab:und_study_area}
 \end{table}
 
-\begin{table}[h]
-  \centering
-  \begin{tabular}{|c|c|c|}
-  \hline
-  $Q_{\text{current avg, domestic}}$ $m^3/day$ & $Q_{\text{current avg, commercial}}$ $m^3/day$ & $Q_{\text{infiltration}}$ $m^3/day$ \\
-  \hline
-% BEGIN py_currentFlows
-  61200.0 & 7969.08 & 11323.41 \\
-% END py_currentFlows
-  \hline
-  \end{tabular}
-  \caption{Current flow rates}
-  \label{tab:current_flows}
-\end{table}
 
 \subsection{Minimum current flow rates}
 
@@ -260,6 +246,7 @@ commonly adopted as 20 years as it balances the need to consider future growth a
 technological advancements while ensuring economic feasibility \cite{wef_DesignWaterResource}.
 The projected population can be calculated based on \eqref{eq:population_projection}. 
 
+
 \begin{align}
   \refstepcounter{equation}
   PE_{\text{projected}} = \left\lceil PE \times \left(1 + \frac{\text{Growth Percentage}}{100} \right)^{20} \right\rceil 
@@ -267,12 +254,10 @@ The projected population can be calculated based on \eqref{eq:population_project
 \end{align}
 
 
-  
-  
-
 \noindent Additionally, a **climate change factor** of 1.2 was adopted based on published long-term projections. This factor accounts for increased intensity and frequency of rainfall events and their impact on infiltration and inflow volumes.
 
-
+\input{current_rates.tex}
+\input{projected_rates.tex}
 
 
 \newpage
