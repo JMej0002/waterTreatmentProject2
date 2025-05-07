@@ -6,4 +6,4 @@
 \contentsline {section}{\numberline {4}Secondary treatment}{4}{}%
 \contentsline {section}{\numberline {5}Environmental impact assessment}{5}{}%
 \contentsline {section}{\numberline {6}summary}{6}{}%
-\contentsline {section}{Appendix A\hskip 1em\relax Area and Population per suburb}{8}{}%
+\contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{}%

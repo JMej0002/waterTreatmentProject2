@@ -1,8 +1,20 @@
-\begin{table}
-\caption{Melbourne suburbs with area and population}
-\label{tab:mel_subs}
-\begin{tabular}{lrrlr}
+\begin{longtable}{lrrlr}
+\caption{Melbourne suburbs with area and population} \label{tab:mel_subs} \\
+\toprule
 Suburb & Population Density & Population & LGA & Area (km2) \\
+\midrule
+\endfirsthead
+\caption[]{Melbourne suburbs with area and population} \\
+\toprule
+Suburb & Population Density & Population & LGA & Area (km2) \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{Continued on next page} \\
+\midrule
+\endfoot
+\bottomrule
+\endlastfoot
 Southbank & 11962.280000 & 22631 & Melbourne (City) & 1.890000 \\
 Carlton & 10597.480000 & 16055 & Melbourne (City) & 1.510000 \\
 Fitzroy & 7355.630000 & 10431 & Yarra (City) & 1.420000 \\
@@ -423,5 +435,4 @@ Warburton & 15.180000 & 2020 & Yarra Ranges (Shire) & 133.070000 \\
 Kalkallo & 14.950000 & 5548 & Hume (City) & 371.100000 \\
 Kinglake & 13.340000 & 1662 & Murrindindi (Shire) & 124.590000 \\
 Gembrook & 11.610000 & 2559 & Cardinia (Shire) & 220.410000 \\
-\end{tabular}
-\end{table}
+\end{longtable}

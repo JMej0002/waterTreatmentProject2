@@ -22,13 +22,18 @@
 \usepackage{amsmath}
 \usepackage{appendix}
 \usepackage{titlesec}
+\usepackage{longtable}
+\usepackage{booktabs}  % Optional: cleaner lines
+
 
 % Redefine section command for appendices
-\newcommand{\appendixsection}[1]{%
+\newcommand{\appendixsection}[2]{%
   \refstepcounter{section}%
   \section*{Appendix \thesection\quad #1}%
   \addcontentsline{toc}{section}{Appendix \thesection\quad #1}%
+  \label{#2}%
 }
+
 
 
 
@@ -124,7 +129,8 @@ Executive summary to be added here afterwards
 
 % Start main document with headers and page numbers
 \pagestyle{fancy}
-\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[C]{Page \thepage\ of \pageref{endNumbering}}
+
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
@@ -149,7 +155,7 @@ and characteristics based on the amount of people that would produce the same va
 \textit{Table 3-4}
  equivalent population factors are presented for different development types for both residential and commercial use. 
 For this report, based on previous surveys and analysis, it is known that the equivalent population from 
-domestic contributions is equal to 340000.
+domestic contributions (\(PE_{\mathrm{domestic}}\)) is equal to 340000.
 Similarly, for commercial contributions, the equivalent population is known to comply with the 
 following calculation: 
 % BEGIN py_Population
@@ -185,7 +191,45 @@ from 0.2 up to 28 \(\mathrm{m^3/ha/day}\) \cite{metcalf_2014_wastewater}. In thi
 has choosen the lower limit as the system will be new and therefore the damage on the pipelines will be
 minimum. 
 
-As no data of the covered area is available, the autors have
+As no data of the covered area is available, the autors have estimated it based on the average
+population per area ratio of Melbourne suburbs. The Melbourne population density per suburb data is available in the 
+\textit{Australian Bureau of Statistics} web page, see Apendix  \ref{app:melbourne_density} for the raw data.
+From it, the Population average per suburb ( \(P_{\text{average}}\) ) and the average landscape area (\(A_{average}\) \(\mathrm{km^2}\))
+were calculated. With the \(P_{\text{average}}\) / \(A_{average}\) ratio, multiplied by the \(PE_{\mathrm{domestic}}\)
+the estimated area of the understudy suburb (\(A_{estimated}\)) is obtained. The \(PE_{\mathrm{commercial}}\) is not included
+as it does not represents actual population. In the Table \ref{tab:und_study_area} the obtained results for the infiltration 
+rate estimation. In the Table \ref{tab:current_flows} the current flow rates obtained are summarized.\\
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|p{2cm}|c|c|c|c|c|}
+  \hline
+  $P_{\text{average}}$ & $A_{\text{average}}$ (km$^2$) & $A_{\text{average}} / P_{\text{average}}$ & $A_{\text{estimated}}$ (km$^2$) & Ratio (m$^3$/ha/day) & $Q_{\text{infiltration}}$ (m$^3$/day) \\
+  \hline
+% BEGIN py_areaContent
+  11200.0 & 18.65 & 0.0017 & 5.66 & 0.2 & 11323.41 \\
+% END py_areaContent
+  \hline
+  \end{tabular}
+  \caption{Understudy landscape area estimation}
+  \label{tab:und_study_area}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|}
+  \hline
+  $Q_{\text{current avg, domestic}}$ $m^3/day$ & $Q_{\text{current avg, commercial}}$ $m^3/day$ & $Q_{\text{infiltration}}$ $m^3/day$ \\
+  \hline
+% BEGIN py_currentFlows
+  61200.0 & 7969.08 & 11323.41 \\
+% END py_currentFlows
+  \hline
+  \end{tabular}
+  \caption{Current flow rates}
+  \label{tab:current_flows}
+\end{table}
+
 
 
 \newpage
@@ -207,14 +251,28 @@ As no data of the covered area is available, the autors have
 
 \bibliographystyle{apalike}     % or plain, abbrv, unsrt, etc.
 \bibliography{references}      % <- filename of your .bib file, no extension
+\label{endNumbering}
 \newpage
 
-\appendix
 
-\appendixsection{Area and Population per suburb}
+\clearpage
+\appendix
+\renewcommand{\thesection}{\arabic{section}}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\fancyfoot[C]{Appendix Page \thepage}
+
+
+
+\appendixsection{Area and Population per suburb}{app:melbourne_density}
 
 Table of Melbourne suburbs with their area and popluation \cite{australianbureauofstatistics_2021_suburbs}.\\
 \input{melbourne_density.tex}
+
+
+
+\label{LastPageAppendix}
 
 \end{document}
 
