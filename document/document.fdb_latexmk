@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex document"] 1746698037.86423 "document.aux" "document.bbl" "document" 1746700941.90889 0
+["bibtex document"] 1746698037.86423 "document.aux" "document.bbl" "document" 1746700987.86916 0
   "./references.bib" 1746679074 1957 050752ff83e3e2bac0401883bff24fdd ""
   "c:/texlive/2025/texmf-dist/bibtex/bst/base/apalike.bst" 1746442555 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "document.aux" 1746700940 5940 dc9ff249a36e48053cec27b55c990661 "pdflatex"
+  "document.aux" 1746700986 5940 dc9ff249a36e48053cec27b55c990661 "pdflatex"
   (generated)
   "document.bbl"
   "document.blg"
   (rewritten before read)
-["pdflatex"] 1746700939.35825 "c:/GitRepositories/waterTreatmentProject2/document/document.tex" "document.pdf" "document" 1746700941.90937 0
+["pdflatex"] 1746700985.11209 "c:/GitRepositories/waterTreatmentProject2/document/document.tex" "document.pdf" "document" 1746700987.87071 0
   "../images/boxPlot_BOD.png" 1746682704 55501 590a5e8c187dd9c9cada46131079208d ""
   "../images/combined_boxplots_with_missing.png" 1746681585 2396 e2b5112f7226eb1b5c7bc512e9c39b3d ""
   "../images/monash_logo.png" 1746520189 18590 fb618b1635a8cd935a55915654315f0c ""
   "../images/peaking_factor.png" 1746606026 86851 c5d63611e7b4b178750e678fdca04a0e ""
-  "c:/GitRepositories/waterTreatmentProject2/document/document.tex" 1746700938 16350 13ac424e6b55798bf41f94998b559e7f ""
+  "c:/GitRepositories/waterTreatmentProject2/document/document.tex" 1746700984 16352 7afddf28729e776645f955cabef4b74f ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1746451645 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1746454304 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1746449383 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -121,11 +121,11 @@
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1746475972 3567497 2f0cce2cec2ad792ddd1f25ed076db6c ""
   "c:/texlive/2025/texmf.cnf" 1746475728 713 e69b156964470283e0530f5060668171 ""
   "current_rates.tex" 1746700886 699 0dbb1a6fe8c09700ee41b9375cbd823a ""
-  "document.aux" 1746700940 5940 dc9ff249a36e48053cec27b55c990661 "pdflatex"
+  "document.aux" 1746700986 5940 dc9ff249a36e48053cec27b55c990661 "pdflatex"
   "document.bbl" 1746698038 1039 72b3ec70909af6ef0fe2a71d16ee5e68 "bibtex document"
-  "document.out" 1746700940 2299 a5c4342c41741a38800a08107b2dfd82 "pdflatex"
-  "document.tex" 1746700938 16350 13ac424e6b55798bf41f94998b559e7f ""
-  "document.toc" 1746700940 1049 fda495c40155f1387393155fc853ab3f "pdflatex"
+  "document.out" 1746700986 2299 a5c4342c41741a38800a08107b2dfd82 "pdflatex"
+  "document.tex" 1746700984 16352 7afddf28729e776645f955cabef4b74f ""
+  "document.toc" 1746700986 1049 fda495c40155f1387393155fc853ab3f "pdflatex"
   "melbourne_density.tex" 1746674699 28678 5a842330b0cf46ca59c511b56e495b79 ""
   "projected_rates.tex" 1746614272 727 d9b226a60ad88a0cabdec91b80664fc4 ""
   (generated)
