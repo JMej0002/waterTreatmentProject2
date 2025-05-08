@@ -3,7 +3,7 @@
 \contentsline {subsection}{\numberline {1.2}Current flowrates estimation}{1}{}%
 \contentsline {subsection}{\numberline {1.3}Minimum current flow rates}{2}{}%
 \contentsline {subsection}{\numberline {1.4}Maximum current flow rates}{2}{}%
-\contentsline {section}{\numberline {2}Preliminary treatment}{4}{}%
+\contentsline {section}{\numberline {2}Preliminary Treatment Design}{4}{}%
 \contentsline {section}{\numberline {3}Primary treatment}{5}{}%
 \contentsline {section}{\numberline {4}Secondary treatment}{6}{}%
 \contentsline {section}{\numberline {5}Environmental impact assessment}{7}{}%
