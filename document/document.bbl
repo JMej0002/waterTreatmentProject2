@@ -4,6 +4,12 @@
 {Australian Bureau of Statistics} (2021).
 \newblock Suburbs and localities.
 
+\bibitem[{Melbourne Water}, 2024]{melbournewater_2024_etpdata}
+{Melbourne Water} (2024).
+\newblock Eastern treatment plant daily influent quality data.
+\newblock \url{https://data-melbournewater.opendata.arcgis.com}.
+\newblock Accessed: 2025-05-07.
+
 \bibitem[Metcalf and Eddy, 2014]{metcalf_2014_wastewater}
 Metcalf and Eddy (2014).
 \newblock {\em Wastewater Engineering, Treatment and resource recovery}.
