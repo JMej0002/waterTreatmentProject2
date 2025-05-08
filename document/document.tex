@@ -24,6 +24,11 @@
 \usepackage{titlesec}
 \usepackage{longtable}
 \usepackage{booktabs}  % Optional: cleaner lines
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+
+
+
 
 
 % Redefine section command for appendices
@@ -272,10 +277,122 @@ factor and presented in the Table \ref{tab:projected_rates}.
 \input{current_rates.tex}
 \input{projected_rates.tex}
 
+\subsection{Influent Pollutant Load Estimation}
+\label{sec:pollutant_load}
 
-\newpage
+Following the guidelines established for wastewater treatment design 
+\cite{wef_DesignWaterResource, metcalf_2014_wastewater}, the analysis focused on two key 
+pollutants: Biochemical Oxygen Demand \textit{(BOD)} and Total Suspended Solids (TSS), which 
+are considered the most relevant indicators for organic and solids loading.\\
 
-\section{Preliminary treatment}
+As no specific influent quality data was available for the study area, 
+representative pollutant concentrations were obtained from Melbourne Water’s open 
+dataset on the Eastern Treatment Plant (ETP) \cite{melbournewater_2024_etpdata}. 
+This dataset, which includes daily influent quality records from 2014 onwards, is 
+publicly accessible at \url{https://data-melbournewater.opendata.arcgis.com}.
+In Figure~\ref{fig:boxplots_quality}, 
+the box plot of the \textit{(BOD)} of the abovementioned data is presented. 
+
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{../images/boxPlot_BOD.png}
+  \caption{Boxplots of Biochemical Oxygen Demand (BOD) from Melbourne Water ETP dataset}
+  \label{fig:boxplots_quality}
+\end{figure}
+
+\section{Preliminary Treatment Design}
+\label{sec:prelim_treatment}
+
+The preliminary treatment includes coarse screening to remove large solids and protect downstream units.
+The flow velocity through the screen is assumed within the recommended range of 0.3 to 1.0 m/s.
+The screen bar spacing is selected to capture gross solids greater than 10 mm, and a bar width is
+chosen based on commercial availability.
+
+To determine head loss and sizing of the screen channel, the velocity upstream of the bars, 
+the hydraulic head loss, and the cross-sectional flow area are calculated. The design assumes 
+that flow depth is governed by the downstream hydraulic condition, and the channel width is then determined accordingly. 
+The calculations are based on the peak projected flow rate. Equations used are shown in \eqref{eq:screen_velocity} to 
+\eqref{eq:screen_width}.
+
+\begin{align}
+v_{\text{upstream}} &= v_{\text{screen}} \cdot \frac{b}{b + w} \label{eq:screen_velocity} \\
+h_{\text{loss}} &= \frac{1}{2g C_d^2} \left( v_{\text{screen}}^2 - v_{\text{upstream}}^2 \right) \label{eq:screen_headloss} \\
+A_{\text{wet}} &= \frac{Q_{\text{peak}}}{v_{\text{upstream}}} \label{eq:screen_area} \\
+W_{\text{channel}} &= \frac{A_{\text{wet}}}{d + h_{\text{loss}}} \label{eq:screen_width}
+\end{align}
+
+The values used for this calculation are summarised in Table~\ref{tab:screen_inputs}, 
+and the design results are provided in Table~\ref{tab:screen_outputs}.
+
+\begin{table}[h]
+\centering
+\caption{Design input values for screen and channel}
+\label{tab:screen_inputs}
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Parameter} & \textbf{Value} & \textbf{Description} \\
+\hline
+$v_{\text{screen}}$ & 1.0 m/s & Flow velocity through the screen \\
+$b$ & 0.01 m & Spacing between bars \\
+$w$ & 0.004 m & Bar width \\
+$C_d$ & 0.84 & Discharge coefficient \\
+$g$ & 9.81 m/s$^2$ & Gravitational acceleration \\
+$d$ & 1.0 m & Assumed downstream flow depth \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Screen and channel design results}
+\label{tab:screen_outputs}
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Output} & \textbf{Value} & \textbf{Description} \\
+\hline
+$v_{\text{upstream}}$ & 
+% BEGIN py_velBeforeScreen
+0.714
+% END py_velBeforeScreen
+ m/s
+& Velocity before the screen \\
+$h_{\text{loss}}$ & 
+% BEGIN py_headLoss
+0.04
+% END py_headLoss
+ m
+& Head loss across the screen \\
+$d_{\text{upstream}}$ & 
+% BEGIN py_flowDepthUp
+1.04
+% END py_flowDepthUp
+m & Flow depth upstream \\
+$A_{\text{wet}}$ & 
+% BEGIN py_WetCrossArea
+2.9
+% END py_WetCrossArea
+m$^2$ & Wetted cross-sectional area \\
+$W_{\text{channel}}$ & 
+% BEGIN py_channelWidth
+2.8
+% END py_channelWidth
+m & Required screen channel width \\
+$N_{\text{screens}}$ & 
+% BEGIN py_noScreensrequired
+3
+% END py_noScreensrequired
+& Number of screens required \\
+\hline
+\end{tabular}
+\end{table}
+
+To ensure that the screen performs under minimum flow conditions, 
+the upstream velocity at low flow was recalculated. The downstream control 
+flow depth should not exceed the value shown in Table~\ref{tab:screen_outputs} to 
+maintain sufficient velocity during low flow conditions.
+
 \newpage
 
 \section{Primary treatment}
@@ -285,6 +402,7 @@ factor and presented in the Table \ref{tab:projected_rates}.
 \newpage
 
 \section{Environmental impact assessment}
+
 \newpage
 
 \section{summary}
