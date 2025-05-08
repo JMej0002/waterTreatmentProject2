@@ -24,6 +24,11 @@
 \usepackage{titlesec}
 \usepackage{longtable}
 \usepackage{booktabs}  % Optional: cleaner lines
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+
+
+
 
 
 % Redefine section command for appendices
@@ -272,8 +277,30 @@ factor and presented in the Table \ref{tab:projected_rates}.
 \input{current_rates.tex}
 \input{projected_rates.tex}
 
+\subsection{Influent Pollutant Load Estimation}
+\label{sec:pollutant_load}
 
-\newpage
+Following the guidelines established for wastewater treatment design 
+\cite{wef_DesignWaterResource, metcalf_2014_wastewater}, the analysis focused on two key 
+pollutants: Biochemical Oxygen Demand \textit{(BOD)} and Total Suspended Solids (TSS), which 
+are considered the most relevant indicators for organic and solids loading.\\
+
+As no specific influent quality data was available for the study area, 
+representative pollutant concentrations were obtained from Melbourne Water’s open 
+dataset on the Eastern Treatment Plant (ETP) \cite{melbournewater_2024_etpdata}. 
+This dataset, which includes daily influent quality records from 2014 onwards, is 
+publicly accessible at \url{https://data-melbournewater.opendata.arcgis.com}.
+In Figure~\ref{fig:boxplots_quality}, 
+the box plot of the \textit{(BOD)} of the abovementioned data is presented. 
+
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{../images/boxPlot_BOD.png}
+  \caption{Boxplots of Biochemical Oxygen Demand (BOD) from Melbourne Water ETP dataset}
+  \label{fig:boxplots_quality}
+\end{figure}
 
 \section{Preliminary Treatment Design}
 \label{sec:prelim_treatment}
@@ -286,7 +313,7 @@ chosen based on commercial availability.
 To determine head loss and sizing of the screen channel, the velocity upstream of the bars, 
 the hydraulic head loss, and the cross-sectional flow area are calculated. The design assumes 
 that flow depth is governed by the downstream hydraulic condition, and the channel width is then determined accordingly. 
-The calculations are based on the peak projected flow rate. Equations used are shown in \eqref{eq:screen_headloss} to 
+The calculations are based on the peak projected flow rate. Equations used are shown in \eqref{eq:screen_velocity} to 
 \eqref{eq:screen_width}.
 
 \begin{align}
@@ -375,6 +402,7 @@ maintain sufficient velocity during low flow conditions.
 \newpage
 
 \section{Environmental impact assessment}
+
 \newpage
 
 \section{summary}
