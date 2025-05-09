@@ -7,6 +7,6 @@
 \contentsline {section}{\numberline {2}Preliminary Treatment Design}{4}{section.2}%
 \contentsline {section}{\numberline {3}Primary treatment}{6}{section.3}%
 \contentsline {section}{\numberline {4}Secondary treatment}{7}{section.4}%
-\contentsline {section}{\numberline {5}Environmental impact assessment}{8}{section.5}%
-\contentsline {section}{\numberline {6}summary}{9}{section.6}%
+\contentsline {section}{\numberline {5}Environmental Impact Assessment}{8}{section.5}%
+\contentsline {section}{\numberline {6}summary}{10}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%

@@ -396,12 +396,116 @@ maintain sufficient velocity during low flow conditions.
 \newpage
 
 \section{Primary treatment}
+\label{sec:primary_treat}
 \newpage
 
 \section{Secondary treatment}
 \newpage
 
-\section{Environmental impact assessment}
+
+\section{Environmental Impact Assessment}
+\label{sec:env_impact}
+
+To evaluate the impact of the effluent discharge on the receiving waterway, 
+the \textit{Streeter-Phelps model} was applied. This model predicts the variation in dissolved 
+oxygen (DO) downstream of the discharge point based on oxygen consumption due to biochemical 
+oxygen demand (BOD) and oxygen replenishment through atmospheric reaeration.
+
+According to previous surveys and analysis, the receiving waterway has a base flow that complies
+with: 
+\(Q_{\text{waterway}} = 300{,}000 \cdot \left(\text{10}\right)^{0.2} = 475468 \text{ } m^3/day\)
+. The water quality upstream 
+of the discharge point is characterized by a background BOD of 4 mg/L (L$_r$), a dissolved oxygen saturation 
+of 8.5 mg/L (DO$_saturation$), and an initial oxygen deficit of 0.8 mg/L (DO$_0$). Regulatory guidelines for this region require 
+that DO levels remain above 70\% saturation \textbf{REFERENCE TBD}, yielding a minimum acceptable DO of 5.95 mg/L (Eq~\eqref{eq:do_threshold}).
+Additionally, the rearation rate constant (k$_r$), deoxygenation rate constant (k$_d$), BOD reaction rate
+(k$_1$) and stream velocity (v) are known due to previous assesments. In the Table \ref{tab:env_inputs} the
+input values for the \textit{Streeter-Phelps model} are shown.\\
+
+The effluent discharge was evaluated based on the project adjusted 
+peak flow rate (
+% BEGIN py_adjustedQ
+80.29
+% END py_adjustedQ
+m$^3$/day), calculated in Section \ref{sec:primary_treat} and a maximum BOD$_5$ of 20 mg/L (L$_w$) 
+\textbf{REFERENCE TBD}. 
+
+\begin{table}[h]
+  \centering
+  \caption{Input values for Streeter-Phelps DO sag model}
+  \label{tab:env_inputs}
+  \begin{tabular}{|l|c|l|}
+  \hline
+  \textbf{Parameter} & \textbf{Value} & \textbf{Description} \\
+  \hline
+  $DO_{\text{saturation}}$ & 8.5 mg/L & DO at saturation \\
+  $DO_0$ & 0.8 mg/L & Initial oxygen deficit \\
+  $DO_{\text{min, threshold}}$ & 5.95 mg/L & Minimum DO required \\
+  $L_r$ & 4 mg/L & BOD upstream \\
+  $L_w$ & 20 mg/L & BOD$_5$ of effluent \\
+  $k_r$ & 0.71 day$^{-1}$ & Reaeration rate constant \\
+  $k_d$ & 0.51 day$^{-1}$ & Deoxygenation rate constant \\
+  $k_1$ & 0.23 day$^{-1}$ & BOD reaction rate \\
+  $v$ & 0.07 m/s & Stream velocity \\
+  $Q_w$ & 475468 $m^3/day$ & Waterway flowrate\\
+  $Q_e$ &
+% BEGIN py_adjustedQ2
+80.29
+% END py_adjustedQ2
+  $m^3/day$ & Adjusted flowrate\\
+  \hline
+  \end{tabular}
+\end{table}
+
+
+From this, the ultimate BOD (L$_u$) is estimated using Eq. \eqref{eq:ultimate_bod} with the time \textit{t} 
+equals to 5 days. Using Eq. \eqref{eq:mixing_zone_bod} the mixed BOD in the receiving stream is
+determined, and with Eq. \eqref{eq:mixing_zone_bod} mixed conditions downstream are calculated.
+The model then determines the time ($t_c$) at which the minimum DO level occurs using Eq. \eqref{eq:tc}. 
+Finally, the maximum deficit $D(t_c)$ is calculated using Eq. \eqref{eq:do_deficit}. Results are 
+shown in Table \ref{tab:env_outputs}.
+
+
+
+Key equations used in this model are given below:
+
+\begin{align}
+DO_{\text{min, threshold}} &= 0.7 \cdot DO_{\text{saturation}} \label{eq:do_threshold} \\
+L_u &= \frac{L_w}{1 - e^{-k_1 t}} \label{eq:ultimate_bod} \\
+L_0 &= \frac{Q_w \cdot L_r + Q_e \cdot L_u}{Q_w + Q_e} \label{eq:mixing_zone_bod} \\
+t_c &= \frac{1}{k_r - k_d} \ln \left[ \frac{k_r}{k_d} \left(1 - D_0 \cdot \frac{k_r - k_d}{k_d L_0} \right) \right] \label{eq:tc} \\
+%x_c &= t_c \cdot 86400 \cdot v \label{eq:distance_min_do} \\
+D(t_c) &= \frac{k_d L_0}{k_r - k_d} \left(e^{-k_d t_c} - e^{-k_r t_c}\right) + D_0 e^{-k_r t_c} \label{eq:do_deficit}
+\end{align}
+
+%link the table below to the results!!!
+
+\begin{table}[h]
+\centering
+\caption{Environmental impact model results}
+\label{tab:env_outputs}
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Output} & \textbf{Value} & \textbf{Description} \\
+\hline
+$L_u$ & 
+% BEGIN py_Lu
+\texttt{[insert]} 
+% END py_Lu
+mg/L & Ultimate BOD of effluent \\
+$L_0$ & \texttt{[insert]} mg/L & Mixed BOD in receiving stream \\
+$t_c$ & \texttt{[insert]} days & Time to reach minimum DO \\
+$x_c$ & \texttt{[insert]} m & Distance to minimum DO level \\
+$D(t_c)$ & \texttt{[insert]} mg/L & DO deficit at time $t_c$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%discuss about the results!! 
+As shown in Table~\ref{tab:env_outputs}, 
+the dissolved oxygen deficit at its critical point is [insert result] mg/L, 
+which is [below/above] the regulatory limit of 2.55 mg/L. Therefore, the discharge 
+[complies/does not comply] with the receiving waterway's environmental standard.
 
 \newpage
 
