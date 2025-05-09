@@ -672,7 +672,139 @@ Final design depth $H_{\text{final}}$ (with 50\% SF) & \texttt{[insert]} & m \\
 
 \section{Secondary treatment}
 \label{sec:secondary_trat}
-\newpage
+
+\subsection{Design Overview}
+
+The secondary treatment stage is designed as an extended aeration activated sludge process, aiming to achieve 90\% BOD\textsubscript{5} removal. Based on the effluent quality requirement 20 mg/L (BOD\textsubscript{5}), the influent concentration to this stage can be derived from:
+
+\begin{align}
+BOD_{\text{in}} &= \frac{BOD_{\text{effluent}}}{1 - \eta}
+\label{eq:secondary_bod_in}
+\end{align}
+
+where \( \eta = 0.9 \) is the BOD removal efficiency.
+
+\subsection{Sludge Characteristics and Return Flow}
+
+Mixed liquor suspended solids (MLSS) concentration is chosen based on the process type and operating temperature, and return sludge concentration \( X_R \) is assumed. The sludge volume index (SVI) is given by:
+
+\begin{align}
+SVI &= \frac{10^6}{X_R}
+\end{align}
+
+The settled sludge volume is:
+
+\begin{align}
+v &= \frac{SVI \cdot X}{1000}
+\end{align}
+
+The return sludge flow rate is then:
+
+\begin{align}
+Q_R &= \frac{Q \cdot v}{1000 - v}
+\end{align}
+
+\subsection{Aeration Tank Sizing}
+
+Using a target food-to-microorganism ratio (F/M), the required aeration tank volume is calculated:
+
+\begin{align}
+V_{\text{aeration}} &= \frac{Q \cdot BOD_{\text{in}}}{F/M \cdot X}
+\label{eq:aeration_volume}
+\end{align}
+
+This is followed by residence time:
+
+\begin{align}
+t_{\text{aeration}} &= \frac{V_{\text{aeration}}}{Q} \cdot 24
+\end{align}
+
+The organic loading is:
+
+\begin{align}
+OL &= \frac{Q \cdot BOD_{\text{in}}}{V_{\text{aeration}}}
+\end{align}
+
+\subsection{Sludge Age and Stability}
+
+The sludge age is estimated from:
+
+\begin{align}
+\theta_c &= \frac{1}{Y \cdot (F/M) \cdot \eta - K_d}
+\end{align}
+
+A safety factor is applied to account for peak organic load variations:
+
+\begin{align}
+\theta_{c, \text{design}} &= 1.3 \cdot \theta_c
+\end{align}
+
+\subsection{Contact-Stabilization Configuration}
+
+Given the contact time is 0.5 h and stabilization time is 2 h, the aeration tank is split as follows:
+
+\begin{align}
+V_{\text{contact}} &= \frac{1}{5} \cdot V_{\text{aeration}} \\
+V_{\text{stabilization}} &= V_{\text{aeration}} - V_{\text{contact}}
+\end{align}
+
+Contact tank geometry is based on the guideline ratio \( \text{length} = 4 \times \text{depth} \), and width computed from:
+
+\begin{align}
+W &= \frac{V}{L \cdot D}
+\end{align}
+
+Stabilization tank depth is derived from:
+
+\begin{align}
+D &= \frac{V}{L \cdot W}
+\end{align}
+
+\subsection*{Summary of Inputs and Outputs}
+
+\begin{table}[h]
+\centering
+\caption{Input values for secondary treatment}
+\label{tab:secondary_inputs}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Parameter} & \textbf{Symbol} & \textbf{Value} \\
+\hline
+Target effluent BOD\textsubscript{5} & $BOD_{\text{effluent}}$ & 20 mg/L \\
+BOD removal efficiency & $\eta$ & 90\% \\
+MLSS & $X$ & 3000 mg/L \\
+Return sludge solids & $X_R$ & 11000 mg/L \\
+Yield coefficient & $Y$ & 0.6 \\
+Decay coefficient & $K_d$ & 0.06 d\textsuperscript{-1} \\
+Conversion rate & $k$ & 0.2 d\textsuperscript{-1} \\
+F/M ratio & F/M & 0.4 \\
+Safety factor & -- & 1.3 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Design results for secondary treatment}
+\label{tab:secondary_results}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Output} & \textbf{Symbol} & \textbf{Result} \\
+\hline
+Influent BOD to secondary & $BOD_{\text{in}}$ & \texttt{[insert]} \\
+Return sludge ratio & $Q_R/Q$ & \texttt{[insert]} \\
+Aeration volume & $V_{\text{aeration}}$ & \texttt{[insert]} m$^3$ \\
+Aeration time & $t_{\text{aeration}}$ & \texttt{[insert]} h \\
+Sludge age & $\theta_c$ & \texttt{[insert]} d \\
+Final design age & $\theta_{c, \text{design}}$ & \texttt{[insert]} d \\
+Contact tank volume & $V_{\text{contact}}$ & \texttt{[insert]} m$^3$ \\
+Stabilization tank volume & $V_{\text{stabilization}}$ & \texttt{[insert]} m$^3$ \\
+Contact tank (L×W×D) & -- & \texttt{[insert]} m × \texttt{[insert]} m × \texttt{[insert]} m \\
+Stabilization tank (L×W×D) & -- & \texttt{[insert]} m × \texttt{[insert]} m × \texttt{[insert]} m \\
+\hline
+\end{tabular}
+\end{table}
+
 
 
 \section{Environmental Impact Assessment}

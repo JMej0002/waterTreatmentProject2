@@ -17,6 +17,11 @@
 \contentsline {subsection}{\numberline {3.3}V-Notch and Launder Design}{9}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Launder Flow Conditions}{9}{subsubsection.3.3.1}%
 \contentsline {section}{\numberline {4}Secondary treatment}{10}{section.4}%
-\contentsline {section}{\numberline {5}Environmental Impact Assessment}{11}{section.5}%
-\contentsline {section}{\numberline {6}summary}{13}{section.6}%
+\contentsline {subsection}{\numberline {4.1}Design Overview}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Sludge Characteristics and Return Flow}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Aeration Tank Sizing}{11}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Sludge Age and Stability}{11}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Contact-Stabilization Configuration}{12}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Environmental Impact Assessment}{12}{section.5}%
+\contentsline {section}{\numberline {6}summary}{15}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
