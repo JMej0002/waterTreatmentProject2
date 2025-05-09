@@ -2,11 +2,15 @@
 \contentsline {subsection}{\numberline {1.1}Population estimations}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Current flowrates estimation}{1}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Minimum current flow rates}{2}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Maximum current flow rates}{2}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.4}Maximum current flow rates}{3}{subsection.1.4}%
 \contentsline {subsection}{\numberline {1.5}Influent Pollutant Load Estimation}{3}{subsection.1.5}%
-\contentsline {section}{\numberline {2}Preliminary Treatment Design}{4}{section.2}%
-\contentsline {section}{\numberline {3}Primary treatment}{6}{section.3}%
-\contentsline {section}{\numberline {4}Secondary treatment}{7}{section.4}%
-\contentsline {section}{\numberline {5}Environmental Impact Assessment}{8}{section.5}%
-\contentsline {section}{\numberline {6}summary}{10}{section.6}%
+\contentsline {section}{\numberline {2}Preliminary Treatment Design}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Facility types}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Screens design}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Equalisation basin}{7}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Primary treatment}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Fecility Types}{7}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Secondary treatment}{8}{section.4}%
+\contentsline {section}{\numberline {5}Environmental Impact Assessment}{9}{section.5}%
+\contentsline {section}{\numberline {6}summary}{11}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%

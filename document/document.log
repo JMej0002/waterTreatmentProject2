@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.6)  9 MAY 2025 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.6)  9 MAY 2025 21:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -485,44 +485,55 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
                    \relax 
 l.133 \newpage
                [2]
-Underfull \hbox (badness 10000) in paragraph at lines 176--200
+Underfull \hbox (badness 10000) in paragraph at lines 144--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--209
+Underfull \hbox (badness 10000) in paragraph at lines 151--163
 
  []
 
 
-Overfull \hbox (12.62996pt too wide) in paragraph at lines 214--223
+Underfull \hbox (badness 10000) in paragraph at lines 164--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--219
+
+ []
+
+
+
+<../images/monash_logo.png, id=103, 903.375pt x 501.875pt>
+File: ../images/monash_logo.png Graphic file (type png)
+<use ../images/monash_logo.png>
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 219.
+(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
+[1 <../images/monash_logo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 220--228
+
+ []
+
+
+Overfull \hbox (12.62996pt too wide) in paragraph at lines 233--242
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-<../images/monash_logo.png, id=85, 903.375pt x 501.875pt>
-File: ../images/monash_logo.png Graphic file (type png)
-<use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 232.
-(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
-[1 <../images/monash_logo.png>]
-<../images/peaking_factor.png, id=104, 677.53125pt x 346.29375pt>
+<../images/peaking_factor.png, id=126, 677.53125pt x 346.29375pt>
 File: ../images/peaking_factor.png Graphic file (type png)
 <use ../images/peaking_factor.png>
-Package pdftex.def Info: ../images/peaking_factor.png  used on input line 235.
+Package pdftex.def Info: ../images/peaking_factor.png  used on input line 254.
 (pdftex.def)             Requested size: 400.38872pt x 204.6497pt.
 
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 262.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 265.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [2 <../images/peaking_factor.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 264--268
+Underfull \hbox (badness 10000) in paragraph at lines 283--287
 
  []
 
@@ -571,18 +582,21 @@ Underfull \hbox (badness 8170) in paragraph at lines 7--8
 []\OT1/ptm/b/n/12 Maximum flow
  []
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 )
-Underfull \hbox (badness 10000) in paragraph at lines 283--287
+Underfull \hbox (badness 10000) in paragraph at lines 302--306
 \OT1/ptm/m/n/12 Following the guide-lines es-tab-lished for wastew-a-ter treat-ment de-sign
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 283--287
+Underfull \hbox (badness 1902) in paragraph at lines 302--306
 \OT1/ptm/m/n/12 [[], []], the anal-y-sis fo-cused on two key
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--287
+Underfull \hbox (badness 10000) in paragraph at lines 302--306
 
  []
 
@@ -590,40 +604,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--287
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 295.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 307.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [3]
-<../images/boxPlot_BOD.png, id=136, 462.528pt x 346.896pt>
+<../images/boxPlot_BOD.png, id=161, 462.528pt x 346.896pt>
 File: ../images/boxPlot_BOD.png Graphic file (type png)
 <use ../images/boxPlot_BOD.png>
-Package pdftex.def Info: ../images/boxPlot_BOD.png  used on input line 300.
+Package pdftex.def Info: ../images/boxPlot_BOD.png  used on input line 319.
 (pdftex.def)             Requested size: 450.43253pt x 337.84377pt.
 
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 324.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 331.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [4 <../images/boxPlot_BOD.png>]
+Underfull \hbox (badness 3724) in paragraph at lines 353--354
+\OT1/ptm/m/n/12 no pri-mary treat-ment is im-ple-
+ []
+
+
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 396.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 390.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [5]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 400.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 477.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [6]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 403.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 491.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 414--424
+
+File: ../images/monash_logo.png Graphic file (type png)
+<use ../images/monash_logo.png>
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 495.
+(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 506--516
 
  []
 
@@ -631,38 +656,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 414--424
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 479.
-(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
-[8]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 493.
- (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-
-File: ../images/monash_logo.png Graphic file (type png)
-<use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 510.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 569.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [9]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 513.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 626.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
-[10] (./document.bbl)
+[10]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 518.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 629.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
-[11]
+[11] (./document.bbl)
+
+File: ../images/monash_logo.png Graphic file (type png)
+<use ../images/monash_logo.png>
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 634.
+(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
+[12]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 12.0pt
-(hyperref)                replaced by space on input line 531.
+(hyperref)                replaced by space on input line 647.
 
 (./melbourne_density.tex
-Underfull \hbox (badness 10000) in paragraph at lines 533--1
+Underfull \hbox (badness 10000) in paragraph at lines 649--1
 
  []
 
@@ -805,13 +826,13 @@ l.438 \end{longtable}
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 540.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 656.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.540 \end{document}
+l.656 \end{document}
                      [11] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./document.aux)
@@ -820,21 +841,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: BFF31D39D4306CA9EE96FE330148DAAA;2299.
+(rerunfilecheck)             Checksum: F776F215BE634606C5F06810B1679024;2843.
  ) 
 Here is how much of TeX's memory you used:
- 12920 strings out of 469608
- 205186 string characters out of 5474774
- 713905 words of memory out of 5000000
- 39517 multiletter control sequences out of 15000+600000
- 651735 words of font info for 81 fonts, out of 8000000 for 9000
+ 12902 strings out of 469608
+ 204995 string characters out of 5474774
+ 714269 words of memory out of 5000000
+ 39496 multiletter control sequences out of 15000+600000
+ 651220 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,16n,114p,379b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (25 pages, 342491 bytes).
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on document.pdf (26 pages, 342416 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 359 PDF objects out of 1000 (max. 8388607)
+ 298 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 144 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -146,7 +146,26 @@ general infrastructure that supports them. As a cities expand, the electrical gr
 recolection and treatment, among others, need to increase their capabilities as well. In the recent years, a northwest area in
 Melbourne has been rapidly developping and therefore, requires the construction of a new Wastewater treatment plant that can 
 address the current and future needs of the community. In the presente report, the authors present the design of the abovementioned
-plant following local guidlines.
+plant following local guidlines.\\
+
+The designed is conformed by a \textit{Preliminary Treatment - Section \ref{sec:prelim_treatment}} 
+where the screeing is designed to remove coarse material 
+on the flow stream to protect downstream process equipment and 
+increse its reliability \cite{metcalf_2014_wastewater}.
+The next step is the \textit{Primary Sedimentation - Section \ref{sec:primary_treat}}, 
+designed to remove the settleted solids and floating material. 
+This process can reach removals ratios of 50\% to 70\% of the 
+suspended solids (\textit{SST}) and 25\% to 40\% of the BOD.
+It is followed by the \textit{Secondary Treatment - Section \ref{sec:secondary_trat}}, 
+in which sludge and activation systems are used to remove the
+soluble, coloidal and particulate suspended organic substances 
+by coagulating them through the microorganisms (sludge). \\
+
+Finally, the environmental impact of the incorporation of the 
+treated wastewater into the waterway is assessed against the 
+local guidelines applicable to determine whether it complies 
+with its requirements or if further treatment shall be implemented.\\
+
 
 \subsection{Population estimations}
 
@@ -157,7 +176,7 @@ and characteristics based on the amount of people that would produce the same va
 \textit{AMF L8 Sewerage Planning and Design Principles}
  which is the standard for wastewater treatment plants, developed by 
  \textit{Yarra Valley Water}
-  which covers the area underdesign in the present report, on 
+  which covers the area underdesign in the present report, on its 
 \textit{Table 3-4}
  equivalent population factors are presented for different development types for both residential and commercial use. 
 For this report, based on previous surveys and analysis, it is known that the equivalent population from 
@@ -310,21 +329,64 @@ The flow velocity through the screen is assumed within the recommended range of 
 The screen bar spacing is selected to capture gross solids greater than 10 mm, and a bar width is
 chosen based on commercial availability.
 
-To determine head loss and sizing of the screen channel, the velocity upstream of the bars, 
+\subsection{Facility types}
+\label{sec:preliminary_facility_types}
+The preliminary treatment is conformed by screeing, also known as \textit{bar racks}, 
+and grit chambers. In the Table \ref{tab:screening_types} the types 
+of screening are categorized based on the size of the screen 
+opening which determines the removal type the screen would provide. 
+
+\begin{table}[h]
+  \centering
+  \caption{Screening clasification per opening size \cite{davis2010water}}
+  \label{tab:screening_types}
+  \begin{tabular}{|l|c|p{6cm}|}
+  \hline
+  \textbf{Type} & \textbf{Typical opening} & \textbf{Removal} \\
+  \hline
+  Trash racks/Primary screening & 40-150 mm & Large heavy debris.\\
+  & & \\
+  Coarse screens & 6-75 mm & Large solids, rags and debris.\\
+  & & \\
+  Fine screens & 1.5-6 mm & Small solids, usually used after a coarse screen.\\
+  & & \\
+  Very fine screens & 0.25-1.5 mm & Suspended solids to near primary treatment level. Usually used when no primary treatment is implemented.\\
+  & & \\
+  Microscreens & 1$\mu$m-0.3 mm & Used in conjunction with very fine screens for effluent polishing. \\
+  \hline
+  \end{tabular}
+\end{table}
+
+The screens can also be clasified depending on the type of cleaning, if it is manually 
+or mechanically, in case of the second one they can be further categorized depending 
+of the mechanism type. The cleaning type does not impact the design calculations and can, 
+therefore, be selected based on commercial and economical constrains.
+
+\subsection{Screens design}
+\label{sec:screens_design}
+
+When the flow goes through the screens, it might suffer a headloss due to
+the obstruction and turbulunce created by the screens limited open area.
+This headloss can be neglected in the primary screening as the opening area
+remains big enough to not cause significant headloss. 
+To determine head loss and sizing of the secondary screening, the velocity upstream of the bars, 
 the hydraulic head loss, and the cross-sectional flow area are calculated. The design assumes 
 that flow depth is governed by the downstream hydraulic condition, and the channel width is then determined accordingly. 
-The calculations are based on the peak projected flow rate. Equations used are shown in \eqref{eq:screen_velocity} to 
-\eqref{eq:screen_width}.
+The calculations are based on the peak projected flow rate.
 
-\begin{align}
-v_{\text{upstream}} &= v_{\text{screen}} \cdot \frac{b}{b + w} \label{eq:screen_velocity} \\
-h_{\text{loss}} &= \frac{1}{2g C_d^2} \left( v_{\text{screen}}^2 - v_{\text{upstream}}^2 \right) \label{eq:screen_headloss} \\
-A_{\text{wet}} &= \frac{Q_{\text{peak}}}{v_{\text{upstream}}} \label{eq:screen_area} \\
-W_{\text{channel}} &= \frac{A_{\text{wet}}}{d + h_{\text{loss}}} \label{eq:screen_width}
-\end{align}
 
-The values used for this calculation are summarised in Table~\ref{tab:screen_inputs}, 
-and the design results are provided in Table~\ref{tab:screen_outputs}.
+The values used for this calculation are summarised in Table~\ref{tab:screen_inputs}.
+The flow velocity thorugh the screen $v_\text{screen}$ should 
+be between 0.3 and 1.0 $m/s$, the latter is selected and checked 
+against the other constrains of the design. The bar spacing or 
+opening size ($b$) 
+is taken as 0.01 m as the screen should remove 
+particles bigger than 10mm. The bar width $w$ is selected as 
+0.004 m based on commercial screens availability. The discharge 
+coefficient ($C_d$) is commonly taken as 0.84, although it might be 
+adjusted based on the screening specifications. Finally, the minimum 
+required downstream flow depth was determined to be 1.0 m based 
+on previous analysis.
 
 \begin{table}[h]
 \centering
@@ -343,6 +405,25 @@ $d$ & 1.0 m & Assumed downstream flow depth \\
 \hline
 \end{tabular}
 \end{table}
+
+From Equations \eqref{eq:screen_velocity} to 
+\eqref{eq:screen_width}
+ Table~\ref{tab:screen_outputs} the upstream velocity ($v_\text{upstream}$), 
+the headloss ($H_\text{loss}$), the upstream flow rate ($d_\text{upstream}$), 
+the wetted cross-sectional area ($A_\text{wet}$) and required channel width ($W_\text{channel}$) 
+were determined.
+The screens width is recommended to be between 0.6 and 1.1m. 
+The number of screens required ($N_\text{screens}$) is therefore calculated based on the 
+channel width divided by the maximum recomended screen width (1.1 m) and 
+rounding up to the nearest integer. Results are shown 
+in the Table \ref{tab:screen_outputs}.
+
+\begin{align}
+  v_{\text{upstream}} &= v_{\text{screen}} \cdot \frac{b}{b + w} \label{eq:screen_velocity} \\
+  h_{\text{loss}} &= \frac{1}{2g C_d^2} \left( v_{\text{screen}}^2 - v_{\text{upstream}}^2 \right) \label{eq:screen_headloss} \\
+  A_{\text{wet}} &= \frac{Q_{\text{peak}}}{v_{\text{upstream}}} \label{eq:screen_area} \\
+  W_{\text{channel}} &= \frac{A_{\text{wet}}}{d + h_{\text{loss}}} \label{eq:screen_width}
+  \end{align}
 
 \begin{table}[h]
 \centering
@@ -393,13 +474,24 @@ the upstream velocity at low flow was recalculated. The downstream control
 flow depth should not exceed the value shown in Table~\ref{tab:screen_outputs} to 
 maintain sufficient velocity during low flow conditions.
 
-\newpage
+\subsection{Equalisation basin}
+\label{sec:equalization_basin}
+
+The Equalization basins were calculated to control the downstreams peak flow, ensuring 
+an addecuated primary treatment achieving the targeted efficiency in the $BOD_5$ 
+removal. See Section \ref{sec:primary_treat} for more information related to its design.
 
 \section{Primary treatment}
 \label{sec:primary_treat}
+
+\subsection{Fecility Types}
+\label{sec:primary_facility_types}
+
+
 \newpage
 
 \section{Secondary treatment}
+\label{sec:secondary_trat}
 \newpage
 
 
@@ -462,23 +554,20 @@ From this, the ultimate BOD (L$_u$) is estimated using Eq. \eqref{eq:ultimate_bo
 equals to 5 days. Using Eq. \eqref{eq:mixing_zone_bod} the mixed BOD in the receiving stream is
 determined, and with Eq. \eqref{eq:mixing_zone_bod} mixed conditions downstream are calculated.
 The model then determines the time ($t_c$) at which the minimum DO level occurs using Eq. \eqref{eq:tc}. 
-Finally, the maximum deficit $D(t_c)$ is calculated using Eq. \eqref{eq:do_deficit}. Results are 
+Finally, the maximum deficit $D(t_c)$ is calculated using Eq. \eqref{eq:do_deficit}.
+The distance downstream at which the the maximum deficit/minimum saturation 
+is reached can also be calculated using Eq. \eqref{eq:distance_min_do} Results are 
 shown in Table \ref{tab:env_outputs}.
-
-
-
-Key equations used in this model are given below:
 
 \begin{align}
 DO_{\text{min, threshold}} &= 0.7 \cdot DO_{\text{saturation}} \label{eq:do_threshold} \\
 L_u &= \frac{L_w}{1 - e^{-k_1 t}} \label{eq:ultimate_bod} \\
 L_0 &= \frac{Q_w \cdot L_r + Q_e \cdot L_u}{Q_w + Q_e} \label{eq:mixing_zone_bod} \\
 t_c &= \frac{1}{k_r - k_d} \ln \left[ \frac{k_r}{k_d} \left(1 - D_0 \cdot \frac{k_r - k_d}{k_d L_0} \right) \right] \label{eq:tc} \\
-%x_c &= t_c \cdot 86400 \cdot v \label{eq:distance_min_do} \\
+x_c &= t_c \cdot 86400 \cdot v \label{eq:distance_min_do} \\
 D(t_c) &= \frac{k_d L_0}{k_r - k_d} \left(e^{-k_d t_c} - e^{-k_r t_c}\right) + D_0 e^{-k_r t_c} \label{eq:do_deficit}
 \end{align}
 
-%link the table below to the results!!!
 
 \begin{table}[h]
 \centering
@@ -490,22 +579,49 @@ D(t_c) &= \frac{k_d L_0}{k_r - k_d} \left(e^{-k_d t_c} - e^{-k_r t_c}\right) + D
 \hline
 $L_u$ & 
 % BEGIN py_Lu
-\texttt{[insert]} 
+29.27
 % END py_Lu
 mg/L & Ultimate BOD of effluent \\
-$L_0$ & \texttt{[insert]} mg/L & Mixed BOD in receiving stream \\
-$t_c$ & \texttt{[insert]} days & Time to reach minimum DO \\
-$x_c$ & \texttt{[insert]} m & Distance to minimum DO level \\
-$D(t_c)$ & \texttt{[insert]} mg/L & DO deficit at time $t_c$ \\
+$L_0$ & 
+% BEGIN py_L0
+7.42
+% END py_L0
+mg/L & Mixed BOD in receiving stream \\
+$t_c$ & 
+% BEGIN py_tc
+1.44
+% END py_tc
+ days & Time to reach minimum DO \\
+$x_c$ & 
+% BEGIN py_xc
+8698.64
+% END py_xc
+m & Distance to minimum DO level \\
+$D(t_c)$ & 
+% BEGIN py_D_tc
+2.56
+% END py_D_tc
+ mg/L & DO deficit at time $t_c$ \\
 \hline
 \end{tabular}
 \end{table}
 
 %discuss about the results!! 
 As shown in Table~\ref{tab:env_outputs}, 
-the dissolved oxygen deficit at its critical point is [insert result] mg/L, 
-which is [below/above] the regulatory limit of 2.55 mg/L. Therefore, the discharge 
-[complies/does not comply] with the receiving waterway's environmental standard.
+the dissolved oxygen deficit at its critical point is 
+% BEGIN py_D_tc2
+2.56
+% END py_D_tc2
+ mg/L. Substracting from the saturation $DO_\text{saturation}$ 
+ the critical deficit $D(t_c)$ the $DO_\text{calculated}$ is obtained, 
+ equal to 
+ % BEGIN py_DO_calc
+5.94
+ % END py_DO_calc
+ mg/L
+which is below the regulatory $DO_\text{min, threshold}$ of 
+5.95 mg/L. Therefore, the discharge 
+complies with the receiving waterway's environmental standard.
 
 \newpage
 
