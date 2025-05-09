@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.6)  9 MAY 2025 21:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.6)  9 MAY 2025 21:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -506,7 +506,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--219
 
 
 
-<../images/monash_logo.png, id=103, 903.375pt x 501.875pt>
+<../images/monash_logo.png, id=133, 903.375pt x 501.875pt>
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
 Package pdftex.def Info: ../images/monash_logo.png  used on input line 219.
@@ -521,7 +521,7 @@ Overfull \hbox (12.62996pt too wide) in paragraph at lines 233--242
  [][] 
  []
 
-<../images/peaking_factor.png, id=126, 677.53125pt x 346.29375pt>
+<../images/peaking_factor.png, id=156, 677.53125pt x 346.29375pt>
 File: ../images/peaking_factor.png Graphic file (type png)
 <use ../images/peaking_factor.png>
 Package pdftex.def Info: ../images/peaking_factor.png  used on input line 254.
@@ -607,7 +607,7 @@ File: ../images/monash_logo.png Graphic file (type png)
 Package pdftex.def Info: ../images/monash_logo.png  used on input line 307.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [3]
-<../images/boxPlot_BOD.png, id=161, 462.528pt x 346.896pt>
+<../images/boxPlot_BOD.png, id=191, 462.528pt x 346.896pt>
 File: ../images/boxPlot_BOD.png Graphic file (type png)
 <use ../images/boxPlot_BOD.png>
 Package pdftex.def Info: ../images/boxPlot_BOD.png  used on input line 319.
@@ -636,19 +636,35 @@ File: ../images/monash_logo.png Graphic file (type png)
 Package pdftex.def Info: ../images/monash_logo.png  used on input line 477.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [6]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 520.
+ (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 491.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 534.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [7]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 495.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 586.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 506--516
+
+File: ../images/monash_logo.png Graphic file (type png)
+<use ../images/monash_logo.png>
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 640.
+(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
+[9]
+
+File: ../images/monash_logo.png Graphic file (type png)
+<use ../images/monash_logo.png>
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 675.
+(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 686--696
 
  []
 
@@ -656,34 +672,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 506--516
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 569.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 749.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
-[9]
+[11]
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 626.
-(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
-[10]
-
-File: ../images/monash_logo.png Graphic file (type png)
-<use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 629.
-(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
-[11] (./document.bbl)
-
-File: ../images/monash_logo.png Graphic file (type png)
-<use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 634.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 806.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 [12]
 
+File: ../images/monash_logo.png Graphic file (type png)
+<use ../images/monash_logo.png>
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 809.
+(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
+[13] (./document.bbl)
+
+File: ../images/monash_logo.png Graphic file (type png)
+<use ../images/monash_logo.png>
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 814.
+(pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
+[14]
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 12.0pt
-(hyperref)                replaced by space on input line 647.
+(hyperref)                replaced by space on input line 827.
 
 (./melbourne_density.tex
-Underfull \hbox (badness 10000) in paragraph at lines 649--1
+Underfull \hbox (badness 10000) in paragraph at lines 829--1
 
  []
 
@@ -826,13 +842,13 @@ l.438 \end{longtable}
 
 File: ../images/monash_logo.png Graphic file (type png)
 <use ../images/monash_logo.png>
-Package pdftex.def Info: ../images/monash_logo.png  used on input line 656.
+Package pdftex.def Info: ../images/monash_logo.png  used on input line 836.
 (pdftex.def)             Requested size: 76.82031pt x 42.67912pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.656 \end{document}
+l.836 \end{document}
                      [11] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./document.aux)
@@ -841,21 +857,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: F776F215BE634606C5F06810B1679024;2843.
+(rerunfilecheck)             Checksum: B43A1DD387CC1DF39FD7D9E4E153B8F4;4153.
  ) 
 Here is how much of TeX's memory you used:
- 12902 strings out of 469608
- 204995 string characters out of 5474774
- 714269 words of memory out of 5000000
- 39496 multiletter control sequences out of 15000+600000
- 651220 words of font info for 79 fonts, out of 8000000 for 9000
+ 12984 strings out of 469608
+ 206229 string characters out of 5474774
+ 714697 words of memory out of 5000000
+ 39545 multiletter control sequences out of 15000+600000
+ 651735 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,16n,114p,379b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (26 pages, 342416 bytes).
+ 75i,16n,114p,406b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on document.pdf (28 pages, 362631 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 298 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 434 PDF objects out of 1000 (max. 8388607)
+ 368 compressed objects within 4 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 

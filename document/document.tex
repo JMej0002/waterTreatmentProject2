@@ -487,8 +487,188 @@ removal. See Section \ref{sec:primary_treat} for more information related to its
 \subsection{Fecility Types}
 \label{sec:primary_facility_types}
 
+\subsection{Primary Sedimentation}
+\label{sec:primary_Sedimentation_design}
 
-\newpage
+\subsubsection{Clarifier Sizing and Flow Equalization}
+
+To determine the volume of the primary clarifiers, the removal efficiencies required for suspended solids (SS) and biochemical oxygen demand (BOD) were referenced from standard design tables \cite{metcalf_2014_wastewater}. The detention times required for each are calculated using the following empirical formula:
+
+\begin{align}
+t &= \frac{R \cdot a}{1 - R \cdot b}
+\end{align}
+
+where \( R \) is the removal efficiency, and \( a \), \( b \) are parameters defined for SS and BOD. The greater of the two detention times governs the total volume design:
+
+\begin{align}
+V_{\text{clarifier}} &= Q_{\text{PHR}} \cdot t \cdot 3600
+\label{eq:clarifier_volume}
+\end{align}
+
+This volume is then checked against the acceptable detention time range for average dry weather flow (ADWF), \(1.5~\text{h} < t < 2.5~\text{h}\), and revised accordingly. The excess volume, if any, is allocated for equalization.
+
+Table~\ref{tab:clarifier_inputs} summarizes the input values used for this step.
+
+\begin{table}[h]
+\centering
+\caption{Input values for clarifier sizing}
+\label{tab:clarifier_inputs}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Parameter} & \textbf{Value} & \textbf{Units} \\
+\hline
+$Q_{\text{ADWF}}$ & \texttt{[insert]} & m$^3$/h \\
+$Q_{\text{PHR}}$ & \texttt{[insert]} & m$^3$/h \\
+$t_{\text{SS}}$ & \texttt{[insert]} & h \\
+$t_{\text{BOD}}$ & \texttt{[insert]} & h \\
+$t_{\text{max}}$ (ADWF) & 2.5 & h \\
+\hline
+\end{tabular}
+\end{table}
+
+The adjusted volume is then used to calculate surface area and surface loading rates (SLR) for both PHR and ADWF conditions:
+
+\begin{align}
+A &= \frac{V}{H} \\
+SLR &= \frac{Q}{A} \cdot \frac{1}{3600 \cdot 24}
+\end{align}
+
+Following this, the clarifier diameter is calculated based on the required volume and depth:
+
+\begin{align}
+D &= \sqrt{ \frac{4V}{\pi H} }
+\end{align}
+
+\subsubsection{Weir Loading Rate (WLR) Assessment}
+
+The weir length for circular clarifiers with two-sided launders is:
+
+\begin{align}
+L_w &= 2 \cdot \pi \cdot (D - 2d_{\text{offset}})
+\end{align}
+
+The WLR is then calculated as:
+
+\begin{align}
+WLR &= \frac{Q}{L_w \cdot 86400}
+\end{align}
+
+The critical design case assumes \(n-1\) clarifiers are in operation. If the WLR exceeds the design limit (500 m$^3$/m/day), tank number or dimensions are adjusted iteratively.
+
+\subsubsection{Final Configuration and Results}
+
+After iterative trials, the final clarifier configuration satisfies all the guidelines. Table~\ref{tab:clarifier_results} summarizes the resulting design parameters.
+
+\begin{table}[h]
+\centering
+\caption{Final clarifier design parameters}
+\label{tab:clarifier_results}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Parameter} & \textbf{Result} & \textbf{Unit} \\
+\hline
+Number of Clarifiers & \texttt{[insert]} & -- \\
+Clarifier Diameter & \texttt{[insert]} & m \\
+Sidewater Depth & \texttt{[insert]} & m \\
+Surface Area (total) & \texttt{[insert]} & m$^2$ \\
+SLR (ADWF) & \texttt{[insert]} & m$^3$/m$^2$/day \\
+SLR (PHR) & \texttt{[insert]} & m$^3$/m$^2$/day \\
+WLR (critical) & \texttt{[insert]} & m$^3$/m/day \\
+Equalization Tank Volume & \texttt{[insert]} & m$^3$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{V-Notch and Launder Design}
+\label{sec:vnotch_design}
+
+To ensure stable discharge from the primary clarifiers and prevent hydraulic overloading, a V-notch weir system was designed in accordance with standard hydraulic principles. The number of notches is determined based on the critical launder length and a center-to-center spacing of 0.3 m between notches:
+
+\begin{align}
+N_{\text{notch}} &= \left\lceil \frac{L_{\text{launder}}}{s} \right\rceil
+\end{align}
+
+where \( s = 0.3 \) m is the spacing. The total number of V-notches in the system is then:
+
+\begin{align}
+N_{\text{notch, total}} = N_{\text{notch}} \times N_{\text{clarifiers}}
+\end{align}
+
+The flow per notch is calculated based on the design peak hourly flow:
+
+\begin{align}
+Q_{\text{notch}} &= \frac{Q_{\text{PHR}}}{N_{\text{notch, total}}}
+\end{align}
+
+The maximum height of water over each V-notch is determined using the general formula for triangular weirs:
+
+\begin{align}
+h &= \left( \frac{Q_{\text{notch}}}{\frac{8}{15} C_d \sqrt{2g} \tan(\theta/2)} \right)^{2/5}
+\label{eq:vnotch_height}
+\end{align}
+
+where \( C_d = 0.58 \), \( g = 9.81~\text{m/s}^2 \), and \( \theta = 90^\circ \). A 15\% safety margin is applied to determine the actual design depth above the notch:
+
+\begin{align}
+y &= 1.15 \cdot h
+\end{align}
+
+The top width of the V-notch opening is twice the water depth:
+
+\begin{align}
+w_{\text{notch}} = 2y
+\end{align}
+
+\subsubsection{Launder Flow Conditions}
+
+To assess flow behavior in the launder channel, the discharge per unit length of the launder is:
+
+\begin{align}
+q &= WLR_{\text{max}} \cdot \frac{1}{3600 \cdot 24} \cdot n_{\text{sides}}
+\end{align}
+
+The maximum water depth in the launder is calculated from the critical section at the discharge point:
+
+\begin{align}
+Y_c &= \left( \frac{q^2 \cdot L^2}{4 g w^2} \right)^{1/3}
+\end{align}
+
+The final maximum water depth is obtained using the equation for uniform flow depth in a launder with one outlet point at distance \( x \):
+
+\begin{align}
+H &= \sqrt{Y_c^2 + \frac{2 q^2 x^2}{g w^2 Y_c}}
+\end{align}
+
+A 50\% safety factor is applied to this maximum depth for design purposes:
+
+\begin{align}
+H_{\text{final}} = 1.5 \cdot H
+\end{align}
+
+\subsubsection*{Summary of V-Notch and Launder Design Results}
+
+\begin{table}[h]
+\centering
+\caption{V-notch and launder design summary}
+\label{tab:vnotch_results}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Parameter} & \textbf{Result} & \textbf{Units} \\
+\hline
+Number of notches per clarifier & \texttt{[insert]} & -- \\
+Total number of notches & \texttt{[insert]} & -- \\
+Flow per notch & \texttt{[insert]} & m$^3$/s \\
+Max. height over notch $h$ & \texttt{[insert]} & m \\
+Water depth $y$ (with 15\% SF) & \texttt{[insert]} & m \\
+Top width of V-notch $w_{\text{notch}}$ & \texttt{[insert]} & m \\
+Discharge per unit length $q$ & \texttt{[insert]} & m$^3$/m/s \\
+Critical height $Y_c$ & \texttt{[insert]} & m \\
+Max. water depth $H$ & \texttt{[insert]} & m \\
+Final design depth $H_{\text{final}}$ (with 50\% SF) & \texttt{[insert]} & m \\
+\hline
+\end{tabular}
+\end{table}
+
 
 \section{Secondary treatment}
 \label{sec:secondary_trat}

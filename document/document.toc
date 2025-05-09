@@ -10,7 +10,13 @@
 \contentsline {subsection}{\numberline {2.3}Equalisation basin}{7}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Primary treatment}{7}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Fecility Types}{7}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Secondary treatment}{8}{section.4}%
-\contentsline {section}{\numberline {5}Environmental Impact Assessment}{9}{section.5}%
-\contentsline {section}{\numberline {6}summary}{11}{section.6}%
+\contentsline {subsection}{\numberline {3.2}Primary Sedimentation}{7}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Clarifier Sizing and Flow Equalization}{7}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Weir Loading Rate (WLR) Assessment}{8}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Final Configuration and Results}{8}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}V-Notch and Launder Design}{9}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Launder Flow Conditions}{9}{subsubsection.3.3.1}%
+\contentsline {section}{\numberline {4}Secondary treatment}{10}{section.4}%
+\contentsline {section}{\numberline {5}Environmental Impact Assessment}{11}{section.5}%
+\contentsline {section}{\numberline {6}summary}{13}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
