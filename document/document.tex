@@ -24,6 +24,9 @@
 \usepackage{titlesec}
 \usepackage{longtable}
 \usepackage{booktabs}  % Optional: cleaner lines
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
 \urlstyle{same}
 
@@ -33,6 +36,7 @@
 
 % Redefine section command for appendices
 \newcommand{\appendixsection}[2]{%
+  \clearpage
   \refstepcounter{section}%
   \section*{Appendix \thesection\quad #1}%
   \addcontentsline{toc}{section}{Appendix \thesection\quad #1}%
@@ -479,7 +483,8 @@ maintain sufficient velocity during low flow conditions.
 
 The Equalization basins were calculated to control the downstreams peak flow, ensuring 
 an addecuated primary treatment achieving the targeted efficiency in the $BOD_5$ 
-removal. See Section \ref{sec:primary_treat} for more information related to its design.
+removal. In Section \ref{sec:primary_treat}, is explained how the volume of the equalization 
+basin was obtained and in Table \ref{tab:clarifier_inputs} the required volume () is shown.
 
 \section{Primary treatment}
 \label{sec:primary_treat}
@@ -492,7 +497,7 @@ removal. See Section \ref{sec:primary_treat} for more information related to its
 
 \subsubsection{Clarifier Sizing and Flow Equalization}
 
-To determine the volume of the primary clarifiers, the removal efficiencies required for suspended solids (SS) 
+To determine the volume of the primary clarifiers, the removal efficiencies required for suspended solids (TSS) 
 and biochemical oxygen demand (BOD) were referenced from standard design tables \cite{metcalf_2014_wastewater}. 
 The detention times required for each are calculated using the following empirical formula:
 
@@ -504,7 +509,9 @@ t &= \frac{E_r \cdot a}{1 - E_r \cdot b}
 where \( E_r \) is the removal efficiency, and \( a \), \( b \) are parameters defined for SST and BOD, see Table \ref{tab:detention_time_parameters}. 
 The greater of the two detention times governs the total volume design. $E_r$ was determined using Eq.\eqref{eq:efficiency}, based on the 
 inflow $BOD$ and the eflow one that was found to comply with the environmental requirements, see Sections \ref{sec:secondary_trat} 
-and \ref{sec:env_impact}. 
+and \ref{sec:env_impact}. The input values as well as the obtained time are shown in the Table \ref{tab:detention_time_parameters}. 
+The retention time is checked against typical values, which are: 
+\(1.5~\text{h} < t < 2.5~\text{h}\), \cite{metcalf_2014_wastewater}.
 
 \begin{align}
   E_{\text{r}} = \frac{BOD_{5,\text{influent}} - BOD_{5,\text{effluent}}}{BOD_{5,\text{influent}}} \times 100
@@ -513,15 +520,15 @@ and \ref{sec:env_impact}.
 
 As there is no environmental requirement for the $TSS$ content on the waterway discharge, the required 
 efficiency can not be calculated. Instead, the efficiency and residence time are calculated 
-based on the $BOD_5$ content (Eq.\eqref{eq:efficiency}) 
-and for the $TSS$ content, the oposite procedure was implemented; based 
-on the obtained residence time, the subsequent efficiency is determined. 
+to comply with the $BOD_5$ content (Eq.\eqref{eq:efficiency}). The same detention time 
+is assumed for the $TSS$ and the efficiency for the solids removal is then calcualed using 
+the Eq.\eqref{eq:efficiency} with the correponding parameters a and b from 
+Table \ref{tab:detention_time_parameters}.
 
 \begin{align}
-V_{\text{clarifier}} &= Q_{\text{PHR}} \cdot t \cdot 3600
+V_{\text{clarifier}}^{\text{calc}} &= Q_{\text{peak}} \cdot t \cdot 3600
 \label{eq:clarifier_volume}
 \end{align}
-
 \begin{table}[h]
   \centering
   \caption{Standard parameters for detention time \cite{metcalf_2014_wastewater}.}
@@ -536,11 +543,15 @@ V_{\text{clarifier}} &= Q_{\text{PHR}} \cdot t \cdot 3600
   \end{tabular}
 \end{table}
 
-This volume (Eq.\eqref{eq:clarifier_volume}) is then checked against the acceptable detention time range for 
-average flow, 
-\(1.5~\text{h} < t < 2.5~\text{h}\), and revised accordingly. 
-The excess volume, if any, would be allocated for equalization.
-Table~\ref{tab:clarifier_inputs} summarizes the input values used for this step.
+The clarifier calculated volume ($V_{\text{clarifier}}^{\text{calc}}$) is determiSned using Eq.\eqref{eq:clarifier_volume} replacing the time $t$ with 
+$t_{\text{BOD}}$ shown in Table \ref{tab:clarifier_inputs}. In addition, replacing the maximum and 
+minimum typical retention times (see Appendix \ref{app:primary_criteria}), the maximum and minimum
+primary sedimentation tank volume ($V_{\text{clarifier}}^{\text{min}}$ and $V_{\text{clarifier}}^{\text{max}}$) can be determine. \\
+If $V_{\text{clarifier}}^{\text{calc}}$  is greater than $V_{\text{clarifier}}^{\text{max}}$, then the excesive volume 
+is used for the equalization basin ($V_{\text{equilization}}^{\text{req}}$) and the final clarifier 
+volume ($V_{\text{clarifier}}^{\text{final}}$) will be equal to 
+$V_{\text{clarifier}}^{\text{max}}$.
+
 
 \begin{table}[h]
 \centering
@@ -565,21 +576,51 @@ $BOD_{5,\text{influent}}$ &
 370.08
 % END py_Inflow_BOD
 & mg/L & Inflow $BOD_5$, see Section \ref{sec:pollutant_load}\\
+$BOD_{5,\text{efluent}}$ & 
+% BEGIN py_Eflow_BOD
+250.0
+% END py_Eflow_BOD
+& mg/L & Found $BOD_5$ that complies with environmental impact, see Section \ref{sec:secondary_trat}\\
+$E_{\text{BOD}}$ & 
+% BEGIN py_EfficiencyPrimary
+32.43
+% END py_EfficiencyPrimary
+& \% & $BOD_5$ Efficiency removal, obtained with Eq.\eqref{eq:efficiency} \\
 $t_{\text{BOD}}$ & 
 % BEGIN py_t_BOD
-\texttt{[insert]} 
+1.662
 % END py_t_BOD
 & h & Optained with Eq.\eqref{eq:time_of_residency}\\
 $t_{\text{TSS}}$ & 
 % BEGIN py_t_TSS
-\texttt{[insert]} 
+1.662
 % END py_t_TSS
-& h \\
+& h & Same as $t_{\text{BOD}}$\\
+$E_{\text{TSS}}$ & 
+% BEGIN py_TSS_efficiency
+54.01
+% END py_TSS_efficiency
+& \% & Solved from Eq.\eqref{eq:efficiency}, replacing $t_{\text{TSS}}$\\
+$V_{\text{clarifier}}^{\text{calc}}$ & 
+% BEGIN py_calculatedSedimentationBasinVolume
+12404.69
+% END py_calculatedSedimentationBasinVolume
+& m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}\\
+$V_{\text{clarifier}}^{\text{max}}$ &
+% BEGIN py_maxSedimentationBasinVolume
+10513.62
+% END py_maxSedimentationBasinVolume
+& m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}, using max. time residency.\\
+$V_{\text{equilization}}^{\text{req}}$ &
+% BEGIN py_RequiredEqualizationTankVolume
+1891.07
+% END py_RequiredEqualizationTankVolume
+& m$^3$ & Difference between $V_{\text{clarifier}}^{\text{max}}$ and $V_{\text{clarifier}}^{\text{calc}}$\\
 \hline
 \end{tabular}
 \end{table}
 
-The adjusted volume is then used to calculate surface area and surface loading rates (SLR) for both PHR and ADWF conditions:
+Tha sedimentation basin height is then selected based on the typical 
 
 \begin{align}
 A &= \frac{V}{H} \\
@@ -1015,6 +1056,41 @@ Table of Melbourne suburbs with their area and popluation \cite{australianbureau
 \input{melbourne_density.tex}
 
 
+\appendixsection{Design criteria for primary sedimentation basins}{app:primary_criteria}
+
+\begin{table}[h]
+\caption{Typical design criteria for primary sedimentation basins \cite{metcalf_2014_wastewater}}
+\label{tab:primary_sed_basin_criteria}
+\centering
+\begin{tabularx}{\textwidth}{@{} l l l @{}}
+\toprule
+\textbf{Parameter} & \textbf{Range of values} & \textbf{Typical/comment} \\
+\midrule
+\multicolumn{3}{l}{\textit{General}} \\
+Overflow rate (average flow) & 30 to 50 m\textsuperscript{3}/d·m\textsuperscript{2} & 40 m\textsuperscript{3}/d·m\textsuperscript{2} \\
+Overflow rate (peak flow)    & 60 to 120 m\textsuperscript{3}/d·m\textsuperscript{2} & 100 m\textsuperscript{3}/d·m\textsuperscript{2} \\
+Detention time (average flow) & 1.5 to 2.5 h & 2.0 h \\
+Flow velocity & 0.020 to 0.025 m/s & -- \\
+Weir loading rate & 125 to 500 m\textsuperscript{3}/d·m & 250 m\textsuperscript{3}/d·m \\
+Sludge hoppers & 1.7 vertical to 1 horizontal & Minimum; bottom width $<$ 0.6 m \\
+Geotechnical & -- & Consider potential for flotation when tank is empty \\
+\addlinespace
+\multicolumn{3}{l}{\textit{Circular tanks}} \\
+\textit{Dimensions} & & \\
+\quad Diameter & 3 to 100 m & 12 to 45 m \\
+\quad \textit{Standard} & 9 to 45 m & In 1.5 m increments \\
+\quad Side water depth & 3 to 5 m & 4.3 m \\
+\quad Floor slope & 1 vertical to 12 horizontal & -- \\
+\addlinespace
+Splitter box inlet velocity & $<$ 0.3 m/s & At peak flow \\
+\addlinespace
+\textit{Inlet configuration} & & \\
+\quad Detention time & 20 minutes & Feedwell \\
+\quad Submergence & 30 to 75\% of depth & Size to prevent scour \\
+\quad EDI detention time & 8 to 10 s & -- \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \label{LastPageAppendix}
 
