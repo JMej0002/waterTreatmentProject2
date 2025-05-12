@@ -1,6 +1,8 @@
 %Project settings
 
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\setmainfont{Arial}
 \usepackage{graphicx}
 \usepackage[
   top=2.5cm,
@@ -11,7 +13,7 @@
 ]{geometry}
 \setlength{\headheight}{2.0cm}
 \setlength{\headsep}{0.5cm}
-\usepackage{times}
+%\usepackage{times}
 \usepackage{sectsty}
 \usepackage{titlesec}
 \usepackage{ragged2e}
@@ -28,6 +30,7 @@
 \usepackage{siunitx}
 \usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
+
 \urlstyle{same}
 
 
@@ -43,19 +46,13 @@
   \label{#2}%
 }
 
-
-
-
-
-%\usepackage{showframe} %this line to show document frames
-
-
 \justifying
 
 % Section formatting: TNR, 16pt, all caps
 \titleformat{\section}
-  {\normalfont\fontsize{16}{18}\bfseries\MakeUppercase}
+  {\normalfont\Large\bfseries\MakeUppercase}
   {\thesection}{1em}{}
+
 
 % Optional paragraph environment
 \newenvironment{normaltext}
@@ -451,7 +448,7 @@ $h_{\text{loss}}$ &
 & Head loss across the screen \\
 $d_{\text{upstream}}$ & 
 % BEGIN py_flowDepthUp
-0.74
+1.04
 % END py_flowDepthUp
 m & Flow depth upstream \\
 $A_{\text{wet}}$ & 
@@ -461,12 +458,12 @@ $A_{\text{wet}}$ &
 m$^2$ & Wetted cross-sectional area \\
 $W_{\text{channel}}$ & 
 % BEGIN py_channelWidth
-4.0
+2.8
 % END py_channelWidth
 m & Required screen channel width \\
 $N_{\text{screens}}$ & 
 % BEGIN py_noScreensrequired
-4
+3
 % END py_noScreensrequired
 & Number of screens required \\
 \hline
@@ -543,9 +540,10 @@ V_{\text{clarifier}}^{\text{calc}} &= Q_{\text{peak}} \cdot t \cdot 3600
   \end{tabular}
 \end{table}
 
-The clarifier calculated volume ($V_{\text{clarifier}}^{\text{calc}}$) is determiSned using Eq.\eqref{eq:clarifier_volume} replacing the time $t$ with 
-$t_{\text{BOD}}$ shown in Table \ref{tab:clarifier_inputs}. In addition, replacing the maximum and 
-minimum typical retention times (see Appendix \ref{app:primary_criteria}), the maximum and minimum
+The clarifier calculated volume ($V_{\text{clarifier}}^{\text{calc}}$) is determiSned using Eq.\eqref{eq:clarifier_volume} 
+replacing the time $t$ with 
+$t_{\text{BOD}}$ shown in Table~\ref{tab:clarifier_inputs}. In addition, replacing the maximum and 
+minimum typical retention times (see Appendix~\ref{app:primary_criteria}), the maximum and minimum
 primary sedimentation tank volume ($V_{\text{clarifier}}^{\text{min}}$ and $V_{\text{clarifier}}^{\text{max}}$) can be determine. \\
 If $V_{\text{clarifier}}^{\text{calc}}$  is greater than $V_{\text{clarifier}}^{\text{max}}$, then the excesive volume 
 is used for the equalization basin ($V_{\text{equilization}}^{\text{req}}$) and the final clarifier 
@@ -578,32 +576,32 @@ $BOD_{5,\text{influent}}$ &
 & mg/L & Inflow $BOD_5$, see Section \ref{sec:pollutant_load}\\
 $BOD_{5,\text{efluent}}$ & 
 % BEGIN py_Eflow_BOD
-250.0
+259.26
 % END py_Eflow_BOD
 & mg/L & Found $BOD_5$ that complies with environmental impact, see Section \ref{sec:secondary_trat}\\
 $E_{\text{BOD}}$ & 
 % BEGIN py_EfficiencyPrimary
-32.43
+30.0
 % END py_EfficiencyPrimary
 & \% & $BOD_5$ Efficiency removal, obtained with Eq.\eqref{eq:efficiency} \\
 $t_{\text{BOD}}$ & 
 % BEGIN py_t_BOD
-1.662
+1.35
 % END py_t_BOD
 & h & Optained with Eq.\eqref{eq:time_of_residency}\\
 $t_{\text{TSS}}$ & 
 % BEGIN py_t_TSS
-1.662
+1.35
 % END py_t_TSS
 & h & Same as $t_{\text{BOD}}$\\
 $E_{\text{TSS}}$ & 
 % BEGIN py_TSS_efficiency
-54.01
+51.14
 % END py_TSS_efficiency
 & \% & Solved from Eq.\eqref{eq:efficiency}, replacing $t_{\text{TSS}}$\\
 $V_{\text{clarifier}}^{\text{calc}}$ & 
 % BEGIN py_calculatedSedimentationBasinVolume
-12404.69
+13589.15
 % END py_calculatedSedimentationBasinVolume
 & m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}\\
 $V_{\text{clarifier}}^{\text{max}}$ &
@@ -613,14 +611,18 @@ $V_{\text{clarifier}}^{\text{max}}$ &
 & m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}, using max. time residency.\\
 $V_{\text{equilization}}^{\text{req}}$ &
 % BEGIN py_RequiredEqualizationTankVolume
-1891.07
+3075.53
 % END py_RequiredEqualizationTankVolume
 & m$^3$ & Difference between $V_{\text{clarifier}}^{\text{max}}$ and $V_{\text{clarifier}}^{\text{calc}}$\\
 \hline
 \end{tabular}
 \end{table}
 
-Tha sedimentation basin height is then selected based on the typical 
+Tha sedimentation basin height is then selected based on the typical design criteria 
+(see Appendix~\ref{app:primary_criteria}). The 5 m height upper limit is selected and 0.5 m
+of 
+
+
 
 \begin{align}
 A &= \frac{V}{H} \\
@@ -923,7 +925,7 @@ input values for the \textit{Streeter-Phelps model} are shown.\\
 The effluent discharge was evaluated based on the project adjusted 
 peak flow rate (
 % BEGIN py_adjustedQ
-135766.42
+138626.63
 % END py_adjustedQ
 m$^3$/day), calculated in Section \ref{sec:primary_treat} and a maximum BOD$_5$ of 20 mg/L (L$_w$) 
 \textbf{REFERENCE TBD}. 
@@ -948,7 +950,7 @@ m$^3$/day), calculated in Section \ref{sec:primary_treat} and a maximum BOD$_5$ 
   $Q_w$ & 475468 $m^3/day$ & Waterway flowrate\\
   $Q_e$ &
 % BEGIN py_adjustedQ2
-135766.42
+138626.63
 % END py_adjustedQ2
   $m^3/day$ & Adjusted flowrate\\
   \hline
@@ -990,7 +992,7 @@ $L_u$ &
 mg/L & Ultimate BOD of effluent \\
 $L_0$ & 
 % BEGIN py_L0
-7.15
+7.24
 % END py_L0
 mg/L & Mixed BOD in receiving stream \\
 $t_c$ & 
@@ -1000,12 +1002,12 @@ $t_c$ &
  days & Time to reach minimum DO \\
 $x_c$ & 
 % BEGIN py_xc
-8648.18
+8665.43
 % END py_xc
 m & Distance to minimum DO level \\
 $D(t_c)$ & 
 % BEGIN py_D_tc
-2.48
+2.5
 % END py_D_tc
  mg/L & DO deficit at time $t_c$ \\
 \hline
@@ -1016,13 +1018,13 @@ $D(t_c)$ &
 As shown in Table~\ref{tab:env_outputs}, 
 the dissolved oxygen deficit at its critical point is 
 % BEGIN py_D_tc2
-2.48
+2.5
 % END py_D_tc2
  mg/L. Substracting from the saturation $DO_\text{saturation}$ 
  the critical deficit $D(t_c)$ the $DO_\text{calculated}$ is obtained, 
  equal to 
  % BEGIN py_DO_calc
-6.02
+6.0
  % END py_DO_calc
  mg/L
 which is below the regulatory $DO_\text{min, threshold}$ of 
@@ -1059,7 +1061,7 @@ Table of Melbourne suburbs with their area and popluation \cite{australianbureau
 \appendixsection{Design criteria for primary sedimentation basins}{app:primary_criteria}
 
 \begin{table}[h]
-\caption{Typical design criteria for primary sedimentation basins \cite{metcalf_2014_wastewater}}
+\caption{Typical design criteria for primary sedimentation basins \cite{davis2010water}}
 \label{tab:primary_sed_basin_criteria}
 \centering
 \begin{tabularx}{\textwidth}{@{} l l l @{}}
