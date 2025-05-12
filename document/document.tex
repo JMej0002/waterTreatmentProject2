@@ -154,8 +154,8 @@ on the flow stream to protect downstream process equipment and
 increse its reliability \cite{metcalf_2014_wastewater}.
 The next step is the \textit{Primary Sedimentation - Section \ref{sec:primary_treat}}, 
 designed to remove the settleted solids and floating material. 
-This process can reach removals ratios of 50\% to 70\% of the 
-suspended solids (\textit{SST}) and 25\% to 40\% of the BOD.
+This process can reach removals ratios of 50\% to 70\% of the total 
+suspended solids (\textit{TSS}) and 25\% to 40\% of the BOD.
 It is followed by the \textit{Secondary Treatment - Section \ref{sec:secondary_trat}}, 
 in which sludge and activation systems are used to remove the
 soluble, coloidal and particulate suspended organic substances 
@@ -235,7 +235,7 @@ rate estimation. In the Table \ref{tab:current_rates} the current flow rates obt
   $P_{\text{average}}$ & $A_{\text{average}}$ (km$^2$) & $A_{\text{average}} / P_{\text{average}}$ & $A_{\text{estimated}}$ (km$^2$) & Ratio (m$^3$/ha/day) & $Q_{\text{infiltration}}$ (m$^3$/day) \\
   \hline
 % BEGIN py_areaContent
-  11200.0 & 18.65 & 0.0017 & 5.66 & 0.2 & 11323.41 \\
+  11200.0 & 18.65 & 0.0017 & 566.17 & 0.2 & 11323.41 \\
 % END py_areaContent
   \hline
   \end{tabular}
@@ -263,7 +263,7 @@ The maximum flow rates can be estimated using the maximum peaking factor
 which from the Figure \ref{fig:peaking_factor} is equal to 1.9. The current flow rates shown in the Table \ref{tab:current_rates}
 are multiplied by this factor, and results are presented in Table \ref{tab:projected_rates}.
 
-\subsection*{Population Growth and Future Design Considerations}
+\subsection{Population Growth and Future Design Considerations}
 
 To account for future demand on the wastewater treatment plant, the design incorporates a projected population 
 growth. Based on previous analysis, it was determined that 
@@ -447,7 +447,7 @@ $h_{\text{loss}}$ &
 & Head loss across the screen \\
 $d_{\text{upstream}}$ & 
 % BEGIN py_flowDepthUp
-1.04
+0.74
 % END py_flowDepthUp
 m & Flow depth upstream \\
 $A_{\text{wet}}$ & 
@@ -457,12 +457,12 @@ $A_{\text{wet}}$ &
 m$^2$ & Wetted cross-sectional area \\
 $W_{\text{channel}}$ & 
 % BEGIN py_channelWidth
-2.8
+4.0
 % END py_channelWidth
 m & Required screen channel width \\
 $N_{\text{screens}}$ & 
 % BEGIN py_noScreensrequired
-3
+4
 % END py_noScreensrequired
 & Number of screens required \\
 \hline
@@ -492,36 +492,89 @@ removal. See Section \ref{sec:primary_treat} for more information related to its
 
 \subsubsection{Clarifier Sizing and Flow Equalization}
 
-To determine the volume of the primary clarifiers, the removal efficiencies required for suspended solids (SS) and biochemical oxygen demand (BOD) were referenced from standard design tables \cite{metcalf_2014_wastewater}. The detention times required for each are calculated using the following empirical formula:
+To determine the volume of the primary clarifiers, the removal efficiencies required for suspended solids (SS) 
+and biochemical oxygen demand (BOD) were referenced from standard design tables \cite{metcalf_2014_wastewater}. 
+The detention times required for each are calculated using the following empirical formula:
 
 \begin{align}
-t &= \frac{R \cdot a}{1 - R \cdot b}
+t &= \frac{E_r \cdot a}{1 - E_r \cdot b}
+\label{eq:time_of_residency}
 \end{align}
 
-where \( R \) is the removal efficiency, and \( a \), \( b \) are parameters defined for SS and BOD. The greater of the two detention times governs the total volume design:
+where \( E_r \) is the removal efficiency, and \( a \), \( b \) are parameters defined for SST and BOD, see Table \ref{tab:detention_time_parameters}. 
+The greater of the two detention times governs the total volume design. $E_r$ was determined using Eq.\eqref{eq:efficiency}, based on the 
+inflow $BOD$ and the eflow one that was found to comply with the environmental requirements, see Sections \ref{sec:secondary_trat} 
+and \ref{sec:env_impact}. 
+
+\begin{align}
+  E_{\text{r}} = \frac{BOD_{5,\text{influent}} - BOD_{5,\text{effluent}}}{BOD_{5,\text{influent}}} \times 100
+  \label{eq:efficiency}
+\end{align}
+
+As there is no environmental requirement for the $TSS$ content on the waterway discharge, the required 
+efficiency can not be calculated. Instead, the efficiency and residence time are calculated 
+based on the $BOD_5$ content (Eq.\eqref{eq:efficiency}) 
+and for the $TSS$ content, the oposite procedure was implemented; based 
+on the obtained residence time, the subsequent efficiency is determined. 
 
 \begin{align}
 V_{\text{clarifier}} &= Q_{\text{PHR}} \cdot t \cdot 3600
 \label{eq:clarifier_volume}
 \end{align}
 
-This volume is then checked against the acceptable detention time range for average dry weather flow (ADWF), \(1.5~\text{h} < t < 2.5~\text{h}\), and revised accordingly. The excess volume, if any, is allocated for equalization.
+\begin{table}[h]
+  \centering
+  \caption{Standard parameters for detention time \cite{metcalf_2014_wastewater}.}
+  \label{tab:detention_time_parameters}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Constituent} & \textbf{a} & \textbf{b}\\
+    \hline
+    $BOD_5$ & 0.018 & 0.020\\
+    $TSS$ & 0.0075 & 0.014\\
+    \hline
+  \end{tabular}
+\end{table}
 
+This volume (Eq.\eqref{eq:clarifier_volume}) is then checked against the acceptable detention time range for 
+average flow, 
+\(1.5~\text{h} < t < 2.5~\text{h}\), and revised accordingly. 
+The excess volume, if any, would be allocated for equalization.
 Table~\ref{tab:clarifier_inputs} summarizes the input values used for this step.
 
 \begin{table}[h]
 \centering
 \caption{Input values for clarifier sizing}
 \label{tab:clarifier_inputs}
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|l|}
 \hline
-\textbf{Parameter} & \textbf{Value} & \textbf{Units} \\
+\textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Description}\\
 \hline
-$Q_{\text{ADWF}}$ & \texttt{[insert]} & m$^3$/h \\
-$Q_{\text{PHR}}$ & \texttt{[insert]} & m$^3$/h \\
-$t_{\text{SS}}$ & \texttt{[insert]} & h \\
-$t_{\text{BOD}}$ & \texttt{[insert]} & h \\
-$t_{\text{max}}$ (ADWF) & 2.5 & h \\
+$Q_{\text{avg}}$ & 
+% BEGIN py_Q_avg
+4205.45
+% END py_Q_avg
+& m$^3$/h &  Average projected flow rate, see Table \ref{tab:projected_rates}\\
+$Q_{\text{peak}}$ & 
+% BEGIN py_Q_peak
+7465.79
+% END py_Q_peak
+& m$^3$/h & Peak projected flow rate, see Table \ref{tab:projected_rates}\\
+$BOD_{5,\text{influent}}$ & 
+% BEGIN py_Inflow_BOD
+370.08
+% END py_Inflow_BOD
+& mg/L & Inflow $BOD_5$, see Section \ref{sec:pollutant_load}\\
+$t_{\text{BOD}}$ & 
+% BEGIN py_t_BOD
+\texttt{[insert]} 
+% END py_t_BOD
+& h & Optained with Eq.\eqref{eq:time_of_residency}\\
+$t_{\text{TSS}}$ & 
+% BEGIN py_t_TSS
+\texttt{[insert]} 
+% END py_t_TSS
+& h \\
 \hline
 \end{tabular}
 \end{table}
@@ -829,7 +882,7 @@ input values for the \textit{Streeter-Phelps model} are shown.\\
 The effluent discharge was evaluated based on the project adjusted 
 peak flow rate (
 % BEGIN py_adjustedQ
-80.29
+135766.42
 % END py_adjustedQ
 m$^3$/day), calculated in Section \ref{sec:primary_treat} and a maximum BOD$_5$ of 20 mg/L (L$_w$) 
 \textbf{REFERENCE TBD}. 
@@ -854,7 +907,7 @@ m$^3$/day), calculated in Section \ref{sec:primary_treat} and a maximum BOD$_5$ 
   $Q_w$ & 475468 $m^3/day$ & Waterway flowrate\\
   $Q_e$ &
 % BEGIN py_adjustedQ2
-80.29
+135766.42
 % END py_adjustedQ2
   $m^3/day$ & Adjusted flowrate\\
   \hline
@@ -891,27 +944,27 @@ D(t_c) &= \frac{k_d L_0}{k_r - k_d} \left(e^{-k_d t_c} - e^{-k_r t_c}\right) + D
 \hline
 $L_u$ & 
 % BEGIN py_Lu
-29.27
+20.49
 % END py_Lu
 mg/L & Ultimate BOD of effluent \\
 $L_0$ & 
 % BEGIN py_L0
-7.42
+7.15
 % END py_L0
 mg/L & Mixed BOD in receiving stream \\
 $t_c$ & 
 % BEGIN py_tc
-1.44
+1.43
 % END py_tc
  days & Time to reach minimum DO \\
 $x_c$ & 
 % BEGIN py_xc
-8698.64
+8648.18
 % END py_xc
 m & Distance to minimum DO level \\
 $D(t_c)$ & 
 % BEGIN py_D_tc
-2.56
+2.48
 % END py_D_tc
  mg/L & DO deficit at time $t_c$ \\
 \hline
@@ -922,13 +975,13 @@ $D(t_c)$ &
 As shown in Table~\ref{tab:env_outputs}, 
 the dissolved oxygen deficit at its critical point is 
 % BEGIN py_D_tc2
-2.56
+2.48
 % END py_D_tc2
  mg/L. Substracting from the saturation $DO_\text{saturation}$ 
  the critical deficit $D(t_c)$ the $DO_\text{calculated}$ is obtained, 
  equal to 
  % BEGIN py_DO_calc
-5.94
+6.02
  % END py_DO_calc
  mg/L
 which is below the regulatory $DO_\text{min, threshold}$ of 
