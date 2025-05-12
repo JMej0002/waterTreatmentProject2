@@ -231,7 +231,7 @@ rate estimation. In the Table \ref{tab:current_rates} the current flow rates obt
   \centering
   \caption{Understudy landscape area estimation}
   \label{tab:und_study_area}
-  \begin{tabular}{|p{2cm}|c|c|c|c|c|}
+  \begin{tabularx}{\textwidth}{|X|c|c|X|X|X|}
   \hline
   $P_{\text{average}}$ & $A_{\text{average}}$ (km$^2$) & $A_{\text{average}} / P_{\text{average}}$ & $A_{\text{estimated}}$ (km$^2$) & Ratio (m$^3$/ha/day) & $Q_{\text{infiltration}}$ (m$^3$/day) \\
   \hline
@@ -239,7 +239,7 @@ rate estimation. In the Table \ref{tab:current_rates} the current flow rates obt
   11200.0 & 18.65 & 0.0017 & 566.17 & 0.2 & 11323.41 \\
 % END py_areaContent
   \hline
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 
@@ -489,6 +489,17 @@ basin was obtained and in Table \ref{tab:clarifier_inputs} the required volume (
 \subsection{Fecility Types}
 \label{sec:primary_facility_types}
 
+Primary treatment in this design is achieved through the use of circular primary 
+clarifiers. While both circular and rectangular clarifiers are widely used, circular 
+tanks were selected due to their hydraulic efficiency, ease of sludge removal, 
+and suitability for continuous operation in medium-to-large wastewater treatment plants. 
+Circular clarifiers promote uniform radial flow distribution, reducing dead zones 
+and short-circuiting, which enhances sedimentation performance. Mechanically, the 
+rotating sludge scraper arms in circular clarifiers allow for reliable and consistent 
+solids removal with minimal manual intervention. Moreover, for a greenfield development 
+with expected long-term service and increasing population, circular clarifiers provide a 
+scalable, space-efficient, and operationally robust solution.
+
 \subsection{Primary Sedimentation}
 \label{sec:primary_Sedimentation_design}
 
@@ -496,14 +507,28 @@ basin was obtained and in Table \ref{tab:clarifier_inputs} the required volume (
 
 To determine the volume of the primary clarifiers, the removal efficiencies required for suspended solids (TSS) 
 and biochemical oxygen demand (BOD) were referenced from standard design tables \cite{metcalf_2014_wastewater}. 
-The detention times required for each are calculated using the following empirical formula:
+The detention times required for each are calculated using Eq.\ref{eq:time_of_residency} in conjuction with 
+Eq.\ref{eq:temperature_factor}. This last one is to increase the retention time when the temperature is lower 
+than 20 degrees as the water viscosity gets affected. For this report, a temperature $T$ of 10 degrees was 
+choosen to incorporate this phenomenon, although further analysis could lead to adjust this value.
 
 \begin{align}
-t &= \frac{E_r \cdot a}{1 - E_r \cdot b}
+t &= \left( \frac{E_r \cdot a}{1 - E_r \cdot b} \right) \cdot T_{\text{factor}}
 \label{eq:time_of_residency}
 \end{align}
 
-where \( E_r \) is the removal efficiency, and \( a \), \( b \) are parameters defined for SST and BOD, see Table \ref{tab:detention_time_parameters}. 
+\begin{equation}
+T_{\text{factor}} =
+\begin{cases}
+1.82 \cdot e^{-0.03 \cdot T}, & \text{if } T < 20^\circ\text{C} \\
+1, & \text{if } T \geq 20^\circ\text{C}
+\end{cases}
+\label{eq:temperature_factor}
+\end{equation}
+
+
+where \( E_r \) is the removal efficiency, $T$ is the temperature of the water, 
+and \( a \), \( b \) are parameters defined for SST and BOD, see Table \ref{tab:detention_time_parameters}. 
 The greater of the two detention times governs the total volume design. $E_r$ was determined using Eq.\eqref{eq:efficiency}, based on the 
 inflow $BOD$ and the eflow one that was found to comply with the environmental requirements, see Sections \ref{sec:secondary_trat} 
 and \ref{sec:env_impact}. The input values as well as the obtained time are shown in the Table \ref{tab:detention_time_parameters}. 
@@ -526,6 +551,8 @@ Table \ref{tab:detention_time_parameters}.
 V_{\text{clarifier}}^{\text{calc}} &= Q_{\text{peak}} \cdot t \cdot 3600
 \label{eq:clarifier_volume}
 \end{align}
+
+
 \begin{table}[h]
   \centering
   \caption{Standard parameters for detention time \cite{metcalf_2014_wastewater}.}
@@ -548,14 +575,21 @@ primary sedimentation tank volume ($V_{\text{clarifier}}^{\text{min}}$ and $V_{\
 If $V_{\text{clarifier}}^{\text{calc}}$  is greater than $V_{\text{clarifier}}^{\text{max}}$, then the excesive volume 
 is used for the equalization basin ($V_{\text{equilization}}^{\text{req}}$) and the final clarifier 
 volume ($V_{\text{clarifier}}^{\text{final}}$) will be equal to 
-$V_{\text{clarifier}}^{\text{max}}$.
+$V_{\text{clarifier}}^{\text{max}}$. Due to the equalization tank, there will 
+be a new \textit{adjusted} peak flow ($Q_{peak}^{adj}$), obtained with Eq.\eqref{eq:adjusted_peak_flow}. Based on this, subsequent calcualtions will 
+be based on this value instead of the $Q_{peak}$, when required.
+
+\begin{align}
+Q_{peak}^{adj} &= \frac{V_{clarifier}^{max}}{t}
+\label{eq:adjusted_peak_flow}
+\end{align}
 
 
 \begin{table}[h]
 \centering
 \caption{Input values for clarifier sizing}
 \label{tab:clarifier_inputs}
-\begin{tabular}{|l|c|c|l|}
+\begin{tabularx}{\textwidth}{|l|c|c|X|}
 \hline
 \textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Description}\\
 \hline
@@ -579,6 +613,12 @@ $BOD_{5,\text{efluent}}$ &
 259.26
 % END py_Eflow_BOD
 & mg/L & Found $BOD_5$ that complies with environmental impact, see Section \ref{sec:secondary_trat}\\
+$T$ & 
+% BEGIN py_Temperature
+10
+% END py_Temperature
+& C & Assumed water lowest Temperature to adjust retention time.\\
+
 $E_{\text{BOD}}$ & 
 % BEGIN py_EfficiencyPrimary
 30.0
@@ -598,79 +638,148 @@ $E_{\text{TSS}}$ &
 % BEGIN py_TSS_efficiency
 51.14
 % END py_TSS_efficiency
-& \% & Solved from Eq.\eqref{eq:efficiency}, replacing $t_{\text{TSS}}$\\
-$V_{\text{clarifier}}^{\text{calc}}$ & 
+& \% & Solved from Eq.\eqref{eq:efficiency}, replacing $t_{\text{TSS}}$\\[0.5em]
+$V_{\text{clarifiers}}^{\text{calc}}$ & 
 % BEGIN py_calculatedSedimentationBasinVolume
 13589.15
 % END py_calculatedSedimentationBasinVolume
-& m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}\\
-$V_{\text{clarifier}}^{\text{max}}$ &
+& m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}\\[0.5em]
+$V_{\text{clarifiers}}^{\text{max}}$ &
 % BEGIN py_maxSedimentationBasinVolume
 10513.62
 % END py_maxSedimentationBasinVolume
-& m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}, using max. time residency.\\
+& m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}, using max. time residency.\\[0.5em]
 $V_{\text{equilization}}^{\text{req}}$ &
 % BEGIN py_RequiredEqualizationTankVolume
 3075.53
 % END py_RequiredEqualizationTankVolume
-& m$^3$ & Difference between $V_{\text{clarifier}}^{\text{max}}$ and $V_{\text{clarifier}}^{\text{calc}}$\\
+& m$^3$ & Difference between $V_{\text{clarifiers}}^{\text{max}}$ and $V_{\text{clarifiers}}^{\text{calc}}$\\[0.5em]
+$Q_{peak}^{adj}$ &
+% BEGIN py_adjusted_peak
+5776.11
+% END py_adjusted_peak
+& m$^3$/h & Adjusted peak flowrate, see Section~\ref{sec:primary_Sedimentation_design}\\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{table}
 
-Tha sedimentation basin height is then selected based on the typical design criteria 
-(see Appendix~\ref{app:primary_criteria}). The 5 m height upper limit is selected and 0.5 m
-of 
-
-
+Tha sedimentation basin height is then selected based on the typical design criteria, 
+see Appendix~\ref{app:primary_criteria}. The 5 m side water depth height upper limit is 
+selected and 0.5 m of freeboard is added ($H_{clarifier}=5.5m$). The area $A_{clarifier}$ is calcualted
+ using Eq.\eqref{eq:sedimentation_tank_area}, the 
+volume $V_{clarifier}^{final}$ used is equal to $V_{clarifier}^{max}$.
+and the Surface Loading Rate ($SLR$) with Eq.\eqref{eq:SLR}, using both the $Q_{avg}$ and $Q_{peak}$. 
+The clarifier diameter is then 
+calculated using Eq.\eqref{eq:clarifier_diameter}. The number of clarifiers $n$ 
+is selected equal as 3 to comply with the \textit{Weir Loading Rate}, see next section. 
+The clarifier volume $V_{clarifier}^{final}$ will be supply in 3 equal volume tanks. 
+Results are shown in Table~\ref{tab:clarifier_results}, 
+which are in compliance with the typical design criteria, see Appendix~\ref{app:primary_criteria}.
 
 \begin{align}
-A &= \frac{V}{H} \\
-SLR &= \frac{Q}{A} \cdot \frac{1}{3600 \cdot 24}
+A_{clarifier} &= \frac{V_{clarifier}^{final}}{n \cdot H} 
+\label{eq:sedimentation_tank_area}
+\\
+SLR_{clarifier} &= \frac{Q}{n \cdot A_{clarifier}} \cdot \frac{1}{3600 \cdot 24}
+\label{eq:SLR}
 \end{align}
 
-Following this, the clarifier diameter is calculated based on the required volume and depth:
 
 \begin{align}
-D &= \sqrt{ \frac{4V}{\pi H} }
+D_{clarifier} &= \sqrt{ \frac{4V_{clarifier}^{final}}{\pi \cdot n \cdot H_{clarifier}} }
+\label{eq:clarifier_diameter}
 \end{align}
 
 \subsubsection{Weir Loading Rate (WLR) Assessment}
 
-The weir length for circular clarifiers with two-sided launders is:
+The weir length for circular clarifiers with two-sided launders is given by 
+Eq.\eqref{eq:weir_length}, where $d_{offset}$ is the distance from clarifier edge to centerline of the launder
+ and $n_{launder-sides}$ is the number of launder sides. 
+The Weir Length Ratio ($WLR$) is given by Ec.\eqref{eq:weir_length_ratio}. 
+The critical condition is then evaluated with Eq.\eqref{eq:weir_length_ratio_critical}, where $n$ is the
+number of clarifier tanks. As explained in the previous section, this value was set as 
+3 so $WLR_{critical}$ does not exceed the design limit (500 m$^3$/m/day). 
 
 \begin{align}
-L_w &= 2 \cdot \pi \cdot (D - 2d_{\text{offset}})
+L_w &= 2 \cdot \pi \cdot (D_{clarifier} - n_{launder-sides} \cdot d_{\text{offset}})
+\label{eq:weir_length}
 \end{align}
-
-The WLR is then calculated as:
 
 \begin{align}
-WLR &= \frac{Q}{L_w \cdot 86400}
+WLR &= \frac{Q_{peak}}{L_w \cdot 86400}
+\label{eq:weir_length_ratio}
 \end{align}
 
-The critical design case assumes \(n-1\) clarifiers are in operation. If the WLR exceeds the design limit (500 m$^3$/m/day), tank number or dimensions are adjusted iteratively.
+\begin{align}
+WLR_{critical} &= \frac{WLR}{n-1}
+\label{eq:weir_length_ratio_critical}
+\end{align}
+
 
 \subsubsection{Final Configuration and Results}
 
-After iterative trials, the final clarifier configuration satisfies all the guidelines. Table~\ref{tab:clarifier_results} summarizes the resulting design parameters.
+The process abovementioned was iterated until achiving results that 
+comply with the typical design criteria (Appendix~\ref{app:primary_criteria}), result are shown 
+in the Table~\ref{tab:clarifier_results}.
 
 \begin{table}[h]
 \centering
 \caption{Final clarifier design parameters}
 \label{tab:clarifier_results}
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|l|}
 \hline
-\textbf{Parameter} & \textbf{Result} & \textbf{Unit} \\
+\textbf{Parameter} & \textbf{Result} & \textbf{Units} & \textbf{Description} \\
 \hline
-Number of Clarifiers & \texttt{[insert]} & -- \\
-Clarifier Diameter & \texttt{[insert]} & m \\
-Sidewater Depth & \texttt{[insert]} & m \\
-Surface Area (total) & \texttt{[insert]} & m$^2$ \\
-SLR (ADWF) & \texttt{[insert]} & m$^3$/m$^2$/day \\
-SLR (PHR) & \texttt{[insert]} & m$^3$/m$^2$/day \\
-WLR (critical) & \texttt{[insert]} & m$^3$/m/day \\
-Equalization Tank Volume & \texttt{[insert]} & m$^3$ \\
+$A_{clarifier}$ & 
+% BEGIN py_area_clarifier
+700.91
+% END py_area_clarifier
+& $m^2$ & Area per clarifier. \\[0.5em]
+$SLR_{clarifier}^{avg}$ & 
+% BEGIN py_SLR_avg
+48.0
+% END py_SLR_avg
+& m$^3$/m$^2$/day & Surface Loading Rate under average flow rate.\\[0.5em]
+$SLR_{clarifier}^{peak}$ & 
+% BEGIN py_SLR_peak
+65.93
+% END py_SLR_peak
+& m$^3$/m$^2$/day & Surface Loading Rate under peak flow rate.\\[0.5em]
+$D_{clarifier}$ & 
+% BEGIN py_clarifier_diameter
+29.87
+% END py_clarifier_diameter
+& m & Diameter of clarifier tank.\\[0.5em]
+$n$ &
+% BEGIN py_number_clarifiers
+3
+% END py_number_clarifiers
+& -- & Number of clarifier tanks.\\[0.5em]
+$n_{launder-sides}$ &
+% BEGIN py_launder_sides
+2
+% END py_launder_sides
+& -- & Number of launder sides.\\[0.5em]
+$L_w$ &
+% BEGIN py_weirLength
+175.13
+% END py_weirLength
+& m & Weir length. \\[0.5em]
+$WLR$ & 
+% BEGIN py_WLR
+791.55
+% END py_WLR
+& m$^3$/m/day & Weir Lenth Ratio.\\[0.5em]
+$WLR_{critical}$ &
+% BEGIN py_WLR_critical
+395.77
+% END py_WLR_critical
+& m$^3$/m/day & Weir Lenth Ratio under critial condition.\\[0.5em]
+$V_{equalization}^{req}$ & 
+% BEGIN py_required_equilization_volume
+3075.53
+% END py_required_equilization_volume
+& m$^3$ & Required equilization tank volume.\\[0.5em]
 \hline
 \end{tabular}
 \end{table}
@@ -693,7 +802,7 @@ N_{\text{notch, total}} = N_{\text{notch}} \times N_{\text{clarifiers}}
 The flow per notch is calculated based on the design peak hourly flow:
 
 \begin{align}
-Q_{\text{notch}} &= \frac{Q_{\text{PHR}}}{N_{\text{notch, total}}}
+Q_{\text{notch}} &= \frac{Q_{peak}^{adj}}{N_{\text{notch, total}}}
 \end{align}
 
 The maximum height of water over each V-notch is determined using the general formula for triangular weirs:
@@ -720,19 +829,38 @@ w_{\text{notch}} = 2y
 To assess flow behavior in the launder channel, the discharge per unit length of the launder is:
 
 \begin{align}
-q &= WLR_{\text{max}} \cdot \frac{1}{3600 \cdot 24} \cdot n_{\text{sides}}
+q &= WLR_{critical} \cdot \frac{1}{3600 \cdot 24} \cdot n_{launder-sides}
 \end{align}
 
 The maximum water depth in the launder is calculated from the critical section at the discharge point:
 
 \begin{align}
-Y_c &= \left( \frac{q^2 \cdot L^2}{4 g w^2} \right)^{1/3}
+Y_c &= \left( \frac{q^2 \cdot L_{launder}^2}{4 g w_{notch}^2} \right)^{1/3}
 \end{align}
 
-The final maximum water depth is obtained using the equation for uniform flow depth in a launder with one outlet point at distance \( x \):
+The perimeter of a clarifier with a 2-sided launder can be determined by dividing the total weir length ($L_w$) by the number of launder sides:
+
+\begin{align}
+P_{\text{clarifier}} &= \frac{L_w}{n_{launder-sides}}
+\label{eq:clarifier_perimeter}
+\end{align}
+
+The farthest distance that water travels into the launder, denoted as $x$, is half the perimeter divided by the number of discharge points:
+
+\begin{align}
+x &= \frac{P_{\text{clarifier}}}{2 \cdot n_{\text{disch}}}
+\label{eq:launder_travel_distance}
+\end{align}
+
+The final maximum water depth is obtained using the equation for uniform flow 
+depth in a launder with one outlet point ($n_{disch}=1$) at distance \( x \):
+
+
+
 
 \begin{align}
 H &= \sqrt{Y_c^2 + \frac{2 q^2 x^2}{g w^2 Y_c}}
+\label{eq:maximum_water_depth}
 \end{align}
 
 A 50\% safety factor is applied to this maximum depth for design purposes:
@@ -741,30 +869,86 @@ A 50\% safety factor is applied to this maximum depth for design purposes:
 H_{\text{final}} = 1.5 \cdot H
 \end{align}
 
-\subsubsection*{Summary of V-Notch and Launder Design Results}
+
+\subsubsection{V-Notch and Launder design results}
+In the Table~\ref{tab:vnotch_results} the results of V-Notch and Launder design are presented.
 
 \begin{table}[h]
 \centering
 \caption{V-notch and launder design summary}
 \label{tab:vnotch_results}
-\begin{tabular}{|l|c|c|}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|p{7cm}|}
 \hline
-\textbf{Parameter} & \textbf{Result} & \textbf{Units} \\
+\textbf{Parameter} & \textbf{Result} & \textbf{Units} & \textbf{Description} \\
 \hline
-Number of notches per clarifier & \texttt{[insert]} & -- \\
-Total number of notches & \texttt{[insert]} & -- \\
-Flow per notch & \texttt{[insert]} & m$^3$/s \\
-Max. height over notch $h$ & \texttt{[insert]} & m \\
-Water depth $y$ (with 15\% SF) & \texttt{[insert]} & m \\
-Top width of V-notch $w_{\text{notch}}$ & \texttt{[insert]} & m \\
-Discharge per unit length $q$ & \texttt{[insert]} & m$^3$/m/s \\
-Critical height $Y_c$ & \texttt{[insert]} & m \\
-Max. water depth $H$ & \texttt{[insert]} & m \\
-Final design depth $H_{\text{final}}$ (with 50\% SF) & \texttt{[insert]} & m \\
+$N_{\text{notch/clarifier}}$ & 
+% BEGIN py_notches_per_clarifier
+584.0
+% END py_notches_per_clarifier
+& -- & Number of notches per clarifier. \\
+$N_{\text{notch, total}}$ &
+% BEGIN py_total_notches
+1752.0
+% END py_total_notches
+& -- & Total number of notches across all clarifiers. \\
+$Q_{\text{notch}}$ &
+% BEGIN py_flow_per_notch
+0.00092
+% END py_flow_per_notch
+& m$^3$/s & Flow per individual V-notch. \\
+$h$ &
+% BEGIN py_h_max
+0.0537
+% END py_h_max
+& m & Maximum height of water over the notch. \\
+$y$ &
+% BEGIN py_y_depth
+0.06176
+% END py_y_depth
+& m & Water depth over the notch including 15\% safety factor. \\
+$w_{\text{notch}}$ &
+% BEGIN py_w_notch
+0.124
+% END py_w_notch
+& m & Top width of the V-notch. \\
+$q$ &
+% BEGIN py_q_launder
+0.00916
+% END py_q_launder
+& m$^3$/m/s & Discharge per unit length of launder. \\
+$Y_c$ &
+% BEGIN py_Yc
+0.403
+% END py_Yc
+& m & Critical height at launder discharge point. \\
+$H$ &
+% BEGIN py_H_max2
+0.699
+% END py_H_max2
+& m & Maximum calculated water depth in launder. \\
+$H_{\text{final}}$ &
+% BEGIN py_H_final
+1.048
+% END py_H_final
+& m & Final design depth in launder with 50\% safety factor. \\
 \hline
 \end{tabular}
 \end{table}
 
+\subsection{Protection and future considerations}
+
+To ensure reliability and continuity of treatment, the primary clarifier 
+system is designed with redundancy and fail-safes.
+Specifically, multiple clarifier units are provided such that one can be taken 
+offline for maintenance without disrupting treatment capacity, that is 
+why on Section~\ref{sec:primary_Sedimentation_design} $n-1$ was used for the 
+weir design. 
+Inlet flow is evenly distributed via energy-dissipating inlets to prevent localized 
+overloading. Overflow weirs are designed with excess capacity 
+and freeboard to safely manage flow surges and prevent bypassing. Emergency bypass 
+channels are also integrated into the layout to protect downstream processes during 
+extreme hydraulic loads or clarifier failure events.
 
 \section{Secondary treatment}
 \label{sec:secondary_trat}
@@ -925,7 +1109,7 @@ input values for the \textit{Streeter-Phelps model} are shown.\\
 The effluent discharge was evaluated based on the project adjusted 
 peak flow rate (
 % BEGIN py_adjustedQ
-138626.63
+5776.11
 % END py_adjustedQ
 m$^3$/day), calculated in Section \ref{sec:primary_treat} and a maximum BOD$_5$ of 20 mg/L (L$_w$) 
 \textbf{REFERENCE TBD}. 
@@ -950,7 +1134,7 @@ m$^3$/day), calculated in Section \ref{sec:primary_treat} and a maximum BOD$_5$ 
   $Q_w$ & 475468 $m^3/day$ & Waterway flowrate\\
   $Q_e$ &
 % BEGIN py_adjustedQ2
-138626.63
+5776.11
 % END py_adjustedQ2
   $m^3/day$ & Adjusted flowrate\\
   \hline
