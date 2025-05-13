@@ -1005,18 +1005,39 @@ extreme hydraulic loads or clarifier failure events.
 
 \subsection{Design Overview}
 
-The secondary treatment stage is designed as an extended aeration activated sludge process, aiming to achieve 90\% BOD\textsubscript{5} removal. Based on the effluent quality requirement 20 mg/L (BOD\textsubscript{5}), the influent concentration to this stage can be derived from:
+The secondary treatment stage is designed as an extended aeration 
+activated sludge process, aiming to achieve a 
+% BEGIN py_sec_removal_efficiency
+94.6
+% END py_sec_removal_efficiency
+\% BOD\textsubscript{5} removal efficiency. 
+As shown in Section~\ref{sec:env_impact}, in order to comply with 
+the minimum $DO$ in the waterway, the maximum $BOD$ present 
+in the effluent must be equal to  
+% BEGIN py_max_BOD_effluent3
+14
+% END py_max_BOD_effluent3
+mg/L. Based on that and the removal efficiency, the inflow $BOD$ 
+concentration can be calculated as:
 
 \begin{align}
 BOD_{\text{in}} &= \frac{BOD_{\text{effluent}}}{1 - \eta}
 \label{eq:secondary_bod_in}
 \end{align}
 
-where \( \eta = 0.9 \) is the BOD removal efficiency.
+where \( \eta\) is the BOD removal efficiency. Computed, the $BOD_{in}$ 
+is equal to 
+% BEGIN py_secondary_BOD_inflow
+259.3
+% END py_secondary_BOD_inflow
+mg/L, and it represents the target for the removal in the primary treatment, 
+see Section~\ref{sec:primary_treat}.
 
 \subsection{Sludge Characteristics and Return Flow}
 
-Mixed liquor suspended solids (MLSS) concentration is chosen based on the process type and operating temperature, and return sludge concentration \( X_R \) is assumed. The sludge volume index (SVI) is given by:
+Mixed liquor suspended solids (MLSS) concentration is chosen based on 
+the process type and operating temperature, and return sludge concentration 
+\( X_R \) is assumed. The sludge volume index (SVI) is given by:
 
 \begin{align}
 SVI &= \frac{10^6}{X_R}

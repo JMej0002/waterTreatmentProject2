@@ -25,9 +25,9 @@
 \contentsline {subsection}{\numberline {4.1}Design Overview}{13}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Sludge Characteristics and Return Flow}{14}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Aeration Tank Sizing}{14}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Sludge Age and Stability}{14}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.4}Sludge Age and Stability}{15}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Contact-Stabilization Configuration}{15}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Environmental Impact Assessment}{15}{section.5}%
-\contentsline {section}{\numberline {6}summary}{18}{section.6}%
+\contentsline {section}{\numberline {5}Environmental Impact Assessment}{16}{section.5}%
+\contentsline {section}{\numberline {6}summary}{19}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
 \contentsline {section}{Appendix 2\hskip 1em\relax Design criteria for primary sedimentation basins}{12}{appendix.B}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  13 MAY 2025 16:05
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  13 MAY 2025 16:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -805,30 +805,14 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1148--1158
-
- []
-
-
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [15]
-
-File: ../images/monash_logo.png Graphic file (type bmp)
-<../images/monash_logo.png>
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 1271--1286
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1179
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1287--1294
-
- []
-
-File: ../images/DOd streeter-phelps Model.png Graphic file (type bmp)
-<../images/DOd streeter-phelps Model.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -836,22 +820,43 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 1292--1307
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1308--1315
+
+ []
+
+
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
 [17]
+File: ../images/DOd streeter-phelps Model.png Graphic file (type bmp)
+<../images/DOd streeter-phelps Model.png>
+
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
-[18] (./document.bbl)
+[18]
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
-[19]
+[19] (./document.bbl)
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
+[20]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1323.
+(hyperref)                replaced by space on input line 1344.
 
 (./melbourne_density.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1325--1
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1
 
  []
 
@@ -926,17 +931,17 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1329--1329
+Underfull \hbox (badness 10000) in paragraph at lines 1350--1350
 |\TU/Arial(0)/b/n/14.4 APPENDIX 2 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1329.
+(hyperref)                replaced by space on input line 1350.
 
 
-Overfull \hbox (33.56255pt too wide) in alignment at lines 1362--1362
+Overfull \hbox (33.56255pt too wide) in alignment at lines 1383--1383
 [][][] 
  []
 
@@ -965,4 +970,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  73i,15n,114p,442b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (34 pages).
+Output written on document.pdf (35 pages).
