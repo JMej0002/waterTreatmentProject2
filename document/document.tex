@@ -1132,8 +1132,8 @@ extreme hydraulic loads or clarifier failure events.
 
 \subsection{Design Overview}
 
-The secondary treatment stage is designed as an extended aeration 
-activated sludge process, aiming to achieve a 
+The secondary treatment stage of the wastewater treatment plant is 
+based on a conventional activated sludge process (\textit{CMAS}), aiming to achieve a 
 % BEGIN py_sec_removal_efficiency
 94.6
 % END py_sec_removal_efficiency
@@ -1161,46 +1161,28 @@ mg/L, and it represents the target for the removal in the primary treatment,
 see Section~\ref{sec:primary_treat}.
 
 
-\subsection{Process Overview}
-The secondary treatment stage of the wastewater treatment plant is based on a conventional activated sludge process (CMAS), designed to ensure the effluent meets environmental discharge requirements. The system aims to reduce the concentration of Biochemical Oxygen Demand (BOD$\_5$) to acceptable levels while maintaining good settling characteristics and manageable sludge production.
-
-\subsection{Influent Characterization and Removal Requirements}
-
-To ensure that the effluent BOD$_5$ concentration does not exceed 
-\SI{14}{mg/L}, and considering a typical maximum removal efficiency of 
-\SI{94.6}{\percent}, the BOD$_5$ concentration entering the secondary 
-treatment process (from the primary clarifier) is calculated using 
-Eq.~\eqref{eq:bod_influent_calc}.
-
-\begin{align}
-BOD\_{5,\text{in}} &= \frac{BOD\_{5,\text{eff}}}{1 - \eta\_{\text{BOD}}}
-\label{eq\:bod_influent_calc}
-\end{align}
-
-The resulting value is presented in Table~\ref{tab:secondary_inputs}.
-
 \subsection{Sludge Return and Settling Considerations}
-The return sludge flow is based on the chosen Suspended Volume Index (SVI), which must be lower than \SI{120}{mL/g} to avoid bulking. Using an SVI of \SI{91}{mL/g}, the return sludge concentration \$X\_R\$ is computed, and the return sludge flow \$Q\_R\$ is determined using mass balance.
+The return sludge flow is based on the chosen Suspended Volume Index (SVI), which must be lower than \SI{120}{mL/g} to avoid bulking. Using an SVI of \SI{91}{mL/g}, the return sludge concentration \(X_R\) is computed, and the return sludge flow \(Q_R\) is determined using mass balance:
 
 \begin{align}
-X\_R &= \frac{10^6}{SVI} \\
-Q\_R &= Q \cdot \frac{v}{1000 - v}
+X_R &= \frac{10^6}{SVI} \\
+Q_R &= Q \cdot \frac{v}{1000 - v}
 \end{align}
 
-where $v$ is the settled sludge volume (mL/L). These calculations and other relevant values are shown in Table~\ref{tab:secondary_inputs}.
+where \(v\) is the settled sludge volume (mL/L). These calculations and other relevant values are shown in Table~\ref{tab:secondary_inputs}.
 
 \subsection{Aeration Tank Sizing}
-The aeration volume $V_a$ is computed based on the influent BOD$_5$, the food to microorganism ratio (F/M), and the mixed liquor suspended solids (MLSS):
+The aeration volume \(V_a\) is computed based on the influent BOD\(_5\), the food-to-microorganism ratio (F/M), and the mixed liquor suspended solids (MLSS):
 
 \begin{align}
-V\_{a} &= \frac{BOD\_{5,\text{in}} \cdot Q}{\text{F/M} \cdot X}
+V_a &= \frac{BOD_{5,\text{in}} \cdot Q}{\text{F/M} \cdot X}
 \label{eq:aeration_volume}
 \end{align}
 
-This volume, along with the flowrate $Q$, is used to estimate the aeration time in Eq.~\eqref{eq:aeration_time}:
+This volume, along with the flow rate \(Q\), is used to estimate the aeration time in Eq.~\eqref{eq:aeration_time}:
 
 \begin{align}
-t\_{a} &= \frac{V\_{a}}{Q} \cdot 24
+t_a &= \frac{V_a}{Q} \cdot 24
 \label{eq:aeration_time}
 \end{align}
 
@@ -1210,20 +1192,20 @@ These values are listed in Table~\ref{tab:secondary_results}.
 The sludge age and BOD loading are calculated to ensure values fall within CMAS design ranges. Biomass production and oxygen demand for average and peak flows are estimated using:
 
 \begin{align}
-Y_{obs} &= \frac{Y}{1 + K_d \cdot \theta_c} \\
-P_X &= Y_{obs} \cdot Q \cdot (S_{in} - S_{eff}) / 1000
+Y_{\text{obs}} &= \frac{Y}{1 + K_d \cdot \theta_c} \\
+P_X &= \frac{Y_{\text{obs}} \cdot Q \cdot (S_{\text{in}} - S_{\text{eff}})}{1000}
 \end{align}
 
 \begin{align}
-O_2 &= \frac{Q \cdot (S_{in} - S_{eff})}{f \cdot 1000} - 1.42 \cdot P_X
+O_2 &= \frac{Q \cdot (S_{\text{in}} - S_{\text{eff}})}{f \cdot 1000} - 1.42 \cdot P_X
 \label{eq:oxygen_demand}
 \end{align}
 
-Where $f$ is the BOD conversion factor. The air requirement is calculated assuming 27.9\% oxygen concentration in air, 10\% transfer efficiency, and a safety factor:
+Where \(f\) is the BOD conversion factor. The air requirement is calculated assuming 27.9\% oxygen concentration in air, 10\% transfer efficiency, and a safety factor:
 
 \begin{align}
-\text{Air}*{\text{peak}} &= \frac{O\_2}{0.279 \cdot 0.1} \cdot \frac{2}{24} \\
-\text{Air}*{\text{avg}} &= \frac{O\_2}{0.279 \cdot 0.1} \cdot 2
+\text{Air}_{\text{peak}} &= \frac{O_2}{0.279 \cdot 0.1} \cdot \frac{2}{24} \\
+\text{Air}_{\text{avg}} &= \frac{O_2}{0.279 \cdot 0.1} \cdot 2
 \end{align}
 
 \subsection{Design Summary}
