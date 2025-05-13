@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  13 MAY 2025 16:38
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  13 MAY 2025 20:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -758,8 +758,8 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [6]
-File: ../images/basin_diagram.png Graphic file (type bmp)
-<../images/basin_diagram.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -769,14 +769,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [7]
+File: ../images/basin_diagram.png Graphic file (type bmp)
+<../images/basin_diagram.png>
 
-File: ../images/monash_logo.png Graphic file (type bmp)
-<../images/monash_logo.png>
-[8]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
+[8]
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
@@ -802,16 +808,11 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [14]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1169--1179
 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -821,12 +822,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1292--1307
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1315
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1306
 
  []
 
@@ -835,6 +831,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1308--1315
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [17]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1434
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1435--1442
+
+ []
+
 File: ../images/DOd streeter-phelps Model.png Graphic file (type bmp)
 <../images/DOd streeter-phelps Model.png>
 
@@ -845,18 +854,22 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
-[19] (./document.bbl)
+[19]
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
-[20]
+[20] (./document.bbl)
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
+[21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1344.
+(hyperref)                replaced by space on input line 1471.
 
 (./melbourne_density.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1346--1
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1
 
  []
 
@@ -931,17 +944,17 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1350--1350
+Underfull \hbox (badness 10000) in paragraph at lines 1477--1477
 |\TU/Arial(0)/b/n/14.4 APPENDIX 2 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1350.
+(hyperref)                replaced by space on input line 1477.
 
 
-Overfull \hbox (33.56255pt too wide) in alignment at lines 1383--1383
+Overfull \hbox (33.56255pt too wide) in alignment at lines 1510--1510
 [][][] 
  []
 
@@ -959,15 +972,15 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: C447B5D8D17BB971BA8993E525B18552;6712.
+(rerunfilecheck)             Checksum: 2441C2A68C370D081745EF902148DA96;6858.
  ) 
 Here is how much of TeX's memory you used:
- 18937 strings out of 470249
- 411904 string characters out of 5487939
- 927350 words of memory out of 5000000
- 45355 multiletter control sequences out of 15000+600000
+ 18944 strings out of 470249
+ 412056 string characters out of 5487939
+ 927874 words of memory out of 5000000
+ 45362 multiletter control sequences out of 15000+600000
  630830 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,15n,114p,442b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (35 pages).
+Output written on document.pdf (36 pages).
