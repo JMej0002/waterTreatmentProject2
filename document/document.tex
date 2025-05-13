@@ -104,7 +104,7 @@
       {\large \bfseries
       Presented by:\\
       Kevin González – 35477350\\
-      Jhon Solórzano – 222\\
+      Jhon Solórzano – 33997470\\
       Julian Mejia – 34774564
       }
   
@@ -1256,12 +1256,16 @@ $D(t_c)$ &
 2.5
 % END py_D_tc
  mg/L & DO deficit at time $t_c$ \\
+$DO_{calculated}$ &
+% BEGIN py_DO_calc2
+6.0
+% END py_DO_calc2
+ mg/L & $DO$ in waterway when maximum deficit $D(t_c)$ \\
 \hline
 \end{tabular}
 \end{table}
 
-This model can be graphed to have a visual representation of the 
-biochemical-timed phenomenon. In 
+
 
 %discuss about the results!! 
 As shown in Table~\ref{tab:env_outputs}, 
@@ -1278,7 +1282,22 @@ the dissolved oxygen deficit at its critical point is
  mg/L
 which is above the regulatory $DO_\text{min, threshold}$ of 
 5.95 mg/L. Therefore, the discharge 
-complies with the receiving waterway's environmental standard.
+complies with the receiving waterway's environmental standard.\\
+
+In the Figure~\ref{fig:DO_streeter_model} the deficit variation across time can be observed,
+obtained base on Eq.~\eqref{eq:do_deficit} variating $t$. The vertical axes 
+represents the deficit, thus zero value indicates the waterway returning 
+to a $DO_{saturation}$ level. In the figure, it can be observed the maximum 
+deficit which is achieved before $t=2 days$. It can also be observed that 
+after approximately 5 days the $DO$ returns to the initial waterway upstream 
+initial value ($DO_0$). \\
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../images/DOd streeter-phelps Model.png}
+  \caption{Disolved oxygen deficit. Vertical axes being the deficit, with zero representation saturation.}
+  \label{fig:DO_streeter_model}
+\end{figure}
 
 \newpage
 
