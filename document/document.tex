@@ -368,7 +368,7 @@ against the other constrains of the design. The bar spacing or
 opening size ($b$) 
 is taken as 0.01 m as the screen should remove 
 particles bigger than 10mm. The bar width $w$ is selected as 
-0.008 m based on commercial screens availability. The discharge 
+0.007 m based on commercial screens availability. The discharge 
 coefficient ($C_d$) is commonly taken as 0.84, although it might be 
 adjusted based on the screening specifications. Finally, the minimum 
 required downstream flow depth was determined to be 1.0 m based 
@@ -384,7 +384,7 @@ on previous analysis.
 \hline
 $v_{\text{screen}}$ & 0.9 m/s & Flow velocity through the screen \\
 $b$ & 0.01 m & Spacing between bars \\
-$w$ & 0.008 m & Bar width \\
+$w$ & 0.007 m & Bar width \\
 $C_d$ & 0.84 & Discharge coefficient \\
 $g$ & 9.81 m/s$^2$ & Gravitational acceleration \\
 $d$ & 1.0 m & Assumed downstream flow depth \\
@@ -395,10 +395,10 @@ $d$ & 1.0 m & Assumed downstream flow depth \\
 From Equations \eqref{eq:screen_velocity} to 
 \eqref{eq:screen_width}
  the upstream velocity ($v_\text{upstream}$), 
-the headloss ($H_\text{loss}$), the upstream flow depth ($d_\text{upstream}$), 
+the headloss ($h_\text{loss}$), the upstream flow depth ($d_\text{upstream}$), 
 the wetted cross-sectional area ($A_\text{wet}$) and required channel width ($W_\text{channel}$) 
 were determined.
-The screens width is recommended to be between 0.6 and 1.1m. 
+The screens width is recommended to be between 0.6 and 1.1m \cite{metcalf_2014_wastewater}. 
 The number of screens required ($N_\text{screens}$) is therefore calculated based on the 
 channel width divided by the maximum recomended screen width (1.1 m) and 
 rounding up to the nearest integer. Results are shown 
@@ -454,6 +454,183 @@ $N_{\text{screens}}$ &
 \hline
 \end{tabular}
 \end{table}
+
+
+\subsection{Blockage Scenario}
+\label{sec:screening_blockage}
+
+To ensure robustness of the preliminary screening system, 
+the design is evaluated under a conservative condition of 
+50\% screen blockage. This is important as screen 
+clogging can lead to increased velocities and head losses, and 
+subsequent failure of the system.
+
+The analysis is based on the Bernoulli equation applied between 
+the upstream and downstream sections of the screen channel:
+
+\begin{align}
+h_1 + \frac{v_1^2}{2g} = h_2 + \frac{v_2^2}{2g} + \Delta h
+\label{eq:bernoulli_basic}
+\end{align}
+
+where:
+- \( h_1 \) and \( h_2 \): upstream and downstream water depths, respectively [m]
+- \( v_1 \) and \( v_2 \): corresponding flow velocities [m/s]
+- \( \Delta h \): head loss due to the screen [m]
+- \( g \): gravitational acceleration (9.81 m/s\textsuperscript{2}).
+
+The upstream water depth \( h_1 \) is determined by:
+
+\begin{align}
+h_1 = \frac{h_2 \cdot v_2}{v_1}
+\label{eq:h1_function}
+\end{align}
+
+The head loss across a partially blocked screen is calculated using 
+a modified version of Eq.\eqref{eq:screen_headloss} to account 
+for the blockage ratio which affects the discharge velocity coefficient:
+
+\begin{align}
+\Delta h = \frac{(v_{\text{sc}}^2 - 1^2) \cdot v_1^2}{2g C_d^2}
+\label{eq:delta_h_screen}
+\end{align}
+
+Here:
+- \( v_{\text{sc}} \): ratio of effective flow velocity through the blocked screen to the open flow velocity.
+
+Substituting Eqs.~\eqref{eq:h1_function} and \eqref{eq:delta_h_screen} into the Bernoulli equation \eqref{eq:bernoulli_basic}, we obtain:
+
+\begin{align}
+\frac{h_2 v_2}{v_1} + \frac{v_1^2}{2g} = h_2 + \frac{v_2^2}{2g} + \frac{(v_{\text{sc}}^2 - 1^2) \cdot v_1^2}{2g C_d^2}
+\label{eq:bernoulli_modified}
+\end{align}
+
+Solving Eq.\eqref{eq:bernoulli_modified} for $v_1$ leads to a grade three 
+equation
+
+\section{understanding}
+The upstream flow velocity in the screen chamber is increased due to the effective reduction of the screen's cross-sectional area under blockage. For the average flow scenario, the velocity within the screen opening is approximated by:
+
+\begin{align}
+v_{\text{sc,avg}} = \frac{Q_{\text{avg}} / n}{h_2 \cdot \left( \frac{b_s - b_b}{b_b + b_w} \cdot b_b \right)}
+\end{align}
+
+where:
+- \( Q_{\text{avg}} \) is the average total flow rate [m\textsuperscript{3}/s]
+- \( n \) is the number of screens
+- \( h_2 \) is the downstream water depth [m]
+- \( b_s \) is the screen width [m]
+- \( b_b \) is the bar width [m]
+- \( b_w \) is the spacing between bars [m]
+
+The velocity immediately downstream of the screen is given by:
+
+\begin{align}
+v_2 = \frac{Q_{\text{avg}} / n}{h_2 \cdot b_s}
+\end{align}
+
+The upstream water depth \( h_1 \) is approximated from the continuity equation:
+
+\begin{align}
+h_1 = \frac{h_2 \cdot v_2}{v_1}
+\end{align}
+
+To compute the head loss caused by the screen blockage, we define a velocity factor:
+
+\begin{align}
+v_{\text{sc}} = \frac{b_b + b_w}{0.5 \cdot b_b}
+\end{align}
+
+The corresponding head loss across the screen is calculated using the orifice loss formula:
+
+\begin{align}
+\Delta h = \frac{(v_{\text{sc}}^2 - 1^2) \cdot v_1^2}{2g C_d^2}
+\end{align}
+
+This head loss is then substituted into the modified Bernoulli equation (Eq.~\ref{eq:bernoulli_modified}) to solve for the critical upstream velocity \( v_1 \) under blockage.
+
+
+under both average and peak flow conditions. The purpose is to ensure that 
+even with 50\% blockage, the upstream velocity remains within acceptable 
+hydraulic limits (typically not exceeding 1 m/s) and the head loss does 
+not cause excessive backwater.
+
+The key inputs and outputs of this analysis are summarized in Table~\ref{tab:preliminary_results}, including screen widths, head losses, and the velocities under 50\% blockage conditions for both flow scenarios.
+
+
+\begin{table}[h]
+\centering
+\caption{Preliminary treatment design parameters}
+\label{tab:preliminary_results}
+\begin{tabular}{|l|c|c|l|}
+\hline
+\textbf{Parameter} & \textbf{Result} & \textbf{Units} & \textbf{Description} \\
+\hline
+$v_s$ & 
+% BEGIN py_velocity_screen
+0.90
+% END py_velocity_screen
+& m/s & Screen design velocity.\\[0.5em]
+$v_u$ & 
+% BEGIN py_velocity_upstream
+0.48
+% END py_velocity_upstream
+& m/s & Velocity upstream of screen.\\[0.5em]
+$\Delta h$ & 
+% BEGIN py_head_loss_screen
+0.07
+% END py_head_loss_screen
+& m & Head loss across the screen.\\[0.5em]
+$h_{\text{up}}$ & 
+% BEGIN py_flow_depth_upstream
+1.07
+% END py_flow_depth_upstream
+& m & Water depth upstream of the screen.\\[0.5em]
+$A_{\text{wet}}$ & 
+% BEGIN py_wet_area
+0.71
+% END py_wet_area
+& m$^2$ & Wetted area of the screen channel.\\[0.5em]
+$w_{\text{channel}}$ & 
+% BEGIN py_channel_width
+0.66
+% END py_channel_width
+& m & Required channel width.\\[0.5em]
+$n_{\text{screens}}$ & 
+% BEGIN py_screen_number
+1
+% END py_screen_number
+& -- & Number of screen units.\\[0.5em]
+$v_{\text{projected max}}$ & 
+% BEGIN py_velocity_upstream_max
+0.52
+% END py_velocity_upstream_max
+& m/s & Velocity upstream under projected peak flow.\\[0.5em]
+$h_{\text{min, avg}}$ & 
+% BEGIN py_flow_depth_min_avg
+0.87
+% END py_flow_depth_min_avg
+& m & Depth to maintain velocity under average flow.\\[0.5em]
+$v_{50\%, \text{avg}}$ & 
+% BEGIN py_v_50_avg
+0.49
+% END py_v_50_avg
+& m/s & Velocity at 50\% blockage (average flow).\\[0.5em]
+$v_{50\%, \text{peak}}$ & 
+% BEGIN py_v_50_peak
+0.75
+% END py_v_50_peak
+& m/s & Velocity at 50\% blockage (peak flow).\\[0.5em]
+\hline
+\end{tabular}
+\end{table}
+
+
+%insert gpt calculations!!!!
+\clearpage
+
+
+
 
 To ensure that the screen performs under minimum flow conditions, 
 the upstream velocity at low flow was recalculated. The downstream control 
