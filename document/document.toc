@@ -6,11 +6,11 @@
 \contentsline {subsection}{\numberline {1.5}Population Growth and Future Design Considerations}{3}{subsection.1.5}%
 \contentsline {subsection}{\numberline {1.6}Influent Pollutant Load Estimation}{4}{subsection.1.6}%
 \contentsline {section}{\numberline {2}Preliminary Treatment Design}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Facility types}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Facility types}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Screens design}{5}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Equalisation basin}{6}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Primary treatment}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Fecility Types}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Facility Types}{7}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Primary Sedimentation}{7}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Clarifier Sizing and Flow Equalization}{7}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Weir Loading Rate (WLR) Assessment}{9}{subsubsection.3.2.2}%

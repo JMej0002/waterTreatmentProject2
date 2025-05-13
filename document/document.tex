@@ -325,43 +325,28 @@ the box plot of the \textit{(BOD)} of the abovementioned data is presented.
 \section{Preliminary Treatment Design}
 \label{sec:prelim_treatment}
 
-The preliminary treatment includes coarse screening to remove large solids and protect downstream units.
-The flow velocity through the screen is assumed within the recommended range of 0.3 to 1.0 m/s.
-The screen bar spacing is selected to capture gross solids greater than 10 mm, and a bar width is
-chosen based on commercial availability.
-
 \subsection{Facility types}
 \label{sec:preliminary_facility_types}
-The preliminary treatment is conformed by screeing, also known as \textit{bar racks}, 
-and grit chambers. In the Table \ref{tab:screening_types} the types 
-of screening are categorized based on the size of the screen 
-opening which determines the removal type the screen would provide. 
 
-\begin{table}[h]
+Coarse screens designed to retain gross pollutants greater than 10 mm are proposed 
+to effectively protect downstream treatment processes. These screens, commonly 
+employed in wastewater treatment plants (\textit{WWTPs}), efficiently remove large solids, 
+rags, and debris (Davis, 2010). However, it is noted that their contribution to 
+the removal of biochemical oxygen demand (\textit{BOD}) is considered negligible.
+
+Each mechanical screen unit should be installed in its own dedicated channel, 
+facilitating isolation for maintenance or emergency purposes. Additionally, 
+vortex grit chambers are proposed to remove grit particles up to 100 mm. 
+This inclusion significantly reduces grit accumulation in downstream units 
+and prevents sediment buildup within the equalisation basin, thus enhancing 
+the overall reliability and effectiveness of subsequent treatment processes.
+
+\begin{figure}[h]
   \centering
-  \caption{Screening clasification per opening size \cite{davis2010water}}
-  \label{tab:screening_types}
-  \begin{tabular}{|l|c|p{6cm}|}
-  \hline
-  \textbf{Type} & \textbf{Typical opening} & \textbf{Removal} \\
-  \hline
-  Trash racks/Primary screening & 40-150 mm & Large heavy debris.\\
-  & & \\
-  Coarse screens & 6-75 mm & Large solids, rags and debris.\\
-  & & \\
-  Fine screens & 1.5-6 mm & Small solids, usually used after a coarse screen.\\
-  & & \\
-  Very fine screens & 0.25-1.5 mm & Suspended solids to near primary treatment level. Usually used when no primary treatment is implemented.\\
-  & & \\
-  Microscreens & 1$\mu$m-0.3 mm & Used in conjunction with very fine screens for effluent polishing. \\
-  \hline
-  \end{tabular}
-\end{table}
-
-The screens can also be clasified depending on the type of cleaning, if it is manually 
-or mechanically, in case of the second one they can be further categorized depending 
-of the mechanism type. The cleaning type does not impact the design calculations and can, 
-therefore, be selected based on commercial and economical constrains.
+  \includegraphics[width=0.6\textwidth]{../images/screens.png}
+  \caption{Preliminary treatment, screens section.}
+  \label{fig:screens_section}
+\end{figure}
 
 \subsection{Screens design}
 \label{sec:screens_design}
@@ -378,12 +363,12 @@ The calculations are based on the peak projected flow rate.
 
 The values used for this calculation are summarised in Table~\ref{tab:screen_inputs}.
 The flow velocity thorugh the screen $v_\text{screen}$ should 
-be between 0.3 and 1.0 $m/s$, the latter is selected and checked 
+be between 0.4 and 0.9 $m/s$ (\cite{davis2010water}), the latter is selected and checked 
 against the other constrains of the design. The bar spacing or 
 opening size ($b$) 
 is taken as 0.01 m as the screen should remove 
 particles bigger than 10mm. The bar width $w$ is selected as 
-0.004 m based on commercial screens availability. The discharge 
+0.008 m based on commercial screens availability. The discharge 
 coefficient ($C_d$) is commonly taken as 0.84, although it might be 
 adjusted based on the screening specifications. Finally, the minimum 
 required downstream flow depth was determined to be 1.0 m based 
@@ -397,9 +382,9 @@ on previous analysis.
 \hline
 \textbf{Parameter} & \textbf{Value} & \textbf{Description} \\
 \hline
-$v_{\text{screen}}$ & 1.0 m/s & Flow velocity through the screen \\
+$v_{\text{screen}}$ & 0.9 m/s & Flow velocity through the screen \\
 $b$ & 0.01 m & Spacing between bars \\
-$w$ & 0.004 m & Bar width \\
+$w$ & 0.008 m & Bar width \\
 $C_d$ & 0.84 & Discharge coefficient \\
 $g$ & 9.81 m/s$^2$ & Gravitational acceleration \\
 $d$ & 1.0 m & Assumed downstream flow depth \\
@@ -436,7 +421,7 @@ in the Table \ref{tab:screen_outputs}.
 \hline
 $v_{\text{upstream}}$ & 
 % BEGIN py_velBeforeScreen
-0.714
+0.5
 % END py_velBeforeScreen
  m/s
 & Velocity before the screen \\
@@ -453,17 +438,17 @@ $d_{\text{upstream}}$ &
 m & Flow depth upstream \\
 $A_{\text{wet}}$ & 
 % BEGIN py_WetCrossArea
-2.9
+4.15
 % END py_WetCrossArea
 m$^2$ & Wetted cross-sectional area \\
 $W_{\text{channel}}$ & 
 % BEGIN py_channelWidth
-2.8
+4.0
 % END py_channelWidth
 m & Required screen channel width \\
 $N_{\text{screens}}$ & 
 % BEGIN py_noScreensrequired
-3
+4
 % END py_noScreensrequired
 & Number of screens required \\
 \hline
@@ -486,7 +471,7 @@ basin was obtained and in Table \ref{tab:clarifier_inputs} the required volume (
 \section{Primary treatment}
 \label{sec:primary_treat}
 
-\subsection{Fecility Types}
+\subsection{Facility Types}
 \label{sec:primary_facility_types}
 
 Primary treatment in this design is achieved through the use of circular primary 
