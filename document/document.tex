@@ -144,22 +144,22 @@ Executive summary to be added here afterwards
 \section{Introduction and Conceptual Design Description}
 Population and economical growth among other factors require the subsequently development of cities and the
 general infrastructure that supports them. As a cities expand, the electrical grid, road systems, drinking water and Wastewater
-recolection and treatment, among others, need to increase their capabilities as well. In the recent years, a northwest area in
-Melbourne has been rapidly developping and therefore, requires the construction of a new Wastewater treatment plant that can 
-address the current and future needs of the community. In the presente report, the authors present the design of the abovementioned
-plant following local guidlines.\\
+recollection and treatment, among others, need to increase their capabilities as well. In the recent years, a northwest area in
+Melbourne has been rapidly developing and therefore, requires the construction of a new Wastewater treatment plant that can 
+address the current and future needs of the community. In the present report, the authors present the design of the abovementioned
+plant following local guidelines.\\
 
 The designed is conformed by a \textit{Preliminary Treatment - Section \ref{sec:prelim_treatment}} 
-where the screeing is designed to remove coarse material 
+where the screening is designed to remove coarse material 
 on the flow stream to protect downstream process equipment and 
-increse its reliability \cite{metcalf_2014_wastewater}.
+increase its reliability \cite{metcalf_2014_wastewater}.
 The next step is the \textit{Primary Sedimentation - Section \ref{sec:primary_treat}}, 
-designed to remove the settleted solids and floating material. 
+designed to remove the settled solids and floating material. 
 This process can reach removals ratios of 50\% to 70\% of the total 
 suspended solids (\textit{TSS}) and 25\% to 40\% of the BOD.
 It is followed by the \textit{Secondary Treatment - Section \ref{sec:secondary_trat}}, 
 in which sludge and activation systems are used to remove the
-soluble, coloidal and particulate suspended organic substances 
+soluble, colloidal and particulate suspended organic substances 
 by coagulating them through the microorganisms (sludge). \\
 
 Finally, the environmental impact of the incorporation of the 
@@ -170,14 +170,14 @@ with its requirements or if further treatment shall be implemented.\\
 
 \subsection{Population estimations}
 
-To determine the waswater flowrates and mass loads for develoment areas that the plant should be capable of process, 
+To determine the wastewater flow rates and mass loads for development areas that the plant should be capable of process, 
 where actual flow and load
-measurements are not avilable, the population equivalent can be used. This is a standarization of the wastewater production
+measurements are not available, the population equivalent can be used. This is a standardization of the wastewater production
 and characteristics based on the amount of people that would produce the same values. For example, in the
 \textit{AMF L8 Sewerage Planning and Design Principles}
  which is the standard for wastewater treatment plants, developed by 
  \textit{Yarra Valley Water}
-  which covers the area underdesign in the present report, on its 
+  which covers the area under design in the present report, on its 
 \textit{Table 3-4}
  equivalent population factors are presented for different development types for both residential and commercial use. 
 For this report, based on previous surveys and analysis, it is known that the equivalent population from 
@@ -205,26 +205,26 @@ L/PE/day \cite{yarravalleywater_2023_amf}. Therefore, the
 % END py_DomesticCurrentFlow
 \(\mathrm{m^3/day}\).
 Similarly, based on previous surveys it got determine that the commercial contribution for this area is
-280 L/PE/day. Therefore the 
+280 L/PE/day. Therefore, the 
 \( Q_{\text{current avg, commercial}} \) can be calculated as
 % BEGIN py_CommercialCurrentFlow
 \(\frac{Q_{\text{commercial per capita}} \times PE_{\text{commercial}}}{1000}= 7969.08\)
 % END py_CommercialCurrentFlow
 \(\mathrm{m^3/day}\).\\
 \\
-The infiltration/inflow flowrate, when no data is available, can be estimated based on either the
+The infiltration/inflow flow rate, when no data is available, can be estimated based on either the
 total length of the sewer system, or based on the area to be covered. For the last one, the ratio can vary
 from 0.2 up to 28 \(\mathrm{m^3/ha/day}\) \cite{metcalf_2014_wastewater}. In this report, the authors
-has choosen the lower limit as the system will be new and therefore the damage on the pipelines will be
+have chosen the lower limit as the system will be new and therefore the damage on the pipelines will be
 minimum. 
 
 As no data of the covered area is available, the autors have estimated it based on the average
 population per area ratio of Melbourne suburbs. The Melbourne population density per suburb data is available in the 
-\textit{Australian Bureau of Statistics} web page, see Apendix  \ref{app:melbourne_density} for the raw data.
+\textit{Australian Bureau of Statistics} web page, see Appendix  \ref{app:melbourne_density} for the raw data.
 From it, the Population average per suburb ( \(P_{\text{average}}\) ) and the average landscape area (\(A_{average}\) \(\mathrm{km^2}\))
 were calculated. With the \(P_{\text{average}}\) / \(A_{average}\) ratio, multiplied by the \(PE_{\mathrm{domestic}}\)
 the estimated area of the understudy suburb (\(A_{estimated}\)) is obtained. The \(PE_{\mathrm{commercial}}\) is not included
-as it does not represents actual population. In the Table \ref{tab:und_study_area} the obtained results for the infiltration 
+as it does not represent actual population. In the Table \ref{tab:und_study_area} the obtained results for the infiltration 
 rate estimation. In the Table \ref{tab:current_rates} the current flow rates obtained are summarized.\\
 
 \begin{table}[h]
@@ -268,7 +268,7 @@ are multiplied by this factor, and results are presented in Table \ref{tab:proje
 
 To account for future demand on the wastewater treatment plant, the design incorporates a projected population 
 growth. Based on previous analysis, it was determined that 
-the annual growth reate can be estimated as: \(G_{rate} = 1 + 10^{0.015} =2.04\%\).
+the annual growth rate can be estimated as: \(G_{rate} = 1 + 10^{0.015} =2.04\%\).
 The current population is therefore projected during the life span of the plant. The life span is 
 commonly adopted as 20 years as it balances the need to consider future growth and 
 technological advancements while ensuring economic feasibility \cite{wef_DesignWaterResource}.
@@ -282,15 +282,15 @@ The projected population can be calculated based on \eqref{eq:population_project
 \end{align}
 
 With the per capita flow rates mentioned in the Section \ref{sec:current_flowrates}, following the same procedure there mentioned
-the flow rates for the projected population can be calculated as well. Additionally, the minimum and maximum projected flowrates
+the flow rates for the projected population can be calculated as well. Additionally, the minimum and maximum projected flow rates
 can be calculated following the peak minimum factor and peak maximum factor mentioned in Sections \ref{sec:minimum_current_flowrates}
 and \ref{sec:maximum_current_flowrates}, respectively. Results are shown in the Table \ref{tab:projected_rates}.\\
 
 To project the infiltration, a different approach is used. This value is not controlled by
 the population as it depends more on the environmental phenomenon. Because of this, it is projected
 based on an environmental factor instead. The \textit{Environment, Land, Water and Planning} department
-of the \textit{Victoria State Goverment} in their \textit{Guidelines for the Adaptive Management of 
-Wastewater Systems Under Climate Change in Victoria}, especified that the climate change factor
+of the \textit{Victoria State Government} in their \textit{Guidelines for the Adaptive Management of 
+Wastewater Systems Under Climate Change in Victoria}, specified that the climate change factor
 can be taken as 1.2. The infiltration flow rate presented in Table \ref{tab:current_rates} is therefore multiplied by this
 factor and presented in the Table \ref{tab:projected_rates}.
 
@@ -338,7 +338,7 @@ Each mechanical screen unit should be installed in its own dedicated channel,
 facilitating isolation for maintenance or emergency purposes. Additionally, 
 vortex grit chambers are proposed to remove grit particles up to 100 mm. 
 This inclusion significantly reduces grit accumulation in downstream units 
-and prevents sediment buildup within the equalisation basin, thus enhancing 
+and prevents sediment buildup within the equalization basin, thus enhancing 
 the overall reliability and effectiveness of subsequent treatment processes.
 
 \begin{figure}[h]
@@ -352,7 +352,7 @@ the overall reliability and effectiveness of subsequent treatment processes.
 \label{sec:screens_design}
 
 When the flow goes through the screens, it might suffer a headloss due to
-the obstruction and turbulunce created by the screens limited open area.
+the obstruction and turbulence created by the screens limited open area.
 This headloss can be neglected in the primary screening as the opening area
 remains big enough to not cause significant headloss. 
 However, in the case of secondary screens, as the open area is 
@@ -366,8 +366,8 @@ and the channel width is then determined accordingly.
 The calculations are based on the peak projected flow rate.
 
 
-The values used for this calculation are summarised in Table~\ref{tab:screen_inputs}.
-The flow velocity thorugh the screen $v_\text{screen}$ should 
+The values used for this calculation are summarized in Table~\ref{tab:screen_inputs}.
+The flow velocity through the screen $v_\text{screen}$ should 
 be between 0.4 and 0.9 $m/s$ (\cite{davis2010water}), the latter is selected and checked 
 against the other constrains of the design. The bar spacing or 
 opening size ($b$) 
@@ -403,9 +403,9 @@ From Equations \eqref{eq:screen_velocity} to
 the headloss ($h_\text{loss}$), the upstream flow depth ($d_\text{upstream}$), 
 the wetted cross-sectional area ($A_\text{wet}$) and required channel width ($W_\text{channel}$) 
 were determined.
-The screens width is recommended to be between 0.6 and 1.1m \cite{metcalf_2014_wastewater}. 
+The screens' width is recommended to be between 0.6 and 1.1m \cite{metcalf_2014_wastewater}. 
 The number of screens required ($N_\text{screens}$) is therefore calculated based on the 
-channel width divided by the maximum recomended screen width (1.1 m) and 
+channel width divided by the maximum recommended screen width (1.1 m) and 
 rounding up to the nearest integer. Results are shown 
 in the Table \ref{tab:screen_outputs}.
 
@@ -519,15 +519,15 @@ Bernoulli equation \eqref{eq:bernoulli_basic}, it is obtained:
 
 Solving Eq.\eqref{eq:bernoulli_modified} for $v_1$ leads to a third grade 
 equation, which is solved for both the current average and projected peak 
-flowrates, see Tables \ref{tab:current_rates} and \ref{tab:projected_rates}. 
+flow rates, see Tables \ref{tab:current_rates} and \ref{tab:projected_rates}. 
 The purpose is to ensure that 
 even with 50\% blockage, the upstream velocity remains within acceptable 
 hydraulic limits (typically not exceeding 1 m/s) and the head loss does 
 not cause excessive backwater.
 
-The obtaiend velocities are summarized in  
+The obtained velocities are summarized in  
 Table~\ref{tab:velocities_current} and \ref{tab:velocities_projected} 
-for current average and projected peak conditiond, respectively. 
+for current average and projected peak condition, respectively. 
 It can be noticed that for both cases, the velocities remain within the 
 acceptable values. 
 
@@ -590,18 +590,18 @@ $v_1$ &
 \subsubsection{Operational considerations}
 \label{sec:screens_operational_considerations}
 
-During the screens operation, a target velocity of 0.7 - 0.9 $m/s$ at peak 
-flows is ideal for operational balance, ensuring effective screenings removal without 
+During the screens' operation, a target velocity of 0.7 - 0.9 $m/s$ at peak 
+flows is ideal for operational balance, ensuring effective screenings' removal without 
 excessive turbulence or debris bypass. The channel dimensions were sized to 
 maintain appropriate flow velocities under varying conditions and considering 
 future growth and possible peak events. Finally, the screens should be 
 easily accessible and designed for rapid maintenance response. Scheduled inspections 
 and routine cleaning are required, especially after high flow events.
 
-\subsection{Equalisation basin}
+\subsection{Equalization basin}
 \label{sec:equalization_basin}
 
-The equalisation basin was designed to minimise flow fluctuations to downstream 
+The equalization basin was designed to minimize flow fluctuations to downstream 
 treatment units, enhancing overall plant stability and performance. 
 Initially, the basin volume calculated by capturing all inflows exceeding 
 the projected average daily flow resulted in an impractical tank size 
@@ -610,21 +610,21 @@ based on the maximum capacity of the downstream primary treatment facilities.
 (See Section \ref{sec:primary_treat}).
 This revised approach operates near-average flow rates for 
 most hours of the day. During peak inflow periods (from 3 pm to 9 pm), 
-inflows exceeding this new peak flow rate are diverted to the equalisation 
+inflows exceeding this new peak flow rate are diverted to the equalization 
 basin. In low-demand hours, stored wastewater is returned to maintain less 
 variable flow to the downstream processes. This method reduced the required 
-equalisation volume and significantly reduced the peak flows. After 
-recalculating using this approach, the required equalisation volume 
+equalization volume and significantly reduced the peak flows. After 
+recalculating using this approach, the required equalization volume 
 was smaller, although this requires extra operational control, providing 
 narrower variation in the hydraulic regime for downstream processes.
-This equalisation basin requires aeration so as to prevent odours 
-and solids deposition. The proposed equalisation is an off-line basin 
+This equalization basin requires aeration to prevent odors 
+and solids deposition. The proposed equalization is an off-line basin 
 as seen in the diagram shown in Figure~\ref{fig:basin_diagram}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{../images/basin_diagram.png}
-  \caption{Off-line equalisation basin –adapted from Fig 3-20, Davis,2010.}
+  \caption{Off-line equalization basin –adapted from Fig 3-20, Davis,2010.}
   \label{fig:basin_diagram}
 \end{figure}
 
@@ -633,7 +633,7 @@ as seen in the diagram shown in Figure~\ref{fig:basin_diagram}.
 
 To ensure continuous operation and protect against failure scenarios, 
 the preliminary treatment facilities incorporate redundancy and safety 
-features, describied in Davis, 2010 an summarized in Table~\ref{tab:contingency_measures} 
+features, described in Davis, 2010 and summarized in Table~\ref{tab:contingency_measures} 
 
 \begin{table}[h]
 \centering
@@ -647,10 +647,10 @@ features, describied in Davis, 2010 an summarized in Table~\ref{tab:contingency_
 An additional mechanically cleaned coarse screen and vortex grit chamber unit will be provided as backup units. This ensures operational continuity during periods when primary units are undergoing maintenance or experiencing overloading conditions. \\[1em]
 \hline
 \textbf{Bypass Channels and Overflow} & 
-Dedicated bypass channels will be installed, allowing flows to bypass the primary screening and grit removal facilities. An overflow outlet will be provided for the equalisation basin to prevent hydraulic overload during emergency situations. \\[0.5em]
+Dedicated bypass channels will be installed, allowing flows to bypass the primary screening and grit removal facilities. An overflow outlet will be provided for the equalization basin to prevent hydraulic overload during emergency situations. \\[0.5em]
 \hline
 \textbf{Maintenance Accessibility} & 
-Screens, grit chambers, and the equalisation basin are designed with ease of access in mind, facilitating rapid maintenance and emergency interventions. \\
+Screens, grit chambers, and the equalization basin are designed with ease of access in mind, facilitating rapid maintenance and emergency interventions. \\
 \hline
 \textbf{Emergency Procedures and Alarms} & 
 An alarm system will trigger when blockage levels reach 50\% or if there is a sudden halt in mechanical operation. This proactive alert mechanism enables prompt operator intervention, minimizing the risk of overflow or downstream process disruption. \\[0.5em]
@@ -672,7 +672,7 @@ and suitability for continuous operation in medium-to-large wastewater treatment
 Circular clarifiers promote uniform radial flow distribution, reducing dead zones 
 and short-circuiting, which enhances sedimentation performance. Mechanically, the 
 rotating sludge scraper arms in circular clarifiers allow for reliable and consistent 
-solids removal with minimal manual intervention. Moreover, for a greenfield development 
+solids' removal with minimal manual intervention. Moreover, for a greenfield development 
 with expected long-term service and increasing population, circular clarifiers provide a 
 scalable, space-efficient, and operationally robust solution.
 
@@ -683,10 +683,10 @@ scalable, space-efficient, and operationally robust solution.
 
 To determine the volume of the primary clarifiers, the removal efficiencies required for suspended solids (TSS) 
 and biochemical oxygen demand (BOD) were referenced from standard design tables \cite{metcalf_2014_wastewater}. 
-The detention times required for each are calculated using Eq.\ref{eq:time_of_residency} in conjuction with 
+The detention times required for each are calculated using Eq.\ref{eq:time_of_residency} in conjunction with 
 Eq.\ref{eq:temperature_factor}. This last one is to increase the retention time when the temperature is lower 
 than 20 degrees as the water viscosity gets affected. For this report, a temperature $T$ of 10 degrees was 
-choosen to incorporate this phenomenon, although further analysis could lead to adjust this value.
+chosen to incorporate this phenomenon, although further analysis could lead to adjust this value.
 
 \begin{align}
 t &= \left( \frac{E_r \cdot a}{1 - E_r \cdot b} \right) \cdot T_{\text{factor}}
@@ -719,8 +719,8 @@ The retention time is checked against typical values, which are:
 As there is no environmental requirement for the $TSS$ content on the waterway discharge, the required 
 efficiency can not be calculated. Instead, the efficiency and residence time are calculated 
 to comply with the $BOD_5$ content (Eq.\eqref{eq:efficiency}). The same detention time 
-is assumed for the $TSS$ and the efficiency for the solids removal is then calcualed using 
-the Eq.\eqref{eq:efficiency} with the correponding parameters a and b from 
+is assumed for the $TSS$ and the efficiency for the solids removal is then calculated using 
+the Eq.\eqref{eq:efficiency} with the corresponding parameters a and b from 
 Table \ref{tab:detention_time_parameters}.
 
 \begin{align}
@@ -743,16 +743,16 @@ V_{\text{clarifier}}^{\text{calc}} &= Q_{\text{peak}} \cdot t \cdot 3600
   \end{tabular}
 \end{table}
 
-The clarifier calculated volume ($V_{\text{clarifier}}^{\text{calc}}$) is determiSned using Eq.\eqref{eq:clarifier_volume} 
+The clarifier calculated volume ($V_{\text{clarifier}}^{\text{calc}}$) is determined using Eq.\eqref{eq:clarifier_volume} 
 replacing the time $t$ with 
 $t_{\text{BOD}}$ shown in Table~\ref{tab:clarifier_inputs}. In addition, replacing the maximum and 
 minimum typical retention times (see Appendix~\ref{app:primary_criteria}), the maximum and minimum
-primary sedimentation tank volume ($V_{\text{clarifier}}^{\text{min}}$ and $V_{\text{clarifier}}^{\text{max}}$) can be determine. \\
-If $V_{\text{clarifier}}^{\text{calc}}$  is greater than $V_{\text{clarifier}}^{\text{max}}$, then the excesive volume 
+primary sedimentation tank volume ($V_{\text{clarifier}}^{\text{min}}$ and $V_{\text{clarifier}}^{\text{max}}$) can be determined. \\
+If $V_{\text{clarifier}}^{\text{calc}}$  is greater than $V_{\text{clarifier}}^{\text{max}}$, then the excessive volume 
 is used for the equalization basin ($V_{\text{equilization}}^{\text{req}}$) and the final clarifier 
 volume ($V_{\text{clarifier}}^{\text{final}}$) will be equal to 
 $V_{\text{clarifier}}^{\text{max}}$. Due to the equalization tank, there will 
-be a new \textit{adjusted} peak flow ($Q_{peak}^{adj}$), obtained with Eq.\eqref{eq:adjusted_peak_flow}. Based on this, subsequent calcualtions will 
+be a new \textit{adjusted} peak flow ($Q_{peak}^{adj}$), obtained with Eq.\eqref{eq:adjusted_peak_flow}. Based on this, subsequent calculations will 
 be based on this value instead of the $Q_{peak}$, when required.
 
 \begin{align}
@@ -793,7 +793,7 @@ $T$ &
 % BEGIN py_Temperature
 10
 % END py_Temperature
-& C & Assumed water lowest Temperature to adjust retention time.\\
+& C & Assumed the water lowest Temperature to adjust retention time.\\
 
 $E_{\text{BOD}}$ & 
 % BEGIN py_EfficiencyPrimary
@@ -804,7 +804,7 @@ $t_{\text{BOD}}$ &
 % BEGIN py_t_BOD
 1.35
 % END py_t_BOD
-& h & Optained with Eq.\eqref{eq:time_of_residency}\\
+& h & Obtained with Eq.\eqref{eq:time_of_residency}\\
 $t_{\text{TSS}}$ & 
 % BEGIN py_t_TSS
 1.35
@@ -834,14 +834,14 @@ $Q_{peak}^{adj}$ &
 % BEGIN py_adjusted_peak
 5776.11
 % END py_adjusted_peak
-& m$^3$/h & Adjusted peak flowrate, see Section~\ref{sec:primary_Sedimentation_design}\\
+& m$^3$/h & Adjusted peak flow rate, see Section~\ref{sec:primary_Sedimentation_design}\\
 \hline
 \end{tabularx}
 \end{table}
 
-Tha sedimentation basin height is then selected based on the typical design criteria, 
+The sedimentation basin height is then selected based on the typical design criteria, 
 see Appendix~\ref{app:primary_criteria}. The 5 m side water depth height upper limit is 
-selected and 0.5 m of freeboard is added ($H_{clarifier}=5.5m$). The area $A_{clarifier}$ is calcualted
+selected and 0.5 m of freeboard is added ($H_{clarifier}=5.5m$). The area $A_{clarifier}$ is calculated
  using Eq.\eqref{eq:sedimentation_tank_area}, the 
 volume $V_{clarifier}^{final}$ used is equal to $V_{clarifier}^{max}$.
 and the Surface Loading Rate ($SLR$) with Eq.\eqref{eq:SLR}, using both the $Q_{avg}$ and $Q_{peak}$. 
@@ -894,7 +894,7 @@ WLR_{critical} &= \frac{WLR}{n-1}
 
 \subsubsection{Final Configuration and Results}
 
-The process abovementioned was iterated until achiving results that 
+The process abovementioned was iterated until achieving results that 
 comply with the typical design criteria (Appendix~\ref{app:primary_criteria}), result are shown 
 in the Table~\ref{tab:clarifier_results}.
 
@@ -945,12 +945,12 @@ $WLR$ &
 % BEGIN py_WLR
 791.55
 % END py_WLR
-& m$^3$/m/day & Weir Lenth Ratio.\\[0.5em]
+& m$^3$/m/day & Weir Length Ratio.\\[0.5em]
 $WLR_{critical}$ &
 % BEGIN py_WLR_critical
 395.77
 % END py_WLR_critical
-& m$^3$/m/day & Weir Lenth Ratio under critial condition.\\[0.5em]
+& m$^3$/m/day & Weir Length Ratio under critical condition.\\[0.5em]
 $V_{equalization}^{req}$ & 
 % BEGIN py_required_equilization_volume
 3075.53
@@ -1160,128 +1160,125 @@ is equal to
 mg/L, and it represents the target for the removal in the primary treatment, 
 see Section~\ref{sec:primary_treat}.
 
-\subsection{Sludge Characteristics and Return Flow}
 
-Mixed liquor suspended solids (MLSS) concentration is chosen based on 
-the process type and operating temperature, and return sludge concentration 
-\( X_R \) is assumed. The sludge volume index (SVI) is given by:
+\subsection{Process Overview}
+The secondary treatment stage of the wastewater treatment plant is based on a conventional activated sludge process (CMAS), designed to ensure the effluent meets environmental discharge requirements. The system aims to reduce the concentration of Biochemical Oxygen Demand (BOD$\_5$) to acceptable levels while maintaining good settling characteristics and manageable sludge production.
 
-\begin{align}
-SVI &= \frac{10^6}{X_R}
-\end{align}
+\subsection{Influent Characterization and Removal Requirements}
 
-The settled sludge volume is:
-
-\begin{align}
-v &= \frac{SVI \cdot X}{1000}
-\end{align}
-
-The return sludge flow rate is then:
+To ensure that the effluent BOD$_5$ concentration does not exceed 
+\SI{14}{mg/L}, and considering a typical maximum removal efficiency of 
+\SI{94.6}{\percent}, the BOD$_5$ concentration entering the secondary 
+treatment process (from the primary clarifier) is calculated using 
+Eq.~\eqref{eq:bod_influent_calc}.
 
 \begin{align}
-Q_R &= \frac{Q \cdot v}{1000 - v}
+BOD\_{5,\text{in}} &= \frac{BOD\_{5,\text{eff}}}{1 - \eta\_{\text{BOD}}}
+\label{eq\:bod_influent_calc}
 \end{align}
+
+The resulting value is presented in Table~\ref{tab:secondary_inputs}.
+
+\subsection{Sludge Return and Settling Considerations}
+The return sludge flow is based on the chosen Suspended Volume Index (SVI), which must be lower than \SI{120}{mL/g} to avoid bulking. Using an SVI of \SI{91}{mL/g}, the return sludge concentration \$X\_R\$ is computed, and the return sludge flow \$Q\_R\$ is determined using mass balance.
+
+\begin{align}
+X\_R &= \frac{10^6}{SVI} \\
+Q\_R &= Q \cdot \frac{v}{1000 - v}
+\end{align}
+
+where $v$ is the settled sludge volume (mL/L). These calculations and other relevant values are shown in Table~\ref{tab:secondary_inputs}.
 
 \subsection{Aeration Tank Sizing}
-
-Using a target food-to-microorganism ratio (F/M), the required aeration tank volume is calculated:
+The aeration volume $V_a$ is computed based on the influent BOD$_5$, the food to microorganism ratio (F/M), and the mixed liquor suspended solids (MLSS):
 
 \begin{align}
-V_{\text{aeration}} &= \frac{Q \cdot BOD_{\text{in}}}{F/M \cdot X}
+V\_{a} &= \frac{BOD\_{5,\text{in}} \cdot Q}{\text{F/M} \cdot X}
 \label{eq:aeration_volume}
 \end{align}
 
-This is followed by residence time:
+This volume, along with the flowrate $Q$, is used to estimate the aeration time in Eq.~\eqref{eq:aeration_time}:
 
 \begin{align}
-t_{\text{aeration}} &= \frac{V_{\text{aeration}}}{Q} \cdot 24
+t\_{a} &= \frac{V\_{a}}{Q} \cdot 24
+\label{eq:aeration_time}
 \end{align}
 
-The organic loading is:
+These values are listed in Table~\ref{tab:secondary_results}.
+
+\subsection{Biomass and Oxygen Demand}
+The sludge age and BOD loading are calculated to ensure values fall within CMAS design ranges. Biomass production and oxygen demand for average and peak flows are estimated using:
 
 \begin{align}
-OL &= \frac{Q \cdot BOD_{\text{in}}}{V_{\text{aeration}}}
+Y_{obs} &= \frac{Y}{1 + K_d \cdot \theta_c} \\
+P_X &= Y_{obs} \cdot Q \cdot (S_{in} - S_{eff}) / 1000
 \end{align}
-
-\subsection{Sludge Age and Stability}
-
-The sludge age is estimated from:
 
 \begin{align}
-\theta_c &= \frac{1}{Y \cdot (F/M) \cdot \eta - K_d}
+O_2 &= \frac{Q \cdot (S_{in} - S_{eff})}{f \cdot 1000} - 1.42 \cdot P_X
+\label{eq:oxygen_demand}
 \end{align}
 
-A safety factor is applied to account for peak organic load variations:
+Where $f$ is the BOD conversion factor. The air requirement is calculated assuming 27.9\% oxygen concentration in air, 10\% transfer efficiency, and a safety factor:
 
 \begin{align}
-\theta_{c, \text{design}} &= 1.3 \cdot \theta_c
+\text{Air}*{\text{peak}} &= \frac{O\_2}{0.279 \cdot 0.1} \cdot \frac{2}{24} \\
+\text{Air}*{\text{avg}} &= \frac{O\_2}{0.279 \cdot 0.1} \cdot 2
 \end{align}
 
-\subsection{Contact-Stabilization Configuration}
-
-Given the contact time is 0.5 h and stabilization time is 2 h, the aeration tank is split as follows:
-
-\begin{align}
-V_{\text{contact}} &= \frac{1}{5} \cdot V_{\text{aeration}} \\
-V_{\text{stabilization}} &= V_{\text{aeration}} - V_{\text{contact}}
-\end{align}
-
-Contact tank geometry is based on the guideline ratio \( \text{length} = 4 \times \text{depth} \), and width computed from:
-
-\begin{align}
-W &= \frac{V}{L \cdot D}
-\end{align}
-
-Stabilization tank depth is derived from:
-
-\begin{align}
-D &= \frac{V}{L \cdot W}
-\end{align}
-
-\subsection*{Summary of Inputs and Outputs}
+\subsection{Design Summary}
+Table~\ref{tab:secondary_inputs} and Table~\ref{tab:secondary_results} summarize the design inputs and resulting key parameters for the secondary treatment system.
 
 \begin{table}[h]
 \centering
-\caption{Input values for secondary treatment}
+\caption{Design input values for secondary treatment}
 \label{tab:secondary_inputs}
-\begin{tabular}{|l|c|c|}
+\begin{tabularx}{\textwidth}{|l|c|c|X|}
 \hline
-\textbf{Parameter} & \textbf{Symbol} & \textbf{Value} \\
+\textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Description} \\
 \hline
-Target effluent BOD\textsubscript{5} & $BOD_{\text{effluent}}$ & 20 mg/L \\
-BOD removal efficiency & $\eta$ & 90\% \\
-MLSS & $X$ & 3000 mg/L \\
-Return sludge solids & $X_R$ & 11000 mg/L \\
-Yield coefficient & $Y$ & 0.6 \\
-Decay coefficient & $K_d$ & 0.06 d\textsuperscript{-1} \\
-Conversion rate & $k$ & 0.2 d\textsuperscript{-1} \\
-F/M ratio & F/M & 0.4 \\
-Safety factor & -- & 1.3 \\
+% BEGIN py_secondary_inputs
+$Q$ & 127506.0 & m$^3$/d & Adjusted projected peak flow from equalization tank \\
+$BOD_{5,\text{eff}}$ & 14.0 & mg/L & Target BOD$_5$ in treated effluent \\
+$\eta_{\text{BOD}}$ & 94.6 & \% & BOD$_5$ removal efficiency \cite{metcalf_2014_wastewater} \\
+$BOD_{5,\text{in}}$ & 259.26 & mg/L & BOD$_5$ at secondary influent, see Eq.~\eqref{eq:bod_influent_calc} \\
+$X$ & 4000 & mg/L & Mixed liquor suspended solids (MLSS) \\
+$SVI$ & 91.0 & mL/g & Suspended Volume Index \\
+$X_R$ & 10989.01 & mg/L & Return sludge concentration \\
+$v$ & 364.0 & mL/L & Volume of settled sludge \\
+$Q_R$ & 76314.38 & m$^3$/d & Return sludge flow \\
+% END py_secondary_inputs
 \hline
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \begin{table}[h]
 \centering
-\caption{Design results for secondary treatment}
+\caption{Key results for secondary treatment design}
 \label{tab:secondary_results}
-\begin{tabular}{|l|c|c|}
+\begin{tabularx}{\textwidth}{|l|c|c|X|}
 \hline
-\textbf{Output} & \textbf{Symbol} & \textbf{Result} \\
+\textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Description} \\
 \hline
-Influent BOD to secondary & $BOD_{\text{in}}$ & \texttt{[insert]} \\
-Return sludge ratio & $Q_R/Q$ & \texttt{[insert]} \\
-Aeration volume & $V_{\text{aeration}}$ & \texttt{[insert]} m$^3$ \\
-Aeration time & $t_{\text{aeration}}$ & \texttt{[insert]} h \\
-Sludge age & $\theta_c$ & \texttt{[insert]} d \\
-Final design age & $\theta_{c, \text{design}}$ & \texttt{[insert]} d \\
-Contact tank volume & $V_{\text{contact}}$ & \texttt{[insert]} m$^3$ \\
-Stabilization tank volume & $V_{\text{stabilization}}$ & \texttt{[insert]} m$^3$ \\
-Contact tank (L×W×D) & -- & \texttt{[insert]} m × \texttt{[insert]} m × \texttt{[insert]} m \\
-Stabilization tank (L×W×D) & -- & \texttt{[insert]} m × \texttt{[insert]} m × \texttt{[insert]} m \\
+% BEGIN py_secondary_results
+$F/M$ & 0.4 & -- & Food to microorganism ratio \\
+$V_a$ & 206.51 & m$^3$ & Aeration volume, see Eq.~\eqref{eq:aeration_volume} \\
+$t_a$ & 3.89 & h & Aeration time, see Eq.~\eqref{eq:aeration_time} \\
+$BOD_{\text{load}}$ & 1600.0 & g/m$^3$/d & BOD$_5$ loading \\
+$\theta_c$ & 6.94 & d & Sludge age \cite{metcalf_2014_wastewater} \\
+$\theta_{c,\text{max}}$ & 9.02 & d & Sludge age (adjusted for peak loading) \\
+$Y_{\text{obs,avg}}$ & 0.43 & -- & Observed yield for average flow \\
+$P_{X,\text{avg}}$ & 961.96 & kg/d & Biomass production for average flow \\
+$P_{X,\text{peak}}$ & 1532.5 & kg/d & Biomass production for peak flow \\
+$O_{2,\text{peak}}$ & 2924.91 & kg/d & Oxygen demand for peak flow, see Eq.~\eqref{eq:oxygen_demand} \\
+$O_{2,\text{avg}}$ & 2698.77 & kg/d & Oxygen demand for average flow, see Eq.~\eqref{eq:oxygen_demand} \\
+$\text{Air}_{\text{peak}}$ & 8743.36 & m$^3$/h & Required air for peak conditions \\
+$\text{Air}_{\text{avg}}$ & 19372.13 & m$^3$/d & Required air for average conditions \\
+% END py_secondary_results
 \hline
-\end{tabular}
+\end{tabularx}
 \end{table}
+
 
 
 
@@ -1291,17 +1288,17 @@ Stabilization tank (L×W×D) & -- & \texttt{[insert]} m × \texttt{[insert]} m �
 To evaluate the impact of the effluent discharge on the receiving waterway, 
 the \textit{Streeter-Phelps model} was applied. This model predicts the variation in dissolved 
 oxygen (DO) downstream of the discharge point based on oxygen consumption due to biochemical 
-oxygen demand (BOD) and oxygen replenishment through atmospheric reaeration.
+oxygen demand (BOD) and oxygen replenishment through atmospheric re-aeration.
 
 According to previous surveys and analysis, the receiving waterway has a base flow that complies
 with: 
 \(Q_{\text{waterway}} = 300{,}000 \cdot \left(\text{10}\right)^{0.2} = 475468 \text{ } m^3/day\)
 . The water quality upstream 
 of the discharge point is characterized by a background BOD of 4 mg/L (L$_r$), a dissolved oxygen saturation 
-of 8.5 mg/L (DO$_saturation$), and an initial oxygen deficit of 0.8 mg/L (DO$_0$). Regulatory guidelines for this region require 
-that DO levels remain above 70\% saturation \textbf{REFERENCE TBD}, yielding a minimum acceptable DO of 5.95 mg/L (Eq~\eqref{eq:do_threshold}).
-Additionally, the rearation rate constant (k$_r$), deoxygenation rate constant (k$_d$), BOD reaction rate
-(k$_1$) and stream velocity (v) are known due to previous assesments. In the Table \ref{tab:env_inputs} the
+of 8.5 mg/L (DO$_{saturation}$), and an initial oxygen deficit of 0.8 mg/L (DO$_0$). Regulatory guidelines for this region require 
+that DO levels remain above 70\% saturation \cite{yarravalleywater_2023_amf}, yielding a minimum acceptable DO of 5.95 mg/L (Eq~\eqref{eq:do_threshold}).
+Additionally, the re-aeration rate constant (k$_r$), oxygenation rate constant (k$_d$), BOD reaction rate
+(k$_1$) and stream velocity (v) are known due to previous assessments. In the Table \ref{tab:env_inputs} the
 input values for the \textit{Streeter-Phelps model} are shown.\\
 
 The effluent discharge was evaluated based on the project adjusted 
@@ -1314,7 +1311,7 @@ m$^3$/day), calculated in Section \ref{sec:primary_treat} and a effluent BOD$_5$
 14
 % END py_max_BOD_effluent2
 mg/L (L$_w$). This value was estimated through iterating the calculations explained 
-in this sections until achieving a $DO_{calculated}$ that complies 
+in this section until achieving a $DO_{calculated}$ that complies 
 with the $DO_{min, threshold}$. Thus, this value was set as the 
 target for the upstream processes, 
 see Sections \ref{sec:primary_treat} and \ref{sec:secondary_trat}. 
@@ -1336,16 +1333,16 @@ see Sections \ref{sec:primary_treat} and \ref{sec:secondary_trat}.
 14
   % END py_max_BOD_effluent
   mg/L & BOD$_5$ of effluent \\
-  $k_r$ & 0.71 day$^{-1}$ & Reaeration rate constant \\
-  $k_d$ & 0.51 day$^{-1}$ & Deoxygenation rate constant \\
+  $k_r$ & 0.71 day$^{-1}$ & Re-aeration rate constant \\
+  $k_d$ & 0.51 day$^{-1}$ & De-oxygenation rate constant \\
   $k_1$ & 0.23 day$^{-1}$ & BOD reaction rate \\
   $v$ & 0.07 m/s & Stream velocity \\
-  $Q_w$ & 475468 $m^3/day$ & Waterway flowrate\\
+  $Q_w$ & 475468 $m^3/day$ & Waterway flow rate\\
   $Q_e$ &
 % BEGIN py_adjustedQ2
 138626.63
 % END py_adjustedQ2
-  $m^3/day$ & Adjusted flowrate\\
+  $m^3/day$ & Adjusted flow rate\\
   \hline
   \end{tabular}
 \end{table}
@@ -1356,7 +1353,7 @@ equals to 5 days. Using Eq. \eqref{eq:mixing_zone_bod} the mixed BOD in the rece
 determined, and with Eq. \eqref{eq:mixing_zone_bod} mixed conditions downstream are calculated.
 The model then determines the time ($t_c$) at which the minimum DO level occurs using Eq. \eqref{eq:tc}. 
 Finally, the maximum deficit $D(t_c)$ is calculated using Eq. \eqref{eq:do_deficit}.
-The distance downstream at which the the maximum deficit/minimum saturation 
+The distance downstream at which the maximum deficit/minimum saturation 
 is reached can also be calculated using Eq. \eqref{eq:distance_min_do} Results are 
 shown in Table \ref{tab:env_outputs}.
 
@@ -1449,7 +1446,7 @@ initial value ($DO_0$). \\
 
 \newpage
 
-\section{summary}
+\section{Summary}
 \newpage
 
 \bibliographystyle{apalike}     % or plain, abbrv, unsrt, etc.
@@ -1470,7 +1467,7 @@ initial value ($DO_0$). \\
 
 \appendixsection{Area and Population per suburb}{app:melbourne_density}
 
-Table of Melbourne suburbs with their area and popluation \cite{australianbureauofstatistics_2021_suburbs}.\\
+Table of Melbourne suburbs with their area and population \cite{australianbureauofstatistics_2021_suburbs}.\\
 \input{melbourne_density.tex}
 
 

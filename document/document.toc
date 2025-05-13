@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {2.2}Screens design}{5}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Blockage Scenario}{7}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Operational considerations}{8}{subsubsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.4}Equalisation basin}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Equalization basin}{8}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Protection against failure}{8}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Primary treatment}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Facility Types}{9}{subsection.3.1}%
@@ -24,11 +24,13 @@
 \contentsline {subsection}{\numberline {3.4}Protection and future considerations}{15}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Secondary treatment}{15}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Design Overview}{15}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Sludge Characteristics and Return Flow}{15}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Aeration Tank Sizing}{16}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Sludge Age and Stability}{16}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Contact-Stabilization Configuration}{16}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.2}Process Overview}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Influent Characterization and Removal Requirements}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Sludge Return and Settling Considerations}{16}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Aeration Tank Sizing}{16}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Biomass and Oxygen Demand}{16}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Design Summary}{17}{subsection.4.7}%
 \contentsline {section}{\numberline {5}Environmental Impact Assessment}{17}{section.5}%
-\contentsline {section}{\numberline {6}summary}{20}{section.6}%
+\contentsline {section}{\numberline {6}Summary}{20}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
 \contentsline {section}{Appendix 2\hskip 1em\relax Design criteria for primary sedimentation basins}{12}{appendix.B}%
