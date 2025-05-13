@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  13 MAY 2025 09:57
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  13 MAY 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -477,11 +477,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip92
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 78.
- (./document.aux
-
-LaTeX Warning: Label `sec:secondary_trat' multiply defined.
-
-)
+ (./document.aux)
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
@@ -751,13 +747,8 @@ File: ../images/boxPlot_BOD.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [4]
-Underfull \hbox (badness 5592) in paragraph at lines 354--355
-\TU/Arial(0)/m/n/10.95 treatment level. Usually used
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+File: ../images/screening.png Graphic file (type bmp)
+<../images/screening.png>
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
@@ -767,6 +758,9 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [6]
+File: ../images/basin_diagram.png Graphic file (type bmp)
+<../images/basin_diagram.png>
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -792,10 +786,6 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [10]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [11]
@@ -807,17 +797,17 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1109
-
- []
-
-
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [14]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1148--1158
+
+ []
 
 
 
@@ -831,18 +821,22 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
-[17] (./document.bbl)
+[17]
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
-[18]
+[18] (./document.bbl)
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
+[19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1240.
+(hyperref)                replaced by space on input line 1304.
 
 (./melbourne_density.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1
+Underfull \hbox (badness 10000) in paragraph at lines 1306--1
 
  []
 
@@ -917,17 +911,17 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1246--1246
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1310
 |\TU/Arial(0)/b/n/14.4 APPENDIX 2 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1246.
+(hyperref)                replaced by space on input line 1310.
 
 
-Overfull \hbox (33.56255pt too wide) in alignment at lines 1279--1279
+Overfull \hbox (33.56255pt too wide) in alignment at lines 1343--1343
 [][][] 
  []
 
@@ -944,26 +938,16 @@ enddocument/afterlastpage (AED): lastpage setting LastPage.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-
-Package rerunfilecheck Warning: File `document.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `document.out':
-(rerunfilecheck)             Before: 9D873CD388988CA0F6D58ED0BDA27889;7323
-(rerunfilecheck)             After:  B062E2BB81B56C4E5DAEE512A1820A8F;6317.
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: C447B5D8D17BB971BA8993E525B18552;6712.
  ) 
 Here is how much of TeX's memory you used:
- 18904 strings out of 470249
- 410824 string characters out of 5487939
- 927568 words of memory out of 5000000
- 45325 multiletter control sequences out of 15000+600000
+ 18927 strings out of 470249
+ 411492 string characters out of 5487939
+ 927225 words of memory out of 5000000
+ 45346 multiletter control sequences out of 15000+600000
  630830 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,15n,114p,442b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (33 pages).
+Output written on document.pdf (34 pages).

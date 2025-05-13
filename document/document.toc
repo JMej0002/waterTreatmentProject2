@@ -6,26 +6,28 @@
 \contentsline {subsection}{\numberline {1.5}Population Growth and Future Design Considerations}{3}{subsection.1.5}%
 \contentsline {subsection}{\numberline {1.6}Influent Pollutant Load Estimation}{4}{subsection.1.6}%
 \contentsline {section}{\numberline {2}Preliminary Treatment Design}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Facility types}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Facility types}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Screens design}{5}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Equalisation basin}{6}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Primary treatment}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Fecility Types}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Primary Sedimentation}{7}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Clarifier Sizing and Flow Equalization}{7}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Weir Loading Rate (WLR) Assessment}{9}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Final Configuration and Results}{9}{subsubsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.3}V-Notch and Launder Design}{9}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Launder Flow Conditions}{11}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}V-Notch and Launder design results}{11}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}Protection and future considerations}{11}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Secondary treatment}{12}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Design Overview}{12}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Sludge Characteristics and Return Flow}{12}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Aeration Tank Sizing}{13}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Sludge Age and Stability}{13}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Contact-Stabilization Configuration}{13}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Environmental Impact Assessment}{14}{section.5}%
-\contentsline {section}{\numberline {6}summary}{17}{section.6}%
+\contentsline {subsubsection}{\numberline {2.2.1}Operational considerations}{6}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Equalisation basin}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Protection against failure}{7}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Primary treatment}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Facility Types}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Primary Sedimentation}{8}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Clarifier Sizing and Flow Equalization}{8}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Weir Loading Rate (WLR) Assessment}{10}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Final Configuration and Results}{11}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}V-Notch and Launder Design}{11}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Launder Flow Conditions}{12}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}V-Notch and Launder design results}{13}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Protection and future considerations}{13}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Secondary treatment}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Design Overview}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Sludge Characteristics and Return Flow}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Aeration Tank Sizing}{14}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Sludge Age and Stability}{14}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Contact-Stabilization Configuration}{15}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Environmental Impact Assessment}{15}{section.5}%
+\contentsline {section}{\numberline {6}summary}{18}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
 \contentsline {section}{Appendix 2\hskip 1em\relax Design criteria for primary sedimentation basins}{12}{appendix.B}%
