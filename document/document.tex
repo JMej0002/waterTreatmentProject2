@@ -343,7 +343,7 @@ the overall reliability and effectiveness of subsequent treatment processes.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{../images/screens.png}
+  \includegraphics[width=0.7\textwidth]{../images/screening.png}
   \caption{Preliminary treatment, screens section.}
   \label{fig:screens_section}
 \end{figure}
@@ -394,8 +394,8 @@ $d$ & 1.0 m & Assumed downstream flow depth \\
 
 From Equations \eqref{eq:screen_velocity} to 
 \eqref{eq:screen_width}
- Table~\ref{tab:screen_outputs} the upstream velocity ($v_\text{upstream}$), 
-the headloss ($H_\text{loss}$), the upstream flow rate ($d_\text{upstream}$), 
+ the upstream velocity ($v_\text{upstream}$), 
+the headloss ($H_\text{loss}$), the upstream flow depth ($d_\text{upstream}$), 
 the wetted cross-sectional area ($A_\text{wet}$) and required channel width ($W_\text{channel}$) 
 were determined.
 The screens width is recommended to be between 0.6 and 1.1m. 
@@ -460,13 +460,77 @@ the upstream velocity at low flow was recalculated. The downstream control
 flow depth should not exceed the value shown in Table~\ref{tab:screen_outputs} to 
 maintain sufficient velocity during low flow conditions.
 
+\subsubsection{Operational considerations}
+\label{sec:screens_operational_considerations}
+
+During the screens operation, a target velocity of 0.7 - 0.9 $m/s$ at peak 
+flows is ideal for operational balance, ensuring effective screenings removal without 
+excessive turbulence or debris bypass. The channel dimensions were sized to 
+maintain appropriate flow velocities under varying conditions and considering 
+future growth and possible peak events. Finally, the screens should be 
+easily accessible and designed for rapid maintenance response. Scheduled inspections 
+and routine cleaning are required, especially after high flow events.
+
 \subsection{Equalisation basin}
 \label{sec:equalization_basin}
 
-The Equalization basins were calculated to control the downstreams peak flow, ensuring 
-an addecuated primary treatment achieving the targeted efficiency in the $BOD_5$ 
-removal. In Section \ref{sec:primary_treat}, is explained how the volume of the equalization 
-basin was obtained and in Table \ref{tab:clarifier_inputs} the required volume (\ref{tab:clarifier_inputs}) is shown.
+The equalisation basin was designed to minimise flow fluctuations to downstream 
+treatment units, enhancing overall plant stability and performance. 
+Initially, the basin volume calculated by capturing all inflows exceeding 
+the projected average daily flow resulted in an impractical tank size 
+(~24,000 m³). Therefore, a new peak flow of 138,626 m³/day was established, 
+based on the maximum capacity of the downstream primary treatment facilities. 
+(See Section \ref{sec:primary_treat}).
+This revised approach operates near-average flow rates for 
+most hours of the day. During peak inflow periods (from 3 pm to 9 pm), 
+inflows exceeding this new peak flow rate are diverted to the equalisation 
+basin. In low-demand hours, stored wastewater is returned to maintain less 
+variable flow to the downstream processes. This method reduced the required 
+equalisation volume and significantly reduced the peak flows. After 
+recalculating using this approach, the required equalisation volume 
+was smaller, although this requires extra operational control, providing 
+narrower variation in the hydraulic regime for downstream processes.
+This equalisation basin requires aeration so as to prevent odours 
+and solids deposition. The proposed equalisation is an off-line basin 
+as seen in the diagram shown in Figure~\ref{fig:basin_diagram}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../images/basin_diagram.png}
+  \caption{Off-line equalisation basin –adapted from Fig 3-20, Davis,2010.}
+  \label{fig:basin_diagram}
+\end{figure}
+
+\subsection{Protection against failure}
+\label{preliminary_treatment_protection}
+
+To ensure continuous operation and protect against failure scenarios, 
+the preliminary treatment facilities incorporate redundancy and safety 
+features, describied in Davis, 2010 an summarized in Table~\ref{tab:contingency_measures} 
+
+\begin{table}[h]
+\centering
+\caption{Operational resilience and contingency measures \cite{davis2010water}}
+\label{tab:contingency_measures}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Aspect} & \textbf{Description} \\
+\hline
+\textbf{Redundancy Measures} & 
+An additional mechanically cleaned coarse screen and vortex grit chamber unit will be provided as backup units. This ensures operational continuity during periods when primary units are undergoing maintenance or experiencing overloading conditions. \\[1em]
+\hline
+\textbf{Bypass Channels and Overflow} & 
+Dedicated bypass channels will be installed, allowing flows to bypass the primary screening and grit removal facilities. An overflow outlet will be provided for the equalisation basin to prevent hydraulic overload during emergency situations. \\[0.5em]
+\hline
+\textbf{Maintenance Accessibility} & 
+Screens, grit chambers, and the equalisation basin are designed with ease of access in mind, facilitating rapid maintenance and emergency interventions. \\
+\hline
+\textbf{Emergency Procedures and Alarms} & 
+An alarm system will trigger when blockage levels reach 50\% or if there is a sudden halt in mechanical operation. This proactive alert mechanism enables prompt operator intervention, minimizing the risk of overflow or downstream process disruption. \\[0.5em]
+\hline
+\end{tabularx}
+\end{table}
+
 
 \section{Primary treatment}
 \label{sec:primary_treat}
@@ -1095,10 +1159,17 @@ input values for the \textit{Streeter-Phelps model} are shown.\\
 The effluent discharge was evaluated based on the project adjusted 
 peak flow rate (
 % BEGIN py_adjustedQ
-5776.11
+138626.63
 % END py_adjustedQ
-m$^3$/day), calculated in Section \ref{sec:primary_treat} and a maximum BOD$_5$ of 20 mg/L (L$_w$) 
-\textbf{REFERENCE TBD}. 
+m$^3$/day), calculated in Section \ref{sec:primary_treat} and a effluent BOD$_5$ of 
+% BEGIN py_max_BOD_effluent2
+14
+% END py_max_BOD_effluent2
+mg/L (L$_w$). This value was estimated through iterating the calculations explained 
+in this sections until achieving a $DO_{calculated}$ that complies 
+with the $DO_{min, threshold}$. Thus, this value was set as the 
+target for the upstream processes, 
+see Sections \ref{sec:primary_treat} and \ref{sec:secondary_trat}. 
 
 \begin{table}[h]
   \centering
@@ -1112,7 +1183,11 @@ m$^3$/day), calculated in Section \ref{sec:primary_treat} and a maximum BOD$_5$ 
   $DO_0$ & 0.8 mg/L & Initial oxygen deficit \\
   $DO_{\text{min, threshold}}$ & 5.95 mg/L & Minimum DO required \\
   $L_r$ & 4 mg/L & BOD upstream \\
-  $L_w$ & 20 mg/L & BOD$_5$ of effluent \\
+  $L_w$ & 
+  % BEGIN py_max_BOD_effluent
+14
+  % END py_max_BOD_effluent
+  mg/L & BOD$_5$ of effluent \\
   $k_r$ & 0.71 day$^{-1}$ & Reaeration rate constant \\
   $k_d$ & 0.51 day$^{-1}$ & Deoxygenation rate constant \\
   $k_1$ & 0.23 day$^{-1}$ & BOD reaction rate \\
@@ -1120,7 +1195,7 @@ m$^3$/day), calculated in Section \ref{sec:primary_treat} and a maximum BOD$_5$ 
   $Q_w$ & 475468 $m^3/day$ & Waterway flowrate\\
   $Q_e$ &
 % BEGIN py_adjustedQ2
-5776.11
+138626.63
 % END py_adjustedQ2
   $m^3/day$ & Adjusted flowrate\\
   \hline
@@ -1143,7 +1218,8 @@ L_u &= \frac{L_w}{1 - e^{-k_1 t}} \label{eq:ultimate_bod} \\
 L_0 &= \frac{Q_w \cdot L_r + Q_e \cdot L_u}{Q_w + Q_e} \label{eq:mixing_zone_bod} \\
 t_c &= \frac{1}{k_r - k_d} \ln \left[ \frac{k_r}{k_d} \left(1 - D_0 \cdot \frac{k_r - k_d}{k_d L_0} \right) \right] \label{eq:tc} \\
 x_c &= t_c \cdot 86400 \cdot v \label{eq:distance_min_do} \\
-D(t_c) &= \frac{k_d L_0}{k_r - k_d} \left(e^{-k_d t_c} - e^{-k_r t_c}\right) + D_0 e^{-k_r t_c} \label{eq:do_deficit}
+D(t_c) &= \frac{k_d L_0}{k_r - k_d} \left(e^{-k_d t_c} - e^{-k_r t_c}\right) + D_0 e^{-k_r t_c} \label{eq:do_deficit}\\
+DO_{calculated} &=DO_{saturation}-D(t_c) \label{eq:do_calculated}
 \end{align}
 
 
@@ -1184,6 +1260,9 @@ $D(t_c)$ &
 \end{tabular}
 \end{table}
 
+This model can be graphed to have a visual representation of the 
+biochemical-timed phenomenon. In 
+
 %discuss about the results!! 
 As shown in Table~\ref{tab:env_outputs}, 
 the dissolved oxygen deficit at its critical point is 
@@ -1197,7 +1276,7 @@ the dissolved oxygen deficit at its critical point is
 6.0
  % END py_DO_calc
  mg/L
-which is below the regulatory $DO_\text{min, threshold}$ of 
+which is above the regulatory $DO_\text{min, threshold}$ of 
 5.95 mg/L. Therefore, the discharge 
 complies with the receiving waterway's environmental standard.
 

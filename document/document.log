@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  13 MAY 2025 13:19
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  13 MAY 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -747,12 +747,8 @@ File: ../images/boxPlot_BOD.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [4]
-File: ../images/screens.png Graphic file (type bmp)
-<../images/screens.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+File: ../images/screening.png Graphic file (type bmp)
+<../images/screening.png>
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
@@ -762,6 +758,9 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [6]
+File: ../images/basin_diagram.png Graphic file (type bmp)
+<../images/basin_diagram.png>
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -787,10 +786,6 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [10]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [11]
@@ -802,17 +797,17 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 1084--1094
-
- []
-
-
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [14]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1148--1158
+
+ []
 
 
 
@@ -826,18 +821,22 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
-[17] (./document.bbl)
+[17]
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
-[18]
+[18] (./document.bbl)
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
+[19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1225.
+(hyperref)                replaced by space on input line 1304.
 
 (./melbourne_density.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1227--1
+Underfull \hbox (badness 10000) in paragraph at lines 1306--1
 
  []
 
@@ -912,17 +911,17 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1231--1231
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1310
 |\TU/Arial(0)/b/n/14.4 APPENDIX 2 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1231.
+(hyperref)                replaced by space on input line 1310.
 
 
-Overfull \hbox (33.56255pt too wide) in alignment at lines 1264--1264
+Overfull \hbox (33.56255pt too wide) in alignment at lines 1343--1343
 [][][] 
  []
 
@@ -939,26 +938,16 @@ enddocument/afterlastpage (AED): lastpage setting LastPage.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `document.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `document.out':
-(rerunfilecheck)             Before: B062E2BB81B56C4E5DAEE512A1820A8F;6317
-(rerunfilecheck)             After:  0AC551C77693D5A39BB2BFA118F63A7F;6317.
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: C447B5D8D17BB971BA8993E525B18552;6712.
  ) 
 Here is how much of TeX's memory you used:
- 18912 strings out of 470249
- 411040 string characters out of 5487939
- 926436 words of memory out of 5000000
- 45332 multiletter control sequences out of 15000+600000
+ 18927 strings out of 470249
+ 411492 string characters out of 5487939
+ 927225 words of memory out of 5000000
+ 45346 multiletter control sequences out of 15000+600000
  630830 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,15n,114p,442b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (33 pages).
+Output written on document.pdf (34 pages).
