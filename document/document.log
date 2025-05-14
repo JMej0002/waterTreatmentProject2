@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  14 MAY 2025 23:55
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  15 MAY 2025 00:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -870,10 +870,6 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [15]
 
-LaTeX Warning: Citation `chudoba1973control' on page 16 undefined on input line 1261.
-
-
-
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [16]
@@ -1331,10 +1327,10 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: FEF769DF97016280507C8D47C5901370;7973.
  ) 
 Here is how much of TeX's memory you used:
- 19122 strings out of 470249
- 416917 string characters out of 5487939
- 930447 words of memory out of 5000000
- 45517 multiletter control sequences out of 15000+600000
+ 19123 strings out of 470249
+ 416937 string characters out of 5487939
+ 930506 words of memory out of 5000000
+ 45518 multiletter control sequences out of 15000+600000
  631292 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,15n,114p,660b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
