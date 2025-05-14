@@ -29,11 +29,19 @@
 \usepackage{multirow}
 \usepackage{siunitx}
 \usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{pdflscape}
+
 \usepackage[hidelinks]{hyperref}
 
 \urlstyle{same}
 
 
+\fancypagestyle{landscapeplain}{
+  \fancyhf{} % clear header/footer
+  \renewcommand{\headrulewidth}{0pt} % remove header line
+  \fancyfoot[C]{\thepage} % page number centered in footer (optional)
+}
 
 
 
@@ -131,6 +139,9 @@ Executive summary to be added here afterwards
 
 
 \tableofcontents
+\listoffigures
+\listoftables
+
 \newpage
 
 % Start main document with headers and page numbers
@@ -1130,7 +1141,17 @@ extreme hydraulic loads or clarifier failure events.
 \section{Secondary treatment}
 \label{sec:secondary_trat}
 
-\subsection{Design Overview}
+\subsection{Facility type}
+\label{sec:sec_treat_facility_type}
+
+The Complete-Mix Activated Sludge (CMAS) 
+process is selected for the secondary treatment stage, 
+following guidelines from the Water Environment Federation \cite{wef_DesignWaterResource}. 
+CMAS provides robust and consistent performance under fluctuating loads and conditions. 
+Despite the process’s susceptibility to filamentous microbial growth, careful selection of 
+operational parameters addresses this potential issue.
+
+\subsection{Influent Characterization and Removal Requirements}
 
 The secondary treatment stage of the wastewater treatment plant is 
 based on a conventional activated sludge process (\textit{CMAS}), aiming to achieve a 
@@ -1158,11 +1179,32 @@ is equal to
 259.3
 % END py_secondary_BOD_inflow
 mg/L, and it represents the target for the removal in the primary treatment, 
-see Section~\ref{sec:primary_treat}.
+see Section~\ref{sec:primary_treat}. The typical design parameters for activated 
+sludge processes are shown in Appendix~\ref{app:sludge_criteria}.
 
 
-\subsection{Sludge Return and Settling Considerations}
-The return sludge flow is based on the chosen Suspended Volume Index (SVI), which must be lower than \SI{120}{mL/g} to avoid bulking. Using an SVI of \SI{91}{mL/g}, the return sludge concentration \(X_R\) is computed, and the return sludge flow \(Q_R\) is determined using mass balance:
+\subsection{Sludge Characteristics and Return Flow}
+
+As the wastewater temperature highly impacts the activated sludge performance 
+a value of $10^{\circ}C$ is used to represent critical weather conditions in 
+Melbourne. A Mixed Liquor Suspended Solids (\textit{MLSS}) concentration of
+% BEGIN py_MLSS
+4000
+% END py_MLSS
+mg/L; and the Suspended Volume Index (\textit{SVI}) is adopted 
+as 
+% BEGIN py_SVI
+91
+% END py_SVI
+mg/L, which promotes good sludge settling characteristics. It also fosters 
+adequate flocculation and settling as it maintains approximately 50\% 
+filamentous microorganism content. Both the 
+which is the limit for the typical values selected for this 
+process, see Appendix~\ref{app:sludge_criteria}.
+The return sludge flow is based on the chosen , which must be lower than \SI{120}{mL/g} 
+to avoid bulking. Using an SVI of \SI{91}{mL/g}, the return 
+sludge concentration \(X_R\) is computed, and the return sludge 
+flow \(Q_R\) is determined using mass balance:
 
 \begin{align}
 X_R &= \frac{10^6}{SVI} \\
@@ -1488,6 +1530,48 @@ Splitter box inlet velocity & $<$ 0.3 m/s & At peak flow \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\appendixsection{Typical design parameters for activates sludge processes}{app:sludge_criteria}
+
+
+\begin{landscape}
+\thispagestyle{landscapeplain}
+\begin{table}[h]
+\centering
+\caption{Typical design parameters for commonly used activated sludge processes \cite{metcalf_2014_wastewater}}
+\label{tab:activated_sludge_parameters}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{4.5cm}|p{3cm}|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{Process name}} & \multirow{2}{*}{\textbf{Reactor type}} & \multirow{2}{*}{\textbf{SRT (d)}} & \multirow{2}{*}{\textbf{F/M}} & \multicolumn{2}{c|}{\textbf{Volumetric loading}} & \multirow{2}{*}{\textbf{MLSS (mg/L)}} & \multirow{2}{*}{\textbf{Total $\tau$ (h)}} \\
+\cline{5-6}
+ & & & (kg BOD/kg MLVSS-d) & lb BOD/1000 ft$^3$/d & kg BOD/m$^3$/d & & \\
+\hline
+High-rate aeration & CMAS or plug flow & 0.5–2 & 1.5–2.0 & 75–150 & 1.2–2.4 & 500–1500 & 1–2 \\
+Contact stabilization & CMAS or plug flow & 5–10 & 0.2–0.6 & 60–75 & 1.0–1.3 & 1000–3000\textsuperscript{a} & 0.5–1\textsuperscript{a} \\
+ & & & & & & 6000–10,000\textsuperscript{b} & 2–4\textsuperscript{b} \\
+High-purity oxygen & Staged & 1–4 & 0.5–1.0 & 80–200 & 1.3–3.2 & 2000–4000 & 1–3 \\
+Conventional plug flow & Plug flow & 3–15 & 0.2–0.4 & 20–40 & 0.3–0.7 & 1000–3000 & 4–8 \\
+Step feed & Plug flow or staged & 3–15 & 0.2–0.4 & 40–60 & 0.7–1.0 & 1500–4000 & 3–5 \\
+Complete mix & CMAS & 3–15 & 0.2–0.6 & 20–100 & 0.3–1.6 & 1500–4000 & 3–6 \\
+Extended aeration & CMAS or plug flow & 20–40 & 0.04–0.1 & 5–15 & 0.1–0.3 & 2000–4000 & 20–30 \\
+Oxidation ditch & CMAS + plug flow & 15–30 & 0.04–0.1 & 5–15 & 0.1–0.3 & 3000–5000 & 15–30 \\
+Batch decant (ICEAS, CAAS) & Plug flow & 12–30 & 0.04–0.1 & 5–15 & 0.1–0.3 & 2000–5000 & 20–40 \\
+Sequencing batch reactor & Batch & 15–30 & 0.04–0.1 & 5–15 & 0.1–0.3 & 2000–5000 & 15–40 \\
+Counter current aeration (CCAS\texttrademark) & Plug flow & 15–30 & 0.04–0.1 & 5–10 & 0.1–0.3 & 2000–4000 & 15–40 \\
+\hline
+\end{tabular}
+
+\vspace{0.8em}
+\begin{flushleft}
+\small
+\textsuperscript{a} MLSS and detention time in contact basin. \\
+\textsuperscript{b} MLSS and detention time in stabilization basin.
+\end{flushleft}
+\end{table}
+\end{landscape}
+
+
 
 \label{LastPageAppendix}
 

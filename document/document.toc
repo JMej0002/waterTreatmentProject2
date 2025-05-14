@@ -23,12 +23,14 @@
 \contentsline {subsubsection}{\numberline {3.3.2}V-Notch and Launder design results}{14}{subsubsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.4}Protection and future considerations}{15}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Secondary treatment}{15}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Design Overview}{15}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Sludge Return and Settling Considerations}{15}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Aeration Tank Sizing}{15}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Biomass and Oxygen Demand}{16}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Design Summary}{16}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.1}Facility type}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Influent Characterization and Removal Requirements}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Sludge Characteristics and Return Flow}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Aeration Tank Sizing}{16}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Biomass and Oxygen Demand}{16}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Design Summary}{17}{subsection.4.6}%
 \contentsline {section}{\numberline {5}Environmental Impact Assessment}{17}{section.5}%
 \contentsline {section}{\numberline {6}Summary}{20}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
 \contentsline {section}{Appendix 2\hskip 1em\relax Design criteria for primary sedimentation basins}{12}{appendix.B}%
+\contentsline {section}{Appendix 3\hskip 1em\relax Typical design parameters for activates sludge processes}{13}{appendix.C}%
