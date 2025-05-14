@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  14 MAY 2025 19:00
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  14 MAY 2025 20:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -632,9 +632,9 @@ Package hyperref Info: Link coloring OFF on input line 86.
 \tf@toc=\write4
 \openout4 = `document.toc'.
 
- (./document.lof
 
-[2])
+
+[2] (./document.lof)
 \tf@lof=\write5
 \openout5 = `document.lof'.
 
@@ -798,30 +798,41 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [7]
-File: ../images/basin_diagram.png Graphic file (type bmp)
-<../images/basin_diagram.png>
+Underfull \hbox (badness 10000) in paragraph at lines 615--626
+
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `' on page 8 undefined on input line 639.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 627--653
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 654--672
+
+ []
 
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [8]
+File: ../images/basin_diagram.png Graphic file (type bmp)
+<../images/basin_diagram.png>
+
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 737--742
+Underfull \hbox (badness 10000) in paragraph at lines 780--785
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 744--753
+Underfull \hbox (badness 10000) in paragraph at lines 787--796
 
  []
 
@@ -859,33 +870,18 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [15]
 
-LaTeX Warning: Reference `eq:bod_influent_calc' on page 16 undefined on input line 1273.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1314--1324
 
- []
+LaTeX Warning: Reference `eq:bod_influent_calc' on page 17 undefined on input line 1316.
 
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [17]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1437--1452
+Underfull \hbox (badness 10000) in paragraph at lines 1357--1367
 
  []
 
@@ -894,12 +890,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1437--1452
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1453--1460
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1495
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1496--1503
 
  []
 
 File: ../images/DOd streeter-phelps Model.png Graphic file (type bmp)
 <../images/DOd streeter-phelps Model.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
@@ -916,10 +920,10 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1489.
+(hyperref)                replaced by space on input line 1532.
 
 (./melbourne_density.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1491--1
+Underfull \hbox (badness 10000) in paragraph at lines 1534--1
 
  []
 
@@ -997,7 +1001,7 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1494.
+(hyperref)                replaced by space on input line 1537.
 
 File: ../images/temperature_multiplier.png Graphic file (type bmp)
 <../images/temperature_multiplier.png>
@@ -1008,20 +1012,13 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1506--1506
-|\TU/Arial(0)/b/n/14.4 APPENDIX 3 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
- []
-
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1506.
+(hyperref)                replaced by space on input line 1549.
 
-
-Overfull \hbox (33.56255pt too wide) in alignment at lines 1539--1539
-[][][] 
- []
-
+File: ../images/temperature_multiplier.png Graphic file (type bmp)
+<../images/temperature_multiplier.png>
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
@@ -1029,10 +1026,19 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 [13
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 1565--1565
+|\TU/Arial(0)/b/n/14.4 APPENDIX 4 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1542.
+(hyperref)                replaced by space on input line 1565.
+
+
+Overfull \hbox (33.56255pt too wide) in alignment at lines 1598--1598
+[][][] 
+ []
 
 
 
@@ -1041,37 +1047,49 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 [14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1558--1558
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 1601.
+
+
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
+[15
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1617--1617
 []|\TU/Arial(0)/m/n/10.95 CMAS or plug
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1559--1559
+Underfull \hbox (badness 10000) in paragraph at lines 1618--1618
 []|\TU/Arial(0)/m/n/10.95 CMAS or plug
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1563--1563
+Underfull \hbox (badness 10000) in paragraph at lines 1622--1622
 []|\TU/Arial(0)/m/n/10.95 Plug flow or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1565--1565
+Underfull \hbox (badness 10000) in paragraph at lines 1624--1624
 []|\TU/Arial(0)/m/n/10.95 CMAS or plug
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1567--1567
+Underfull \hbox (badness 10000) in paragraph at lines 1626--1626
 []|\TU/Arial(0)/m/n/10.95 Batch decant (ICEAS,
  []
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 1569--1569
+Underfull \hbox (badness 2894) in paragraph at lines 1628--1628
 []|\TU/Arial(0)/m/n/10.95 Counter current aeration
  []
 
 
-Overfull \hbox (93.17476pt too wide) in paragraph at lines 1552--1572
+Overfull \hbox (93.17476pt too wide) in paragraph at lines 1611--1631
  [][] 
  []
 
@@ -1080,7 +1098,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[15] 
+[16] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./document.aux)
  ***********
@@ -1094,22 +1112,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `document.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `document.out':
-(rerunfilecheck)             Before: 02009A829278B2B2E68B67440691CA48;7610
-(rerunfilecheck)             After:  AA096BE6A54D822CE1F0CC74B819A79A;7360.
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: 214CA45817E951F33821FCA2041508BA;7711.
  ) 
 Here is how much of TeX's memory you used:
- 19085 strings out of 470249
- 415751 string characters out of 5487939
- 929618 words of memory out of 5000000
- 45483 multiletter control sequences out of 15000+600000
+ 19088 strings out of 470249
+ 415819 string characters out of 5487939
+ 929863 words of memory out of 5000000
+ 45486 multiletter control sequences out of 15000+600000
  631292 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,15n,114p,485b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (40 pages).
+Output written on document.pdf (41 pages).
