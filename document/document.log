@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  13 MAY 2025 23:13
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  14 MAY 2025 17:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -384,7 +384,17 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@delta=\dimen264
 \TX@cols=\count336
 \TX@ftn=\toks28
-) (c:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (c:/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (c:/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+)) (c:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
  (c:/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
@@ -476,30 +486,37 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip92
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 78.
- (./document.aux)
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 86.
+ (./document.aux
+
+LaTeX Warning: Label `eq:clarifier_volume' multiply defined.
+
+
+LaTeX Warning: Label `fig:DO_streeter_model' multiply defined.
+
+)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -507,56 +524,56 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 78.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 78.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 78.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 78.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 78.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 78.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 78.
-LaTeX Font Info:    Redeclaring math accent \check on input line 78.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 78.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 78.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 78.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 78.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 86.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 86.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 86.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 86.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 86.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 86.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 86.
+LaTeX Font Info:    Redeclaring math accent \check on input line 86.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 86.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 86.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 86.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 86.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 78.
+(Font)              `operators' in the math version `normal' on input line 86.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 78.
+(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 86.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 78.
+(Font)              `operators' in the math version `bold' on input line 86.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 78.
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 86.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 78.
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 78.
+(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 78.
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 78.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 78.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 86.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 78.
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 78.
+(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 78.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 78.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 86.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -602,8 +619,8 @@ Package caption Info: End \AtBeginDocument code.
  (c:/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 78.
-Package hyperref Info: Link coloring OFF on input line 78.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 86.
+Package hyperref Info: Link coloring OFF on input line 86.
  (./document.out) (./document.out)
 \@outlinefile=\write3
 \openout3 = `document.out'.
@@ -618,25 +635,40 @@ Package hyperref Info: Link coloring OFF on input line 78.
 \tf@toc=\write4
 \openout4 = `document.toc'.
 
+ (./document.lof
+
+[2])
+\tf@lof=\write5
+\openout5 = `document.lof'.
+
+ (./document.lot
+Overfull \hbox (30.8199pt too wide) in paragraph at lines 19--19
+ [][] [][]\TU/Arial(0)/m/n/10.95 Typical design parameters for commonly used activated sludge processes [[]][] [][]  
+ []
+
+)
+\tf@lot=\write6
+\openout6 = `document.lot'.
 
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 145--151
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 156--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--164
+Underfull \hbox (badness 10000) in paragraph at lines 163--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--169
+Underfull \hbox (badness 10000) in paragraph at lines 176--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--220
+Underfull \hbox (badness 10000) in paragraph at lines 207--231
 
  []
 
@@ -645,22 +677,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--220
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 221--229
+Underfull \hbox (badness 10000) in paragraph at lines 232--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
 []|$\OML/cmm/m/it/10.95 A[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
 []|\TU/Arial(0)/m/n/10.95 Ratio
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
 []|$\OML/cmm/m/it/10.95 Q[]$
  []
 
@@ -671,7 +703,7 @@ File: ../images/peaking_factor.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 284--288
+Underfull \hbox (badness 10000) in paragraph at lines 295--299
 
  []
 
@@ -721,17 +753,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 303--307
+Underfull \hbox (badness 10000) in paragraph at lines 314--318
 \TU/Arial(0)/m/n/10.95 Following the guidelines established for wastewater treatment design
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 303--307
+Underfull \hbox (badness 2990) in paragraph at lines 314--318
 \TU/Arial(0)/m/n/10.95 [[], []], the analysis focused on two key
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--307
+Underfull \hbox (badness 10000) in paragraph at lines 314--318
 
  []
 
@@ -812,6 +844,12 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [15]
 
+LaTeX Warning: Reference `eq:bod_influent_calc' on page 16 undefined on input line 1276.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
@@ -819,24 +857,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1285
+Underfull \hbox (badness 10000) in paragraph at lines 1317--1327
 
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 1398--1413
 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1414--1421
+Underfull \hbox (badness 10000) in paragraph at lines 1440--1455
 
  []
 
@@ -845,6 +879,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 1414--1421
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1456--1463
+
+ []
+
 File: ../images/DOd streeter-phelps Model.png Graphic file (type bmp)
 <../images/DOd streeter-phelps Model.png>
 
@@ -863,10 +901,10 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1450.
+(hyperref)                replaced by space on input line 1492.
 
 (./melbourne_density.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1452--1
+Underfull \hbox (badness 10000) in paragraph at lines 1494--1
 
  []
 
@@ -941,17 +979,31 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1456--1456
-|\TU/Arial(0)/b/n/14.4 APPENDIX 2 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 1497.
+
+File: ../images/temperature_multiplier.png Graphic file (type bmp)
+<../images/temperature_multiplier.png>
+
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
+[12
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1509--1509
+|\TU/Arial(0)/b/n/14.4 APPENDIX 3 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1456.
+(hyperref)                replaced by space on input line 1509.
 
 
-Overfull \hbox (33.56255pt too wide) in alignment at lines 1489--1489
+Overfull \hbox (33.56255pt too wide) in alignment at lines 1542--1542
 [][][] 
  []
 
@@ -959,9 +1011,61 @@ Overfull \hbox (33.56255pt too wide) in alignment at lines 1489--1489
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
-[12
+[13
 
-] 
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 1545.
+
+
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
+[14
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1561--1561
+[]|\TU/Arial(0)/m/n/10.95 CMAS or plug
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1562--1562
+[]|\TU/Arial(0)/m/n/10.95 CMAS or plug
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1566--1566
+[]|\TU/Arial(0)/m/n/10.95 Plug flow or
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
+[]|\TU/Arial(0)/m/n/10.95 CMAS or plug
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1570--1570
+[]|\TU/Arial(0)/m/n/10.95 Batch decant (ICEAS,
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 1572--1572
+[]|\TU/Arial(0)/m/n/10.95 Counter current aeration
+ []
+
+
+Overfull \hbox (93.17476pt too wide) in paragraph at lines 1555--1575
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[15] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./document.aux)
  ***********
@@ -970,24 +1074,21 @@ L3 programming layer <2025-04-14>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
 
-Package rerunfilecheck Warning: File `document.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: Checksums for `document.out':
-(rerunfilecheck)             Before: 50462D75EC80F2D06F61641BA7D40A0E;7093
-(rerunfilecheck)             After:  7462FA0BD19900BFDE8D5F4E8CACACB2;6773.
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: 8BC37462A08430B5F0566D76F4DB301C;7795.
  ) 
 Here is how much of TeX's memory you used:
- 18944 strings out of 470249
- 412059 string characters out of 5487939
- 928307 words of memory out of 5000000
- 45364 multiletter control sequences out of 15000+600000
- 630822 words of font info for 81 fonts, out of 8000000 for 9000
+ 19082 strings out of 470249
+ 415659 string characters out of 5487939
+ 929823 words of memory out of 5000000
+ 45480 multiletter control sequences out of 15000+600000
+ 631292 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,15n,114p,442b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,15n,114p,485b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (36 pages).
+Output written on document.pdf (40 pages).
