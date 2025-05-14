@@ -1165,17 +1165,25 @@ $H_{\text{final}}$ &
 
 \subsection{Protection and future considerations}
 
-To ensure reliability and continuity of treatment, the primary clarifier 
-system is designed with redundancy and fail-safes.
-Specifically, multiple clarifier units are provided such that one can be taken 
-offline for maintenance without disrupting treatment capacity, that is 
-why on Section~\ref{sec:primary_Sedimentation_design} $n-1$ was used for the 
-weir design. 
-Inlet flow is evenly distributed via energy-dissipating inlets to prevent localized 
-overloading. Overflow weirs are designed with excess capacity 
-and freeboard to safely manage flow surges and prevent bypassing. Emergency bypass 
-channels are also integrated into the layout to protect downstream processes during 
-extreme hydraulic loads or clarifier failure events.
+The proposed design includes several features 
+to ensure reliability and performance of the 
+circular primary clarifiers under normal and extreme operating conditions:
+\begin{itemize}
+    \item \textbf{Redundancy:} The system comprises three circular tanks, allowing independent operation. This configuration prevents complete shutdown during maintenance or failure of any single unit \cite{davis2010water}.
+    
+    \item \textbf{Hydraulic Load Management:} The tanks are designed to handle peak flows up to 2.2 times the average flow rate, thus accommodating diurnal fluctuations and surges from return streams without compromising downstream processes \cite{davis2010water}.
+    
+    \item \textbf{Overflow Rates:} The surface loading rate (SLR) is kept within recommended values to ensure efficient sedimentation and avoid solids washout. This includes the capacity to operate effectively under peak conditions at least twice the average flow \cite{davis2010water,metcalf_2014_wastewater}.
+    
+    \item \textbf{Adequate Detention Time:} The clarifiers are designed to maintain detention times between 1.5 and 2.5 hours, which is sufficient for effective settling while minimizing the risk of anaerobic conditions that could result in sludge lifting \cite{davis2010water}.
+    
+    \item \textbf{Velocity Control:} Flow velocities within the tanks are limited to reduce turbulence and prevent resuspension of settled solids \cite{davis2010water}.
+    
+    \item \textbf{Effective Flow Distribution:} Inlet structures and baffles are incorporated ahead of effluent weirs to ensure uniform flow distribution, minimize short-circuiting, and prevent scum from escaping with the effluent \cite{metcalf_2014_wastewater}.
+    
+    \item \textbf{Robust Sludge Removal:} The tank bottom is sloped at 1:12 (vertical to horizontal), forming an inverted cone. Sludge scrapers effectively transport settled solids to a central hopper for collection and removal \cite{metcalf_2014_wastewater}.
+\end{itemize}
+
 
 
 \section{Secondary treatment}
