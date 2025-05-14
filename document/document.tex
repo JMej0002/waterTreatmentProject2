@@ -345,7 +345,7 @@ the overall reliability and effectiveness of subsequent treatment processes.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.7\textwidth]{../images/screens.png}
+  \includegraphics[width=0.6\textwidth]{../images/screens.png}
   \caption{Preliminary treatment, screens section.}
   \label{fig:screens_section}
 \end{figure}
@@ -655,7 +655,7 @@ and enabling precise optimization of subsequent treatment units.\\
  flow rate is selected to ensure the primary 
  clarifier operates within its optimal hydraulic 
  loading range, thereby maintaining the required 
- retention time for efficient settleable solids' removal. 
+ detention time for efficient settleable solids' removal. 
  This adaptive strategy ensures that the plant can 
  effectively manage increasing influent flows while 
  preserving the performance integrity of key 
@@ -710,16 +710,27 @@ An alarm system will trigger when blockage levels reach 50\% or if there is a su
 \subsection{Facility Types}
 \label{sec:primary_facility_types}
 
-Primary treatment in this design is achieved through the use of circular primary 
-clarifiers. While both circular and rectangular clarifiers are widely used, circular 
-tanks were selected due to their hydraulic efficiency, ease of sludge removal, 
-and suitability for continuous operation in medium-to-large wastewater treatment plants. 
-Circular clarifiers promote uniform radial flow distribution, reducing dead zones 
-and short-circuiting, which enhances sedimentation performance. Mechanically, the 
-rotating sludge scraper arms in circular clarifiers allow for reliable and consistent 
-solids' removal with minimal manual intervention. Moreover, for a greenfield development 
-with expected long-term service and increasing population, circular clarifiers provide a 
-scalable, space-efficient, and operationally robust solution.
+Primary treatment in this design is achieved 
+using circular primary clarifiers. While both 
+circular and rectangular clarifiers are widely 
+used, circular tanks were selected due to their 
+hydraulic efficiency, ease of sludge removal, 
+and suitability for continuous operation in 
+medium-to-large wastewater treatment plants. 
+Circular clarifiers promote uniform radial 
+flow distribution, reducing dead zones and 
+short-circuiting, which enhances sedimentation 
+performance \cite{metcalf_2014_wastewater}. 
+Mechanically, the rotating sludge scraper arms 
+in circular clarifiers allow for reliable and consistent 
+solids’ removal with minimal manual intervention \cite{davis2010water}. 
+Additionally, circular tanks are preferred in 
+many applications due to advantages like reduced 
+maintenance needs, drive bearings positioned outside 
+the wastewater, and typically lower construction 
+expenses compared to rectangular designs \cite{davis2010water}. 
+Therefore, the decision to use this type of design 
+is well-supported by its advantages.
 
 \subsection{Primary Sedimentation}
 \label{sec:primary_Sedimentation_design}
@@ -729,10 +740,10 @@ scalable, space-efficient, and operationally robust solution.
 To determine the volume of the primary clarifiers, the removal efficiency ($E_r$) required for biochemical oxygen demand (BOD) was calculated using Eq.\eqref{eq:efficiency}, based on the 
 inflow $BOD$ and the eflow one that was found to comply with the environmental requirements, see Sections \ref{sec:secondary_trat} 
 and \ref{sec:env_impact}. The detention time required to achieve this efficiency is calculated using Eq.\ref{eq:time_of_residency} (where \( a \), \( b \) are parameters defined for SST and BOD, see Table \ref{tab:detention_time_parameters}.) in conjunction with 
-Eq.\ref{eq:temperature_factor}. This last one is to increase the retention time when the temperature is lower 
+Eq.\ref{eq:temperature_factor}. This last one is to increase the detention time when the temperature is lower 
 than 20$^{\circ}C$ as the water viscosity gets affected, see Appendix~\ref{app:temperature_multiplier}. For this report, a temperature $T$ of 10$^{\circ}C$ was 
 chosen to incorporate this phenomenon, although further analysis could lead to adjust this value.
-The obtained retention time $t_{\text{BOD}}$ is checked against the typical design values, which are: 
+The obtained detention time $t_{\text{BOD}}$ is checked against the typical design values, which are: 
 \(1.5~\text{h} < t < 2.5~\text{h}\), see Appendix~\ref{app:primary_criteria}.
 
 \begin{align}
@@ -776,13 +787,13 @@ shown in Table~{\ref{tab:clarifier_inputs}}.\\
 
 
 The clarifier calculated volume ($V_{\text{clarifier}}^{\text{calc}}$) is determined using Eq.\eqref{eq:clarifier_volume} 
-replacing with the required retention time
+replacing with the required detention time
 $t_{\text{BOD}}$ shown in Table~\ref{tab:clarifier_inputs}. However, the maximum volume 
 $V_{\text{clarifier}}^{\text{max}}$ is defined with the smaller flow rate and the maximum 
-retention time (see Eq.\eqref{eq:clarifier_max_volume}), thus ensuring that for lower 
+detention time (see Eq.\eqref{eq:clarifier_max_volume}), thus ensuring that for lower 
 inflows the efficiency is still achieved as $t_{\text{BOD}}$ is lower than $t_{\text{max}}$.
 As seen in Eq.\eqref{eq:clarifier_max_volume}, the minimum flow rate is defined as the current average
-flow rate. This allows that the here proposed clarifiers design will comply with 
+flow rate. This allows that, the here proposed clarifiers design, will comply with 
 the environmental and design requirements under both current and projected conditions.\\
 
 If $V_{\text{clarifier}}^{\text{calc}}$  is greater than $V_{\text{clarifier}}^{\text{max}}$, then the excessive volume 
@@ -795,7 +806,7 @@ shown in Table~\ref{tab:clarifier_inputs}.
 
 
 \begin{align}
-c &= Q_{\text{peak}}^{\text{projected}} \cdot t \cdot 3600 \label{eq:clarifier_volume}\\
+V_{\text{clarifier}}^{\text{calc}} &= Q_{\text{peak}}^{\text{projected}} \cdot t \cdot 3600 \label{eq:clarifier_volume}\\
 V_{\text{clarifiers}}^{\text{max}} &= Q_{\text{avg}}^{\text{currents}} \cdot t_{max} \cdot 3600 \label{eq:clarifier_max_volume}\\
 V_{\text{equilization}}^{\text{req}} &=V_{\text{equilization}}^{\text{req}}-V_{\text{clarifiers}}^{\text{max}} \label{eq:required_equilization_volume}\\
 Q_{peak}^{adj} &= \frac{V_{\text{clarifiers}}^{\text{max}}}{t} \label{eq:adjusted_peak_flow}
@@ -809,12 +820,12 @@ Q_{peak}^{adj} &= \frac{V_{\text{clarifiers}}^{\text{max}}}{t} \label{eq:adjuste
 \hline
 \textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Description}\\
 \hline
-$Q_{\text{avg}}$ & 
+$Q_{\text{avg}}^{\text{current}}$ & 
 % BEGIN py_Q_avg
-4205.45
+3367.75
 % END py_Q_avg
 & m$^3$/h &  Average projected flow rate, see Table \ref{tab:projected_rates}\\
-$Q_{\text{peak}}$ & 
+$Q_{\text{peak}}^{projected}$ & 
 % BEGIN py_Q_peak
 7465.79
 % END py_Q_peak
@@ -833,7 +844,7 @@ $T$ &
 % BEGIN py_Temperature
 10
 % END py_Temperature
-& C & Assumed the water lowest Temperature to adjust retention time.\\
+& C & Assumed the water lowest Temperature to adjust detention time.\\
 
 $E_{\text{BOD}}$ & 
 % BEGIN py_EfficiencyPrimary
@@ -918,7 +929,7 @@ Eq.\eqref{eq:weir_length}, where $d_{offset}$ is the distance from clarifier edg
  and $n_{launder-sides}$ is the number of launder sides. 
 The Weir Length Ratio ($WLR$) is given by Ec.\eqref{eq:weir_length_ratio}. 
 The critical condition is then evaluated with Eq.\eqref{eq:weir_length_ratio_critical}, where $n$ is the
-number of clarifier tanks. As explained in the previous section, this value was set as 
+number of clarifier tanks. As explained in the previous section, this value ($n$) was set as 
 3 so $WLR_{critical}$ does not exceed the design limit (500 m$^3$/m/day). 
 
 \begin{align}
@@ -1160,12 +1171,12 @@ $H_{\text{final}}$ &
 An inlet is proposed to act as energy dissipator (EDI), 
 used within the feed well to distribute flow (influent) and 
 enhance mixing, further promoting flocculation, see Appendix~\ref{app:inlet_images} - Figure~\ref{fig:inlet}. 
-Their diameter was defined as a 10 percent of the tank diameter (max. 13\%), 
+Its detention time is selected as 20 minutes. Their diameter was defined as a 10 percent of the tank diameter (max. 13\%), 
 promoting a detention time between 8 and 10 seconds \cite{metcalf_2014_wastewater}. 
 Additionally, the author mentions that if the inlet assembly is quite large, it 
 can reduce the effective flocculation volume and increase downward velocities, 
 potentially hindering performance. Furthermore, the height of the feed well was defined as 1.25m, which is 25\% of the water depth (5m),
-see Appendix~\ref{app:inlet_images} - Figure~\ref{fig:inlet_profile}
+see Appendix~\ref{app:inlet_images} - Figure~\ref{fig:inlet_profile}.
 
 
 \subsection{Protection and future considerations}
@@ -1204,6 +1215,13 @@ following guidelines from the Water Environment Federation \cite{wef_DesignWater
 CMAS provides robust and consistent performance under fluctuating loads and conditions. 
 Despite the process’s susceptibility to filamentous microbial growth, careful selection of 
 operational parameters addresses this potential issue.
+
+Circular secondary clarifiers are proposed because 
+their radial symmetry flow minimizes short-circuiting. 
+The inlet structure needs to have a good energy dissipation 
+and symmetrical flow, therefore a center-feed column with 
+energy-dissipating inlet and flocculation baffle 
+is recommended \cite{davis2010water}.
 
 Secondary treatment produces excess biomass that 
 must be removed from the secondary clarifier and 
@@ -1275,53 +1293,73 @@ flow \(Q_R\) is determined using mass balance:
 
 \begin{align}
 X_R &= \frac{10^6}{SVI} \\
-Q_R &= Q \cdot \frac{v}{1000 - v}
+Q_R &= Q_{\text{peak}}^{\text{adj}} \cdot \frac{V_{settled}}{1000 - V_{settled}}\\
+V_{settled} &=SVI \cdot MLSS /1000
 \end{align}
 
-where \(v\) is the settled sludge volume (mL/L). 
-These calculations and other relevant values 
-are shown in Table~\ref{tab:secondary_inputs}.
-The resulting return sludge ratio %(Q<sub>R</sub>/Q) 
+
+The resulting return sludge ratio (\textit{RSR})
 is verified within the recommended range (0.25–1.0) 
 for CMAS processes \cite{metcalf_2014_wastewater}.
 
 \subsubsection{Aeration Tank Sizing}
 
-The aeration volume \(V_a\) is computed based on the influent BOD\(_5\), the food-to-microorganism ratio (F/M), and the mixed liquor suspended solids (MLSS):
+Selecting the upper limit of the Food-to-Microorganism \textit{(F/M)} ratio 
+(0.4 d⁻¹, Metcalf \& Eddy, 2014) minimizes the required aeration 
+tank volume. The aeration volume ($V_a$) and hydraulic residence time (HRT) 
+are calculated using:
 
 \begin{align}
-V_a &= \frac{BOD_{5,\text{in}} \cdot Q}{\text{F/M} \cdot X}
-\label{eq:aeration_volume}
+V_a &= \frac{BOD_{5,\text{in}} \cdot Q_{\text{peak}}^{\text{adj}}}{\text{F/M} \cdot X_R} \label{eq:aeration_volume}\\
+HRT &= \frac{V_a}{Q} \cdot 24 \label{eq:aeration_time}
 \end{align}
 
-This volume, along with the flow rate \(Q\), is used to estimate the aeration time in Eq.~\eqref{eq:aeration_time}:
+The calculated \textit{HRT} is within the recommended range 
+(3–6 hours) for CMAS processes, confirming adequate contact 
+time and biological stabilization.
+
+\subsubsection{Organic Loading Rate}
 
 \begin{align}
-t_a &= \frac{V_a}{Q} \cdot 24
-\label{eq:aeration_time}
+\text{OLR} &= \frac{S_0 \cdot Q_{\text{peak}}^{\text{adjusted}}}{V}
 \end{align}
 
-These values are listed in Table~\ref{tab:secondary_results}.
-
-\subsubsection{Biomass and Oxygen Demand}
-The sludge age and BOD loading are calculated to ensure values fall within CMAS design ranges. Biomass production and oxygen demand for average and peak flows are estimated using:
+The specific substrate utilization rate is:
 
 \begin{align}
-Y_{\text{obs}} &= \frac{Y}{1 + K_d \cdot \theta_c} \\
-P_X &= \frac{Y_{\text{obs}} \cdot Q \cdot (S_{\text{in}} - S_{\text{eff}})}{1000}
+U &= F/M \cdot \eta_{\text{BOD}}
 \end{align}
+
+The sludge age is:
 
 \begin{align}
-O_2 &= \frac{Q \cdot (S_{\text{in}} - S_{\text{eff}})}{f \cdot 1000} - 1.42 \cdot P_X
-\label{eq:oxygen_demand}
+\theta_c &= \frac{1}{Y \cdot U - K_d}
 \end{align}
 
-Where \(f\) is the BOD conversion factor. The air requirement is calculated assuming 27.9\% oxygen concentration in air, 10\% transfer efficiency, and a safety factor:
+Including a safety factor of 1.3 to account for peak organic load:
 
 \begin{align}
-\text{Air}_{\text{peak}} &= \frac{O_2}{0.279 \cdot 0.1} \cdot \frac{2}{24} \\
-\text{Air}_{\text{avg}} &= \frac{O_2}{0.279 \cdot 0.1} \cdot 2
+\theta_{c,\text{adj}} &= 1.3 \cdot \theta_c
 \end{align}
+
+The waste sludge flow rate is:
+
+\begin{align}
+Q_w &= \frac{\text{MLSS} \cdot V}{X_R \cdot \theta_c} 
+\end{align}
+
+The adjusted waste flow using $\theta_{c,\text{adj}}$:
+
+\begin{align}
+Q_{w,\text{adj}} &= \frac{4000 \cdot 1{,}618{,}690.63}{10{,}989.01 \cdot 11.6} = 50{,}109.03~\text{m}^3/\text{d}
+\end{align}
+
+Effluent flow is then:
+
+\begin{align}
+Q_e &= Q_{\text{peak}}^{\text{adjusted}} - Q_w
+\end{align}
+
 
 \subsubsection{Design Summary}
 Table~\ref{tab:secondary_inputs} and Table~\ref{tab:secondary_results} summarize the design inputs and resulting key parameters for the secondary treatment system.
@@ -1578,13 +1616,13 @@ From the above data, the following box plot can be obtained.
 
 \appendixsection{Temperature multiplier for detention time}{app:temperature_multiplier}
 
-Curve of the Temperature factor ($T_{factor}$) to increase retention time 
+Curve of the Temperature factor ($T_{factor}$) to increase detention time 
 in sedimentation when wastewater is at a lower temperature than 20$^{\circ}C$ \cite{metcalf_2014_wastewater}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{../images/temperature_multiplier.png}
-  \caption{Temperature multiplier for retention time \cite{metcalf_2014_wastewater}.}
+  \caption{Temperature multiplier for detention time \cite{metcalf_2014_wastewater}.}
   \label{fig:DO_streeter_model}
 \end{figure}
 
@@ -1695,7 +1733,7 @@ Contact stabilization & Plug flow & Diffused-air, mechanical & 80--90 & Use for 
 \thispagestyle{landscapeplain}
 \begin{table}[h]
 \centering
-\caption{Typical design parameters for commonly used activated sludge processes \cite{metcalf_2014_wastewater}}
+\caption{Typical design parameters for activated sludge processes \cite{metcalf_2014_wastewater}}
 \label{tab:activated_sludge_parameters}
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{|p{4.5cm}|p{3cm}|c|c|c|c|c|c|}
