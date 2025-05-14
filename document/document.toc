@@ -32,5 +32,6 @@
 \contentsline {section}{\numberline {5}Environmental Impact Assessment}{17}{section.5}%
 \contentsline {section}{\numberline {6}Summary}{20}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
-\contentsline {section}{Appendix 2\hskip 1em\relax Design criteria for primary sedimentation basins}{12}{appendix.B}%
-\contentsline {section}{Appendix 3\hskip 1em\relax Typical design parameters for activates sludge processes}{13}{appendix.C}%
+\contentsline {section}{Appendix 2\hskip 1em\relax Temperature multiplier for detention time}{12}{appendix.B}%
+\contentsline {section}{Appendix 3\hskip 1em\relax Design criteria for primary sedimentation basins}{13}{appendix.C}%
+\contentsline {section}{Appendix 4\hskip 1em\relax Typical design parameters for activates sludge processes}{14}{appendix.D}%

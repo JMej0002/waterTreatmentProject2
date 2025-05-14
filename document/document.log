@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  14 MAY 2025 00:57
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  14 MAY 2025 17:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -487,7 +487,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip92
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 86.
- (./document.aux)
+ (./document.aux
+
+LaTeX Warning: Label `eq:clarifier_volume' multiply defined.
+
+
+LaTeX Warning: Label `fig:DO_streeter_model' multiply defined.
+
+)
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
@@ -972,20 +979,13 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1498--1498
-|\TU/Arial(0)/b/n/14.4 APPENDIX 2 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
- []
-
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1498.
+(hyperref)                replaced by space on input line 1497.
 
-
-Overfull \hbox (33.56255pt too wide) in alignment at lines 1531--1531
-[][][] 
- []
-
+File: ../images/temperature_multiplier.png Graphic file (type bmp)
+<../images/temperature_multiplier.png>
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
@@ -993,10 +993,19 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 [12
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 1509--1509
+|\TU/Arial(0)/b/n/14.4 APPENDIX 3 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1534.
+(hyperref)                replaced by space on input line 1509.
+
+
+Overfull \hbox (33.56255pt too wide) in alignment at lines 1542--1542
+[][][] 
+ []
 
 
 
@@ -1005,37 +1014,49 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 [13
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1550--1550
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 1545.
+
+
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
+[14
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1561--1561
 []|\TU/Arial(0)/m/n/10.95 CMAS or plug
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1551--1551
+Underfull \hbox (badness 10000) in paragraph at lines 1562--1562
 []|\TU/Arial(0)/m/n/10.95 CMAS or plug
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1555--1555
+Underfull \hbox (badness 10000) in paragraph at lines 1566--1566
 []|\TU/Arial(0)/m/n/10.95 Plug flow or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1557--1557
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1568
 []|\TU/Arial(0)/m/n/10.95 CMAS or plug
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1559--1559
+Underfull \hbox (badness 10000) in paragraph at lines 1570--1570
 []|\TU/Arial(0)/m/n/10.95 Batch decant (ICEAS,
  []
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 1561--1561
+Underfull \hbox (badness 2894) in paragraph at lines 1572--1572
 []|\TU/Arial(0)/m/n/10.95 Counter current aeration
  []
 
 
-Overfull \hbox (93.17476pt too wide) in paragraph at lines 1544--1564
+Overfull \hbox (93.17476pt too wide) in paragraph at lines 1555--1575
  [][] 
  []
 
@@ -1044,7 +1065,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[14] 
+[15] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./document.aux)
  ***********
@@ -1055,16 +1076,19 @@ L3 programming layer <2025-04-14>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: F99FEF2492B1E29A1CA38423A92C008C;7472.
+(rerunfilecheck)             Checksum: 8BC37462A08430B5F0566D76F4DB301C;7795.
  ) 
 Here is how much of TeX's memory you used:
- 19072 strings out of 470249
- 415269 string characters out of 5487939
- 929440 words of memory out of 5000000
- 45471 multiletter control sequences out of 15000+600000
+ 19082 strings out of 470249
+ 415659 string characters out of 5487939
+ 929823 words of memory out of 5000000
+ 45480 multiletter control sequences out of 15000+600000
  631292 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,15n,114p,485b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (39 pages).
+Output written on document.pdf (40 pages).
