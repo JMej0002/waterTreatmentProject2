@@ -690,15 +690,16 @@ scalable, space-efficient, and operationally robust solution.
 \subsection{Primary Sedimentation}
 \label{sec:primary_Sedimentation_design}
 
-\subsubsection{Clarifier Sizing and Flow Equalization}
+\subsubsection{Pollutant removal}
 
-To determine the volume of the primary clarifiers, the removal efficiencies ($E_r$) required for suspended solids (TSS) 
-and biochemical oxygen demand (BOD) were calculated using Eq.\eqref{eq:efficiency}, based on the 
+To determine the volume of the primary clarifiers, the removal efficiency ($E_r$) required for biochemical oxygen demand (BOD) was calculated using Eq.\eqref{eq:efficiency}, based on the 
 inflow $BOD$ and the eflow one that was found to comply with the environmental requirements, see Sections \ref{sec:secondary_trat} 
-and \ref{sec:env_impact}. The detention times required for each are calculated using Eq.\ref{eq:time_of_residency} in conjunction with 
+and \ref{sec:env_impact}. The detention time required to achieve this efficiency is calculated using Eq.\ref{eq:time_of_residency} (where \( a \), \( b \) are parameters defined for SST and BOD, see Table \ref{tab:detention_time_parameters}.) in conjunction with 
 Eq.\ref{eq:temperature_factor}. This last one is to increase the retention time when the temperature is lower 
 than 20$^{\circ}C$ as the water viscosity gets affected, see Appendix~\ref{app:temperature_multiplier}. For this report, a temperature $T$ of 10$^{\circ}C$ was 
 chosen to incorporate this phenomenon, although further analysis could lead to adjust this value.
+The obtained retention time $t_{\text{BOD}}$ is checked against the typical design values, which are: 
+\(1.5~\text{h} < t < 2.5~\text{h}\), see Appendix~\ref{app:primary_criteria}.
 
 \begin{align}
   E_{\text{r}} = \frac{BOD_{5,\text{influent}} - BOD_{5,\text{effluent}}}{BOD_{5,\text{influent}}} \times 100
@@ -719,27 +720,6 @@ T_{\text{factor}} =
 \label{eq:temperature_factor}
 \end{equation}
 
-
-where, $T$ is the temperature of the water, 
-and \( a \), \( b \) are parameters defined for SST and BOD, see Table \ref{tab:detention_time_parameters}.
-The retention time is checked against typical values, which are: 
-\(1.5~\text{h} < t < 2.5~\text{h}\), \cite{metcalf_2014_wastewater}.
-
-Using Eq.\eqref{eq:efficiency} the retention time 
-
-As there is no environmental requirement for the $TSS$ content on the waterway discharge, the required 
-efficiency can not be calculated. Instead, the efficiency and residence time are calculated 
-to comply with the $BOD_5$ content (Eq.\eqref{eq:efficiency}). 
-For the $TSS$ removal the same detention time as the $BOD$ is used and the subsequent
-efficiency is calculated from Eq.\eqref{eq:efficiency} 
-with the corresponding parameters a and b for $TSS$.
-
-\begin{align}
-V_{\text{clarifier}}^{\text{calc}} &= Q_{\text{peak}}^{\text{projected}} \cdot t \cdot 3600 \label{eq:clarifier_volume}\\
-V_{\text{clarifier}}^{\text{max}} &= Q_{\text{avg}}^{\text{current}} \cdot t_{max} \cdot 3600 \label{eq:clarifier_volume}
-\end{align}
-
-
 \begin{table}[h]
   \centering
   \caption{Standard parameters for detention time \cite{metcalf_2014_wastewater}.}
@@ -754,23 +734,38 @@ V_{\text{clarifier}}^{\text{max}} &= Q_{\text{avg}}^{\text{current}} \cdot t_{ma
   \end{tabular}
 \end{table}
 
+As there is no environmental requirement for the $TSS$ content on the waterway discharge, the required 
+efficiency can not be calculated. Therefore, for the $TSS$ removal the same detention time as the $BOD$ is used, and the subsequent
+efficiency is calculated from Eq.\eqref{eq:efficiency} 
+with the corresponding parameters a and b for $TSS$. Input values and results are 
+shown in Table~{\ref{tab:clarifier_inputs}}.\\
+
+
 The clarifier calculated volume ($V_{\text{clarifier}}^{\text{calc}}$) is determined using Eq.\eqref{eq:clarifier_volume} 
-replacing the time $t$ with 
-$t_{\text{BOD}}$ shown in Table~\ref{tab:clarifier_inputs}. In addition, replacing the maximum and 
-minimum typical retention times (see Appendix~\ref{app:primary_criteria}), the maximum and minimum
-primary sedimentation tank volume ($V_{\text{clarifier}}^{\text{min}}$ and $V_{\text{clarifier}}^{\text{max}}$) can be determined. \\
+replacing with the required retention time
+$t_{\text{BOD}}$ shown in Table~\ref{tab:clarifier_inputs}. However, the maximum volume 
+$V_{\text{clarifier}}^{\text{max}}$ is defined with the smaller flow rate and the maximum 
+retention time (see Eq.\eqref{eq:clarifier_max_volume}), thus ensuring that for lower 
+inflows the efficiency is still achieved as $t_{\text{BOD}}$ is lower than $t_{\text{max}}$.
+As seen in Eq.\eqref{eq:clarifier_max_volume}, the minimum flow rate is defined as the current average
+flow rate. This allows that the here proposed clarifiers design will comply with 
+the environmental and design requirements under both current and projected conditions.\\
+
 If $V_{\text{clarifier}}^{\text{calc}}$  is greater than $V_{\text{clarifier}}^{\text{max}}$, then the excessive volume 
 is used for the equalization basin ($V_{\text{equilization}}^{\text{req}}$) and the final clarifier 
 volume ($V_{\text{clarifier}}^{\text{final}}$) will be equal to 
 $V_{\text{clarifier}}^{\text{max}}$. Due to the equalization tank, there will 
 be a new \textit{adjusted} peak flow ($Q_{peak}^{adj}$), obtained with Eq.\eqref{eq:adjusted_peak_flow}. Based on this, subsequent calculations will 
-be based on this value instead of the $Q_{peak}$, when required.
+be based on this value instead of the $Q_{peak}$, when required. Input and result values are
+shown in Table~\ref{tab:clarifier_inputs}.
+
 
 \begin{align}
-Q_{peak}^{adj} &= \frac{V_{clarifier}^{max}}{t}
-\label{eq:adjusted_peak_flow}
+c &= Q_{\text{peak}}^{\text{projected}} \cdot t \cdot 3600 \label{eq:clarifier_volume}\\
+V_{\text{clarifiers}}^{\text{max}} &= Q_{\text{avg}}^{\text{currents}} \cdot t_{max} \cdot 3600 \label{eq:clarifier_max_volume}\\
+V_{\text{equilization}}^{\text{req}} &=V_{\text{equilization}}^{\text{req}}-V_{\text{clarifiers}}^{\text{max}} \label{eq:required_equilization_volume}\\
+Q_{peak}^{adj} &= \frac{V_{\text{clarifiers}}^{\text{max}}}{t} \label{eq:adjusted_peak_flow}
 \end{align}
-
 
 \begin{table}[h]
 \centering
@@ -835,31 +830,36 @@ $V_{\text{clarifiers}}^{\text{max}}$ &
 % BEGIN py_maxSedimentationBasinVolume
 10513.62
 % END py_maxSedimentationBasinVolume
-& m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}, using max. time residency.\\[0.5em]
+& m$^3$ & Calculated with Eq.\eqref{eq:clarifier_max_volume}\\[0.5em]
 $V_{\text{equilization}}^{\text{req}}$ &
 % BEGIN py_RequiredEqualizationTankVolume
 3075.53
 % END py_RequiredEqualizationTankVolume
-& m$^3$ & Difference between $V_{\text{clarifiers}}^{\text{max}}$ and $V_{\text{clarifiers}}^{\text{calc}}$\\[0.5em]
+& m$^3$ & Calculated with Eq.\eqref{eq:required_equilization_volume}\\[0.5em]
 $Q_{peak}^{adj}$ &
 % BEGIN py_adjusted_peak
 5776.11
 % END py_adjusted_peak
-& m$^3$/h & Adjusted peak flow rate, see Section~\ref{sec:primary_Sedimentation_design}\\
+& m$^3$/h & Adjusted peak flow rate calculated with Eq.\eqref{eq:adjusted_peak_flow}\\
 \hline
 \end{tabularx}
 \end{table}
 
-The sedimentation basin height is then selected based on the typical design criteria, 
+\subsection{Design description}
+\label{sec:clarifier_design_description}
+
+With the $V_{\text{clarifier}}^{\text{max}}$ obtained in the previous section, 
+the sedimentation basin is dimensioned accordingly. Its height selected based on the typical design criteria, 
 see Appendix~\ref{app:primary_criteria}. The 5 m side water depth height upper limit is 
 selected and 0.5 m of freeboard is added ($H_{clarifier}=5.5m$). The area $A_{clarifier}$ is calculated
  using Eq.\eqref{eq:sedimentation_tank_area}, the 
 volume $V_{clarifier}^{final}$ used is equal to $V_{clarifier}^{max}$.
-and the Surface Loading Rate ($SLR$) with Eq.\eqref{eq:SLR}, using both the $Q_{avg}$ and $Q_{peak}$. 
+The Surface Loading Rate ($SLR$) is calculated 
+with Eq.\eqref{eq:SLR}, using both the $Q_{avg}$ and $Q_{peak}^{adj}$. 
 The clarifier diameter is then 
 calculated using Eq.\eqref{eq:clarifier_diameter}. The number of clarifiers $n$ 
 is selected equal as 3 to comply with the \textit{Weir Loading Rate}, see next section. 
-The clarifier volume $V_{clarifier}^{final}$ will be supply in 3 equal volume tanks. 
+The clarifier volume $V_{clarifier}^{final}$ will be supplied in 3 equal volume tanks. 
 Results are shown in Table~\ref{tab:clarifier_results}, 
 which are in compliance with the typical design criteria, see Appendix~\ref{app:primary_criteria}.
 
@@ -903,10 +903,8 @@ WLR_{critical} &= \frac{WLR}{n-1}
 \end{align}
 
 
-\subsubsection{Final Configuration and Results}
-
 The process abovementioned was iterated until achieving results that 
-comply with the typical design criteria (Appendix~\ref{app:primary_criteria}), result are shown 
+comply with the typical design criteria (Appendix~\ref{app:primary_criteria}), results are shown 
 in the Table~\ref{tab:clarifier_results}.
 
 \begin{table}[h]
@@ -971,7 +969,7 @@ $V_{equalization}^{req}$ &
 \end{tabular}
 \end{table}
 
-\subsection{V-Notch and Launder Design}
+\subsubsection{V-Notch and Launder Design}
 \label{sec:vnotch_design}
 
 To ensure stable discharge from the primary clarifiers and prevent hydraulic overloading, a V-notch weir system was designed in accordance with standard hydraulic principles. The number of notches is determined based on the critical launder length and a center-to-center spacing of 0.3 m between notches:
@@ -1057,7 +1055,6 @@ H_{\text{final}} = 1.5 \cdot H
 \end{align}
 
 
-\subsubsection{V-Notch and Launder design results}
 In the Table~\ref{tab:vnotch_results} the results of V-Notch and Launder design are presented.
 
 \begin{table}[h]
