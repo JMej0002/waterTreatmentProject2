@@ -33,6 +33,6 @@
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
 \contentsline {section}{Appendix 2\hskip 1em\relax Temperature multiplier for detention time}{12}{appendix.B}%
 \contentsline {section}{Appendix 3\hskip 1em\relax Mass balance technic for equilization volume}{13}{appendix.C}%
-\contentsline {section}{Appendix 4\hskip 1em\relax Design criteria for primary sedimentation basins}{14}{appendix.D}%
-\contentsline {section}{Appendix 5\hskip 1em\relax Operational characteristics of activated sludge process}{15}{appendix.E}%
-\contentsline {section}{Appendix 6\hskip 1em\relax Typical design parameters for activates sludge processes}{17}{appendix.F}%
+\contentsline {section}{Appendix 4\hskip 1em\relax Design criteria for primary sedimentation basins}{15}{appendix.D}%
+\contentsline {section}{Appendix 5\hskip 1em\relax Operational characteristics of activated sludge process}{16}{appendix.E}%
+\contentsline {section}{Appendix 6\hskip 1em\relax Typical design parameters for activates sludge processes}{18}{appendix.F}%
