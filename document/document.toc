@@ -25,9 +25,9 @@
 \contentsline {subsection}{\numberline {4.1}Facility type}{16}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Pollutant removal}{16}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Sludge Characteristics and Return Flow}{16}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.3}Aeration Tank Sizing}{17}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Biomass and Oxygen Demand}{17}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Design Summary}{17}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.2.2}Aeration Tank Sizing}{17}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Biomass and Oxygen Demand}{17}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Design Summary}{17}{subsubsection.4.2.4}%
 \contentsline {section}{\numberline {5}Environmental Impact Assessment}{17}{section.5}%
 \contentsline {section}{\numberline {6}Summary}{21}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%

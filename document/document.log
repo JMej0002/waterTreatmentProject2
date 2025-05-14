@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  14 MAY 2025 23:04
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  14 MAY 2025 23:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -487,11 +487,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip92
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 86.
- (./document.aux
 
-LaTeX Warning: Label `fig:DO_streeter_model' multiply defined.
-
-)
+No file document.aux.
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
@@ -571,7 +568,6 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 86.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -618,9 +614,12 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 86.
 Package hyperref Info: Link coloring OFF on input line 86.
- (./document.out) (./document.out)
 \@outlinefile=\write3
 \openout3 = `document.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 
 
@@ -628,31 +627,37 @@ Package hyperref Info: Link coloring OFF on input line 86.
 
 ]
 
-[1] (./document.toc
-
-[2])
+[1]
+No file document.toc.
 \tf@toc=\write4
 \openout4 = `document.toc'.
 
- (./document.lof)
+No file document.lof.
 \tf@lof=\write5
 \openout5 = `document.lof'.
 
- (./document.lot
-Overfull \hbox (30.8199pt too wide) in paragraph at lines 20--20
- [][] [][]\TU/Arial(0)/m/n/10.95 Typical design parameters for commonly used activated sludge processes [[]][] [][]  
- []
-
-)
+No file document.lot.
 \tf@lot=\write6
 \openout6 = `document.lot'.
 
 
 
-[3]
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 156--162
 
  []
+
+
+LaTeX Warning: Reference `sec:prelim_treatment' on page 1 undefined on input line 163.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 1 undefined on input line 166.
+
+
+LaTeX Warning: Reference `sec:primary_treat' on page 1 undefined on input line 167.
+
+
+LaTeX Warning: Reference `sec:secondary_trat' on page 1 undefined on input line 171.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 163--175
@@ -665,6 +670,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--180
  []
 
 
+LaTeX Warning: Citation `yarravalleywater_2023_amf' on page 1 undefined on input line 212.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 1 undefined on input line 228.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 207--231
 
  []
@@ -673,7 +684,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--231
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 1 undefined on input line 231.
+
 [1]
+
+LaTeX Warning: Reference `app:melbourne_density' on page 2 undefined on input line 234.
+
+
+LaTeX Warning: Reference `tab:und_study_area' on page 2 undefined on input line 238.
+
+
+LaTeX Warning: Reference `tab:current_rates' on page 2 undefined on input line 239.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 232--240
 
  []
@@ -693,16 +717,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--253
 []|$\OML/cmm/m/it/10.95 Q[]$
  []
 
+
+LaTeX Warning: Reference `fig:peaking_factor' on page 2 undefined on input line 261.
+
+
+LaTeX Warning: Reference `tab:current_rates' on page 2 undefined on input line 261.
+
+
+LaTeX Warning: Reference `tab:projected_rates' on page 2 undefined on input line 262.
+
 File: ../images/peaking_factor.png Graphic file (type bmp)
 <../images/peaking_factor.png>
+
+LaTeX Warning: Reference `fig:peaking_factor' on page 2 undefined on input line 275.
+
+
+LaTeX Warning: Reference `tab:current_rates' on page 2 undefined on input line 275.
+
+
+LaTeX Warning: Reference `tab:projected_rates' on page 2 undefined on input line 276.
+
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 2 undefined on input line 278.
+
 [2]
+
+LaTeX Warning: Citation `wef_DesignWaterResource' on page 3 undefined on input line 285.
+
+
+LaTeX Warning: Reference `eq:population_projection' on page 3 undefined on input line 286.
+
+
+LaTeX Warning: Reference `sec:current_flowrates' on page 3 undefined on input line 295.
+
+
+LaTeX Warning: Reference `sec:minimum_current_flowrates' on page 3 undefined on input line 297.
+
+
+LaTeX Warning: Reference `sec:maximum_current_flowrates' on page 3 undefined on input line 298.
+
+
+LaTeX Warning: Reference `tab:projected_rates' on page 3 undefined on input line 298.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 295--299
 
  []
+
+
+LaTeX Warning: Reference `tab:current_rates' on page 3 undefined on input line 305.
+
+
+LaTeX Warning: Reference `tab:projected_rates' on page 3 undefined on input line 306.
 
 (./current_rates.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
@@ -750,14 +820,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 314--318
-\TU/Arial(0)/m/n/10.95 Following the guidelines established for wastewater treatment design
- []
+
+LaTeX Warning: Citation `wef_DesignWaterResource' on page 3 undefined on input line 315.
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 314--318
-\TU/Arial(0)/m/n/10.95 [[], []], the analysis focused on two key
- []
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 3 undefined on input line 315.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 314--318
@@ -768,26 +835,91 @@ Underfull \hbox (badness 10000) in paragraph at lines 314--318
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 3 undefined on input line 318.
+
 [3]
+
+LaTeX Warning: Citation `melbournewater_2024_etpdata' on page 4 undefined on input line 321.
+
+
+LaTeX Warning: Reference `fig:boxplots_quality' on page 4 undefined on input line 324.
+
 File: ../images/boxPlot_BOD.png Graphic file (type bmp)
 <../images/boxPlot_BOD.png>
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 4 undefined on input line 348.
+
 [4]
 File: ../images/screening.png Graphic file (type bmp)
 <../images/screening.png>
 
 
+LaTeX Warning: Reference `tab:screen_inputs' on page 5 undefined on input line 380.
+
+
+LaTeX Warning: Citation `davis2010water' on page 5 undefined on input line 382.
+
+
+
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 5 undefined on input line 392.
+
 [5]
 
+LaTeX Warning: Reference `eq:screen_velocity' on page 6 undefined on input line 411.
+
+
+LaTeX Warning: Reference `eq:screen_width' on page 6 undefined on input line 412.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 6 undefined on input line 417.
+
+
+LaTeX Warning: Reference `tab:screen_outputs' on page 6 undefined on input line 421.
+
+
+
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 6 undefined on input line 489.
+
 [6]
 
+LaTeX Warning: Reference `eq:screen_headloss' on page 7 undefined on input line 512.
+
+
+LaTeX Warning: Reference `eq:h1_function' on page 7 undefined on input line 523.
+
+
+LaTeX Warning: Reference `eq:delta_h_screen' on page 7 undefined on input line 523.
+
+
+LaTeX Warning: Reference `eq:bernoulli_basic' on page 7 undefined on input line 524.
+
+
+LaTeX Warning: Reference `eq:bernoulli_modified' on page 7 undefined on input line 531.
+
+
+LaTeX Warning: Reference `tab:current_rates' on page 7 undefined on input line 533.
+
+
+LaTeX Warning: Reference `tab:projected_rates' on page 7 undefined on input line 533.
+
+
+LaTeX Warning: Reference `tab:velocities_current' on page 7 undefined on input line 540.
+
+
+LaTeX Warning: Reference `tab:velocities_projected' on page 7 undefined on input line 540.
+
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
@@ -797,13 +929,23 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 7 undefined on input line 611.
+
 [7]
+
+LaTeX Warning: Reference `sec:primary_treat' on page 8 undefined on input line 625.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 615--626
 
  []
 
 
 LaTeX Warning: Reference `' on page 8 undefined on input line 639.
+
+
+LaTeX Warning: Reference `sec:clarifier_design_description' on page 8 undefined on input line 644.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 627--653
@@ -819,17 +961,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 654--672
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 8 undefined on input line 672.
+
 [8]
+
+LaTeX Warning: Reference `fig:basin_diagram' on page 9 undefined on input line 676.
+
 File: ../images/basin_diagram.png Graphic file (type bmp)
 <../images/basin_diagram.png>
+
+LaTeX Warning: Reference `tab:contingency_measures' on page 9 undefined on input line 690.
+
+
+LaTeX Warning: Citation `davis2010water' on page 9 undefined on input line 694.
+
+
+LaTeX Warning: Citation `davis2010water' on page 9 undefined on input line 694.
+
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 9 undefined on input line 732.
+
 [9]
+
+LaTeX Warning: Reference `eq:efficiency' on page 10 undefined on input line 738.
+
+
+LaTeX Warning: Reference `sec:secondary_trat' on page 10 undefined on input line 739.
+
+
+LaTeX Warning: Reference `sec:env_impact' on page 10 undefined on input line 740.
+
+
+LaTeX Warning: Reference `eq:time_of_residency' on page 10 undefined on input line 740.
+
+
+LaTeX Warning: Reference `tab:detention_time_parameters' on page 10 undefined on input line 740.
+
+
+LaTeX Warning: Reference `eq:temperature_factor' on page 10 undefined on input line 741.
+
+
+LaTeX Warning: Reference `app:temperature_multiplier' on page 10 undefined on input line 742.
+
+
+LaTeX Warning: Reference `app:primary_criteria' on page 10 undefined on input line 745.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 10 undefined on input line 768.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 10 undefined on input line 768.
+
+
+LaTeX Warning: Reference `eq:efficiency' on page 10 undefined on input line 782.
+
+
+LaTeX Warning: Reference `tab:clarifier_inputs' on page 10 undefined on input line 784.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 780--785
 
  []
+
+
+LaTeX Warning: Reference `eq:clarifier_volume' on page 10 undefined on input line 787.
+
+
+LaTeX Warning: Reference `tab:clarifier_inputs' on page 10 undefined on input line 789.
+
+
+LaTeX Warning: Reference `eq:clarifier_max_volume' on page 10 undefined on input line 791.
+
+
+LaTeX Warning: Reference `eq:clarifier_max_volume' on page 10 undefined on input line 793.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 787--796
@@ -840,11 +1049,90 @@ Underfull \hbox (badness 10000) in paragraph at lines 787--796
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 10 undefined on input line 796.
+
 [10]
+
+LaTeX Warning: Reference `eq:adjusted_peak_flow' on page 11 undefined on input line 801.
+
+
+LaTeX Warning: Reference `tab:clarifier_inputs' on page 11 undefined on input line 803.
+
+
+LaTeX Warning: Reference `tab:projected_rates' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `tab:projected_rates' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `sec:pollutant_load' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `sec:secondary_trat' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `eq:efficiency' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `eq:time_of_residency' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `eq:efficiency' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `eq:clarifier_volume' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `eq:clarifier_max_volume' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `eq:required_equilization_volume' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `eq:adjusted_peak_flow' on page 11 undefined on input line 888.
+
+
+LaTeX Warning: Reference `app:primary_criteria' on page 11 undefined on input line 896.
+
+
+LaTeX Warning: Reference `eq:sedimentation_tank_area' on page 11 undefined on input line 898.
+
+
+LaTeX Warning: Reference `eq:SLR' on page 11 undefined on input line 901.
+
+
+LaTeX Warning: Reference `eq:clarifier_diameter' on page 11 undefined on input line 903.
+
+
+LaTeX Warning: Reference `tab:clarifier_results' on page 11 undefined on input line 906.
+
+
+LaTeX Warning: Reference `app:primary_criteria' on page 11 undefined on input line 907.
+
+
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 11 undefined on input line 908.
+
 [11]
+
+LaTeX Warning: Reference `eq:weir_length' on page 12 undefined on input line 926.
+
+
+LaTeX Warning: Reference `eq:weir_length_ratio' on page 12 undefined on input line 928.
+
+
+LaTeX Warning: Reference `eq:weir_length_ratio_critical' on page 12 undefined on input line 929.
+
+
+LaTeX Warning: Reference `app:primary_criteria' on page 12 undefined on input line 950.
+
+
+LaTeX Warning: Reference `tab:clarifier_results' on page 12 undefined on input line 951.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -852,47 +1140,161 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 12 undefined on input line 1028.
+
 [12]
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 13 undefined on input line 1061.
+
 [13]
+
+LaTeX Warning: Reference `tab:vnotch_results' on page 14 undefined on input line 1101.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 1172--1173
-[]\TU/Arial(0)/b/n/10.95 Redundancy: \TU/Arial(0)/m/n/10.95 The system comprises three circular tanks, allowing independent operation.
- []
+LaTeX Warning: Citation `davis2010water' on page 14 undefined on input line 1172.
+
+
+LaTeX Warning: Citation `davis2010water' on page 14 undefined on input line 1174.
+
+
+LaTeX Warning: Citation `davis2010water' on page 14 undefined on input line 1176.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 14 undefined on input line 1176.
+
+
+LaTeX Warning: Citation `davis2010water' on page 14 undefined on input line 1178.
 
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 14 undefined on input line 1179.
+
 [14]
 
+LaTeX Warning: Citation `davis2010water' on page 15 undefined on input line 1180.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 15 undefined on input line 1182.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 15 undefined on input line 1184.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 15 undefined on input line 1185.
+
+
+LaTeX Warning: Citation `wef_DesignWaterResource' on page 15 undefined on input line 1198.
+
+
+
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 15 undefined on input line 1202.
+
 [15]
+
+LaTeX Warning: Citation `davis2010water' on page 16 undefined on input line 1211.
+
+
+LaTeX Warning: Reference `app:operational_chac_sludge' on page 16 undefined on input line 1217.
+
+
+LaTeX Warning: Reference `sec:env_impact' on page 16 undefined on input line 1224.
+
+
+LaTeX Warning: Reference `sec:primary_treat' on page 16 undefined on input line 1244.
+
+
+LaTeX Warning: Reference `app:sludge_criteria' on page 16 undefined on input line 1245.
+
 
 LaTeX Warning: Citation `chudoba1973control' on page 16 undefined on input line 1264.
 
+c:/GitRepositories/waterTreatmentProject2/document/document.tex:1267: Misplaced alignment tab character &.
+l.1267 ...low temperatures, according to Metcalf &
+                                                   Eddy (2014, Table 8-19)
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+LaTeX Warning: Reference `tab:secondary_inputs' on page 16 undefined on input line 1278.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 16 undefined on input line 1281.
+
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 16 undefined on input line 1287.
+
 [16]
 
-LaTeX Warning: Reference `eq:bod_influent_calc' on page 17 undefined on input line 1339.
+LaTeX Warning: Reference `eq:aeration_time' on page 17 undefined on input line 1292.
+
+
+LaTeX Warning: Reference `tab:secondary_results' on page 17 undefined on input line 1299.
+
+
+LaTeX Warning: Reference `tab:secondary_inputs' on page 17 undefined on input line 1322.
+
+
+LaTeX Warning: Reference `tab:secondary_results' on page 17 undefined on input line 1322.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 17 undefined on input line 1344.
+
+
+LaTeX Warning: Reference `eq:bod_influent_calc' on page 17 undefined on input line 1344.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+LaTeX Warning: Reference `eq:aeration_volume' on page 17 undefined on input line 1371.
+
+
+LaTeX Warning: Reference `eq:aeration_time' on page 17 undefined on input line 1371.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 17 undefined on input line 1371.
+
+
+LaTeX Warning: Reference `eq:oxygen_demand' on page 17 undefined on input line 1371.
+
+
+LaTeX Warning: Reference `eq:oxygen_demand' on page 17 undefined on input line 1371.
+
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1380--1390
+LaTeX Warning: Citation `yarravalleywater_2023_amf' on page 17 undefined on input line 1391.
+
+
+LaTeX Warning: Reference `eq:do_threshold' on page 17 undefined on input line 1391.
+
+
+LaTeX Warning: Reference `tab:env_inputs' on page 17 undefined on input line 1393.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1385--1395
 
  []
 
@@ -900,16 +1302,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 1380--1390
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 17 undefined on input line 1395.
+
 [17]
 
+LaTeX Warning: Reference `sec:primary_treat' on page 18 undefined on input line 1401.
+
+
+LaTeX Warning: Reference `sec:primary_treat' on page 18 undefined on input line 1409.
+
+
+LaTeX Warning: Reference `sec:secondary_trat' on page 18 undefined on input line 1409.
+
+
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `eq:ultimate_bod' on page 18 undefined on input line 1443.
+
+
+LaTeX Warning: Reference `eq:mixing_zone_bod' on page 18 undefined on input line 1444.
+
+
+LaTeX Warning: Reference `eq:mixing_zone_bod' on page 18 undefined on input line 1445.
+
+
+LaTeX Warning: Reference `eq:tc' on page 18 undefined on input line 1446.
+
+
+LaTeX Warning: Reference `eq:do_deficit' on page 18 undefined on input line 1447.
+
+
+LaTeX Warning: Reference `eq:distance_min_do' on page 18 undefined on input line 1449.
+
+
+LaTeX Warning: Reference `tab:env_outputs' on page 18 undefined on input line 1450.
 
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 18 undefined on input line 1451.
+
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1503--1518
+
+LaTeX Warning: Reference `tab:env_outputs' on page 19 undefined on input line 1508.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1508--1523
 
  []
 
@@ -917,8 +1359,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1503--1518
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 19 undefined on input line 1523.
+
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1519--1526
+
+LaTeX Warning: Reference `fig:DO_streeter_model' on page 20 undefined on input line 1524.
+
+
+LaTeX Warning: Reference `eq:do_deficit' on page 20 undefined on input line 1525.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1531
 
  []
 
@@ -928,48 +1380,35 @@ File: ../images/DOd streeter-phelps Model.png Graphic file (type bmp)
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 20 undefined on input line 1539.
+
 [20]
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 21 undefined on input line 1542.
+
 [21] (./document.bbl)
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
+
+LaTeX Warning: Reference `endNumbering' on page 22 undefined on input line 1547.
+
 [22]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1555.
+(hyperref)                replaced by space on input line 1560.
+
+
+LaTeX Warning: Citation `australianbureauofstatistics_2021_suburbs' on page 1 undefined on input line 1562.
 
 (./melbourne_density.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1557--1
+Underfull \hbox (badness 10000) in paragraph at lines 1562--1
 
- []
-
-
-Overfull \hbox (4.4774pt too wide) in alignment at lines 1--6
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (4.4774pt too wide) in alignment at lines 6--11
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (4.4774pt too wide) in alignment at lines 11--15
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (4.4774pt too wide) in alignment at lines 15--17
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (4.4774pt too wide) in alignment at lines 17--218
- [] [] [] [] [] 
  []
 
 
@@ -1011,9 +1450,13 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
  [9]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 17 on input line 438.
+
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
- [10])
+[10])
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
@@ -1021,10 +1464,19 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1560.
+(hyperref)                replaced by space on input line 1565.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 12 undefined on input line 1568.
 
 File: ../images/temperature_multiplier.png Graphic file (type bmp)
 <../images/temperature_multiplier.png>
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 12 undefined on input line 1573.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 12 undefined on input line 1573.
+
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
@@ -1035,7 +1487,13 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1572.
+(hyperref)                replaced by space on input line 1577.
+
+
+LaTeX Warning: Reference `fig:mass_balance_equilization_volume' on page 13 undefined on input line 1582.
+
+
+LaTeX Warning: Reference `fig:mass_balance_projected_volume' on page 13 undefined on input line 1583.
 
 File: ../images/equabasincurrentaveragee.png Graphic file (type bmp)
 <../images/equabasincurrentaveragee.png>
@@ -1055,17 +1513,23 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 1596--1596
+Underfull \hbox (badness 10000) in paragraph at lines 1601--1601
 |\TU/Arial(0)/b/n/14.4 APPENDIX 4 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1596.
+(hyperref)                replaced by space on input line 1601.
 
 
-Overfull \hbox (33.56255pt too wide) in alignment at lines 1629--1629
+LaTeX Warning: Citation `davis2010water' on page 15 undefined on input line 1604.
+
+
+LaTeX Warning: Citation `davis2010water' on page 15 undefined on input line 1604.
+
+
+Overfull \hbox (33.56255pt too wide) in alignment at lines 1634--1634
 [][][] 
  []
 
@@ -1076,177 +1540,183 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 [15
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1632--1632
+Underfull \hbox (badness 10000) in paragraph at lines 1637--1637
 |\TU/Arial(0)/b/n/14.4 APPENDIX 5 OPERATIONAL CHARACTERISTICS OF ACTIVATED
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1632.
+(hyperref)                replaced by space on input line 1637.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 16 undefined on input line 1641.
+
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 16 undefined on input line 1641.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 []|\TU/Arial(0)/m/n/10.95 Diffused-air,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 mechanical
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 []|\TU/Arial(0)/m/n/10.95 Use for low-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 strength do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 process is
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 1653--1653
+Underfull \hbox (badness 4981) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 susceptible to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 []|\TU/Arial(0)/m/n/10.95 Continuous-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 flow stirred-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 []|\TU/Arial(0)/m/n/10.95 Diffused-air,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 mechanical
  []
 
 
-Underfull \hbox (badness 6608) in paragraph at lines 1653--1653
+Underfull \hbox (badness 6608) in paragraph at lines 1658--1658
 []|\TU/Arial(0)/m/n/10.95 Use for gen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 eral applica-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 tion; process
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 1653--1653
+Underfull \hbox (badness 1845) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 is resistant to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 shock loads
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 but is sus-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 ceptible to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 filamentous
  []
 
 
-Underfull \hbox (badness 6608) in paragraph at lines 1653--1653
+Underfull \hbox (badness 6608) in paragraph at lines 1658--1658
 []|\TU/Arial(0)/m/n/10.95 Use for gen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 eral appli-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 cation for a
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 1653--1653
+Underfull \hbox (badness 1122) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 wide range of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 []|\TU/Arial(0)/m/n/10.95 Use for in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 termediate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 degree of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 treatment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 where cell
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 tissue in the
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 1653--1653
+Underfull \hbox (badness 1565) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 effluent is not
  []
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 1653--1653
+Underfull \hbox (badness 3547) in paragraph at lines 1658--1658
 []|\TU/Arial(0)/m/n/10.95 Contact stabi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 []|\TU/Arial(0)/m/n/10.95 Diffused-air,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 systems and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1653
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1658
 \TU/Arial(0)/m/n/10.95 package
  []
 
@@ -1267,7 +1737,7 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1657.
+(hyperref)                replaced by space on input line 1662.
 
 
 
@@ -1276,37 +1746,44 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1673--1673
-[]|\TU/Arial(0)/m/n/10.95 CMAS or plug
- []
+
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 19 undefined on input line 1669.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1674--1674
-[]|\TU/Arial(0)/m/n/10.95 CMAS or plug
- []
+LaTeX Warning: Citation `metcalf_2014_wastewater' on page 19 undefined on input line 1669.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1678--1678
+[]|\TU/Arial(0)/m/n/10.95 CMAS or plug
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1679--1679
+[]|\TU/Arial(0)/m/n/10.95 CMAS or plug
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1683--1683
 []|\TU/Arial(0)/m/n/10.95 Plug flow or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1680--1680
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1685
 []|\TU/Arial(0)/m/n/10.95 CMAS or plug
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1682--1682
+Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
 []|\TU/Arial(0)/m/n/10.95 Batch decant (ICEAS,
  []
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 1684--1684
+Underfull \hbox (badness 2894) in paragraph at lines 1689--1689
 []|\TU/Arial(0)/m/n/10.95 Counter current aeration
  []
 
 
-Overfull \hbox (93.17476pt too wide) in paragraph at lines 1667--1687
+Overfull \hbox (93.17476pt too wide) in paragraph at lines 1672--1692
  [][] 
  []
 
@@ -1315,7 +1792,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[19] 
+[19]
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./document.aux)
  ***********
@@ -1327,18 +1808,27 @@ L3 programming layer <2025-04-14>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 15E450AC5D29A54FBF5B7AD3F1FB62C8;7943.
+
+Package rerunfilecheck Warning: File `document.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `document.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  FEF769DF97016280507C8D47C5901370;7973.
+
+Package lastpage Warning: Rerun to get the references right on input line 1706.
+
  ) 
 Here is how much of TeX's memory you used:
- 19113 strings out of 470249
- 416717 string characters out of 5487939
- 930319 words of memory out of 5000000
- 45509 multiletter control sequences out of 15000+600000
- 631292 words of font info for 85 fonts, out of 8000000 for 9000
+ 19091 strings out of 470249
+ 416469 string characters out of 5487939
+ 915894 words of memory out of 5000000
+ 45497 multiletter control sequences out of 15000+600000
+ 631308 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,15n,114p,485b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,15n,114p,400b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (45 pages).
+Output written on document.pdf (44 pages).

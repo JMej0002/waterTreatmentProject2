@@ -1248,7 +1248,7 @@ sludge processes are shown in Appendix~\ref{app:sludge_criteria}.
 
 \subsubsection{Sludge Characteristics and Return Flow}
 
-As the wastewater temperature highly impacts the activated sludge performance 
+As the wastewater temperature highly impacts the activated sludge performance, 
 a value of $10^{\circ}C$ is used to represent critical weather conditions in 
 Melbourne. A Mixed Liquor Suspended Solids (\textit{MLSS}) concentration of
 % BEGIN py_MLSS
@@ -1261,12 +1261,11 @@ as
 % END py_SVI
 mg/L, which promotes good sludge settling characteristics. It also fosters 
 adequate flocculation and settling as it maintains approximately 50\% 
-filamentous microorganism content \cite{chudoba1973control}. Both the 
-which is the limit for the typical values selected for this 
-process, see Appendix~\ref{app:sludge_criteria}.
-The return sludge flow is based on the chosen , which must be lower than \SI{120}{mL/g} 
-to avoid bulking. Using an SVI of \SI{91}{mL/g}, the return 
-sludge concentration \(X_R\) is computed, and the return sludge 
+filamentous microorganism content \cite{chudoba1973control}. Both selected 
+values of 
+\textit{MLSS} and \textit{SVI} are appropriate for conventional 
+activated sludge processes at low temperatures, according to Metcalf & Eddy (2014, Table 8-19) 
+The return sludge concentration \(X_R\) is computed, and the return sludge 
 flow \(Q_R\) is determined using mass balance:
 
 \begin{align}
@@ -1274,9 +1273,15 @@ X_R &= \frac{10^6}{SVI} \\
 Q_R &= Q \cdot \frac{v}{1000 - v}
 \end{align}
 
-where \(v\) is the settled sludge volume (mL/L). These calculations and other relevant values are shown in Table~\ref{tab:secondary_inputs}.
+where \(v\) is the settled sludge volume (mL/L). 
+These calculations and other relevant values 
+are shown in Table~\ref{tab:secondary_inputs}.
+The resulting return sludge ratio (Q<sub>R</sub>/Q) 
+is verified within the recommended range (0.25–1.0) 
+for CMAS processes \cite{metcalf_2014_wastewater}.
 
-\subsection{Aeration Tank Sizing}
+\subsubsection{Aeration Tank Sizing}
+
 The aeration volume \(V_a\) is computed based on the influent BOD\(_5\), the food-to-microorganism ratio (F/M), and the mixed liquor suspended solids (MLSS):
 
 \begin{align}
@@ -1293,7 +1298,7 @@ t_a &= \frac{V_a}{Q} \cdot 24
 
 These values are listed in Table~\ref{tab:secondary_results}.
 
-\subsection{Biomass and Oxygen Demand}
+\subsubsection{Biomass and Oxygen Demand}
 The sludge age and BOD loading are calculated to ensure values fall within CMAS design ranges. Biomass production and oxygen demand for average and peak flows are estimated using:
 
 \begin{align}
@@ -1313,7 +1318,7 @@ Where \(f\) is the BOD conversion factor. The air requirement is calculated assu
 \text{Air}_{\text{avg}} &= \frac{O_2}{0.279 \cdot 0.1} \cdot 2
 \end{align}
 
-\subsection{Design Summary}
+\subsubsection{Design Summary}
 Table~\ref{tab:secondary_inputs} and Table~\ref{tab:secondary_results} summarize the design inputs and resulting key parameters for the secondary treatment system.
 
 \begin{table}[h]
