@@ -851,17 +851,17 @@ $E_{\text{BOD}}$ &
 & \% & $BOD_5$ Efficiency removal, obtained with Eq.\eqref{eq:efficiency} \\
 $t_{\text{BOD}}$ & 
 % BEGIN py_t_BOD
-5.416
+1.82
 % END py_t_BOD
 & h & Obtained with Eq.\eqref{eq:time_of_residency}\\
 $t_{\text{TSS}}$ & 
 % BEGIN py_t_TSS
-5.416
+1.82
 % END py_t_TSS
 & h & Same as $t_{\text{BOD}}$\\
 $E_{\text{TSS}}$ & 
 % BEGIN py_TSS_efficiency
-55.19
+51.14
 % END py_TSS_efficiency
 & \% & Solved from Eq.\eqref{eq:efficiency}, replacing $t_{\text{TSS}}$\\[0.5em]
 $V_{\text{clarifiers}}^{\text{calc}}$ & 
@@ -1193,21 +1193,34 @@ circular primary clarifiers under normal and extreme operating conditions:
 \subsection{Facility type}
 \label{sec:sec_treat_facility_type}
 
-The Complete-Mix Activated Sludge (CMAS) 
+The Complete-Mix Activated Sludge (\textit{CMAS}) 
 process is selected for the secondary treatment stage, 
 following guidelines from the Water Environment Federation \cite{wef_DesignWaterResource}. 
 CMAS provides robust and consistent performance under fluctuating loads and conditions. 
 Despite the process’s susceptibility to filamentous microbial growth, careful selection of 
 operational parameters addresses this potential issue.
 
-\subsection{Influent Characterization and Removal Requirements}
+Secondary treatment produces excess biomass that 
+must be removed from the secondary clarifier and 
+conveyed for further processing or disposal. 
+A centrifugal non-clog pump is recommended: it 
+delivers dilute sludge and fine solids handling 
+without blockage, operates at high hydraulic efficiency, 
+and requires minimal maintenance. Compared to 
+positive-displacement alternatives, it also offers 
+a lower cost and strong lifecycle value \cite{davis2010water}.
 
-The secondary treatment stage of the wastewater treatment plant is 
-based on a conventional activated sludge process (\textit{CMAS}), aiming to achieve a 
+\subsection{Pollutant removal}
+\label{sec:sec_tret_polluntant_removal}
+
+The \textit{CMAS} process presents efficiencies that can vary 
+from 85\% up to 95\%, see Appendix~\ref{app:operational_chac_sludge}. Through 
+iterations along with the primary treatment processes, the optimal efficiency 
+was selected as 
 % BEGIN py_sec_removal_efficiency
 93.0
 % END py_sec_removal_efficiency
-\% BOD\textsubscript{5} removal efficiency. 
+\% BOD\textsubscript{5} removal. 
 As shown in Section~\ref{sec:env_impact}, in order to comply with 
 the minimum $DO$ in the waterway, the maximum $BOD$ present 
 in the effluent must be equal to  
@@ -1232,7 +1245,8 @@ see Section~\ref{sec:primary_treat}. The typical design parameters for activated
 sludge processes are shown in Appendix~\ref{app:sludge_criteria}.
 
 
-\subsection{Sludge Characteristics and Return Flow}
+
+\subsubsection{Sludge Characteristics and Return Flow}
 
 As the wastewater temperature highly impacts the activated sludge performance 
 a value of $10^{\circ}C$ is used to represent critical weather conditions in 
@@ -1247,7 +1261,7 @@ as
 % END py_SVI
 mg/L, which promotes good sludge settling characteristics. It also fosters 
 adequate flocculation and settling as it maintains approximately 50\% 
-filamentous microorganism content. Both the 
+filamentous microorganism content \cite{chudoba1973control}. Both the 
 which is the limit for the typical values selected for this 
 process, see Appendix~\ref{app:sludge_criteria}.
 The return sludge flow is based on the chosen , which must be lower than \SI{120}{mL/g} 
@@ -1606,6 +1620,31 @@ Splitter box inlet velocity & $<$ 0.3 m/s & At peak flow \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\appendixsection{Operational characteristics of activated sludge process}{app:operational_chac_sludge}
+
+\begin{table}[h]
+\centering
+\caption{Operational Characteristics of Activated Sludge Process \cite{metcalf_2014_wastewater}}
+\label{tab:activated_sludge_process}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{|X|X|X|c|X|}
+\hline
+\textbf{Process Modification} & \textbf{Flow Model} & \textbf{Aeration System} & \textbf{BOD Removal Efficiency (\%)} & \textbf{Remarks} \\
+\hline
+Conventional & Plug flow & Diffused-air, mechanical aerators & 85--95 & Use for low-strength domestic wastes; process is susceptible to shock loads \\
+\hline
+Complete-mix & Continuous-flow stirred-tank reactor & Diffused-air, mechanical aerators & 85--95 & Use for general application; process is resistant to shock loads but is susceptible to filamentous growths \\
+\hline
+Step feed & Plug flow & Diffused-air & 85--95 & Use for general application for a wide range of wastes \\
+\hline
+Modified aeration & Plug flow & Diffused-air & 60--75 & Use for intermediate degree of treatment where cell tissue in the effluent is not objectionable \\
+\hline
+Contact stabilization & Plug flow & Diffused-air, mechanical & 80--90 & Use for expansion of existing systems and package plants \\
+\hline
+\end{tabularx}
+\end{table}
+
 
 \appendixsection{Typical design parameters for activates sludge processes}{app:sludge_criteria}
 
