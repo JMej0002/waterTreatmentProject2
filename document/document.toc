@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {2}Preliminary Treatment Design}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Facility types}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Screens design}{4}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Blockage Scenario}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1}Blockage Scenario}{6}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Operational considerations}{7}{subsubsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.3}Equalization basin}{8}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Protection against failure}{9}{subsection.2.4}%

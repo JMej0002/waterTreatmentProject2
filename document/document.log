@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  14 MAY 2025 23:42
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  14 MAY 2025 23:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -769,8 +769,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 314--318
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [3]
-File: ../images/screening.png Graphic file (type bmp)
-<../images/screening.png>
+File: ../images/screens.png Graphic file (type bmp)
+<../images/screens.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1318,7 +1318,7 @@ Package rerunfilecheck Info: File `document.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  19112 strings out of 470249
- 416715 string characters out of 5487939
+ 416697 string characters out of 5487939
  930332 words of memory out of 5000000
  45508 multiletter control sequences out of 15000+600000
  631292 words of font info for 85 fonts, out of 8000000 for 9000
