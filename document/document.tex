@@ -29,11 +29,19 @@
 \usepackage{multirow}
 \usepackage{siunitx}
 \usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{pdflscape}
+
 \usepackage[hidelinks]{hyperref}
 
 \urlstyle{same}
 
 
+\fancypagestyle{landscapeplain}{
+  \fancyhf{} % clear header/footer
+  \renewcommand{\headrulewidth}{0pt} % remove header line
+  \fancyfoot[C]{\thepage} % page number centered in footer (optional)
+}
 
 
 
@@ -131,6 +139,9 @@ Executive summary to be added here afterwards
 
 
 \tableofcontents
+\listoffigures
+\listoftables
+
 \newpage
 
 % Start main document with headers and page numbers
@@ -681,12 +692,18 @@ scalable, space-efficient, and operationally robust solution.
 
 \subsubsection{Clarifier Sizing and Flow Equalization}
 
-To determine the volume of the primary clarifiers, the removal efficiencies required for suspended solids (TSS) 
-and biochemical oxygen demand (BOD) were referenced from standard design tables \cite{metcalf_2014_wastewater}. 
-The detention times required for each are calculated using Eq.\ref{eq:time_of_residency} in conjunction with 
+To determine the volume of the primary clarifiers, the removal efficiencies ($E_r$) required for suspended solids (TSS) 
+and biochemical oxygen demand (BOD) were calculated using Eq.\eqref{eq:efficiency}, based on the 
+inflow $BOD$ and the eflow one that was found to comply with the environmental requirements, see Sections \ref{sec:secondary_trat} 
+and \ref{sec:env_impact}. The detention times required for each are calculated using Eq.\ref{eq:time_of_residency} in conjunction with 
 Eq.\ref{eq:temperature_factor}. This last one is to increase the retention time when the temperature is lower 
-than 20 degrees as the water viscosity gets affected. For this report, a temperature $T$ of 10 degrees was 
+than 20$^{\circ}C$ as the water viscosity gets affected, see Appendix~\ref{app:temperature_multiplier}. For this report, a temperature $T$ of 10$^{\circ}C$ was 
 chosen to incorporate this phenomenon, although further analysis could lead to adjust this value.
+
+\begin{align}
+  E_{\text{r}} = \frac{BOD_{5,\text{influent}} - BOD_{5,\text{effluent}}}{BOD_{5,\text{influent}}} \times 100
+  \label{eq:efficiency}
+\end{align}
 
 \begin{align}
 t &= \left( \frac{E_r \cdot a}{1 - E_r \cdot b} \right) \cdot T_{\text{factor}}
@@ -703,29 +720,23 @@ T_{\text{factor}} =
 \end{equation}
 
 
-where \( E_r \) is the removal efficiency, $T$ is the temperature of the water, 
-and \( a \), \( b \) are parameters defined for SST and BOD, see Table \ref{tab:detention_time_parameters}. 
-The greater of the two detention times governs the total volume design. $E_r$ was determined using Eq.\eqref{eq:efficiency}, based on the 
-inflow $BOD$ and the eflow one that was found to comply with the environmental requirements, see Sections \ref{sec:secondary_trat} 
-and \ref{sec:env_impact}. The input values as well as the obtained time are shown in the Table \ref{tab:detention_time_parameters}. 
+where, $T$ is the temperature of the water, 
+and \( a \), \( b \) are parameters defined for SST and BOD, see Table \ref{tab:detention_time_parameters}.
 The retention time is checked against typical values, which are: 
 \(1.5~\text{h} < t < 2.5~\text{h}\), \cite{metcalf_2014_wastewater}.
 
-\begin{align}
-  E_{\text{r}} = \frac{BOD_{5,\text{influent}} - BOD_{5,\text{effluent}}}{BOD_{5,\text{influent}}} \times 100
-  \label{eq:efficiency}
-\end{align}
+Using Eq.\eqref{eq:efficiency} the retention time 
 
 As there is no environmental requirement for the $TSS$ content on the waterway discharge, the required 
 efficiency can not be calculated. Instead, the efficiency and residence time are calculated 
-to comply with the $BOD_5$ content (Eq.\eqref{eq:efficiency}). The same detention time 
-is assumed for the $TSS$ and the efficiency for the solids removal is then calculated using 
-the Eq.\eqref{eq:efficiency} with the corresponding parameters a and b from 
-Table \ref{tab:detention_time_parameters}.
+to comply with the $BOD_5$ content (Eq.\eqref{eq:efficiency}). 
+For the $TSS$ removal the same detention time as the $BOD$ is used and the subsequent
+efficiency is calculated from Eq.\eqref{eq:efficiency} 
+with the corresponding parameters a and b for $TSS$.
 
 \begin{align}
-V_{\text{clarifier}}^{\text{calc}} &= Q_{\text{peak}} \cdot t \cdot 3600
-\label{eq:clarifier_volume}
+V_{\text{clarifier}}^{\text{calc}} &= Q_{\text{peak}}^{\text{projected}} \cdot t \cdot 3600 \label{eq:clarifier_volume}\\
+V_{\text{clarifier}}^{\text{max}} &= Q_{\text{avg}}^{\text{current}} \cdot t_{max} \cdot 3600 \label{eq:clarifier_volume}
 \end{align}
 
 
@@ -1130,7 +1141,17 @@ extreme hydraulic loads or clarifier failure events.
 \section{Secondary treatment}
 \label{sec:secondary_trat}
 
-\subsection{Design Overview}
+\subsection{Facility type}
+\label{sec:sec_treat_facility_type}
+
+The Complete-Mix Activated Sludge (CMAS) 
+process is selected for the secondary treatment stage, 
+following guidelines from the Water Environment Federation \cite{wef_DesignWaterResource}. 
+CMAS provides robust and consistent performance under fluctuating loads and conditions. 
+Despite the process’s susceptibility to filamentous microbial growth, careful selection of 
+operational parameters addresses this potential issue.
+
+\subsection{Influent Characterization and Removal Requirements}
 
 The secondary treatment stage of the wastewater treatment plant is 
 based on a conventional activated sludge process (\textit{CMAS}), aiming to achieve a 
@@ -1158,11 +1179,32 @@ is equal to
 259.3
 % END py_secondary_BOD_inflow
 mg/L, and it represents the target for the removal in the primary treatment, 
-see Section~\ref{sec:primary_treat}.
+see Section~\ref{sec:primary_treat}. The typical design parameters for activated 
+sludge processes are shown in Appendix~\ref{app:sludge_criteria}.
 
 
-\subsection{Sludge Return and Settling Considerations}
-The return sludge flow is based on the chosen Suspended Volume Index (SVI), which must be lower than \SI{120}{mL/g} to avoid bulking. Using an SVI of \SI{91}{mL/g}, the return sludge concentration \(X_R\) is computed, and the return sludge flow \(Q_R\) is determined using mass balance:
+\subsection{Sludge Characteristics and Return Flow}
+
+As the wastewater temperature highly impacts the activated sludge performance 
+a value of $10^{\circ}C$ is used to represent critical weather conditions in 
+Melbourne. A Mixed Liquor Suspended Solids (\textit{MLSS}) concentration of
+% BEGIN py_MLSS
+4000
+% END py_MLSS
+mg/L; and the Suspended Volume Index (\textit{SVI}) is adopted 
+as 
+% BEGIN py_SVI
+91
+% END py_SVI
+mg/L, which promotes good sludge settling characteristics. It also fosters 
+adequate flocculation and settling as it maintains approximately 50\% 
+filamentous microorganism content. Both the 
+which is the limit for the typical values selected for this 
+process, see Appendix~\ref{app:sludge_criteria}.
+The return sludge flow is based on the chosen , which must be lower than \SI{120}{mL/g} 
+to avoid bulking. Using an SVI of \SI{91}{mL/g}, the return 
+sludge concentration \(X_R\) is computed, and the return sludge 
+flow \(Q_R\) is determined using mass balance:
 
 \begin{align}
 X_R &= \frac{10^6}{SVI} \\
@@ -1452,6 +1494,17 @@ initial value ($DO_0$). \\
 Table of Melbourne suburbs with their area and population \cite{australianbureauofstatistics_2021_suburbs}.\\
 \input{melbourne_density.tex}
 
+\appendixsection{Temperature multiplier for detention time}{app:temperature_multiplier}
+
+Curve of the Temperature factor ($T_{factor}$) to increase retention time 
+in sedimentation when wastewater is at a lower temperature than 20$^{\circ}C$ \cite{metcalf_2014_wastewater}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../images/temperature_multiplier.png}
+  \caption{Temperature multiplier for retention time \cite{metcalf_2014_wastewater}.}
+  \label{fig:DO_streeter_model}
+\end{figure}
 
 \appendixsection{Design criteria for primary sedimentation basins}{app:primary_criteria}
 
@@ -1488,6 +1541,48 @@ Splitter box inlet velocity & $<$ 0.3 m/s & At peak flow \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\appendixsection{Typical design parameters for activates sludge processes}{app:sludge_criteria}
+
+
+\begin{landscape}
+\thispagestyle{landscapeplain}
+\begin{table}[h]
+\centering
+\caption{Typical design parameters for commonly used activated sludge processes \cite{metcalf_2014_wastewater}}
+\label{tab:activated_sludge_parameters}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{4.5cm}|p{3cm}|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{Process name}} & \multirow{2}{*}{\textbf{Reactor type}} & \multirow{2}{*}{\textbf{SRT (d)}} & \multirow{2}{*}{\textbf{F/M}} & \multicolumn{2}{c|}{\textbf{Volumetric loading}} & \multirow{2}{*}{\textbf{MLSS (mg/L)}} & \multirow{2}{*}{\textbf{Total $\tau$ (h)}} \\
+\cline{5-6}
+ & & & (kg BOD/kg MLVSS-d) & lb BOD/1000 ft$^3$/d & kg BOD/m$^3$/d & & \\
+\hline
+High-rate aeration & CMAS or plug flow & 0.5–2 & 1.5–2.0 & 75–150 & 1.2–2.4 & 500–1500 & 1–2 \\
+Contact stabilization & CMAS or plug flow & 5–10 & 0.2–0.6 & 60–75 & 1.0–1.3 & 1000–3000\textsuperscript{a} & 0.5–1\textsuperscript{a} \\
+ & & & & & & 6000–10,000\textsuperscript{b} & 2–4\textsuperscript{b} \\
+High-purity oxygen & Staged & 1–4 & 0.5–1.0 & 80–200 & 1.3–3.2 & 2000–4000 & 1–3 \\
+Conventional plug flow & Plug flow & 3–15 & 0.2–0.4 & 20–40 & 0.3–0.7 & 1000–3000 & 4–8 \\
+Step feed & Plug flow or staged & 3–15 & 0.2–0.4 & 40–60 & 0.7–1.0 & 1500–4000 & 3–5 \\
+Complete mix & CMAS & 3–15 & 0.2–0.6 & 20–100 & 0.3–1.6 & 1500–4000 & 3–6 \\
+Extended aeration & CMAS or plug flow & 20–40 & 0.04–0.1 & 5–15 & 0.1–0.3 & 2000–4000 & 20–30 \\
+Oxidation ditch & CMAS + plug flow & 15–30 & 0.04–0.1 & 5–15 & 0.1–0.3 & 3000–5000 & 15–30 \\
+Batch decant (ICEAS, CAAS) & Plug flow & 12–30 & 0.04–0.1 & 5–15 & 0.1–0.3 & 2000–5000 & 20–40 \\
+Sequencing batch reactor & Batch & 15–30 & 0.04–0.1 & 5–15 & 0.1–0.3 & 2000–5000 & 15–40 \\
+Counter current aeration (CCAS\texttrademark) & Plug flow & 15–30 & 0.04–0.1 & 5–10 & 0.1–0.3 & 2000–4000 & 15–40 \\
+\hline
+\end{tabular}
+
+\vspace{0.8em}
+\begin{flushleft}
+\small
+\textsuperscript{a} MLSS and detention time in contact basin. \\
+\textsuperscript{b} MLSS and detention time in stabilization basin.
+\end{flushleft}
+\end{table}
+\end{landscape}
+
+
 
 \label{LastPageAppendix}
 
