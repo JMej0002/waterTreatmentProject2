@@ -478,7 +478,7 @@ m & Screen width\\
 \end{table}
 
 
-\subsection{Blockage Scenario}
+\subsubsection{Blockage Scenario}
 \label{sec:screening_blockage}
 
 To ensure robustness of the preliminary screening system, 
@@ -616,20 +616,63 @@ The equalization basin was designed to minimize flow fluctuations to downstream
 treatment units, enhancing overall plant stability and performance. 
 Initially, the basin volume calculated by capturing all inflows exceeding 
 the projected average daily flow resulted in an impractical tank size 
-(~24,000 m³). Therefore, a new peak flow of 138,626 m³/day was established, 
+(~24,000 m³). Therefore, a new peak flow of 
+% BEGIN py_newPeakFlow
+111013.22
+% END py_newPeakFlow
+$m^3/day$ was established, 
 based on the maximum capacity of the downstream primary treatment facilities. 
-(See Section \ref{sec:primary_treat}).
-This revised approach operates near-average flow rates for 
-most hours of the day. During peak inflow periods (from 3 pm to 9 pm), 
-inflows exceeding this new peak flow rate are diverted to the equalization 
-basin. In low-demand hours, stored wastewater is returned to maintain less 
-variable flow to the downstream processes. This method reduced the required 
-equalization volume and significantly reduced the peak flows. After 
-recalculating using this approach, the required equalization volume 
-was smaller, although this requires extra operational control, providing 
-narrower variation in the hydraulic regime for downstream processes.
-This equalization basin requires aeration to prevent odors 
-and solids deposition. The proposed equalization is an off-line basin 
+(See Section \ref{sec:primary_treat}).\\
+
+The planned flow management strategy for the wastewater 
+treatment plant incorporates a phased approach utilizing 
+an equalization basin to optimize downstream treatment 
+processes over the facility's operational lifetime. Initially, 
+operation will commence with the equalization basin 
+configured to deliver a constant flow rate downstream ($Q_{avg}^{current}$). 
+This is facilitated by a significant design storage volume $V_{\text{equilization}}$, 
+approximated at 
+% BEGIN py_EqualizationVolume
+19000.0
+% END py_EqualizationVolume
+$m^3$, obtained through the mass balance 
+technic, see Appendix~\ref{} inclusive of a safety factor of 
+% BEGIN py_EqualizationFS
+1.2
+% END py_EqualizationFS
+. It is noted that, according to the clarifier design 
+shown in Section \ref{sec:clarifier_design_description}, the required 
+equilization basin volume $V_{\text{equilization}}^{\text{req}}$ is actually 
+% BEGIN py_requiredEqBasinVol
+5169.77
+% END py_requiredEqBasinVol
+$m^3$. However, the objective of this initial constant flow regime is 
+to establish stable hydraulic and organic loading 
+conditions, thereby simplifying the commissioning process 
+and enabling precise optimization of subsequent treatment units.\\
+
+ As the service area population increases and influent 
+ flow rates exhibit greater volume and variability, 
+ the operational strategy for the equalization basin 
+ will transition to one focused on smoothing flow variations. 
+ Simultaneously, a critical peak flow constraint of 
+ % BEGIN py_NewPeakFlow
+111013.22
+ % END py_NewPeakFlow
+ $m^3/day$ will be imposed on the flow discharged from the 
+ basin to the primary clarifier. This specific 
+ flow rate is selected to ensure the primary 
+ clarifier operates within its optimal hydraulic 
+ loading range, thereby maintaining the required 
+ retention time for efficient settleable solids' removal. 
+ This adaptive strategy ensures that the plant can 
+ effectively manage increasing influent flows while 
+ preserving the performance integrity of key 
+ treatment processes throughout its operational lifespan.\\
+
+This equalization basin requires aeration so as to 
+prevent odors and solids deposition. The proposed 
+equalization is an off-line basin 
 as seen in the diagram shown in Figure~\ref{fig:basin_diagram}.
 
 \begin{figure}[h]
@@ -792,7 +835,7 @@ $BOD_{5,\text{influent}}$ &
 & mg/L & Inflow $BOD_5$, see Section \ref{sec:pollutant_load}\\
 $BOD_{5,\text{efluent}}$ & 
 % BEGIN py_Eflow_BOD
-259.26
+258.99
 % END py_Eflow_BOD
 & mg/L & Found $BOD_5$ that complies with environmental impact, see Section \ref{sec:secondary_trat}\\
 $T$ & 
@@ -808,12 +851,12 @@ $E_{\text{BOD}}$ &
 & \% & $BOD_5$ Efficiency removal, obtained with Eq.\eqref{eq:efficiency} \\
 $t_{\text{BOD}}$ & 
 % BEGIN py_t_BOD
-1.35
+1.82
 % END py_t_BOD
 & h & Obtained with Eq.\eqref{eq:time_of_residency}\\
 $t_{\text{TSS}}$ & 
 % BEGIN py_t_TSS
-1.35
+1.82
 % END py_t_TSS
 & h & Same as $t_{\text{BOD}}$\\
 $E_{\text{TSS}}$ & 
@@ -828,17 +871,17 @@ $V_{\text{clarifiers}}^{\text{calc}}$ &
 & m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}\\[0.5em]
 $V_{\text{clarifiers}}^{\text{max}}$ &
 % BEGIN py_maxSedimentationBasinVolume
-10513.62
+8419.38
 % END py_maxSedimentationBasinVolume
 & m$^3$ & Calculated with Eq.\eqref{eq:clarifier_max_volume}\\[0.5em]
 $V_{\text{equilization}}^{\text{req}}$ &
 % BEGIN py_RequiredEqualizationTankVolume
-3075.53
+5169.77
 % END py_RequiredEqualizationTankVolume
 & m$^3$ & Calculated with Eq.\eqref{eq:required_equilization_volume}\\[0.5em]
 $Q_{peak}^{adj}$ &
 % BEGIN py_adjusted_peak
-5776.11
+4625.55
 % END py_adjusted_peak
 & m$^3$/h & Adjusted peak flow rate calculated with Eq.\eqref{eq:adjusted_peak_flow}\\
 \hline
@@ -917,7 +960,7 @@ in the Table~\ref{tab:clarifier_results}.
 \hline
 $A_{clarifier}$ & 
 % BEGIN py_area_clarifier
-700.91
+561.29
 % END py_area_clarifier
 & $m^2$ & Area per clarifier. \\[0.5em]
 $SLR_{clarifier}^{avg}$ & 
@@ -932,7 +975,7 @@ $SLR_{clarifier}^{peak}$ &
 & m$^3$/m$^2$/day & Surface Loading Rate under peak flow rate.\\[0.5em]
 $D_{clarifier}$ & 
 % BEGIN py_clarifier_diameter
-29.87
+26.73
 % END py_clarifier_diameter
 & m & Diameter of clarifier tank.\\[0.5em]
 $n$ &
@@ -947,22 +990,22 @@ $n_{launder-sides}$ &
 & -- & Number of launder sides.\\[0.5em]
 $L_w$ &
 % BEGIN py_weirLength
-175.13
+155.4
 % END py_weirLength
 & m & Weir length. \\[0.5em]
 $WLR$ & 
 % BEGIN py_WLR
-791.55
+714.36
 % END py_WLR
 & m$^3$/m/day & Weir Length Ratio.\\[0.5em]
 $WLR_{critical}$ &
 % BEGIN py_WLR_critical
-395.77
+357.18
 % END py_WLR_critical
 & m$^3$/m/day & Weir Length Ratio under critical condition.\\[0.5em]
 $V_{equalization}^{req}$ & 
 % BEGIN py_required_equilization_volume
-3075.53
+5169.77
 % END py_required_equilization_volume
 & m$^3$ & Required equilization tank volume.\\[0.5em]
 \hline
@@ -1068,52 +1111,52 @@ In the Table~\ref{tab:vnotch_results} the results of V-Notch and Launder design 
 \hline
 $N_{\text{notch/clarifier}}$ & 
 % BEGIN py_notches_per_clarifier
-584.0
+519.0
 % END py_notches_per_clarifier
 & -- & Number of notches per clarifier. \\
 $N_{\text{notch, total}}$ &
 % BEGIN py_total_notches
-1752.0
+1557.0
 % END py_total_notches
 & -- & Total number of notches across all clarifiers. \\
 $Q_{\text{notch}}$ &
 % BEGIN py_flow_per_notch
-0.00092
+0.00083
 % END py_flow_per_notch
 & m$^3$/s & Flow per individual V-notch. \\
 $h$ &
 % BEGIN py_h_max
-0.0537
+0.05151
 % END py_h_max
 & m & Maximum height of water over the notch. \\
 $y$ &
 % BEGIN py_y_depth
-0.06176
+0.05924
 % END py_y_depth
 & m & Water depth over the notch including 15\% safety factor. \\
 $w_{\text{notch}}$ &
 % BEGIN py_w_notch
-0.124
+0.118
 % END py_w_notch
 & m & Top width of the V-notch. \\
 $q$ &
 % BEGIN py_q_launder
-0.00916
+0.00827
 % END py_q_launder
 & m$^3$/m/s & Discharge per unit length of launder. \\
 $Y_c$ &
 % BEGIN py_Yc
-0.403
+0.348
 % END py_Yc
 & m & Critical height at launder discharge point. \\
 $H$ &
 % BEGIN py_H_max2
-0.699
+0.602
 % END py_H_max2
 & m & Maximum calculated water depth in launder. \\
 $H_{\text{final}}$ &
 % BEGIN py_H_final
-1.048
+0.904
 % END py_H_final
 & m & Final design depth in launder with 50\% safety factor. \\
 \hline
@@ -1122,17 +1165,26 @@ $H_{\text{final}}$ &
 
 \subsection{Protection and future considerations}
 
-To ensure reliability and continuity of treatment, the primary clarifier 
-system is designed with redundancy and fail-safes.
-Specifically, multiple clarifier units are provided such that one can be taken 
-offline for maintenance without disrupting treatment capacity, that is 
-why on Section~\ref{sec:primary_Sedimentation_design} $n-1$ was used for the 
-weir design. 
-Inlet flow is evenly distributed via energy-dissipating inlets to prevent localized 
-overloading. Overflow weirs are designed with excess capacity 
-and freeboard to safely manage flow surges and prevent bypassing. Emergency bypass 
-channels are also integrated into the layout to protect downstream processes during 
-extreme hydraulic loads or clarifier failure events.
+The proposed design includes several features 
+to ensure reliability and performance of the 
+circular primary clarifiers under normal and extreme operating conditions:
+\begin{itemize}
+    \item \textbf{Redundancy:} The system comprises three circular tanks, allowing independent operation. This configuration prevents complete shutdown during maintenance or failure of any single unit \cite{davis2010water}.
+    
+    \item \textbf{Hydraulic Load Management:} The tanks are designed to handle peak flows up to 2.2 times the average flow rate, thus accommodating diurnal fluctuations and surges from return streams without compromising downstream processes \cite{davis2010water}.
+    
+    \item \textbf{Overflow Rates:} The surface loading rate (SLR) is kept within recommended values to ensure efficient sedimentation and avoid solids washout. This includes the capacity to operate effectively under peak conditions at least twice the average flow \cite{davis2010water,metcalf_2014_wastewater}.
+    
+    \item \textbf{Adequate Detention Time:} The clarifiers are designed to maintain detention times between 1.5 and 2.5 hours, which is sufficient for effective settling while minimizing the risk of anaerobic conditions that could result in sludge lifting \cite{davis2010water}.
+    
+    \item \textbf{Velocity Control:} Flow velocities within the tanks are limited to reduce turbulence and prevent resuspension of settled solids \cite{davis2010water}.
+    
+    \item \textbf{Effective Flow Distribution:} Inlet structures and baffles are incorporated ahead of effluent weirs to ensure uniform flow distribution, minimize short-circuiting, and prevent scum from escaping with the effluent \cite{metcalf_2014_wastewater}.
+    
+    \item \textbf{Robust Sludge Removal:} The tank bottom is sloped at 1:12 (vertical to horizontal), forming an inverted cone. Sludge scrapers effectively transport settled solids to a central hopper for collection and removal \cite{metcalf_2014_wastewater}.
+    \item \textbf{Launder protection: } Maintenance cost and algal growth are both controlled by supplying a cover surface over the weirs \cite{metcalf_2014_wastewater}.
+\end{itemize}
+
 
 
 \section{Secondary treatment}
@@ -1141,26 +1193,39 @@ extreme hydraulic loads or clarifier failure events.
 \subsection{Facility type}
 \label{sec:sec_treat_facility_type}
 
-The Complete-Mix Activated Sludge (CMAS) 
+The Complete-Mix Activated Sludge (\textit{CMAS}) 
 process is selected for the secondary treatment stage, 
 following guidelines from the Water Environment Federation \cite{wef_DesignWaterResource}. 
 CMAS provides robust and consistent performance under fluctuating loads and conditions. 
 Despite the process’s susceptibility to filamentous microbial growth, careful selection of 
 operational parameters addresses this potential issue.
 
-\subsection{Influent Characterization and Removal Requirements}
+Secondary treatment produces excess biomass that 
+must be removed from the secondary clarifier and 
+conveyed for further processing or disposal. 
+A centrifugal non-clog pump is recommended: it 
+delivers dilute sludge and fine solids handling 
+without blockage, operates at high hydraulic efficiency, 
+and requires minimal maintenance. Compared to 
+positive-displacement alternatives, it also offers 
+a lower cost and strong lifecycle value \cite{davis2010water}.
 
-The secondary treatment stage of the wastewater treatment plant is 
-based on a conventional activated sludge process (\textit{CMAS}), aiming to achieve a 
+\subsection{Pollutant removal}
+\label{sec:sec_tret_polluntant_removal}
+
+The \textit{CMAS} process presents efficiencies that can vary 
+from 85\% up to 95\%, see Appendix~\ref{app:operational_chac_sludge}. Through 
+iterations along with the primary treatment processes, the optimal efficiency 
+was selected as 
 % BEGIN py_sec_removal_efficiency
-94.6
+93.0
 % END py_sec_removal_efficiency
-\% BOD\textsubscript{5} removal efficiency. 
+\% BOD\textsubscript{5} removal. 
 As shown in Section~\ref{sec:env_impact}, in order to comply with 
 the minimum $DO$ in the waterway, the maximum $BOD$ present 
 in the effluent must be equal to  
 % BEGIN py_max_BOD_effluent3
-14
+18
 % END py_max_BOD_effluent3
 mg/L. Based on that and the removal efficiency, the inflow $BOD$ 
 concentration can be calculated as:
@@ -1173,16 +1238,17 @@ BOD_{\text{in}} &= \frac{BOD_{\text{effluent}}}{1 - \eta}
 where \( \eta\) is the BOD removal efficiency. Computed, the $BOD_{in}$ 
 is equal to 
 % BEGIN py_secondary_BOD_inflow
-259.3
+259.0
 % END py_secondary_BOD_inflow
 mg/L, and it represents the target for the removal in the primary treatment, 
 see Section~\ref{sec:primary_treat}. The typical design parameters for activated 
 sludge processes are shown in Appendix~\ref{app:sludge_criteria}.
 
 
-\subsection{Sludge Characteristics and Return Flow}
 
-As the wastewater temperature highly impacts the activated sludge performance 
+\subsubsection{Sludge Characteristics and Return Flow}
+
+As the wastewater temperature highly impacts the activated sludge performance, 
 a value of $10^{\circ}C$ is used to represent critical weather conditions in 
 Melbourne. A Mixed Liquor Suspended Solids (\textit{MLSS}) concentration of
 % BEGIN py_MLSS
@@ -1195,12 +1261,11 @@ as
 % END py_SVI
 mg/L, which promotes good sludge settling characteristics. It also fosters 
 adequate flocculation and settling as it maintains approximately 50\% 
-filamentous microorganism content. Both the 
-which is the limit for the typical values selected for this 
-process, see Appendix~\ref{app:sludge_criteria}.
-The return sludge flow is based on the chosen , which must be lower than \SI{120}{mL/g} 
-to avoid bulking. Using an SVI of \SI{91}{mL/g}, the return 
-sludge concentration \(X_R\) is computed, and the return sludge 
+filamentous microorganism content \cite{chudoba1973control}. Both selected 
+values of 
+\textit{MLSS} and \textit{SVI} are appropriate for conventional 
+activated sludge processes at low temperatures, according to Metcalf & Eddy (2014, Table 8-19) 
+The return sludge concentration \(X_R\) is computed, and the return sludge 
 flow \(Q_R\) is determined using mass balance:
 
 \begin{align}
@@ -1208,9 +1273,15 @@ X_R &= \frac{10^6}{SVI} \\
 Q_R &= Q \cdot \frac{v}{1000 - v}
 \end{align}
 
-where \(v\) is the settled sludge volume (mL/L). These calculations and other relevant values are shown in Table~\ref{tab:secondary_inputs}.
+where \(v\) is the settled sludge volume (mL/L). 
+These calculations and other relevant values 
+are shown in Table~\ref{tab:secondary_inputs}.
+The resulting return sludge ratio (Q<sub>R</sub>/Q) 
+is verified within the recommended range (0.25–1.0) 
+for CMAS processes \cite{metcalf_2014_wastewater}.
 
-\subsection{Aeration Tank Sizing}
+\subsubsection{Aeration Tank Sizing}
+
 The aeration volume \(V_a\) is computed based on the influent BOD\(_5\), the food-to-microorganism ratio (F/M), and the mixed liquor suspended solids (MLSS):
 
 \begin{align}
@@ -1227,7 +1298,7 @@ t_a &= \frac{V_a}{Q} \cdot 24
 
 These values are listed in Table~\ref{tab:secondary_results}.
 
-\subsection{Biomass and Oxygen Demand}
+\subsubsection{Biomass and Oxygen Demand}
 The sludge age and BOD loading are calculated to ensure values fall within CMAS design ranges. Biomass production and oxygen demand for average and peak flows are estimated using:
 
 \begin{align}
@@ -1247,7 +1318,7 @@ Where \(f\) is the BOD conversion factor. The air requirement is calculated assu
 \text{Air}_{\text{avg}} &= \frac{O_2}{0.279 \cdot 0.1} \cdot 2
 \end{align}
 
-\subsection{Design Summary}
+\subsubsection{Design Summary}
 Table~\ref{tab:secondary_inputs} and Table~\ref{tab:secondary_results} summarize the design inputs and resulting key parameters for the secondary treatment system.
 
 \begin{table}[h]
@@ -1325,11 +1396,11 @@ input values for the \textit{Streeter-Phelps model} are shown.\\
 The effluent discharge was evaluated based on the project adjusted 
 peak flow rate (
 % BEGIN py_adjustedQ
-138626.63
+111013.22
 % END py_adjustedQ
 m$^3$/day), calculated in Section \ref{sec:primary_treat} and a effluent BOD$_5$ of 
 % BEGIN py_max_BOD_effluent2
-14
+18
 % END py_max_BOD_effluent2
 mg/L (L$_w$). This value was estimated through iterating the calculations explained 
 in this section until achieving a $DO_{calculated}$ that complies 
@@ -1351,7 +1422,7 @@ see Sections \ref{sec:primary_treat} and \ref{sec:secondary_trat}.
   $L_r$ & 4 mg/L & BOD upstream \\
   $L_w$ & 
   % BEGIN py_max_BOD_effluent
-14
+18
   % END py_max_BOD_effluent
   mg/L & BOD$_5$ of effluent \\
   $k_r$ & 0.71 day$^{-1}$ & Re-aeration rate constant \\
@@ -1361,7 +1432,7 @@ see Sections \ref{sec:primary_treat} and \ref{sec:secondary_trat}.
   $Q_w$ & 475468 $m^3/day$ & Waterway flow rate\\
   $Q_e$ &
 % BEGIN py_adjustedQ2
-138626.63
+111013.22
 % END py_adjustedQ2
   $m^3/day$ & Adjusted flow rate\\
   \hline
@@ -1399,32 +1470,32 @@ DO_{calculated} &=DO_{saturation}-D(t_c) \label{eq:do_calculated}
 \hline
 $L_u$ & 
 % BEGIN py_Lu
-20.49
+26.34
 % END py_Lu
 mg/L & Ultimate BOD of effluent \\
 $L_0$ & 
 % BEGIN py_L0
-7.24
+7.35
 % END py_L0
 mg/L & Mixed BOD in receiving stream \\
 $t_c$ & 
 % BEGIN py_tc
-1.43
+1.44
 % END py_tc
  days & Time to reach minimum DO \\
 $x_c$ & 
 % BEGIN py_xc
-8665.43
+8685.92
 % END py_xc
 m & Distance to minimum DO level \\
 $D(t_c)$ & 
 % BEGIN py_D_tc
-2.5
+2.54
 % END py_D_tc
  mg/L & DO deficit at time $t_c$ \\
 $DO_{calculated}$ &
 % BEGIN py_DO_calc2
-6.0
+5.96
 % END py_DO_calc2
  mg/L & $DO$ in waterway when maximum deficit $D(t_c)$ \\
 \hline
@@ -1437,13 +1508,13 @@ $DO_{calculated}$ &
 As shown in Table~\ref{tab:env_outputs}, 
 the dissolved oxygen deficit at its critical point is 
 % BEGIN py_D_tc2
-2.5
+2.54
 % END py_D_tc2
  mg/L. Substracting from the saturation $DO_\text{saturation}$ 
  the critical deficit $D(t_c)$ the $DO_\text{calculated}$ is obtained, 
  equal to 
  % BEGIN py_DO_calc
-6.0
+5.96
  % END py_DO_calc
  mg/L
 which is above the regulatory $DO_\text{min, threshold}$ of 
@@ -1503,6 +1574,30 @@ in sedimentation when wastewater is at a lower temperature than 20$^{\circ}C$ \c
   \label{fig:DO_streeter_model}
 \end{figure}
 
+\appendixsection{Mass balance technic for equilization volume}{app:mass_balanca_eq_volume}
+
+The required volume to ensure a constant flow downstreams of the equilization basin 
+during current conditions was obtained using the mass balance technic, ensuring 
+that the inflow surplus during daily function of the plant is balanced with the 
+deficit. In the Figure~\ref{fig:mass_balance_equilization_volume} and 
+in the Figure~\ref{fig:mass_balance_projected_volume} the projected condition 
+is represented showing the \textit{adjusted peak flow}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\textwidth]{../images/equabasincurrentaveragee.png}
+  \caption{Mass balance diagram for current conditions.}
+  \label{fig:mass_balance_equilization_volume}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\textwidth]{../images/equabasinnewpeakk.png}
+  \caption{Mass balance diagram for projected conditions.}
+  \label{fig:mass_balance_projected_volume}
+\end{figure}
+
+
 \appendixsection{Design criteria for primary sedimentation basins}{app:primary_criteria}
 
 \begin{table}[h]
@@ -1538,6 +1633,31 @@ Splitter box inlet velocity & $<$ 0.3 m/s & At peak flow \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\appendixsection{Operational characteristics of activated sludge process}{app:operational_chac_sludge}
+
+\begin{table}[h]
+\centering
+\caption{Operational Characteristics of Activated Sludge Process \cite{metcalf_2014_wastewater}}
+\label{tab:activated_sludge_process}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{|X|X|X|c|X|}
+\hline
+\textbf{Process Modification} & \textbf{Flow Model} & \textbf{Aeration System} & \textbf{BOD Removal Efficiency (\%)} & \textbf{Remarks} \\
+\hline
+Conventional & Plug flow & Diffused-air, mechanical aerators & 85--95 & Use for low-strength domestic wastes; process is susceptible to shock loads \\
+\hline
+Complete-mix & Continuous-flow stirred-tank reactor & Diffused-air, mechanical aerators & 85--95 & Use for general application; process is resistant to shock loads but is susceptible to filamentous growths \\
+\hline
+Step feed & Plug flow & Diffused-air & 85--95 & Use for general application for a wide range of wastes \\
+\hline
+Modified aeration & Plug flow & Diffused-air & 60--75 & Use for intermediate degree of treatment where cell tissue in the effluent is not objectionable \\
+\hline
+Contact stabilization & Plug flow & Diffused-air, mechanical & 80--90 & Use for expansion of existing systems and package plants \\
+\hline
+\end{tabularx}
+\end{table}
+
 
 \appendixsection{Typical design parameters for activates sludge processes}{app:sludge_criteria}
 
