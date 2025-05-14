@@ -320,18 +320,9 @@ As no specific influent quality data was available for the study area,
 representative pollutant concentrations were obtained from Melbourne Water’s open 
 dataset on the Eastern Treatment Plant (ETP) \cite{melbournewater_2024_etpdata}. 
 This dataset, which includes daily influent quality records from 2014 onwards, is 
-publicly accessible at \url{https://data-melbournewater.opendata.arcgis.com}.
-In Figure~\ref{fig:boxplots_quality}, 
-the box plot of the \textit{(BOD)} of the abovementioned data is presented. 
+publicly accessible at \url{https://data-melbournewater.opendata.arcgis.com}, see Appendix~\ref{app:melbourne_density} 
+for the whole data presentation.
 
-
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.9\textwidth]{../images/boxPlot_BOD.png}
-  \caption{Boxplots of Biochemical Oxygen Demand (BOD) from Melbourne Water ETP dataset}
-  \label{fig:boxplots_quality}
-\end{figure}
 
 \section{Preliminary Treatment Design}
 \label{sec:prelim_treatment}
@@ -399,7 +390,7 @@ on previous analysis.
 \textbf{Parameter} & \textbf{Value} & \textbf{Description} \\
 \hline
 $v_{\text{screen}}$ & 0.9 m/s & Flow velocity through the screen \\
-$b$ & 0.01 m & Spacing between bars \\
+$b$ & 0.009 m & Spacing between bars \\
 $w$ & 0.007 m & Bar width \\
 $C_d$ & 0.84 & Discharge coefficient \\
 $g$ & 9.81 m/s$^2$ & Gravitational acceleration \\
@@ -636,7 +627,7 @@ approximated at
 19000.0
 % END py_EqualizationVolume
 $m^3$, obtained through the mass balance 
-technic, see Appendix~\ref{} inclusive of a safety factor of 
+technic, see Appendix~\ref{app:mass_balanca_eq_volume} inclusive of a safety factor of 
 % BEGIN py_EqualizationFS
 1.2
 % END py_EqualizationFS
@@ -1264,7 +1255,7 @@ adequate flocculation and settling as it maintains approximately 50\%
 filamentous microorganism content \cite{chudoba1973control}. Both selected 
 values of 
 \textit{MLSS} and \textit{SVI} are appropriate for conventional 
-activated sludge processes at low temperatures, according to Metcalf & Eddy (2014, Table 8-19) 
+activated sludge processes at low temperatures, according to Metcalf \& Eddy (2014, Table 8-19) 
 The return sludge concentration \(X_R\) is computed, and the return sludge 
 flow \(Q_R\) is determined using mass balance:
 
@@ -1276,7 +1267,7 @@ Q_R &= Q \cdot \frac{v}{1000 - v}
 where \(v\) is the settled sludge volume (mL/L). 
 These calculations and other relevant values 
 are shown in Table~\ref{tab:secondary_inputs}.
-The resulting return sludge ratio (Q<sub>R</sub>/Q) 
+The resulting return sludge ratio %(Q<sub>R</sub>/Q) 
 is verified within the recommended range (0.25–1.0) 
 for CMAS processes \cite{metcalf_2014_wastewater}.
 
@@ -1561,6 +1552,15 @@ initial value ($DO_0$). \\
 
 Table of Melbourne suburbs with their area and population \cite{australianbureauofstatistics_2021_suburbs}.\\
 \input{melbourne_density.tex}
+
+From the above data, the following box plot can be obtained.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{../images/boxPlot_BOD.png}
+  \caption{Boxplots of Biochemical Oxygen Demand (BOD) from Melbourne Water ETP dataset}
+  \label{fig:boxplots_quality}
+\end{figure}
 
 \appendixsection{Temperature multiplier for detention time}{app:temperature_multiplier}
 
