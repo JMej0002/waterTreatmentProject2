@@ -3,43 +3,47 @@
 \contentsline {subsection}{\numberline {1.2}Current flowrates estimation}{1}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Minimum current flow rates}{2}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}Maximum current flow rates}{2}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Population Growth and Future Design Considerations}{3}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Influent Pollutant Load Estimation}{4}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.5}Population Growth and Future Design Considerations}{2}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Influent Pollutant Load Estimation}{3}{subsection.1.6}%
 \contentsline {section}{\numberline {2}Preliminary Treatment Design}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Facility types}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Screens design}{4}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Blockage Scenario}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1}Blockage Scenario}{5}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Operational considerations}{7}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}Equalization basin}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Equalization basin}{7}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Protection against failure}{8}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Primary treatment}{9}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Facility Types}{9}{subsection.3.1}%
+\contentsline {section}{\numberline {3}Primary treatment}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Facility Types}{8}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Primary Sedimentation}{9}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Pollutant removal}{9}{subsubsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.3}Design description}{11}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Design description}{10}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Weir Loading Rate (WLR) Assessment}{11}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}V-Notch and Launder Design}{12}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Launder Flow Conditions}{13}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Inlet design}{14}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.2}V-Notch and Launder Design}{11}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Launder Flow Conditions}{12}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Inlet design}{13}{subsubsection.3.3.4}%
 \contentsline {subsection}{\numberline {3.4}Protection and future considerations}{14}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Secondary treatment}{15}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Facility type}{15}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Pollutant removal}{16}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Design description}{16}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Sludge Characteristics and Return Flow}{16}{subsubsection.4.3.1}%
+\contentsline {section}{\numberline {4}Secondary treatment}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Facility type}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Pollutant removal}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Design description}{15}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Sludge Characteristics and Return Flow}{15}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Aeration Tank Sizing}{16}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Organic Loading Rate}{17}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Sludge Age and Stability}{17}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Aeration Tank Configuration}{18}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.3}Organic Loading Rate}{16}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Sludge Age and Stability}{16}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Aeration Tank Configuration}{17}{subsubsection.4.3.5}%
 \contentsline {subsubsection}{\numberline {4.3.6}Aeration requirements}{18}{subsubsection.4.3.6}%
-\contentsline {subsubsection}{\numberline {4.3.7}Design Summary}{19}{subsubsection.4.3.7}%
-\contentsline {subsection}{\numberline {4.4}Protection against failure}{20}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Environmental Impact Assessment}{20}{section.5}%
+\contentsline {subsubsection}{\numberline {4.3.7}Design Summary}{18}{subsubsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.4}Protection against failure}{19}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Environmental Impact Assessment}{19}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Impact on receiving waterway}{19}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Biosolids management}{22}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Summary}{22}{section.6}%
-\contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
-\contentsline {section}{Appendix 2\hskip 1em\relax Temperature multiplier for detention time}{12}{appendix.B}%
-\contentsline {section}{Appendix 3\hskip 1em\relax Mass balance technique for equilization volume}{13}{appendix.C}%
-\contentsline {section}{Appendix 4\hskip 1em\relax Inlet sections views}{15}{appendix.D}%
-\contentsline {section}{Appendix 5\hskip 1em\relax Design criteria for primary sedimentation basins}{16}{appendix.E}%
-\contentsline {section}{Appendix 6\hskip 1em\relax Operational characteristics of activated sludge process}{17}{appendix.F}%
-\contentsline {section}{Appendix 7\hskip 1em\relax Typical design parameters for activates sludge processes}{19}{appendix.G}%
+\contentsline {section}{Appendix 1\hskip 1em\relax Peaking Factors}{1}{appendix.A}%
+\contentsline {section}{Appendix 2\hskip 1em\relax Area and Population per suburb}{2}{appendix.B}%
+\contentsline {section}{Appendix 3\hskip 1em\relax Temperature multiplier for detention time}{13}{appendix.C}%
+\contentsline {section}{Appendix 4\hskip 1em\relax Mass balance technique for equilization volume}{14}{appendix.D}%
+\contentsline {section}{Appendix 5\hskip 1em\relax Equalization Off-line diagram}{16}{appendix.E}%
+\contentsline {section}{Appendix 6\hskip 1em\relax Inlet sections views}{17}{appendix.F}%
+\contentsline {section}{Appendix 7\hskip 1em\relax Design criteria for primary sedimentation basins}{18}{appendix.G}%
+\contentsline {section}{Appendix 8\hskip 1em\relax Operational characteristics of activated sludge process}{19}{appendix.H}%
+\contentsline {section}{Appendix 9\hskip 1em\relax Typical design parameters for activates sludge processes}{21}{appendix.I}%

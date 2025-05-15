@@ -13,8 +13,14 @@ Davis, M.~L. (2010).
 \newblock {\em Water and Wastewater Engineering: Design Principles and Practice}.
 \newblock McGraw-Hill Companies, Inc., New York.
 
-\bibitem[{Melbourne Water}, 2024]{melbournewater_2024_etpdata}
-{Melbourne Water} (2024).
+\bibitem[{Melbourne Water}, 2024a]{melbournewater_2024_customer_outcomes}
+{Melbourne Water} (2024a).
+\newblock Customer outcomes performance report 2023--24.
+\newblock \url{https://www.melbournewater.com.au}.
+\newblock Accessed: 2025-05-15.
+
+\bibitem[{Melbourne Water}, 2024b]{melbournewater_2024_etpdata}
+{Melbourne Water} (2024b).
 \newblock Eastern treatment plant daily influent quality data.
 \newblock \url{https://data-melbournewater.opendata.arcgis.com}.
 \newblock Accessed: 2025-05-07.
@@ -23,6 +29,12 @@ Davis, M.~L. (2010).
 Metcalf and Eddy (2014).
 \newblock {\em Wastewater Engineering, Treatment and resource recovery}.
 \newblock McGraw, 5 edition.
+
+\bibitem[{United States Environmental Protection Agency}, 1993]{EPA1993_CFR503}
+{United States Environmental Protection Agency} (1993).
+\newblock Standards for the use or disposal of sewage sludge.
+\newblock Code of Federal Regulations, Title 40, Part 503.
+\newblock Federal Register, Vol.\ 58, No.\ 32, pp.\ 9248-9415, 19 February 1993.
 
 \bibitem[{Water Environment Federation}, 2017]{wef_DesignWaterResource}
 {Water Environment Federation} (2017).
