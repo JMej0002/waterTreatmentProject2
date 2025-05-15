@@ -31,6 +31,8 @@
 \usepackage{tabularx}
 \usepackage{textcomp}
 \usepackage{pdflscape}
+\usepackage{pdfpages}
+
 
 \usepackage[hidelinks]{hyperref}
 
@@ -662,7 +664,7 @@ configured to deliver a constant flow rate downstream ($Q_{avg}^{current}$).
 This is facilitated by a significant design storage volume $V_{\text{equilization}}$, 
 approximated at 
 % BEGIN py_EqualizationVolume
-23000.0
+21000.0
 % END py_EqualizationVolume
 $m^3$, obtained through the mass balance 
 technique, see Appendix~\ref{app:mass_balanca_eq_volume} inclusive of a safety factor of 
@@ -1882,7 +1884,8 @@ the dissolved oxygen deficit at its critical point is
 which is above the regulatory $DO_\text{min, threshold}$ of 
 5.95 mg/L. Therefore, the discharge 
 complies with the receiving waterway's environmental standard. In the Figure~\ref{fig:DO_streeter_model}, Appendix~\ref{app:streeter_phelps_model}, the deficit variation across time can be observed,
-obtained base on Eq.~\eqref{eq:do_deficit} variating $t$. 
+obtained base on Eq.~\eqref{eq:do_deficit} variating $t$. The distance downstream at 
+which the waterway reaches the initial $DO$ is 32718.83 m. 
 
 
 \subsection{Biosolids management}
@@ -1934,9 +1937,9 @@ pumping energy by roughly a quarter.
 \hline
 \textbf{Process} & \textbf{BOD mg/L} & \textbf{$BOD_{efficiency}\%$} & \textbf{TSS mg/L} & \textbf{$TSS_{efficiency}\%$} \\
 \hline
-Catchment & 370 & -- & 370 & --\\
-Primary treatment & 264 & 29 & 185 & 50\\
-Secondary treatment & 18 & 93.2 & 10 & 95\\
+Catchment & 370 & -- & 370 & --\\[0.5em]
+Primary treatment & 264 & 29 & 185 & 50\\[0.5em]
+Secondary treatment & 18 & 93.2 & 10 & 95\\[0.5em]
 \hline
 \end{tabularx}
 \end{table}
