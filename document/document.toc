@@ -25,15 +25,17 @@
 \contentsline {section}{\numberline {4}Secondary treatment}{15}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Facility type}{15}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Pollutant removal}{16}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Sludge Characteristics and Return Flow}{16}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Aeration Tank Sizing}{16}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Organic Loading Rate}{17}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Sludge Age and Stability}{17}{subsubsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.3}Aeration Tank Configuration}{17}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Aeration requirements}{18}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Design Summary}{19}{subsubsection.4.3.2}%
-\contentsline {section}{\numberline {5}Environmental Impact Assessment}{19}{section.5}%
-\contentsline {section}{\numberline {6}Summary}{23}{section.6}%
+\contentsline {subsection}{\numberline {4.3}Design description}{16}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Sludge Characteristics and Return Flow}{16}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Aeration Tank Sizing}{16}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Organic Loading Rate}{17}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Sludge Age and Stability}{17}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Aeration Tank Configuration}{18}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.6}Aeration requirements}{18}{subsubsection.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.7}Design Summary}{19}{subsubsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.4}Protection against failure}{20}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Environmental Impact Assessment}{20}{section.5}%
+\contentsline {section}{\numberline {6}Summary}{22}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
 \contentsline {section}{Appendix 2\hskip 1em\relax Temperature multiplier for detention time}{12}{appendix.B}%
 \contentsline {section}{Appendix 3\hskip 1em\relax Mass balance technique for equilization volume}{13}{appendix.C}%

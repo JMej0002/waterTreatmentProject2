@@ -1267,7 +1267,8 @@ mg/L, and it represents the target for the removal in the primary treatment,
 see Section~\ref{sec:primary_treat}. The typical design parameters for activated 
 sludge processes are shown in Appendix~\ref{app:sludge_criteria}.
 
-
+\subsection{Design description}
+\label{sec:design_description_secondary_treat}
 
 \subsubsection{Sludge Characteristics and Return Flow}
 
@@ -1364,7 +1365,7 @@ Q_e &= Q_{\text{peak}}^{\text{adjusted}} - Q_w \label{eq:effluent_flow}\\
 Q_{e\text{,adj}} &= Q_{\text{peak}}^{\text{adjusted}} - Q_{w\text{,adj}} \label{eq:effluent_flow_adj}
 \end{align}
 
-\subsection{Aeration Tank Configuration}
+\subsubsection{Aeration Tank Configuration}
 \label{sec:aeration_tank_configuration}
 Aeration basins are sized to avoid large volumes 
 that promote dead zones, potentially exacerbating 
@@ -1443,6 +1444,9 @@ adjusted peak conditions:
 \begin{align}
 Y_{\text{obs,avg}} &= \frac{Y}{1 + K_d \cdot \theta_c} \label{eq:observed_yield_avg}\\
 P_{x\text{,avg}} &= Y_{\text{obs,avg}} \cdot Q_{\text{avg}}^{\text{projected}} \cdot \frac{BOD_{\text{in}} - BOD_{\text{eff}}}{1000} \label{eq:biomas_rate_avg}\\
+\end{align}
+
+\begin{align}
 Y_{\text{obs,peak}} &= \frac{Y}{1 + K_d \cdot \theta_{c\text{,adj}}} \label{eq:observed_yield_peak}\\
 P_{x\text{,peak}} &= Y_{\text{obs,avg}} \cdot Q_{\text{peak}}^{\text{adj}} \cdot \frac{BOD_{\text{in}} - BOD_{\text{eff}}}{1000} \label{eq:biomas_rate_peak}
 \end{align}
@@ -1681,7 +1685,18 @@ $\text{Air}_{\text{avg}}$ &
 \end{tabularx}
 \end{table}
 
+\subsection{Protection against failure}
+\label{sec:protection_against_failue_secondary_treat}
 
+The process design follows a duty/stand‑by (N+1) 
+philosophy for all blowers and return‑sludge pumps, 
+providing high resilience. If one secondary clarifier 
+is unavailable for maintenance, the remaining unit will 
+sustain the full peak hydraulic and solids load. 
+Likewise, the six complete‑mix aeration tanks allow 
+any single basin to be isolated for maintenance 
+while the plant continues to meet permit limits 
+under normal operating conditions.
 
 
 \section{Environmental Impact Assessment}
@@ -1846,7 +1861,6 @@ initial value ($DO_0$). \\
   \label{fig:DO_streeter_model}
 \end{figure}
 
-\newpage
 
 \section{Summary}
 \newpage
