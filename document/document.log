@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  15 MAY 2025 02:17
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.6)  15 MAY 2025 14:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -786,7 +786,7 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 606--617
+Underfull \hbox (badness 10000) in paragraph at lines 618--644
 
  []
 
@@ -795,17 +795,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 606--617
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 618--644
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 645--663
 
  []
 
 File: ../images/basin_diagram.png Graphic file (type bmp)
 <../images/basin_diagram.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
@@ -825,6 +823,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 789--798
  []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
@@ -841,15 +842,15 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [13]
-
-File: ../images/monash_logo.png Graphic file (type bmp)
-<../images/monash_logo.png>
-[14]
 Underfull \hbox (badness 1024) in paragraph at lines 1188--1189
 []\TU/Arial(0)/b/n/10.95 Redundancy: \TU/Arial(0)/m/n/10.95 The system comprises three circular tanks, allowing independent operation.
  []
 
 
+
+File: ../images/monash_logo.png Graphic file (type bmp)
+<../images/monash_logo.png>
+[14]
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
@@ -861,39 +862,14 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [16]
 
-LaTeX Warning: Reference `eq:bod_influent_calc' on page 17 undefined on input line 1387.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `eq:oxygen_demand' on page 17 undefined on input line 1414.
-
-
-LaTeX Warning: Reference `eq:oxygen_demand' on page 17 undefined on input line 1414.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 1428--1438
-
- []
-
-
 
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [18]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1551--1566
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1485
 
  []
 
@@ -902,12 +878,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1551--1566
 File: ../images/monash_logo.png Graphic file (type bmp)
 <../images/monash_logo.png>
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1567--1574
+Underfull \hbox (badness 10000) in paragraph at lines 1598--1613
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1614--1621
 
  []
 
 File: ../images/DOd streeter-phelps Model.png Graphic file (type bmp)
 <../images/DOd streeter-phelps Model.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 
 File: ../images/monash_logo.png Graphic file (type bmp)
@@ -924,10 +908,10 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1603.
+(hyperref)                replaced by space on input line 1650.
 
 (./melbourne_density.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1605--1
+Underfull \hbox (badness 10000) in paragraph at lines 1652--1
 
  []
 
@@ -1008,7 +992,7 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1617.
+(hyperref)                replaced by space on input line 1664.
 
 File: ../images/temperature_multiplier.png Graphic file (type bmp)
 <../images/temperature_multiplier.png>
@@ -1022,7 +1006,7 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1629.
+(hyperref)                replaced by space on input line 1676.
 
 File: ../images/equabasincurrentaveragee.png Graphic file (type bmp)
 <../images/equabasincurrentaveragee.png>
@@ -1045,7 +1029,7 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1652.
+(hyperref)                replaced by space on input line 1699.
 
 File: ../images/Inlet.png Graphic file (type bmp)
 <../images/Inlet.png>
@@ -1058,17 +1042,17 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 [15
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1668--1668
+Underfull \hbox (badness 10000) in paragraph at lines 1715--1715
 |\TU/Arial(0)/b/n/14.4 APPENDIX 5 DESIGN CRITERIA FOR PRIMARY SEDIMENTATION
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1668.
+(hyperref)                replaced by space on input line 1715.
 
 
-Overfull \hbox (33.56255pt too wide) in alignment at lines 1701--1701
+Overfull \hbox (33.56255pt too wide) in alignment at lines 1748--1748
 [][][] 
  []
 
@@ -1079,177 +1063,177 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 [16
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1704--1704
+Underfull \hbox (badness 10000) in paragraph at lines 1751--1751
 |\TU/Arial(0)/b/n/14.4 APPENDIX 6 OPERATIONAL CHARACTERISTICS OF ACTIVATED
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1704.
+(hyperref)                replaced by space on input line 1751.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 []|\TU/Arial(0)/m/n/10.95 Diffused-air,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 mechanical
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 []|\TU/Arial(0)/m/n/10.95 Use for low-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 strength do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 process is
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 1725--1725
+Underfull \hbox (badness 4981) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 susceptible to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 []|\TU/Arial(0)/m/n/10.95 Continuous-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 flow stirred-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 []|\TU/Arial(0)/m/n/10.95 Diffused-air,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 mechanical
  []
 
 
-Underfull \hbox (badness 6608) in paragraph at lines 1725--1725
+Underfull \hbox (badness 6608) in paragraph at lines 1772--1772
 []|\TU/Arial(0)/m/n/10.95 Use for gen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 eral applica-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 tion; process
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 1725--1725
+Underfull \hbox (badness 1845) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 is resistant to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 shock loads
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 but is sus-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 ceptible to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 filamentous
  []
 
 
-Underfull \hbox (badness 6608) in paragraph at lines 1725--1725
+Underfull \hbox (badness 6608) in paragraph at lines 1772--1772
 []|\TU/Arial(0)/m/n/10.95 Use for gen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 eral appli-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 cation for a
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 1725--1725
+Underfull \hbox (badness 1122) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 wide range of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 []|\TU/Arial(0)/m/n/10.95 Use for in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 termediate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 degree of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 treatment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 where cell
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 tissue in the
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 1725--1725
+Underfull \hbox (badness 1565) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 effluent is not
  []
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 1725--1725
+Underfull \hbox (badness 3547) in paragraph at lines 1772--1772
 []|\TU/Arial(0)/m/n/10.95 Contact stabi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 []|\TU/Arial(0)/m/n/10.95 Diffused-air,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 systems and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1772
 \TU/Arial(0)/m/n/10.95 package
  []
 
@@ -1270,7 +1254,7 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 1729.
+(hyperref)                replaced by space on input line 1776.
 
 
 
@@ -1279,37 +1263,37 @@ File: ../images/monash_logo.png Graphic file (type bmp)
 [19
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1745--1745
+Underfull \hbox (badness 10000) in paragraph at lines 1792--1792
 []|\TU/Arial(0)/m/n/10.95 CMAS or plug
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1746--1746
+Underfull \hbox (badness 10000) in paragraph at lines 1793--1793
 []|\TU/Arial(0)/m/n/10.95 CMAS or plug
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1750--1750
+Underfull \hbox (badness 10000) in paragraph at lines 1797--1797
 []|\TU/Arial(0)/m/n/10.95 Plug flow or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1752--1752
+Underfull \hbox (badness 10000) in paragraph at lines 1799--1799
 []|\TU/Arial(0)/m/n/10.95 CMAS or plug
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1754--1754
+Underfull \hbox (badness 10000) in paragraph at lines 1801--1801
 []|\TU/Arial(0)/m/n/10.95 Batch decant (ICEAS,
  []
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 1756--1756
+Underfull \hbox (badness 2894) in paragraph at lines 1803--1803
 []|\TU/Arial(0)/m/n/10.95 Counter current aeration
  []
 
 
-Overfull \hbox (93.17476pt too wide) in paragraph at lines 1739--1759
+Overfull \hbox (93.17476pt too wide) in paragraph at lines 1786--1806
  [][] 
  []
 
@@ -1327,19 +1311,16 @@ L3 programming layer <2025-04-14>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 9AF35C5867F5535707B60268E33D4485;8288.
+(rerunfilecheck)             Checksum: 5C3B805BDB5079AFBADB8FDB6ADCF329;8694.
  ) 
 Here is how much of TeX's memory you used:
- 19135 strings out of 470249
- 417273 string characters out of 5487939
- 930934 words of memory out of 5000000
- 45529 multiletter control sequences out of 15000+600000
+ 19134 strings out of 470249
+ 417249 string characters out of 5487939
+ 931360 words of memory out of 5000000
+ 45528 multiletter control sequences out of 15000+600000
  631292 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,15n,114p,485b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s

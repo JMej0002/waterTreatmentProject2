@@ -373,7 +373,7 @@ The flow velocity through the screen $v_\text{screen}$ should
 be between 0.4 and 0.9 $m/s$ (\cite{davis2010water}), the latter is selected and checked 
 against the other constrains of the design. The bar spacing or 
 opening size ($b$) 
-is taken as 0.01 m as the screen should remove 
+is taken as 0.009 m as the screen should remove 
 particles bigger than 10mm. The bar width $w$ is selected as 
 0.007 m based on commercial screens availability. The discharge 
 coefficient ($C_d$) is commonly taken as 0.84, although it might be 
@@ -405,7 +405,7 @@ From Equations \eqref{eq:screen_velocity} to
 the headloss ($h_\text{loss}$), the upstream flow depth ($d_\text{upstream}$), 
 the wetted cross-sectional area ($A_\text{wet}$) and required channel width ($W_\text{channel}$) 
 were determined.
-The screens' width is recommended to be between 0.6 and 1.1m \cite{metcalf_2014_wastewater}. 
+The screens' width is recommended to be between 0.6 and 1.0m \cite{metcalf_2014_wastewater}. 
 The number of screens required ($N_\text{screens}$) is therefore calculated based on the 
 channel width divided by the maximum recommended screen width (1.1 m) and 
 rounding up to the nearest integer. Results are shown 
@@ -603,17 +603,17 @@ and routine cleaning are required, especially after high flow events.
 \subsection{Equalization basin}
 \label{sec:equalization_basin}
 
-The equalization basin was designed to minimize flow fluctuations to downstream 
-treatment units, enhancing overall plant stability and performance. 
-Initially, the basin volume calculated by capturing all inflows exceeding 
-the projected average daily flow resulted in an impractical tank size 
-(~24,000 m³). Therefore, a new peak flow of 
+%The equalization basin was designed to minimize flow fluctuations to downstream 
+%treatment units, enhancing overall plant stability and performance. 
+%Initially, the basin volume calculated by capturing all inflows exceeding 
+%the projected average daily flow resulted in an impractical tank size 
+%(~24,000 m³). Therefore, a new peak flow of 
 % BEGIN py_newPeakFlow
-111013.22
+%111013.22
 % END py_newPeakFlow
-$m^3/day$ was established, 
-based on the maximum capacity of the downstream primary treatment facilities. 
-(See Section \ref{sec:primary_treat}).\\
+%$m^3/day$ was established, 
+%based on the maximum capacity of the downstream primary treatment facilities. 
+%(See Section \ref{sec:primary_treat}).\\
 
 The planned flow management strategy for the wastewater 
 treatment plant incorporates a phased approach utilizing 
@@ -627,7 +627,7 @@ approximated at
 19000.0
 % END py_EqualizationVolume
 $m^3$, obtained through the mass balance 
-technic, see Appendix~\ref{app:mass_balanca_eq_volume} inclusive of a safety factor of 
+technique, see Appendix~\ref{app:mass_balanca_eq_volume} inclusive of a safety factor of 
 % BEGIN py_EqualizationFS
 1.2
 % END py_EqualizationFS
@@ -1319,47 +1319,95 @@ The calculated \textit{HRT} is within the recommended range
 time and biological stabilization.
 
 \subsubsection{Organic Loading Rate}
+The organic loading rate, an essential performance parameter, is computed as follows:
 
 \begin{align}
-\text{OLR} &= \frac{S_0 \cdot Q_{\text{peak}}^{\text{adjusted}}}{V}
+\text{OLR} &= \frac{BOD_{5,\text{in}} \cdot Q_{\text{peak}}^{\text{adjusted}}}{V_a}
 \end{align}
 
-The specific substrate utilization rate is:
+\subsubsection{Sludge Age and Stability}
+
+Typically, kinetic coefficients for activated 
+sludge processes are reported at 20 °C. To adapt 
+these to our chosen design temperature (10 °C), 
+the Arrhenius equation is employed to adjust the 
+yield coefficient (Y) and decay coefficient ($K_d$):
 
 \begin{align}
-U &= F/M \cdot \eta_{\text{BOD}}
-\end{align}
-
-The sludge age is:
-
-\begin{align}
+U &= F/M \cdot \eta\\
 \theta_c &= \frac{1}{Y \cdot U - K_d}
 \end{align}
 
-Including a safety factor of 1.3 to account for peak organic load:
+Using these adjusted coefficients, the required 
+sludge age is calculated. A safety factor 
+of 1.3 is applied to accommodate peak organic load variations:
 
 \begin{align}
 \theta_{c,\text{adj}} &= 1.3 \cdot \theta_c
 \end{align}
 
-The waste sludge flow rate is:
+The waste flow ($Q_w$) is calculated with the $MLSS$, $V_a$,
+$X_R$ and $\theta_c$ as shown below. Similarly, the 
+adjusted waste flow ($Q_{w\text{,adj}}$) rate is calculated, but using 
+$\theta_{c,\text{adj}}$ instead.
 
 \begin{align}
-Q_w &= \frac{\text{MLSS} \cdot V}{X_R \cdot \theta_c} 
+Q_w &= \frac{\text{MLSS} \cdot V_a}{X_R \cdot \theta_c}\\
+Q_{w\text{,adj}} &= \frac{\text{MLSS} \cdot V_a}{X_R \cdot \theta_{c,\text{adj}}} 
 \end{align}
 
-The adjusted waste flow using $\theta_{c,\text{adj}}$:
+Finally, the base effluent flow ($Q_e$) and adjusted one ($Q_{e\text{, adj}}$) are obtained as:
 
 \begin{align}
-Q_{w,\text{adj}} &= \frac{4000 \cdot 1{,}618{,}690.63}{10{,}989.01 \cdot 11.6} = 50{,}109.03~\text{m}^3/\text{d}
+Q_e &= Q_{\text{peak}}^{\text{adjusted}} - Q_w\\
+Q_{e\text{,adj}} &= Q_{\text{peak}}^{\text{adjusted}} - Q_{w\text{,adj}}\
 \end{align}
 
-Effluent flow is then:
+\subsection{Aeration Tank Configuration}
+Aeration basins are sized to avoid large volumes 
+that promote dead zones, potentially exacerbating 
+filamentous microbial growth \cite{chudoba1973control}. 
+Thus, individual basin volume is limited to 3,500 $m^3$, 
+and the length-to-width ratio is capped at 3:1, 
+consistent with Davis (2010). The number of aeration 
+tanks required is therefore calculated as:
 
 \begin{align}
-Q_e &= Q_{\text{peak}}^{\text{adjusted}} - Q_w
+  N_{\text{tanks}}^{\text{aeration}}=\frac{V_a}{3500}
 \end{align}
 
+rounding the result to the next integer, ensuring therefore 
+a volume per tank below the abovementioned limit. The volume 
+per tank is then recalculated as: 
+
+\begin{align}
+  V_{\text{tank}}^{\text{aeration}} &=\frac{V_a}{N_{\text{tanks}}^{\text{aeration}}}
+\end{align}
+
+The aeration tank dimensions are then selected to yield the obtained $V_{\text{tank}}^{\text{aeration}}$.
+The tank depth was selected as 
+% BEGIN py_aerationTankDepth
+4
+% END py_aerationTankDepth
+m, as values within 3 to 6 m are recommended 
+\cite{metcalf_2014_wastewater}; 
+the tank width was estimated as 
+four times the depth, i.e. 
+% BEGIN py_aerationTankWidth
+16
+% END py_aerationTankWidth
+m: and finally the length is calculated to reach the desired 
+volume: $L_{\text{tank}}^{\text{aeration}}=V_{\text{tank}}^{\text{aeration}}/(Width*Depth)= $
+% BEGIN py_aerationTankLength
+46.8
+% END py_aerationTankLength
+m. \\
+A \textit{Solids Loading Ratio} ($SLR$) 
+during average flow conditions is selected as 
+% BEGIN py_SLR_selected
+6
+% END py_SLR_selected
+$kg/m^2/day$, as this value 
 
 \subsubsection{Design Summary}
 Table~\ref{tab:secondary_inputs} and Table~\ref{tab:secondary_results} summarize the design inputs and resulting key parameters for the secondary treatment system.
@@ -1376,7 +1424,7 @@ Table~\ref{tab:secondary_inputs} and Table~\ref{tab:secondary_results} summarize
 $Q$ & 127506.0 & m$^3$/d & Adjusted projected peak flow from equalization tank \\
 $BOD_{5,\text{eff}}$ & 14.0 & mg/L & Target BOD$_5$ in treated effluent \\
 $\eta_{\text{BOD}}$ & 94.6 & \% & BOD$_5$ removal efficiency \cite{metcalf_2014_wastewater} \\
-$BOD_{5,\text{in}}$ & 259.26 & mg/L & BOD$_5$ at secondary influent, see Eq.~\eqref{eq:bod_influent_calc} \\
+$BOD_{5,\text{in}}$ & 259.26 & mg/L & BOD$_5$ at secondary influent \\
 $X$ & 4000 & mg/L & Mixed liquor suspended solids (MLSS) \\
 $SVI$ & 91.0 & mL/g & Suspended Volume Index \\
 $X_R$ & 10989.01 & mg/L & Return sludge concentration \\
@@ -1405,8 +1453,8 @@ $\theta_{c,\text{max}}$ & 9.02 & d & Sludge age (adjusted for peak loading) \\
 $Y_{\text{obs,avg}}$ & 0.43 & -- & Observed yield for average flow \\
 $P_{X,\text{avg}}$ & 961.96 & kg/d & Biomass production for average flow \\
 $P_{X,\text{peak}}$ & 1532.5 & kg/d & Biomass production for peak flow \\
-$O_{2,\text{peak}}$ & 2924.91 & kg/d & Oxygen demand for peak flow, see Eq.~\eqref{eq:oxygen_demand} \\
-$O_{2,\text{avg}}$ & 2698.77 & kg/d & Oxygen demand for average flow, see Eq.~\eqref{eq:oxygen_demand} \\
+$O_{2,\text{peak}}$ & 2924.91 & kg/d & Oxygen demand for peak flow\\
+$O_{2,\text{avg}}$ & 2698.77 & kg/d & Oxygen demand for average flow \\
 $\text{Air}_{\text{peak}}$ & 8743.36 & m$^3$/h & Required air for peak conditions \\
 $\text{Air}_{\text{avg}}$ & 19372.13 & m$^3$/d & Required air for average conditions \\
 % END py_secondary_results
@@ -1626,10 +1674,10 @@ in sedimentation when wastewater is at a lower temperature than 20$^{\circ}C$ \c
   \label{fig:DO_streeter_model}
 \end{figure}
 
-\appendixsection{Mass balance technic for equilization volume}{app:mass_balanca_eq_volume}
+\appendixsection{Mass balance technique for equilization volume}{app:mass_balanca_eq_volume}
 
 The required volume to ensure a constant flow downstreams of the equilization basin 
-during current conditions was obtained using the mass balance technic, ensuring 
+during current conditions was obtained using the mass balance technique, ensuring 
 that the inflow surplus during daily function of the plant is balanced with the 
 deficit. In the Figure~\ref{fig:mass_balance_equilization_volume} and 
 in the Figure~\ref{fig:mass_balance_projected_volume} the projected condition 
