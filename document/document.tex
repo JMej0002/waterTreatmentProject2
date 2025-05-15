@@ -204,13 +204,13 @@ following calculation:
 \subsection{Current flowrates estimation}
 \label{sec:current_flowrates}
 
-According to the \textit{Water Service Association of Australia} the inflow rate percapita
+According to the \textit{Melbourne Water - Customer Outcomes Performance Report} the inflow rate percapita
 can be estimated as 
 % BEGIN py_DomesticPerCapitaFlowrate
 162
 % END py_DomesticPerCapitaFlowrate
-L/PE/day \cite{yarravalleywater_2023_amf}. Therefore, the 
-\( Q_{\text{current avg, domestic}} \) can be calculated as\\
+L/PE/day \cite{melbournewater_2024_customer_outcomes}. Therefore, the 
+\( Q_{\text{current avg, domestic}} \) can be calculated as 
 % BEGIN py_DomesticCurrentFlow
 \(\frac{Q_{\text{domestic per capita}} \times PE_{\text{domestic}}}{1000}= 55080.0\)
 % END py_DomesticCurrentFlow
@@ -257,15 +257,10 @@ rate estimation. In the Table \ref{tab:current_rates} the current flow rates obt
 \label{sec:minimum_current_flowrates}
 
 The minimum flow rates can be estimated using the minimum peaking factor
-which from the \ref{fig:peaking_factor} is equal to 0.3. The current flow rates shown in the Table \ref{tab:current_rates}
+which from the Figure~\ref{fig:peaking_factor}, in Appendix~\ref{app:peaking_factors},
+ is equal to 0.3. The current flow rates shown in the Table \ref{tab:current_rates}
 are multiplied by this factor, and results are presented in Table \ref{tab:projected_rates}.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.8\textwidth]{../images/peaking_factor.png}
-  \caption{Daily fluctuation of peaking factors at each hour of the day for flow rates on an average day in a similar wastewater catchment.}
-  \label{fig:peaking_factor}
-\end{figure}
 
 \subsection{Maximum current flow rates}
 \label{sec:maximum_current_flowrates}
@@ -610,9 +605,7 @@ and routine cleaning are required, especially after high flow events.
 %Initially, the basin volume calculated by capturing all inflows exceeding 
 %the projected average daily flow resulted in an impractical tank size 
 %(~24,000 m³). Therefore, a new peak flow of 
-% BEGIN py_newPeakFlow
-114454.28
-% END py_newPeakFlow
+
 %$m^3/day$ was established, 
 %based on the maximum capacity of the downstream primary treatment facilities. 
 %(See Section \ref{sec:primary_treat}).\\
@@ -630,10 +623,7 @@ approximated at
 % END py_EqualizationVolume
 $m^3$, obtained through the mass balance 
 technique, see Appendix~\ref{app:mass_balanca_eq_volume} inclusive of a safety factor of 
-% BEGIN py_EqualizationFS
-1.2
-% END py_EqualizationFS
-. It is noted that, according to the clarifier design 
+1.1. It is noted that, according to the clarifier design 
 shown in Section \ref{sec:clarifier_design_description}, the required 
 equilization basin volume $V_{\text{equilization}}^{\text{req}}$ is actually 
 % BEGIN py_requiredEqBasinVol
@@ -666,14 +656,10 @@ and enabling precise optimization of subsequent treatment units.\\
 This equalization basin requires aeration so as to 
 prevent odors and solids deposition. The proposed 
 equalization is an off-line basin 
-as seen in the diagram shown in Figure~\ref{fig:basin_diagram}.
+as seen in the diagram shown in Figure~\ref{fig:basin_diagram}, see 
+Appendix~\ref{app:equialization_diagram}.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.8\textwidth]{../images/basin_diagram.png}
-  \caption{Off-line equalization basin –adapted from Fig 3-20, Davis,2010.}
-  \label{fig:basin_diagram}
-\end{figure}
+
 
 \subsection{Protection against failure}
 \label{preliminary_treatment_protection}
@@ -847,7 +833,6 @@ $T$ &
 10
 % END py_Temperature
 & C & Assumed the water lowest Temperature to adjust detention time.\\
-
 $E_{\text{BOD}}$ & 
 % BEGIN py_EfficiencyPrimary
 28.68
@@ -865,9 +850,10 @@ $t_{\text{TSS}}$ &
 & h & Same as $t_{\text{BOD}}$\\
 $E_{\text{TSS}}$ & 
 % BEGIN py_TSS_efficiency
-49.51
+50.0
 % END py_TSS_efficiency
 & \% & Solved from Eq.\eqref{eq:efficiency}, replacing $t_{\text{TSS}}$\\[0.5em]
+$TSS_{effluent}$ & 185 & mg/L & $TSS$ effluent from primary treatment to secondary treatment\\[0.5em]
 $V_{\text{clarifiers}}^{\text{calc}}$ & 
 % BEGIN py_calculatedSedimentationBasinVolume
 13137.67
@@ -898,7 +884,9 @@ $Q_{peak}^{adj}$ &
 With the $V_{\text{clarifier}}^{\text{max}}$ obtained in the previous section, 
 the sedimentation basin is dimensioned accordingly. Its height selected based on the typical design criteria, 
 see Appendix~\ref{app:primary_criteria}. The 5 m side water depth height upper limit is 
-selected and 0.5 m of freeboard is added ($H_{clarifier}=5.5m$). The area $A_{clarifier}$ is calculated
+selected, found after iterating the design that this height yields a clarifier 
+area that complies with the $SLR$ criteria. A freeboard distance 
+of 0.5 m is added, thus $H_{clarifier}=5.5m$. The area $A_{clarifier}$ is calculated
  using Eq.\eqref{eq:sedimentation_tank_area}, the 
 volume $V_{clarifier}^{final}$ used is equal to $V_{clarifier}^{max}$.
 The Surface Loading Rate ($SLR$) is calculated 
@@ -932,21 +920,13 @@ Eq.\eqref{eq:weir_length}, where $d_{offset}$ is the distance from clarifier edg
 The Weir Length Ratio ($WLR$) is given by Ec.\eqref{eq:weir_length_ratio}. 
 The critical condition is then evaluated with Eq.\eqref{eq:weir_length_ratio_critical}, where $n$ is the
 number of clarifier tanks. As explained in the previous section, this value ($n$) was set as 
-3 so $WLR_{critical}$ does not exceed the design limit (500 m$^3$/m/day). 
+3 so $WLR_{critical}$, i.e. when one 
+clarifier is out of service, does not exceed the design limit (500 m$^3$/m/day). 
 
 \begin{align}
-L_w &= n_{launder-sides} \cdot \pi \cdot (D_{clarifier} - 2 \cdot d_{\text{offset}})
-\label{eq:weir_length}
-\end{align}
-
-\begin{align}
-WLR &= \frac{Q_{peak}}{L_w \cdot 86400}
-\label{eq:weir_length_ratio}
-\end{align}
-
-\begin{align}
-WLR_{critical} &= \frac{WLR}{n-1}
-\label{eq:weir_length_ratio_critical}
+L_w &= n_{launder-sides} \cdot \pi \cdot (D_{clarifier} - 2 \cdot d_{\text{offset}}) \label{eq:weir_length}\\
+WLR &= \frac{Q_{peak}}{L_w \cdot 86400} \label{eq:weir_length_ratio}\\
+WLR_{critical} &= \frac{WLR}{n-1} \label{eq:weir_length_ratio_critical}\\
 \end{align}
 
 
@@ -962,6 +942,7 @@ in the Table~\ref{tab:clarifier_results}.
 \hline
 \textbf{Parameter} & \textbf{Result} & \textbf{Units} & \textbf{Description} \\
 \hline
+$H_{clarifier}$ & 5.5 & m & 5m height of water plus 0.5m freeboard\\[0.5em]
 $A_{clarifier}$ & 
 % BEGIN py_area_clarifier
 518.79
@@ -1019,13 +1000,18 @@ $V_{equalization}^{req}$ &
 \subsubsection{V-Notch and Launder Design}
 \label{sec:vnotch_design}
 
-To ensure stable discharge from the primary clarifiers and prevent hydraulic overloading, a V-notch weir system was designed in accordance with standard hydraulic principles. The number of notches is determined based on the critical launder length and a center-to-center spacing of 0.3 m between notches:
+To ensure stable discharge from the primary clarifiers 
+and prevent hydraulic overloading, a V-notch weir system 
+was designed in accordance with standard hydraulic principles. 
+The number of notches is determined based on the launder length
+per tank and a center-to-center spacing of 0.3 m between notches:
 
 \begin{align}
 N_{\text{notch}} &= \left\lceil \frac{L_{\text{launder}}}{s} \right\rceil
 \end{align}
 
-where \( s = 0.3 \) m is the spacing. The total number of V-notches in the system is then:
+where \( s = 0.3 \) m is the typical spacing \cite{metcalf_2014_wastewater}. 
+The total number of V-notches in the system is then:
 
 \begin{align}
 N_{\text{notch, total}} = N_{\text{notch}} \times N_{\text{clarifiers}}
@@ -1267,7 +1253,14 @@ is equal to
 % END py_secondary_BOD_inflow
 mg/L, and it represents the target for the removal in the primary treatment, 
 see Section~\ref{sec:primary_treat}. The typical design parameters for activated 
-sludge processes are shown in Appendix~\ref{app:sludge_criteria}.
+sludge processes are shown in Appendix~\ref{app:sludge_criteria}.\\
+As shown in Table~\ref{tab:clarifier_inputs}, the $TSS$ received from 
+the primary treatment is equal to 185 mg/L. A well-operated secondary 
+treatment process can yield from 4 to 10 mg/L $TSS$ effluent 
+concentration \cite{metcalf_2014_wastewater}. Conservatively, the upper 
+limit value is chosen, and the $TSS$ removal efficiency is therefore 
+obtained as 95\%.
+
 
 \subsection{Design description}
 \label{sec:design_description_secondary_treat}
@@ -1446,9 +1439,6 @@ adjusted peak conditions:
 \begin{align}
 Y_{\text{obs,avg}} &= \frac{Y}{1 + K_d \cdot \theta_c} \label{eq:observed_yield_avg}\\
 P_{x\text{,avg}} &= Y_{\text{obs,avg}} \cdot Q_{\text{avg}}^{\text{projected}} \cdot \frac{BOD_{\text{in}} - BOD_{\text{eff}}}{1000} \label{eq:biomas_rate_avg}\\
-\end{align}
-
-\begin{align}
 Y_{\text{obs,peak}} &= \frac{Y}{1 + K_d \cdot \theta_{c\text{,adj}}} \label{eq:observed_yield_peak}\\
 P_{x\text{,peak}} &= Y_{\text{obs,avg}} \cdot Q_{\text{peak}}^{\text{adj}} \cdot \frac{BOD_{\text{in}} - BOD_{\text{eff}}}{1000} \label{eq:biomas_rate_peak}
 \end{align}
@@ -1690,12 +1680,12 @@ $\text{Air}_{\text{avg}}$ &
 \subsection{Protection against failure}
 \label{sec:protection_against_failue_secondary_treat}
 
-The process design follows a duty/stand‑by (N+1) 
-philosophy for all blowers and return‑sludge pumps, 
+The process design follows a duty/stand-by (N+1) 
+philosophy for all blowers and return-sludge pumps, 
 providing high resilience. If one secondary clarifier 
 is unavailable for maintenance, the remaining unit will 
 sustain the full peak hydraulic and solids load. 
-Likewise, the six complete‑mix aeration tanks allow 
+Likewise, the six complete-mix aeration tanks allow 
 any single basin to be isolated for maintenance 
 while the plant continues to meet permit limits 
 under normal operating conditions.
@@ -1703,6 +1693,8 @@ under normal operating conditions.
 
 \section{Environmental Impact Assessment}
 \label{sec:env_impact}
+
+\subsection{Impact on receiving waterway}
 
 To evaluate the impact of the effluent discharge on the receiving waterway, 
 the \textit{Streeter-Phelps model} was applied. This model predicts the variation in dissolved 
@@ -1863,6 +1855,23 @@ initial value ($DO_0$). \\
   \label{fig:DO_streeter_model}
 \end{figure}
 
+\subsection{Biosolids management}
+
+The solids balance indicates 20 t $d^{-1}$ of primary sludge 
+($\approx$ 285 $m^3$ $d^{-1}$ at 7 \% TS) and 28 t $d^{-1}$ of secondary sludge 
+(1,375 m³ $d^{-1}$ at 2 \% TS), with primary rising to 25 t $d^{-1}$ 
+at peak. Gravity or DAF thickening to 4-6 \% TS trims volumes 
+by 60 \% \cite{metcalf_2014_wastewater}. The mixed sludge is then 
+anaerobically digested, producing Class B biosolids and 
+biogas for plant energy \cite{wef_DesignWaterResource}. Centrifuge 
+dewatering to 18-22 \% TS cuts haulage to 250 m³ $d^{-1}$ 
+\cite{EPA1993_CFR503}. The resulting cake can be land-applied 
+under EPA Victoria nutrient and metal caps \cite{EPA1993_CFR503}, 
+composted to Class A, or thermally dried/incinerated with 
+energy recovery and ash reuse in cement or bricks. This treatment 
+train minimizes transport, recovers resources and energy, 
+complies with regulations, and keeps disposal options adaptable 
+to changing markets and policies.
 
 \section{Summary}
 \newpage
@@ -1881,7 +1890,17 @@ initial value ($DO_0$). \\
 
 \fancyfoot[C]{Appendix Page \thepage}
 
+\appendixsection{Peaking Factors}{app:peaking_factors}
 
+According to previous studies, the peaking factors of the wastewater catchment for the 
+understudy suburb are shown in the table below. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../images/peaking_factor.png}
+  \caption{Daily fluctuation of peaking factors at each hour of the day for flow rates on an average day in a similar wastewater catchment.}
+  \label{fig:peaking_factor}
+\end{figure}
 
 \appendixsection{Area and Population per suburb}{app:melbourne_density}
 
@@ -1930,6 +1949,17 @@ is represented showing the \textit{adjusted peak flow}.
   \includegraphics[width=1.0\textwidth]{../images/equabasinnewpeakk.png}
   \caption{Mass balance diagram for projected conditions.}
   \label{fig:mass_balance_projected_volume}
+\end{figure}
+
+\appendixsection{Equalization Off-line diagram}{app:equialization_diagram}
+
+The selected off-line configuration for the equalization basin is shown in the figure below.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../images/basin_diagram.png}
+  \caption{Off-line equalization basin –adapted from Fig 3-20, Davis,2010.}
+  \label{fig:basin_diagram}
 \end{figure}
 
 \appendixsection{Inlet sections views}{app:inlet_images}
