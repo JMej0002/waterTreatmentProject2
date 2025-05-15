@@ -1294,7 +1294,8 @@ flow \(Q_R\) is determined using mass balance:
 \begin{align}
 X_R &= \frac{10^6}{SVI} \\
 Q_R &= Q_{\text{peak}}^{\text{adj}} \cdot \frac{V_{settled}}{1000 - V_{settled}}\\
-V_{settled} &=SVI \cdot MLSS /1000
+V_{settled} &=SVI \cdot MLSS /1000\\
+RSR &=\frac{Q_R}{Q_{\text{peak}}^{\text{adj}}}
 \end{align}
 
 
@@ -1305,7 +1306,7 @@ for CMAS processes \cite{metcalf_2014_wastewater}.
 \subsubsection{Aeration Tank Sizing}
 
 Selecting the upper limit of the Food-to-Microorganism \textit{(F/M)} ratio 
-(0.4 d⁻¹, Metcalf \& Eddy, 2014) minimizes the required aeration 
+(0.4 $day^{-1}$, Metcalf \& Eddy, 2014) minimizes the required aeration 
 tank volume. The aeration volume ($V_a$) and hydraulic residence time (HRT) 
 are calculated using:
 
@@ -1322,7 +1323,7 @@ time and biological stabilization.
 The organic loading rate, an essential performance parameter, is computed as follows:
 
 \begin{align}
-\text{OLR} &= \frac{BOD_{5,\text{in}} \cdot Q_{\text{peak}}^{\text{adjusted}}}{V_a}
+\text{OLR} &= \frac{BOD_{5,\text{in}} \cdot Q_{\text{peak}}^{\text{adjusted}}}{V_a}\label{eq:organic_load_rate}
 \end{align}
 
 \subsubsection{Sludge Age and Stability}
@@ -1334,8 +1335,8 @@ the Arrhenius equation is employed to adjust the
 yield coefficient (Y) and decay coefficient ($K_d$):
 
 \begin{align}
-U &= F/M \cdot \eta\\
-\theta_c &= \frac{1}{Y \cdot U - K_d}
+U &= F/M \cdot \eta \label{eq:utilization_ratio}\\
+\theta_c &= \frac{1}{Y \cdot U - K_d} \label{eq:sludge_age}
 \end{align}
 
 Using these adjusted coefficients, the required 
@@ -1343,7 +1344,7 @@ sludge age is calculated. A safety factor
 of 1.3 is applied to accommodate peak organic load variations:
 
 \begin{align}
-\theta_{c,\text{adj}} &= 1.3 \cdot \theta_c
+\theta_{c,\text{adj}} &= 1.3 \cdot \theta_c \label{eq:sludge_age_adjusted}
 \end{align}
 
 The waste flow ($Q_w$) is calculated with the $MLSS$, $V_a$,
@@ -1352,18 +1353,19 @@ adjusted waste flow ($Q_{w\text{,adj}}$) rate is calculated, but using
 $\theta_{c,\text{adj}}$ instead.
 
 \begin{align}
-Q_w &= \frac{\text{MLSS} \cdot V_a}{X_R \cdot \theta_c}\\
-Q_{w\text{,adj}} &= \frac{\text{MLSS} \cdot V_a}{X_R \cdot \theta_{c,\text{adj}}} 
+Q_w &= \frac{\text{MLSS} \cdot V_a}{X_R \cdot \theta_c} \label{eq:flow_waste}\\
+Q_{w\text{,adj}} &= \frac{\text{MLSS} \cdot V_a}{X_R \cdot \theta_{c,\text{adj}}} \label{eq:flow_waste_adj}
 \end{align}
 
 Finally, the base effluent flow ($Q_e$) and adjusted one ($Q_{e\text{, adj}}$) are obtained as:
 
 \begin{align}
-Q_e &= Q_{\text{peak}}^{\text{adjusted}} - Q_w\\
-Q_{e\text{,adj}} &= Q_{\text{peak}}^{\text{adjusted}} - Q_{w\text{,adj}}\
+Q_e &= Q_{\text{peak}}^{\text{adjusted}} - Q_w \label{eq:effluent_flow}\\
+Q_{e\text{,adj}} &= Q_{\text{peak}}^{\text{adjusted}} - Q_{w\text{,adj}} \label{eq:effluent_flow_adj}
 \end{align}
 
 \subsection{Aeration Tank Configuration}
+\label{sec:aeration_tank_configuration}
 Aeration basins are sized to avoid large volumes 
 that promote dead zones, potentially exacerbating 
 filamentous microbial growth \cite{chudoba1973control}. 
@@ -1373,7 +1375,7 @@ consistent with Davis (2010). The number of aeration
 tanks required is therefore calculated as:
 
 \begin{align}
-  N_{\text{tanks}}^{\text{aeration}}=\frac{V_a}{3500}
+  N_{\text{tanks}}^{\text{aeration}}=\frac{V_a}{3500} \label{eq:number_aeration_tanks}
 \end{align}
 
 rounding the result to the next integer, ensuring therefore 
@@ -1381,7 +1383,7 @@ a volume per tank below the abovementioned limit. The volume
 per tank is then recalculated as: 
 
 \begin{align}
-  V_{\text{tank}}^{\text{aeration}} &=\frac{V_a}{N_{\text{tanks}}^{\text{aeration}}}
+  V_{\text{tank}}^{\text{aeration}} &=\frac{V_a}{N_{\text{tanks}}^{\text{aeration}}} \label{eq:volume_aeration_tank}
 \end{align}
 
 The aeration tank dimensions are then selected to yield the obtained $V_{\text{tank}}^{\text{aeration}}$.
@@ -1397,17 +1399,78 @@ four times the depth, i.e.
 16
 % END py_aerationTankWidth
 m: and finally the length is calculated to reach the desired 
-volume: $L_{\text{tank}}^{\text{aeration}}=V_{\text{tank}}^{\text{aeration}}/(Width*Depth)= $
+volume: $L_{\text{tank}}^{\text{aeration}}=V_{\text{tank}}^{\text{aeration}}/(Width \cdot Depth)= $
 % BEGIN py_aerationTankLength
-46.8
+47
 % END py_aerationTankLength
 m. \\
-A \textit{Solids Loading Ratio} ($SLR$) 
-during average flow conditions is selected as 
+A \textit{Solids Loading Ratio} ($SLR_{\text{peak}}$) 
+during peak flow conditions is selected as 
 % BEGIN py_SLR_selected
 6
 % END py_SLR_selected
-$kg/m^2/day$, as this value 
+$kg/m^2/day$, as this value is recommended to within 
+4 to 6 $kg/m^2/day$. The upper limit was selected as 
+after the equalization basin, the adjusted peak flow is 
+close to the average flow.\\
+
+The area of the secondary clarifier is given by the equation below.
+
+\begin{equation}
+A_{\text{clarifier}} = \frac{(Q_{\text{peak}}^{\text{adj}} + RSR \cdot Q_{\text{peak}}^{\text{adj}}) \cdot MLSS}{SLR_{\text{peak}} \cdot 24 \cdot 1000}
+\label{eq:secondary_clarifier_area}
+\end{equation}
+
+Finally, the $SLR_{\text{avg}}$ is calculated as shown below
+
+\begin{equation}
+\text{SLR}_{\text{avg}} = \frac{\left(Q_{\text{peak}}^{\text{adj}} + \text{RSR} \cdot Q_{\text{peak}}^{\text{adj}}\right) \cdot \text{MLSS}}{A_{\text{clarifier}} \cdot 24 \cdot 1000}
+\label{eq:solids_loading_average}
+\end{equation}
+
+\subsubsection{Aeration requirements}
+\label{sec:aeration_requirements}
+
+Aeration equipment selection requires evaluating 
+both peak hourly and daily average oxygen demands. 
+Peak oxygen demand determines aerator power, while 
+daily average demand informs energy consumption. 
+Oxygen demands and biomass production are 
+calculated using the observed yield coefficient ($Y_{\text{obs}}$) 
+and the biomass generation ratio ($P_x$) for both average and 
+adjusted peak conditions:
+
+\begin{align}
+Y_{\text{obs,avg}} &= \frac{Y}{1 + K_d \cdot \theta_c} \label{eq:observed_yield_avg}\\
+P_{x\text{,avg}} &= Y_{\text{obs,avg}} \cdot Q_{\text{avg}}^{\text{projected}} \cdot \frac{BOD_{\text{in}} - BOD_{\text{eff}}}{1000} \label{eq:biomas_rate_avg}\\
+Y_{\text{obs,peak}} &= \frac{Y}{1 + K_d \cdot \theta_{c\text{,adj}}} \label{eq:observed_yield_peak}\\
+P_{x\text{,peak}} &= Y_{\text{obs,avg}} \cdot Q_{\text{peak}}^{\text{adj}} \cdot \frac{BOD_{\text{in}} - BOD_{\text{eff}}}{1000} \label{eq:biomas_rate_peak}
+\end{align}
+
+To determine blower capacity during peak demand, 
+the oxygen demand for the activated sludge process 
+is first estimated by accounting for both the 
+oxidation of BOD and the synthesis of biomass. 
+The fraction of BOD oxidized is calculated using 
+a first-order decay model. The total oxygen requirement 
+is then adjusted by subtracting the oxygen used for 
+biomass synthesis. Finally, the volume of air required 
+is calculated by incorporating a safety factor of 2 and 
+assuming a standard oxygen transfer efficiency of 10\% 
+(based on a transfer capacity of 0.279 kg $O_2$ per $m^3$ of air). 
+This process ensures reliable aeration system sizing 
+under peak loading conditions.
+The complete formulation is given 
+in Equations~\eqref{eq:bod_conversion_fraction}--\eqref{eq:air_required_avg}.
+
+\begin{align}
+f &= 1 - e^{-5k} \label{eq:bod_conversion_fraction} \\
+O_{2,\text{peak}} &= \frac{Q_{\text{peak}}^{\text{adj}} \cdot (BOD_{\text{in}} - BOD_{\text{eff}})}{f \cdot 1000} - 1.42 \cdot P_{x,\text{peak}} \label{eq:oxygen_demand_peak} \\
+O_{2,\text{avg}} &= \frac{Q_{\text{avg}} \cdot (BOD_{\text{in}} - BOD_{\text{eff}})}{f \cdot 1000} - 1.42 \cdot P_{x,\text{avg}} \label{eq:oxygen_demand_avg} \\
+V_{\text{air,peak}}^{\text{hourly}} &= \frac{O_{2,\text{peak}}}{0.279 \cdot 0.1} \cdot \frac{2}{24} \label{eq:air_required_peak} \\
+V_{\text{air,avg}}^{\text{daily}}  &= \frac{O_{2,\text{avg}}}{0.279 \cdot 0.1} \label{eq:air_required_avg}
+\end{align}
+
 
 \subsubsection{Design Summary}
 Table~\ref{tab:secondary_inputs} and Table~\ref{tab:secondary_results} summarize the design inputs and resulting key parameters for the secondary treatment system.
@@ -1420,17 +1483,56 @@ Table~\ref{tab:secondary_inputs} and Table~\ref{tab:secondary_results} summarize
 \hline
 \textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Description} \\
 \hline
-% BEGIN py_secondary_inputs
-$Q$ & 127506.0 & m$^3$/d & Adjusted projected peak flow from equalization tank \\
-$BOD_{5,\text{eff}}$ & 14.0 & mg/L & Target BOD$_5$ in treated effluent \\
-$\eta_{\text{BOD}}$ & 94.6 & \% & BOD$_5$ removal efficiency \cite{metcalf_2014_wastewater} \\
-$BOD_{5,\text{in}}$ & 259.26 & mg/L & BOD$_5$ at secondary influent \\
-$X$ & 4000 & mg/L & Mixed liquor suspended solids (MLSS) \\
-$SVI$ & 91.0 & mL/g & Suspended Volume Index \\
-$X_R$ & 10989.01 & mg/L & Return sludge concentration \\
-$v$ & 364.0 & mL/L & Volume of settled sludge \\
-$Q_R$ & 76314.38 & m$^3$/d & Return sludge flow \\
-% END py_secondary_inputs
+$Q_{\text{peak}}^{\text{adj}}$ & 
+% BEGIN py_Q_new_peak_secondary
+111013.2
+% END py_Q_new_peak_secondary
+& m$^3$/d & Adjusted projected peak flow, see Section~\ref{sec:primary_treat} \\
+$Q_{\text{avg}}$ &
+% BEGIN py_Q_avg_sec
+100930.7
+% END py_Q_avg_sec
+& m$^3$/d & Average projected flow rate, see Table~\ref{tab:projected_rates} \\
+$BOD_{5,\text{eff}}$ & 
+% BEGIN BOD_eff_sec
+18
+% END BOD_eff_sec
+& mg/L & Target BOD$_5$ for waterway effluent, see Section~\ref{sec:env_impact}\\
+$\eta_{\text{BOD}}$ & 
+% BEGIN py_BOD_removal_eff_sec
+93.0
+% END py_BOD_removal_eff_sec
+& \% & Selected BOD$_5$ removal efficiency\\
+$MLSS$ & 
+% BEGIN py_MLSS_sec
+4000
+% END py_MLSS_sec
+& mg/L & Selected Mixed Liquor Suspended Solids (MLSS) \\
+$SVI$ & 
+% BEGIN py_SVI_sec
+91
+% END py_SVI_sec
+& mL/g & Selected Suspended Volume Index \\
+$Y$ &
+% BEGIN py_Y_sec
+0.45
+% END py_Y_sec
+& SS/mg & Yield coefficient of $BOD_5$\\
+$K_d$ &
+% BEGIN py_Kd_sec
+0.04
+% END py_Kd_sec
+& $day^{-1}$ & Decay coefficient\\
+$k$ &
+% BEGIN py_k_sec
+0.2
+% END py_k_sec
+& $day^{-1}$ & Conversion rate constant\\
+$F/M$ &
+% BEGIN py_F_M_sec
+0.4
+% END py_F_M_sec
+& -- & Selected Food to Microorganism ratio\\
 \hline
 \end{tabularx}
 \end{table}
@@ -1444,19 +1546,136 @@ $Q_R$ & 76314.38 & m$^3$/d & Return sludge flow \\
 \textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Description} \\
 \hline
 % BEGIN py_secondary_results
-$F/M$ & 0.4 & -- & Food to microorganism ratio \\
-$V_a$ & 206.51 & m$^3$ & Aeration volume, see Eq.~\eqref{eq:aeration_volume} \\
-$t_a$ & 3.89 & h & Aeration time, see Eq.~\eqref{eq:aeration_time} \\
-$BOD_{\text{load}}$ & 1600.0 & g/m$^3$/d & BOD$_5$ loading \\
-$\theta_c$ & 6.94 & d & Sludge age \cite{metcalf_2014_wastewater} \\
-$\theta_{c,\text{max}}$ & 9.02 & d & Sludge age (adjusted for peak loading) \\
-$Y_{\text{obs,avg}}$ & 0.43 & -- & Observed yield for average flow \\
-$P_{X,\text{avg}}$ & 961.96 & kg/d & Biomass production for average flow \\
-$P_{X,\text{peak}}$ & 1532.5 & kg/d & Biomass production for peak flow \\
-$O_{2,\text{peak}}$ & 2924.91 & kg/d & Oxygen demand for peak flow\\
-$O_{2,\text{avg}}$ & 2698.77 & kg/d & Oxygen demand for average flow \\
-$\text{Air}_{\text{peak}}$ & 8743.36 & m$^3$/h & Required air for peak conditions \\
-$\text{Air}_{\text{avg}}$ & 19372.13 & m$^3$/d & Required air for average conditions \\
+$BOD_{5,\text{in}}$ & 
+% BEGIN py_BOD_in_sec
+259.0
+% END py_BOD_in_sec
+& mg/L & BOD$_5$ at secondary influent \\
+$X_R$ & 
+% BEGIN py_X_R_sec
+10989.0
+% END py_X_R_sec
+& mg/L & Return sludge concentration \\
+$V_{settled}$ & 
+% BEGIN py_VolumeSettledSludge
+364.0
+% END py_VolumeSettledSludge
+& mL/L & Volume of settled sludge \\
+$Q_R$ & 
+% BEGIN py_ReturnFlow_sec
+63535.9
+% END py_ReturnFlow_sec
+& m$^3$/d & Return sludge flow \\
+$V_a$ & 
+% BEGIN py_Aeration_Volume_sec
+17969.6
+% END py_Aeration_Volume_sec
+& m$^3$ & Aeration volume, see Eq.~\eqref{eq:aeration_volume} \\
+$HRT$ & 
+% BEGIN py_HRT_sec
+3.9
+% END py_HRT_sec
+& h & Hydraulic Residence Time, see Eq.~\eqref{eq:aeration_time} \\
+$OLR$ & 
+% BEGIN py_Organic_load_rate_sec
+1600.0
+% END py_Organic_load_rate_sec
+& g/m$^3$/d & Organic loading rate, see Eq~\eqref{eq:organic_load_rate}\\
+$U$ &
+% BEGIN py_UtilizationRatio
+0.4
+% END py_UtilizationRatio
+& -- & Specific Utilization Ratio, see Eq.~\eqref{eq:utilization_ratio}\\
+$\theta_c$ & 
+% BEGIN py_sludgeAge_sec
+7.9
+% END py_sludgeAge_sec
+& d & Sludge age, see Eq.~\eqref{eq:sludge_age}\\
+$\theta_{c,\text{adj}}$ & 
+% BEGIN py_sludgeAgeAdj_sec
+10.3
+% END py_sludgeAgeAdj_sec
+& d & Sludge age adjusted for peak loading, see Eq.~\eqref{eq:sludge_age_adjusted} \\
+$Q_w$ &
+% BEGIN py_flowWaste
+826.9
+% END py_flowWaste
+& m$^3$/d & Waste flow, see Eq.~\eqref{eq:flow_waste}\\
+$Q_{w\text{,adj}}$ &
+% BEGIN py_flowWasteAdj
+636.3
+% END py_flowWasteAdj
+& m$^3$/d & Waste flow adjusted, see Eq.~\eqref{eq:flow_waste_adj}\\
+$Q_e$ &
+% BEGIN py_effluentFlow
+110186.3
+% END py_effluentFlow
+& m$^3$/d & Effluent flow, see Eq.~\eqref{eq:effluent_flow}\\
+$Q_{e\text{,adj}}$ &
+% BEGIN py_effluentFlowAdj
+110376.9
+% END py_effluentFlowAdj
+& m$^3$/d & Effluent flow adjusted, see Eq.~\eqref{eq:effluent_flow_adj}\\
+$N_{\text{tanks}}^{\text{aeration}}$ &
+% BEGIN py_NAerationTanks
+6
+% END py_NAerationTanks
+& -- & Number of aeration tanks, see Eq.~\eqref{eq:number_aeration_tanks}\\
+$V_{\text{tank}}^{\text{aeration}}$ &
+% BEGIN py_VolumeAerationTankFinal
+3008
+% END py_VolumeAerationTankFinal
+& $m^3$ & Aeration tank to construct volume, see Section~\ref{sec:aeration_tank_configuration} for tank's dimensions \\
+$A_{\text{clarifier}}$ &
+% BEGIN py_areaClarifier_sec
+4841.4
+% END py_areaClarifier_sec
+& $m^2$ & Total clarifiers area, see Eq.~\eqref{eq:secondary_clarifier_area}\\
+$SLR_{\text{avg}}$ &
+% BEGIN py_SLR_sec
+5.7
+% END py_SLR_sec
+& $kg/m^2/day$ & Solids loading ratio average flow, see Eq.~\eqref{eq:solids_loading_average}\\
+$Y_{\text{obs,avg}}$ & 
+% BEGIN py_Yobs_sec
+0.34
+% END py_Yobs_sec
+& -- & Observed yield for average flow rate, see Eq.~\eqref{eq:observed_yield_avg} \\
+$P_{X,\text{avg}}$ & 
+% BEGIN py_P_avg_sec
+8269.9
+% END py_P_avg_sec
+& kg/d & Biomass production for average flow, see Eq.~\eqref{eq:biomas_rate_avg} \\
+$Y_{\text{obs,peak}}$ & 
+% BEGIN py_Y_peaksec
+0.319
+% END py_Y_peaksec
+& -- & Observed yield for peak flow rate, see Eq.~\eqref{eq:observed_yield_peak} \\
+$P_{X,\text{peak}}$ & 
+% BEGIN py_P_peak_sec
+8531.0
+% END py_P_peak_sec
+& kg/d & Biomass production for peak flow, see Eq.~\eqref{eq:biomas_rate_peak} \\
+$O_{2,\text{peak}}$ & 
+% BEGIN py_Oxigen_peak
+30208.8
+% END py_Oxigen_peak
+& kg/d & Oxygen demand for peak flow, see Eq.~\eqref{eq:oxygen_demand_peak}\\
+$O_{2,\text{avg}}$ &
+% BEGIN py_OxigenAvg
+26364.9
+% END py_OxigenAvg
+& kg/d & Oxygen demand for average flow, see Eq.~\eqref{eq:oxygen_demand_avg}\\
+$\text{Air}_{\text{peak}}$ & 
+% BEGIN py_air_peak
+90229.4
+% END py_air_peak
+& m$^3$/h & Required air for peak conditions, see Eq.~\eqref{eq:air_required_peak}\\
+$\text{Air}_{\text{avg}}$ & 
+% BEGIN py_air_avg
+944979.9
+% END py_air_avg
+& m$^3$/d & Required air for average conditions, see Eq.~\eqref{eq:air_required_avg}\\
 % END py_secondary_results
 \hline
 \end{tabularx}

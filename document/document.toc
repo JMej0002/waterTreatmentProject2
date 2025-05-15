@@ -30,9 +30,10 @@
 \contentsline {subsubsection}{\numberline {4.2.3}Organic Loading Rate}{17}{subsubsection.4.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.4}Sludge Age and Stability}{17}{subsubsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.3}Aeration Tank Configuration}{17}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Design Summary}{18}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1}Aeration requirements}{18}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Design Summary}{19}{subsubsection.4.3.2}%
 \contentsline {section}{\numberline {5}Environmental Impact Assessment}{19}{section.5}%
-\contentsline {section}{\numberline {6}Summary}{21}{section.6}%
+\contentsline {section}{\numberline {6}Summary}{23}{section.6}%
 \contentsline {section}{Appendix 1\hskip 1em\relax Area and Population per suburb}{1}{appendix.A}%
 \contentsline {section}{Appendix 2\hskip 1em\relax Temperature multiplier for detention time}{12}{appendix.B}%
 \contentsline {section}{Appendix 3\hskip 1em\relax Mass balance technique for equilization volume}{13}{appendix.C}%
