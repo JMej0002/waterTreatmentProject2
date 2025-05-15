@@ -207,12 +207,12 @@ following calculation:
 According to the \textit{Water Service Association of Australia} the inflow rate percapita
 can be estimated as 
 % BEGIN py_DomesticPerCapitaFlowrate
-180
+162
 % END py_DomesticPerCapitaFlowrate
 L/PE/day \cite{yarravalleywater_2023_amf}. Therefore, the 
 \( Q_{\text{current avg, domestic}} \) can be calculated as\\
 % BEGIN py_DomesticCurrentFlow
-\(\frac{Q_{\text{domestic per capita}} \times PE_{\text{domestic}}}{1000}= 61200.0\)
+\(\frac{Q_{\text{domestic per capita}} \times PE_{\text{domestic}}}{1000}= 55080.0\)
 % END py_DomesticCurrentFlow
 \(\mathrm{m^3/day}\).
 Similarly, based on previous surveys it got determine that the commercial contribution for this area is
@@ -446,12 +446,12 @@ $d_{\text{upstream}}$ &
 m & Flow depth upstream \\
 $A_{\text{wet}}$ & 
 % BEGIN py_WetCrossArea
-4.1
+4.42
 % END py_WetCrossArea
 m$^2$ & Wetted cross-sectional area \\
 $W_{\text{channel}}$ & 
 % BEGIN py_channelWidth
-4.0
+4.4
 % END py_channelWidth
 m & Required screen channel width \\
 $N_{\text{screens}}$ & 
@@ -461,7 +461,7 @@ $N_{\text{screens}}$ &
 & Number of screens required \\
 $W_{\text{screen}}$ &
 % BEGIN py_screenWidth
-1.0
+1.1
 % END py_screenWidth
 m & Screen width\\
 \hline
@@ -544,17 +544,17 @@ acceptable values.
 \hline
 $v_{\text{sc}}$ & 
 % BEGIN py_velocity_screen
-0.97
+1.0
 % END py_velocity_screen
 & m/s & Screen design velocity\\
 $v_2$ &
 % BEGIN py_velocity_down_cureentavg
-0.54
+0.56
 % END py_velocity_down_cureentavg
 & m/s & Velocity downstream\\
 $v_1$ &
 % BEGIN py_velocity_up_cureentavg
-0.41
+0.40
 % END py_velocity_up_cureentavg
 & m/s & Velocity upstream\\
 \hline
@@ -571,12 +571,12 @@ $v_1$ &
 \hline
 $v_{\text{sc}}$ & 
 % BEGIN py_velocity_screen_projected
-0.89
+0.87
 % END py_velocity_screen_projected
 & m/s & Screen design velocity\\
 $v_2$ &
 % BEGIN py_velocity_down_projected
-0.52
+0.51
 % END py_velocity_down_projected
 & m/s & Velocity downstream\\
 $v_1$ &
@@ -609,7 +609,7 @@ and routine cleaning are required, especially after high flow events.
 %the projected average daily flow resulted in an impractical tank size 
 %(~24,000 m³). Therefore, a new peak flow of 
 % BEGIN py_newPeakFlow
-%111013.22
+114454.28
 % END py_newPeakFlow
 %$m^3/day$ was established, 
 %based on the maximum capacity of the downstream primary treatment facilities. 
@@ -624,7 +624,7 @@ configured to deliver a constant flow rate downstream ($Q_{avg}^{current}$).
 This is facilitated by a significant design storage volume $V_{\text{equilization}}$, 
 approximated at 
 % BEGIN py_EqualizationVolume
-19000.0
+23000.0
 % END py_EqualizationVolume
 $m^3$, obtained through the mass balance 
 technique, see Appendix~\ref{app:mass_balanca_eq_volume} inclusive of a safety factor of 
@@ -635,7 +635,7 @@ technique, see Appendix~\ref{app:mass_balanca_eq_volume} inclusive of a safety f
 shown in Section \ref{sec:clarifier_design_description}, the required 
 equilization basin volume $V_{\text{equilization}}^{\text{req}}$ is actually 
 % BEGIN py_requiredEqBasinVol
-5169.77
+5355.78
 % END py_requiredEqBasinVol
 $m^3$. However, the objective of this initial constant flow regime is 
 to establish stable hydraulic and organic loading 
@@ -648,7 +648,7 @@ and enabling precise optimization of subsequent treatment units.\\
  will transition to one focused on smoothing flow variations. 
  Simultaneously, a critical peak flow constraint of 
  % BEGIN py_NewPeakFlow
-111013.22
+114454.28
  % END py_NewPeakFlow
  $m^3/day$ will be imposed on the flow discharged from the 
  basin to the primary clarifier. This specific 
@@ -822,12 +822,12 @@ Q_{peak}^{adj} &= \frac{V_{\text{clarifiers}}^{\text{max}}}{t} \label{eq:adjuste
 \hline
 $Q_{\text{avg}}^{\text{current}}$ & 
 % BEGIN py_Q_avg
-3367.75
+3112.75
 % END py_Q_avg
 & m$^3$/h &  Average projected flow rate, see Table \ref{tab:projected_rates}\\
 $Q_{\text{peak}}^{projected}$ & 
 % BEGIN py_Q_peak
-7465.79
+8051.08
 % END py_Q_peak
 & m$^3$/h & Peak projected flow rate, see Table \ref{tab:projected_rates}\\
 $BOD_{5,\text{influent}}$ & 
@@ -837,7 +837,7 @@ $BOD_{5,\text{influent}}$ &
 & mg/L & Inflow $BOD_5$, see Section \ref{sec:pollutant_load}\\
 $BOD_{5,\text{efluent}}$ & 
 % BEGIN py_Eflow_BOD
-258.99
+263.93
 % END py_Eflow_BOD
 & mg/L & Found $BOD_5$ that complies with environmental impact, see Section \ref{sec:secondary_trat}\\
 $T$ & 
@@ -848,42 +848,42 @@ $T$ &
 
 $E_{\text{BOD}}$ & 
 % BEGIN py_EfficiencyPrimary
-30.0
+28.68
 % END py_EfficiencyPrimary
 & \% & $BOD_5$ Efficiency removal, obtained with Eq.\eqref{eq:efficiency} \\
 $t_{\text{BOD}}$ & 
 % BEGIN py_t_BOD
-1.82
+1.632
 % END py_t_BOD
 & h & Obtained with Eq.\eqref{eq:time_of_residency}\\
 $t_{\text{TSS}}$ & 
 % BEGIN py_t_TSS
-1.82
+1.632
 % END py_t_TSS
 & h & Same as $t_{\text{BOD}}$\\
 $E_{\text{TSS}}$ & 
 % BEGIN py_TSS_efficiency
-51.14
+49.51
 % END py_TSS_efficiency
 & \% & Solved from Eq.\eqref{eq:efficiency}, replacing $t_{\text{TSS}}$\\[0.5em]
 $V_{\text{clarifiers}}^{\text{calc}}$ & 
 % BEGIN py_calculatedSedimentationBasinVolume
-13589.15
+13137.67
 % END py_calculatedSedimentationBasinVolume
 & m$^3$ & Calculated with Eq.\eqref{eq:clarifier_volume}\\[0.5em]
 $V_{\text{clarifiers}}^{\text{max}}$ &
 % BEGIN py_maxSedimentationBasinVolume
-8419.38
+7781.88
 % END py_maxSedimentationBasinVolume
 & m$^3$ & Calculated with Eq.\eqref{eq:clarifier_max_volume}\\[0.5em]
 $V_{\text{equilization}}^{\text{req}}$ &
 % BEGIN py_RequiredEqualizationTankVolume
-5169.77
+5355.78
 % END py_RequiredEqualizationTankVolume
 & m$^3$ & Calculated with Eq.\eqref{eq:required_equilization_volume}\\[0.5em]
 $Q_{peak}^{adj}$ &
 % BEGIN py_adjusted_peak
-4625.55
+4768.93
 % END py_adjusted_peak
 & m$^3$/h & Adjusted peak flow rate calculated with Eq.\eqref{eq:adjusted_peak_flow}\\
 \hline
@@ -962,7 +962,7 @@ in the Table~\ref{tab:clarifier_results}.
 \hline
 $A_{clarifier}$ & 
 % BEGIN py_area_clarifier
-561.29
+518.79
 % END py_area_clarifier
 & $m^2$ & Area per clarifier. \\[0.5em]
 $SLR_{clarifier}^{avg}$ & 
@@ -972,12 +972,12 @@ $SLR_{clarifier}^{avg}$ &
 & m$^3$/m$^2$/day & Surface Loading Rate under average flow rate.\\[0.5em]
 $SLR_{clarifier}^{peak}$ & 
 % BEGIN py_SLR_peak
-65.93
+73.54
 % END py_SLR_peak
 & m$^3$/m$^2$/day & Surface Loading Rate under peak flow rate.\\[0.5em]
 $D_{clarifier}$ & 
 % BEGIN py_clarifier_diameter
-26.73
+25.7
 % END py_clarifier_diameter
 & m & Diameter of clarifier tank.\\[0.5em]
 $n$ &
@@ -992,22 +992,22 @@ $n_{launder-sides}$ &
 & -- & Number of launder sides.\\[0.5em]
 $L_w$ &
 % BEGIN py_weirLength
-155.4
+148.92
 % END py_weirLength
 & m & Weir length. \\[0.5em]
 $WLR$ & 
 % BEGIN py_WLR
-714.36
+768.57
 % END py_WLR
 & m$^3$/m/day & Weir Length Ratio.\\[0.5em]
 $WLR_{critical}$ &
 % BEGIN py_WLR_critical
-357.18
+384.29
 % END py_WLR_critical
 & m$^3$/m/day & Weir Length Ratio under critical condition.\\[0.5em]
 $V_{equalization}^{req}$ & 
 % BEGIN py_required_equilization_volume
-5169.77
+5355.78
 % END py_required_equilization_volume
 & m$^3$ & Required equilization tank volume.\\[0.5em]
 \hline
@@ -1113,52 +1113,52 @@ In the Table~\ref{tab:vnotch_results} the results of V-Notch and Launder design 
 \hline
 $N_{\text{notch/clarifier}}$ & 
 % BEGIN py_notches_per_clarifier
-519.0
+497.0
 % END py_notches_per_clarifier
 & -- & Number of notches per clarifier. \\
 $N_{\text{notch, total}}$ &
 % BEGIN py_total_notches
-1557.0
+1491.0
 % END py_total_notches
 & -- & Total number of notches across all clarifiers. \\
 $Q_{\text{notch}}$ &
 % BEGIN py_flow_per_notch
-0.00083
+0.00089
 % END py_flow_per_notch
 & m$^3$/s & Flow per individual V-notch. \\
 $h$ &
 % BEGIN py_h_max
-0.05151
+0.05306
 % END py_h_max
 & m & Maximum height of water over the notch. \\
 $y$ &
 % BEGIN py_y_depth
-0.05924
+0.06102
 % END py_y_depth
 & m & Water depth over the notch including 15\% safety factor. \\
 $w_{\text{notch}}$ &
 % BEGIN py_w_notch
-0.118
+0.122
 % END py_w_notch
 & m & Top width of the V-notch. \\
 $q$ &
 % BEGIN py_q_launder
-0.00827
+0.0089
 % END py_q_launder
 & m$^3$/m/s & Discharge per unit length of launder. \\
 $Y_c$ &
 % BEGIN py_Yc
-0.348
+0.355
 % END py_Yc
 & m & Critical height at launder discharge point. \\
 $H$ &
 % BEGIN py_H_max2
-0.602
+0.615
 % END py_H_max2
 & m & Maximum calculated water depth in launder. \\
 $H_{\text{final}}$ &
 % BEGIN py_H_final
-0.904
+0.922
 % END py_H_final
 & m & Final design depth in launder with 50\% safety factor. \\
 \hline
@@ -1241,7 +1241,7 @@ from 85\% up to 95\%, see Appendix~\ref{app:operational_chac_sludge}. Through
 iterations along with the primary treatment processes, the optimal efficiency 
 was selected as 
 % BEGIN py_sec_removal_efficiency
-93.0
+93.2
 % END py_sec_removal_efficiency
 \% BOD\textsubscript{5} removal. 
 As shown in Section~\ref{sec:env_impact}, in order to comply with 
@@ -1261,7 +1261,7 @@ BOD_{\text{in}} &= \frac{BOD_{\text{effluent}}}{1 - \eta}
 where \( \eta\) is the BOD removal efficiency. Computed, the $BOD_{in}$ 
 is equal to 
 % BEGIN py_secondary_BOD_inflow
-259.0
+263.9
 % END py_secondary_BOD_inflow
 mg/L, and it represents the target for the removal in the primary treatment, 
 see Section~\ref{sec:primary_treat}. The typical design parameters for activated 
@@ -1390,19 +1390,19 @@ per tank is then recalculated as:
 The aeration tank dimensions are then selected to yield the obtained $V_{\text{tank}}^{\text{aeration}}$.
 The tank depth was selected as 
 % BEGIN py_aerationTankDepth
-4
+4.2
 % END py_aerationTankDepth
 m, as values within 3 to 6 m are recommended 
 \cite{metcalf_2014_wastewater}; 
 the tank width was estimated as 
 four times the depth, i.e. 
 % BEGIN py_aerationTankWidth
-16
+16.8
 % END py_aerationTankWidth
 m: and finally the length is calculated to reach the desired 
 volume: $L_{\text{tank}}^{\text{aeration}}=V_{\text{tank}}^{\text{aeration}}/(Width \cdot Depth)= $
 % BEGIN py_aerationTankLength
-47
+45
 % END py_aerationTankLength
 m. \\
 A \textit{Solids Loading Ratio} ($SLR_{\text{peak}}$) 
@@ -1489,12 +1489,12 @@ Table~\ref{tab:secondary_inputs} and Table~\ref{tab:secondary_results} summarize
 \hline
 $Q_{\text{peak}}^{\text{adj}}$ & 
 % BEGIN py_Q_new_peak_secondary
-111013.2
+114454.3
 % END py_Q_new_peak_secondary
 & m$^3$/d & Adjusted projected peak flow, see Section~\ref{sec:primary_treat} \\
 $Q_{\text{avg}}$ &
 % BEGIN py_Q_avg_sec
-100930.7
+108323.8
 % END py_Q_avg_sec
 & m$^3$/d & Average projected flow rate, see Table~\ref{tab:projected_rates} \\
 $BOD_{5,\text{eff}}$ & 
@@ -1504,7 +1504,7 @@ $BOD_{5,\text{eff}}$ &
 & mg/L & Target BOD$_5$ for waterway effluent, see Section~\ref{sec:env_impact}\\
 $\eta_{\text{BOD}}$ & 
 % BEGIN py_BOD_removal_eff_sec
-93.0
+93.2
 % END py_BOD_removal_eff_sec
 & \% & Selected BOD$_5$ removal efficiency\\
 $MLSS$ & 
@@ -1552,7 +1552,7 @@ $F/M$ &
 % BEGIN py_secondary_results
 $BOD_{5,\text{in}}$ & 
 % BEGIN py_BOD_in_sec
-259.0
+263.9
 % END py_BOD_in_sec
 & mg/L & BOD$_5$ at secondary influent \\
 $X_R$ & 
@@ -1567,17 +1567,17 @@ $V_{settled}$ &
 & mL/L & Volume of settled sludge \\
 $Q_R$ & 
 % BEGIN py_ReturnFlow_sec
-63535.9
+65505.3
 % END py_ReturnFlow_sec
 & m$^3$/d & Return sludge flow \\
 $V_a$ & 
 % BEGIN py_Aeration_Volume_sec
-17969.6
+18880.0
 % END py_Aeration_Volume_sec
 & m$^3$ & Aeration volume, see Eq.~\eqref{eq:aeration_volume} \\
 $HRT$ & 
 % BEGIN py_HRT_sec
-3.9
+4.0
 % END py_HRT_sec
 & h & Hydraulic Residence Time, see Eq.~\eqref{eq:aeration_time} \\
 $OLR$ & 
@@ -1602,22 +1602,22 @@ $\theta_{c,\text{adj}}$ &
 & d & Sludge age adjusted for peak loading, see Eq.~\eqref{eq:sludge_age_adjusted} \\
 $Q_w$ &
 % BEGIN py_flowWaste
-826.9
+868.8
 % END py_flowWaste
 & m$^3$/d & Waste flow, see Eq.~\eqref{eq:flow_waste}\\
 $Q_{w\text{,adj}}$ &
 % BEGIN py_flowWasteAdj
-636.3
+668.5
 % END py_flowWasteAdj
 & m$^3$/d & Waste flow adjusted, see Eq.~\eqref{eq:flow_waste_adj}\\
 $Q_e$ &
 % BEGIN py_effluentFlow
-110186.3
+113585.5
 % END py_effluentFlow
 & m$^3$/d & Effluent flow, see Eq.~\eqref{eq:effluent_flow}\\
 $Q_{e\text{,adj}}$ &
 % BEGIN py_effluentFlowAdj
-110376.9
+113785.8
 % END py_effluentFlowAdj
 & m$^3$/d & Effluent flow adjusted, see Eq.~\eqref{eq:effluent_flow_adj}\\
 $N_{\text{tanks}}^{\text{aeration}}$ &
@@ -1627,17 +1627,17 @@ $N_{\text{tanks}}^{\text{aeration}}$ &
 & -- & Number of aeration tanks, see Eq.~\eqref{eq:number_aeration_tanks}\\
 $V_{\text{tank}}^{\text{aeration}}$ &
 % BEGIN py_VolumeAerationTankFinal
-3008
+3175.2
 % END py_VolumeAerationTankFinal
 & $m^3$ & Aeration tank to construct volume, see Section~\ref{sec:aeration_tank_configuration} for tank's dimensions \\
 $A_{\text{clarifier}}$ &
 % BEGIN py_areaClarifier_sec
-4841.4
+4991.5
 % END py_areaClarifier_sec
 & $m^2$ & Total clarifiers area, see Eq.~\eqref{eq:secondary_clarifier_area}\\
 $SLR_{\text{avg}}$ &
 % BEGIN py_SLR_sec
-5.7
+5.8
 % END py_SLR_sec
 & $kg/m^2/day$ & Solids loading ratio average flow, see Eq.~\eqref{eq:solids_loading_average}\\
 $Y_{\text{obs,avg}}$ & 
@@ -1647,7 +1647,7 @@ $Y_{\text{obs,avg}}$ &
 & -- & Observed yield for average flow rate, see Eq.~\eqref{eq:observed_yield_avg} \\
 $P_{X,\text{avg}}$ & 
 % BEGIN py_P_avg_sec
-8269.9
+9057.6
 % END py_P_avg_sec
 & kg/d & Biomass production for average flow, see Eq.~\eqref{eq:biomas_rate_avg} \\
 $Y_{\text{obs,peak}}$ & 
@@ -1657,27 +1657,27 @@ $Y_{\text{obs,peak}}$ &
 & -- & Observed yield for peak flow rate, see Eq.~\eqref{eq:observed_yield_peak} \\
 $P_{X,\text{peak}}$ & 
 % BEGIN py_P_peak_sec
-8531.0
+8975.7
 % END py_P_peak_sec
 & kg/d & Biomass production for peak flow, see Eq.~\eqref{eq:biomas_rate_peak} \\
 $O_{2,\text{peak}}$ & 
 % BEGIN py_Oxigen_peak
-30208.8
+31783.6
 % END py_Oxigen_peak
 & kg/d & Oxygen demand for peak flow, see Eq.~\eqref{eq:oxygen_demand_peak}\\
 $O_{2,\text{avg}}$ &
 % BEGIN py_OxigenAvg
-26364.9
+29398.5
 % END py_OxigenAvg
 & kg/d & Oxygen demand for average flow, see Eq.~\eqref{eq:oxygen_demand_avg}\\
 $\text{Air}_{\text{peak}}$ & 
 % BEGIN py_air_peak
-90229.4
+94933.1
 % END py_air_peak
 & m$^3$/h & Required air for peak conditions, see Eq.~\eqref{eq:air_required_peak}\\
 $\text{Air}_{\text{avg}}$ & 
 % BEGIN py_air_avg
-944979.9
+1053708.6
 % END py_air_avg
 & m$^3$/d & Required air for average conditions, see Eq.~\eqref{eq:air_required_avg}\\
 % END py_secondary_results
@@ -1721,7 +1721,7 @@ input values for the \textit{Streeter-Phelps model} are shown.\\
 The effluent discharge was evaluated based on the project adjusted 
 peak flow rate (
 % BEGIN py_adjustedQ
-111013.22
+114454.28
 % END py_adjustedQ
 m$^3$/day), calculated in Section \ref{sec:primary_treat} and a effluent BOD$_5$ of 
 % BEGIN py_max_BOD_effluent2
@@ -1757,7 +1757,7 @@ see Sections \ref{sec:primary_treat} and \ref{sec:secondary_trat}.
   $Q_w$ & 475468 $m^3/day$ & Waterway flow rate\\
   $Q_e$ &
 % BEGIN py_adjustedQ2
-111013.22
+114454.28
 % END py_adjustedQ2
   $m^3/day$ & Adjusted flow rate\\
   \hline
@@ -1800,7 +1800,7 @@ $L_u$ &
 mg/L & Ultimate BOD of effluent \\
 $L_0$ & 
 % BEGIN py_L0
-7.35
+7.33
 % END py_L0
 mg/L & Mixed BOD in receiving stream \\
 $t_c$ & 
@@ -1810,17 +1810,17 @@ $t_c$ &
  days & Time to reach minimum DO \\
 $x_c$ & 
 % BEGIN py_xc
-8685.92
+8682.24
 % END py_xc
 m & Distance to minimum DO level \\
 $D(t_c)$ & 
 % BEGIN py_D_tc
-2.54
+2.53
 % END py_D_tc
  mg/L & DO deficit at time $t_c$ \\
 $DO_{calculated}$ &
 % BEGIN py_DO_calc2
-5.96
+5.97
 % END py_DO_calc2
  mg/L & $DO$ in waterway when maximum deficit $D(t_c)$ \\
 \hline
@@ -1833,13 +1833,13 @@ $DO_{calculated}$ &
 As shown in Table~\ref{tab:env_outputs}, 
 the dissolved oxygen deficit at its critical point is 
 % BEGIN py_D_tc2
-2.54
+2.53
 % END py_D_tc2
  mg/L. Substracting from the saturation $DO_\text{saturation}$ 
  the critical deficit $D(t_c)$ the $DO_\text{calculated}$ is obtained, 
  equal to 
  % BEGIN py_DO_calc
-5.96
+5.97
  % END py_DO_calc
  mg/L
 which is above the regulatory $DO_\text{min, threshold}$ of 
