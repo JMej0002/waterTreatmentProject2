@@ -49,4 +49,5 @@
 \contentsline {section}{Appendix 8\hskip 1em\relax Streeter-Phelps Model}{19}{appendix.H}%
 \contentsline {section}{Appendix 9\hskip 1em\relax Design criteria for primary sedimentation basins}{20}{appendix.I}%
 \contentsline {section}{Appendix 10\hskip 1em\relax Operational characteristics of activated sludge process}{21}{appendix.J}%
-\contentsline {section}{Appendix 11\hskip 1em\relax Typical design parameters for activates sludge processes}{23}{appendix.K}%
+\contentsline {section}{Appendix 11\hskip 1em\relax Python scripts}{23}{appendix.K}%
+\contentsline {section}{Appendix 12\hskip 1em\relax Typical design parameters for activates sludge processes}{58}{appendix.L}%

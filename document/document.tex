@@ -188,6 +188,13 @@ strategies ensure reliability and resilience under varying
 conditions.
 \newpage
 
+\section*{AI usage acknowledgment}
+
+We used ChatGPT (model o3 and mini o4) to assist us to 
+build graphs, tables and functions in the python code. 
+Besides, it assists us to create .bib references for this report.
+
+\newpage
 
 \tableofcontents
 \listoffigures
@@ -1922,11 +1929,45 @@ pumping energy by roughly a quarter.
 
 \section{Summary}
 
+This wastewater treatment plant is designed to serve 
+a growing region in northwest Melbourne, with an average 
+daily flow of approximately 108,000 m³ and a peak capacity 
+of 193,000 m³. The treatment process consists of 
+preliminary screening using mechanical coarse screens 
+and vortex grit chambers to remove large debris and grit, 
+followed by primary treatment with three circular 
+clarifiers that achieve substantial removal of suspended 
+solids and organic matter. Secondary treatment is 
+provided by a Complete-Mix Activated Sludge (CMAS) process, 
+utilizing six aeration tanks and secondary clarifiers to 
+remove the remaining organic and particulate pollutants. 
+The design incorporates an equalization basin to regulate 
+flow and enhance treatment performance, along with robust 
+redundancy across all critical units to ensure operational resilience.
+
+The environmental impact assessment confirms that the 
+effluent meets regulatory requirements, with a final 
+BOD concentration of 18 mg/L. Using the Streeter-Phelps model, 
+the treated discharge is shown to maintain downstream 
+dissolved oxygen levels above the threshold of 5.95 mg/L, 
+reaching a minimum of 5.97 mg/L and returning to saturation 
+within 32.7 km of the outfall. Biosolids generated from the 
+process, including primary and secondary sludge, are thickened, 
+anaerobically digested to recover biogas, and dewatered 
+for beneficial reuse such as land application or composting. 
+The plant design also considers carbon emissions, with 
+energy-efficient equipment and biogas recovery systems 
+incorporated to minimize the environmental footprint 
+while maintaining compliance with long-term sustainability goals.
+
+In the Figure~\ref{fig:wtp_plan}, a conceptual diagram of the layout 
+of the wastewater treatment plant designed in the present document is presented.
+
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.0\textwidth]{../images/Plan_view_WWTP.png}
   \caption{Wastewater treatment plan conceptual diagram, by Authors.}
-  \label{fig:boxplots_quality}
+  \label{fig:wtp_plan}
 \end{figure}
 
 \begin{table}[h]
@@ -2140,6 +2181,11 @@ Contact stabilization & Plug flow & Diffused-air, mechanical & 80--90 & Use for 
 \hline
 \end{tabularx}
 \end{table}
+
+\appendixsection{Python scripts}{app:python_scripts}
+\includepdf[pages=-]{python_code_appendix_1.pdf}
+\includepdf[pages=-]{python_code_appendix_2.pdf}
+\includepdf[pages=-]{python_code_appendix_3.pdf}
 
 
 \appendixsection{Typical design parameters for activates sludge processes}{app:sludge_criteria}
