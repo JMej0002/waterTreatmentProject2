@@ -330,7 +330,7 @@ the $BOD$ concentration, thus conservatively it is taken as the same value.
 Coarse screens designed to retain gross pollutants greater than 10 mm are proposed 
 to effectively protect downstream treatment processes. These screens, commonly 
 employed in wastewater treatment plants (\textit{WWTPs}), efficiently remove large solids, 
-rags, and debris (Davis, 2010). However, it is noted that their contribution to 
+rags, and debris \cite{davis2010water}. However, it is noted that their contribution to 
 the removal of biochemical oxygen demand (\textit{BOD}) is considered negligible.
 
 Each mechanical screen unit should be installed in its own dedicated channel, 
@@ -339,13 +339,6 @@ vortex grit chambers are proposed to remove grit particles up to 100 $\mu$m.
 This inclusion significantly reduces grit accumulation in downstream units 
 and prevents sediment buildup within the equalization basin, thus enhancing 
 the overall reliability and effectiveness of subsequent treatment processes.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.6\textwidth]{../images/screens.png}
-  \caption{Preliminary treatment, screens section.}
-  \label{fig:screens_section}
-\end{figure}
 
 \subsection{Screens design}
 \label{sec:screens_design}
@@ -406,7 +399,8 @@ The screens' width is recommended to be between 0.6 and 1.1m \cite{metcalf_2014_
 The number of screens required ($N_\text{screens}$) is therefore calculated based on the 
 channel width divided by the maximum recommended screen width (1.1 m) and 
 rounding up to the nearest integer. Results are shown 
-in the Table \ref{tab:screen_outputs}.
+in the Table \ref{tab:screen_outputs}. In the Appendix~\ref{app:preliminary_sections} is shown the 
+elevations of the screens indicating the hydraulic control.
 
 \begin{align}
   v_{\text{upstream}} &= v_{\text{screen}} \cdot \frac{b}{b + w} \label{eq:screen_velocity} \\
@@ -1914,6 +1908,20 @@ From the above data, the following box plot can be obtained.
   \includegraphics[width=0.9\textwidth]{../images/boxPlot_BOD.png}
   \caption{Boxplots of Biochemical Oxygen Demand (BOD) from Melbourne Water ETP dataset}
   \label{fig:boxplots_quality}
+\end{figure}
+
+\appendixsection{Preliminary treatment, screens section}{app:preliminary_sections}
+
+Below it is shown a sketch of elevation of the screens and the hydraulic control 
+provided in the preliminary treatment. The above section represents the 
+results based on the projected peak flow rate while the below one the results 
+with the current average flow rate. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{../images/screens.png}
+  \caption{Preliminary treatment, screens section.}
+  \label{fig:screens_section}
 \end{figure}
 
 \appendixsection{Temperature multiplier for detention time}{app:temperature_multiplier}
