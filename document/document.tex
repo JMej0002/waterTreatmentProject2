@@ -134,7 +134,56 @@
   
 
 \section*{Executive Summary}
-Executive summary to be added here afterwards
+
+The purpose of this report is to present the design 
+of a new wastewater treatment plant (WWTP) 
+for a rapidly developing northwest area in Melbourne. 
+The plant is designed to address current and future 
+community needs over a 20-year operational lifespan, 
+ensuring compliance with local guidelines and environmental 
+standards. The design encompasses preliminary, primary, 
+and secondary treatment processes, along with an environmental 
+impact assessment.\\
+The methodology involved population and flow rate 
+estimations based on current and projected data, 
+incorporating domestic, commercial, and infiltration 
+contributions. Key design parameters were derived 
+from established guidelines, including the AMF L8 
+Sewerage Planning and Design Principles and Melbourne 
+Water datasets. The preliminary treatment includes 
+coarse screens and vortex grit chambers, while primary 
+treatment utilizes circular clarifiers for sedimentation. 
+Secondary treatment employs a Complete-Mix Activated 
+Sludge (CMAS) process to achieve high pollutant removal 
+efficiency. The environmental impact was assessed 
+using the Streeter-Phelps model to ensure dissolved
+ oxygen levels in the receiving waterway remain above 
+ regulatory thresholds. Biosolids management includes 
+ a plan for handling and treating sludge produced 
+ from the treatment processes, including thickening, 
+ anaerobic digestion, dewatering, and ultimate 
+ disposal or reuse. 
+Findings indicate the plant can handle an average 
+flow of 74,706 m³/day and a peak flow of 131,450 m³/day, 
+with projected increases to 108,324 m³/day and 193,226 m³/day, 
+respectively. The preliminary treatment is designed with 
+four 1.1m wide screens and an equalization basin 
+(adjusted to approx. 21000 m³). The primary treatment, 
+using three circular clarifiers, is designed to achieve 
+approximately 28.7\% BOD and 50\% TSS removal. 
+The secondary CMAS system is designed for 93.2\% 
+BOD removal, targeting a final effluent BOD of 18 mg/L. 
+The environmental assessment confirmed compliance with 
+a minimum dissolved oxygen level of 5.95 mg/L in the 
+receiving waterway. Biosolids management will handle 
+around 48 ton of sludge daily through digestion and 
+dewatering. \\
+In conclusion, the proposed WWTP design is robust, 
+scalable, and environmentally compliant, capable of 
+meeting current demands while accommodating future growth. 
+The inclusion of redundancy and adaptive operational 
+strategies ensure reliability and resilience under varying 
+conditions.
 \newpage
 
 
@@ -1832,22 +1881,9 @@ the dissolved oxygen deficit at its critical point is
  mg/L
 which is above the regulatory $DO_\text{min, threshold}$ of 
 5.95 mg/L. Therefore, the discharge 
-complies with the receiving waterway's environmental standard.\\
+complies with the receiving waterway's environmental standard. In the Figure~\ref{fig:DO_streeter_model}, Appendix~\ref{app:streeter_phelps_model}, the deficit variation across time can be observed,
+obtained base on Eq.~\eqref{eq:do_deficit} variating $t$. 
 
-In the Figure~\ref{fig:DO_streeter_model} the deficit variation across time can be observed,
-obtained base on Eq.~\eqref{eq:do_deficit} variating $t$. The vertical axes 
-represents the deficit, thus zero value indicates the waterway returning 
-to a $DO_{saturation}$ level. In the figure, it can be observed the maximum 
-deficit which is achieved before $t=2 days$. It can also be observed that 
-after approximately 5 days the $DO$ returns to the initial waterway upstream 
-initial value ($DO_0$). \\
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.8\textwidth]{../images/DOd streeter-phelps Model.png}
-  \caption{Disolved oxygen deficit. Vertical axes being the deficit, with zero representation saturation.}
-  \label{fig:DO_streeter_model}
-\end{figure}
 
 \subsection{Biosolids management}
 
@@ -1867,7 +1903,45 @@ train minimizes transport, recovers resources and energy,
 complies with regulations, and keeps disposal options adaptable 
 to changing markets and policies.
 
+\subsection{Carbon emissions}
+
+Aeration is the main operational carbon hot-spot in municipal 
+plants, accounting for roughly 50-60 \% of total power 
+demand \cite{metcalf_2014_wastewater}. Our design tempers 
+that load by installing a 23000 $m^3$ equalization 
+basin that flattens flow peaks, thus reducing 
+total aeration requirements. Pumps for RAS, WAS 
+and sludge are the next largest electrical 
+consumer. Hence, a gravity-stepped hydraulic 
+profile is suggested and high-efficiency non-clog 
+centrifugal trim total dynamic head, cutting 
+pumping energy by roughly a quarter.
+
 \section{Summary}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\textwidth]{../images/Plan_view_WWTP.png}
+  \caption{Wastewater treatment plan conceptual diagram, by Authors.}
+  \label{fig:boxplots_quality}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Environmental impact model results}
+\label{tab:env_outputs}
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|}
+\hline
+\textbf{Process} & \textbf{BOD mg/L} & \textbf{$BOD_{efficiency}\%$} & \textbf{TSS mg/L} & \textbf{$TSS_{efficiency}\%$} \\
+\hline
+Catchment & 370 & -- & 370 & --\\
+Primary treatment & 264 & 29 & 185 & 50\\
+Secondary treatment & 18 & 93.2 & 10 & 95\\
+\hline
+\end{tabularx}
+\end{table}
+
+
 \newpage
 
 \bibliographystyle{apalike}     % or plain, abbrv, unsrt, etc.
@@ -1986,6 +2060,22 @@ The selected off-line configuration for the equalization basin is shown in the f
   \label{fig:inlet_profile}
 \end{figure}
 
+\appendixsection{Streeter-Phelps Model}{app:streeter_phelps_model}
+
+In the image below, the Streeter-Phelps model for the waterway discharge is presented. 
+The vertical axes 
+represents the deficit, thus zero value indicates the waterway returning 
+to a $DO_{saturation}$ level. In the figure, it can be observed the maximum 
+deficit which is achieved before $t=2 days$. It can also be observed that 
+after approximately 5 days the $DO$ returns to the initial waterway upstream 
+initial value ($DO_0$). \\
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../images/DOd streeter-phelps Model.png}
+  \caption{Disolved oxygen deficit. Vertical axes being the deficit, with zero representation saturation.}
+  \label{fig:DO_streeter_model}
+\end{figure}
+
 \appendixsection{Design criteria for primary sedimentation basins}{app:primary_criteria}
 
 \begin{table}[h]
@@ -2021,6 +2111,8 @@ Splitter box inlet velocity & $<$ 0.3 m/s & At peak flow \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+
 
 \appendixsection{Operational characteristics of activated sludge process}{app:operational_chac_sludge}
 
