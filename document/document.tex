@@ -176,7 +176,7 @@ by coagulating them through the microorganisms (sludge). \\
 Finally, the environmental impact of the incorporation of the 
 treated wastewater into the waterway is assessed against the 
 local guidelines applicable to determine whether it complies 
-with its requirements or if further treatment shall be implemented.\\
+with its requirements or if further treatment shall be implemented.
 
 
 \subsection{Population estimations}
@@ -253,7 +253,6 @@ rate estimation. In the Table \ref{tab:current_rates} the current flow rates obt
   \end{tabularx}
 \end{table}
 
-
 \subsection{Minimum current flow rates}
 \label{sec:minimum_current_flowrates}
 
@@ -314,14 +313,17 @@ factor and presented in the Table \ref{tab:projected_rates}.
 Following the guidelines established for wastewater treatment design 
 \cite{wef_DesignWaterResource, metcalf_2014_wastewater}, the analysis focused on two key 
 pollutants: Biochemical Oxygen Demand \textit{(BOD)} and Total Suspended Solids (TSS), which 
-are considered the most relevant indicators for organic and solids loading.\\
+are considered the most relevant indicators for organic and solids loading.
 
 As no specific influent quality data was available for the study area, 
 representative pollutant concentrations were obtained from Melbourne Water’s open 
 dataset on the Eastern Treatment Plant (ETP) \cite{melbournewater_2024_etpdata}. 
 This dataset, which includes daily influent quality records from 2014 onwards, is 
 publicly accessible at \url{https://data-melbournewater.opendata.arcgis.com}, see Appendix~\ref{app:melbourne_density} 
-for the whole data presentation.
+for the whole data presentation. From this data, the average inflow $BOD$ is 370
+$mg/L$, which when analyzed by pollutant load yields results within typical reported 
+values \cite{metcalf_2014_wastewater}. The inflow $TSS$ varies from 0.5 to 1.0 times 
+the $BOD$ concentration, thus conservatively it is taken as the same value.
 
 
 \section{Preliminary Treatment Design}
@@ -338,7 +340,7 @@ the removal of biochemical oxygen demand (\textit{BOD}) is considered negligible
 
 Each mechanical screen unit should be installed in its own dedicated channel, 
 facilitating isolation for maintenance or emergency purposes. Additionally, 
-vortex grit chambers are proposed to remove grit particles up to 100 mm. 
+vortex grit chambers are proposed to remove grit particles up to 100 $\mu$m. 
 This inclusion significantly reduces grit accumulation in downstream units 
 and prevents sediment buildup within the equalization basin, thus enhancing 
 the overall reliability and effectiveness of subsequent treatment processes.
@@ -405,7 +407,7 @@ From Equations \eqref{eq:screen_velocity} to
 the headloss ($h_\text{loss}$), the upstream flow depth ($d_\text{upstream}$), 
 the wetted cross-sectional area ($A_\text{wet}$) and required channel width ($W_\text{channel}$) 
 were determined.
-The screens' width is recommended to be between 0.6 and 1.0m \cite{metcalf_2014_wastewater}. 
+The screens' width is recommended to be between 0.6 and 1.1m \cite{metcalf_2014_wastewater}. 
 The number of screens required ($N_\text{screens}$) is therefore calculated based on the 
 channel width divided by the maximum recommended screen width (1.1 m) and 
 rounding up to the nearest integer. Results are shown 
